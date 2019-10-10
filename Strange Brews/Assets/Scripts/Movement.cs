@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    /*
     public enum MOVEMENT_TYPE { UNITS, FORCE, VEL };
 
     public float delta;
     // public means another script can access it
     // in unity everything that is public has a little field in the inspector
     public float movement_force;
-
-    public MOVEMENT_TYPE movement_type;
-
-    */
     public float velocity;
 
-    public float characterscale;
+    public float characterscale = 1.0f;
 
     private Rigidbody2D rbody;
+
+    public MOVEMENT_TYPE movement_type;
 
     private bool moving = true;
 
@@ -32,14 +29,19 @@ public class Movement : MonoBehaviour
         // can use this variable to access this object
         // this is the component it is attached to
         // any object you attatch this script to has to have a Rigidbody2D
-        velocity = 2.0f;
-        characterscale = 1.0f;
     }
 
     // FixedUpdate is called at a fixed rate, while Update is simply called for every rendered frame
     // FixedUpdate should be used to write the code related to the physics simulation (e.g. applying force, setting velocity and so on)
     void FixedUpdate()
     {
+        // How to access the position of the object
+        // an array of two elements Vector2
+        Vector2 pos = transform.position;
+        // every object has a transform so this is a shortcut
+        // this is how you access the position of the current object
+
+
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         /* how does input work in unity
@@ -58,16 +60,61 @@ public class Movement : MonoBehaviour
          *      here you can change the name or the keys without changing the code
          *      don't really touch the settings unless you know what you are doing
          */
-        rbody.velocity = new Vector2(velocity * h, velocity * v);
-        /* this one will override any other physics interacting with it
-         */
-        if ((v > 0 || v < 0) && moving)
+
+
+        // How to move...
+        switch (movement_type)
         {
-            characterscale = characterscale - v / 200;
-            transform.localScale = new Vector3(characterscale, characterscale, characterscale);
+            // needs to stop scaling when it collides with something (so it doesn't keep growing/shrinking when not moving
+            // should probably scale by coordinates rather than velocity
+            // you can choose the movement type in unity with a drop down window
+            // are these built in?
+            case MOVEMENT_TYPE.UNITS:
+                // this is how you move it by units
+                // want to overwrite the position of the object
+                //transform.position = new Vector2(pos.x + delta, pos.y + delta); // this is moving constantly
+                /* this one will move it by delta
+                 * the delta can be changed in unity in the inspector window, default 0
+                 * this is for when you want something to move one unit at a time
+                 * easier to send a message to a server to use this one because it just says move this many units
+                 * for top down games
+                 */
+                transform.position = new Vector2(pos.x + h * delta, pos.y + v * delta);
+                // this moves the position when the key is pressed
+
+                if (v > 0 || v < 0)
+                {
+                    characterscale = characterscale - v / 100;
+                    transform.localScale = new Vector3(characterscale, characterscale, characterscale);
+                }
+
+
+                break;
+            case MOVEMENT_TYPE.FORCE:
+                // how do forces work?
+                rbody.AddForce(new Vector2(movement_force * h, movement_force * v));
+                // happening every frame
+                // every frame your adding force which will change the velocity
+                /* this one will be a non linear build up of speeding out until the speed you want
+                 * can exponentially increase it
+                 * it won't just go from stationary to super fast
+                 * if you add a force and something hits it then it flies backwards
+                 * this one is good for platformers
+                 */
+                break;
+            case MOVEMENT_TYPE.VEL:
+                rbody.velocity = new Vector2(velocity * h, velocity * v);
+                /* this one will override any other physics interacting with it
+                 */
+                if ((v > 0 || v < 0) && moving)
+                {
+                    characterscale = characterscale - v / 60;
+                    transform.localScale = new Vector3(characterscale, characterscale, characterscale);
+                }
+
+                break;
         }
     }
-
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
         string hitObject = collisionInfo.collider.tag;
