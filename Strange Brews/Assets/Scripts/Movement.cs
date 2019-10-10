@@ -15,13 +15,16 @@ public class Movement : MonoBehaviour
     public MOVEMENT_TYPE movement_type;
 
     */
-    public float velocity;
+    private float velocity;
 
     private float characterscale;
 
     private Rigidbody2D rbody;
 
     private bool moving = true;
+
+    private Vector2 position;
+    private float initial_y;
 
 
     // Start is called before the first frame update
@@ -32,8 +35,11 @@ public class Movement : MonoBehaviour
         // can use this variable to access this object
         // this is the component it is attached to
         // any object you attatch this script to has to have a Rigidbody2D
-        velocity = 3.0f;
+        velocity = 5.0f;
+        position = rbody.position;
         characterscale = 1.0f;
+        initial_y = position.y;
+
     }
 
     // FixedUpdate is called at a fixed rate, while Update is simply called for every rendered frame
@@ -61,20 +67,21 @@ public class Movement : MonoBehaviour
         rbody.velocity = new Vector2(velocity * h, velocity * v);
         /* this one will override any other physics interacting with it
          */
+        
+
         if ((v > 0 || v < 0) && moving)
         {
-            characterscale = characterscale - v / 100;
+            Debug.Log("moving");
+            characterscale -= v/100;
             transform.localScale = new Vector3(characterscale, characterscale, characterscale);
+            initial_y = position.y;
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collisionInfo)
+    void OnCollisionStay2D(Collision2D collisionInfo)
     {
         string hitObject = collisionInfo.collider.tag;
-        if (hitObject == "border") // if colliding with back or front wall
-        {
-            moving = false;
-        }
+        moving = false;
     }
 
     void OnCollisionExit2D(Collision2D collisionInfo)

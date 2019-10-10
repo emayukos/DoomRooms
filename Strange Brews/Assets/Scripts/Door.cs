@@ -15,7 +15,7 @@ public class Door : MonoBehaviour
     private void Start()
     {
         //Fetch the GameObject's Collider (make sure they have a Collider component)
-        roomNumberText.text = "room: " + roomNumber;
+        roomNumberText.text = "Room: " + roomNumber;
         //player = GetComponent<PolygonCollider2D>();
         //player.isTrigger = false; // player doesn't have key so not a trigger >> need to set this to true once player has key
     }
@@ -31,7 +31,7 @@ public class Door : MonoBehaviour
             {
                 Debug.Log("Player has key.");
                 roomNumber += 1;
-                roomNumberText.text = "room: " + roomNumber; // update text 
+                roomNumberText.text = "Room: " + roomNumber; // update text 
                 SceneManager.LoadScene("Room2"); // name of scene >> will destroy this game object
             }
             else {
