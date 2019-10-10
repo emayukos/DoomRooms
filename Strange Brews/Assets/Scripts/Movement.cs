@@ -108,7 +108,7 @@ public class Movement : MonoBehaviour
                  */
                 if ((v > 0 || v < 0) && moving)
                 {
-                    characterscale = characterscale - v / 50;
+                    characterscale = characterscale - v / 60;
                     transform.localScale = new Vector3(characterscale, characterscale, characterscale);
                 }
 
