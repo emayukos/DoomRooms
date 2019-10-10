@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
 
     public MOVEMENT_TYPE movement_type;
 
+    private bool moving = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +31,9 @@ public class Movement : MonoBehaviour
         // any object you attatch this script to has to have a Rigidbody2D
     }
 
-    // Update is called once per frame
-    void Update()
+    // FixedUpdate is called at a fixed rate, while Update is simply called for every rendered frame
+    // FixedUpdate should be used to write the code related to the physics simulation (e.g. applying force, setting velocity and so on)
+    void FixedUpdate()
     {
         // How to access the position of the object
         // an array of two elements Vector2
@@ -62,6 +65,8 @@ public class Movement : MonoBehaviour
         // How to move...
         switch (movement_type)
         {
+            // needs to stop scaling when it collides with something (so it doesn't keep growing/shrinking when not moving
+            // should probably scale by coordinates rather than velocity
             // you can choose the movement type in unity with a drop down window
             // are these built in?
             case MOVEMENT_TYPE.UNITS:
@@ -101,7 +106,7 @@ public class Movement : MonoBehaviour
                 rbody.velocity = new Vector2(velocity * h, velocity * v);
                 /* this one will override any other physics interacting with it
                  */
-                if (v > 0 || v < 0)
+                if ((v > 0 || v < 0) && moving)
                 {
                     characterscale = characterscale - v / 50;
                     transform.localScale = new Vector3(characterscale, characterscale, characterscale);
@@ -110,4 +115,19 @@ public class Movement : MonoBehaviour
                 break;
         }
     }
+    void OnCollisionEnter2D(Collision2D collisionInfo)
+    {
+        string hitObject = collisionInfo.collider.tag;
+        if (hitObject == "border") // if colliding with back or front wall
+        {
+            moving = false;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collisionInfo)
+    {
+        Debug.Log("Exit !!!");
+        moving = true;
+    }
+
 }
