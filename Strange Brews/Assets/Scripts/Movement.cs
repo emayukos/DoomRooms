@@ -71,14 +71,13 @@ public class Movement : MonoBehaviour
 
         if ((v > 0 || v < 0) && moving)
         {
-            Debug.Log("moving");
             characterscale -= v/100;
             transform.localScale = new Vector3(characterscale, characterscale, characterscale);
             initial_y = position.y;
         }
     }
 
-    private void OnCollisionEnter2D(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         moving = false;
     }
