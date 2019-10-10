@@ -78,6 +78,10 @@ public class Movement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision collision)
+    {
+        moving = false;
+    }
     void OnCollisionStay2D(Collision2D collisionInfo)
     {
         string hitObject = collisionInfo.collider.tag;
