@@ -37,7 +37,6 @@ public class Movement : MonoBehaviour
         // any object you attatch this script to has to have a Rigidbody2D
         velocity = 5.0f;
         position = rbody.position;
-        characterscale = 1.0f;
         initial_y = position.y;
 
     }
@@ -67,14 +66,9 @@ public class Movement : MonoBehaviour
         rbody.velocity = new Vector2(velocity * h, velocity * v);
         /* this one will override any other physics interacting with it
          */
+        characterscale = (transform.position.y - (transform.position.y - initial_y) * 0.5f) / initial_y;
         
-
-        if ((v > 0 || v < 0) && moving)
-        {
-            characterscale -= v/100;
-            transform.localScale = new Vector3(characterscale, characterscale, characterscale);
-            initial_y = position.y;
-        }
+        transform.localScale = new Vector3(characterscale, characterscale, characterscale);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
