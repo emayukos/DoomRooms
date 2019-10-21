@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 192204854}
   - component: {fileID: 192204853}
   m_Layer: 5
-  m_Name: 'joinServer.InputField '
+  m_Name: 'createServer.InputField '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 415381526}
   - component: {fileID: 415381525}
   m_Layer: 5
-  m_Name: 'createServer.InputField '
+  m_Name: 'joinServer.InputField '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1703,17 +1703,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2006652792}
-        m_MethodName: onClickCreateRoom
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1873416016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1990,8 +1979,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mLogic: {fileID: 2006652793}
-  createRoomInput: {fileID: 415381525}
-  joinRoomInput: {fileID: 192204853}
+  createRoomInput: {fileID: 192204853}
+  joinRoomInput: {fileID: 415381525}
 --- !u!114 &2006652793
 MonoBehaviour:
   m_ObjectHideFlags: 0
