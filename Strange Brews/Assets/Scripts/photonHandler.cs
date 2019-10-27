@@ -50,10 +50,10 @@ public class photonHandler : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "room1")
+        if (scene.name != "MainMenu")
         {
             SpawnPlayer();
-            Debug.Log("loaded main menu");
+            Debug.Log("loaded room");
         }
     }
 
