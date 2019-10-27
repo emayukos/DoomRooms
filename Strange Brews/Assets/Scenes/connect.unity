@@ -1296,6 +1296,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496030084}
   m_CullTransparentMesh: 0
+--- !u!1 &1525580310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1525580312}
+  - component: {fileID: 1525580311}
+  m_Layer: 0
+  m_Name: photonDontDestroy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1525580311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525580310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cabe1af97b92c49539257add50423e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  photonB: {fileID: 2006652792}
+  mainPlayer: {fileID: 2822197704444749393, guid: c2bbf17419ac44714b3902f8c40ac7a8,
+    type: 3}
+--- !u!4 &1525580312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525580310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 340.45956, y: 238.88808, z: -52.00286}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1526147232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,7 +1974,6 @@ GameObject:
   - component: {fileID: 2006652791}
   - component: {fileID: 2006652790}
   - component: {fileID: 2006652792}
-  - component: {fileID: 2006652793}
   m_Layer: 0
   m_Name: photonScript
   m_TagString: Untagged
@@ -1978,21 +2023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784f42d65c3134994851eb6672d11a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mLogic: {fileID: 2006652793}
+  pHandler: {fileID: 1525580311}
   createRoomInput: {fileID: 192204853}
   joinRoomInput: {fileID: 415381525}
---- !u!114 &2006652793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2006652789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f9d2b8b942543efa955f982acf246b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2067405515
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement; // for the changing of the scenes
 
 public class MainMenu : MonoBehaviour
 {
+    
+
+
     // To change the scene when the play button is clicked
     // make sure that this is called when the play button is clicked
     public void PlayGame()
@@ -23,5 +26,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+
+   
 }
 
