@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUp : MonoBehaviour
+public class PickUp : Photon.MonoBehaviour
 {
     private string itemNameFound = null;
     private string itemDescription = null;
@@ -23,8 +23,9 @@ public class PickUp : MonoBehaviour
             {
                 //add to inventory
                 //addItem(itemNameFound);
-                inventory.GetComponent<Inventory>().addItem(itemNameFound);
-                Destroy(gameObject);
+                //pickup();
+                this.photonView.RPC("pickup", PhotonTargets.All);
+                
             }
 
             if (Input.GetKeyDown(KeyCode.L))
@@ -51,5 +52,12 @@ public class PickUp : MonoBehaviour
     {
         itemNameFound = null;
 
+    }
+
+    [PunRPC]
+    private void pickup()
+    {
+        inventory.GetComponent<Inventory>().addItem(itemNameFound);
+        PhotonNetwork.Destroy(gameObject);
     }
 }
