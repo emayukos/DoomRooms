@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AssignedKey : MonoBehaviour
+public class CabinetKey : InventoryItem
 {
-    string keyName = "Cabinet Key";
 
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<Interactable>().setLookDescription("A key with the word 'cabinet' on it.");
+        GetComponent<InventoryItem>().setItemName("Cabinet Key");
         
     }
 
@@ -16,11 +17,6 @@ public class AssignedKey : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public string getKeyName()
-    {
-        return keyName;
     }
 
 }
