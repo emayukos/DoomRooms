@@ -11,7 +11,6 @@ public class photonHandler : MonoBehaviour
 
     public GameObject mainPlayer;
 
-    public GameObject secondaryPlayer;
 
 
 
