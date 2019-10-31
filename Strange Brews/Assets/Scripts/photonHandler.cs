@@ -11,6 +11,8 @@ public class photonHandler : MonoBehaviour
 
     public GameObject mainPlayer;
 
+    public GameObject secondaryPlayer;
+
 
     private void Awake()
     {
@@ -63,6 +65,7 @@ public class photonHandler : MonoBehaviour
     {
         Debug.Log("spawn player");
         PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
+        PhotonNetwork.Instantiate(secondaryPlayer.name, secondaryPlayer.transform.position, secondaryPlayer.transform.rotation, 0);
     }
 
 
