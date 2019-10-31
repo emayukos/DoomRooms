@@ -14,6 +14,7 @@ public class photonHandler : MonoBehaviour
     public GameObject secondaryPlayer;
 
 
+
     private void Awake()
     {
         // won't destroy this object when the scene changes bc we will need it later
@@ -59,15 +60,11 @@ public class photonHandler : MonoBehaviour
         }
     }
 
-   
-
     private void SpawnPlayer()
     {
         Debug.Log("spawn player");
         PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
-        PhotonNetwork.Instantiate(secondaryPlayer.name, secondaryPlayer.transform.position, secondaryPlayer.transform.rotation, 0);
     }
-
 
     void OnDisable()
     {
