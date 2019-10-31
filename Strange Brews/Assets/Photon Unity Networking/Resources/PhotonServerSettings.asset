@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AppID: e56f959c-8c51-4c28-a5aa-e50c9843d7db
   VoiceAppID: 
-  ChatAppID: e56f959c-8c51-4c28-a5aa-e50c9843d7db
+  ChatAppID: 
   HostType: 1
-  PreferredRegion: 8
+  PreferredRegion: 0
   EnabledRegions: -1
   Protocol: 0
   ServerAddress: 
@@ -28,7 +28,6 @@ MonoBehaviour:
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
-  - MainMenu
   - Chat
   - ColorRpc
   - DestroyRpc
@@ -44,4 +43,5 @@ MonoBehaviour:
   - RequestForPickupItems
   - RequestForPickupTimes
   - TaggedPlayer
+  - pickup
   DisableAutoOpenWizard: 1

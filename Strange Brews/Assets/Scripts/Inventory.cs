@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory : Photon.MonoBehaviour
 {
     private bool HasFinalKey = false;
     private string[] itemlist = new string[3];
