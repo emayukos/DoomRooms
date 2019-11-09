@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DirectionalMovement : MonoBehaviour
+public class movementDirectional : MonoBehaviour
 {
     public int walkVelocity = 7;
     public int runVelocity = 13;

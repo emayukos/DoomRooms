@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LockedThing : MonoBehaviour
 {
+    public PhotonView photonView;
     string lockedThingFound = null;
     bool unlock = false;
     GameObject inventory;
@@ -24,10 +25,12 @@ public class LockedThing : MonoBehaviour
             {
                 //unlock
                 unlock = inventory.GetComponent<Inventory>().searchItem(lockedThingFound);
+
                 
                 if(unlock == true)
                 {
-                    Destroy(gameObject);
+                    //Destroy(gameObject);
+                    this.photonView.RPC("unlockThing", PhotonTargets.All);
                 }
                 else
                 {
@@ -54,6 +57,10 @@ public class LockedThing : MonoBehaviour
 
     }
 
-
+    [PunRPC]
+    private void unlockThing()
+    {
+        PhotonNetwork.Destroy(gameObject);
+    }
 
 }

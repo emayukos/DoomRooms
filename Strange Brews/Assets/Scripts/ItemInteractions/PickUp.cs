@@ -27,12 +27,6 @@ public class PickUp : Photon.MonoBehaviour
                 this.photonView.RPC("pickup", PhotonTargets.All);
                 
             }
-
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                //display description
-                Debug.Log(itemDescription);
-            }
             
         }
 
@@ -43,7 +37,6 @@ public class PickUp : Photon.MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             itemNameFound = GetComponent<InventoryItem>().getItemName();
-            itemDescription = GetComponent<Interactable>().getLookDescription();
         }
 
     }
