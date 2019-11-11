@@ -9,37 +9,16 @@ public class Inventory : Photon.MonoBehaviour
     private int numItems = 0;
     GameObject inventoryMenuText;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         inventoryMenuText = GameObject.Find("Inventory List");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            if (numItems == 0)
-            {
-                Debug.Log("empty");
-            }
-            else
-            {
-                for (int i = 0; i < numItems; i++)
-                {
-                    Debug.Log((i + 1) + ". " + itemlist[i]);
-                }
-            }
-            
-            
-        }
-
-
-    }
 
     public bool full()
     {
+        //checks if inventory array capacity has been met
         if (numItems < 3)
             return false;
         else
@@ -50,12 +29,14 @@ public class Inventory : Photon.MonoBehaviour
     {
         if (!full())
         {
+            //adds items to next open position in inventory array
             itemlist[numItems] = itemName;
             numItems++;
 
+            //adds item to inventory display list
             inventoryMenuText.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, itemName);
 
-            //Debug.Log(itemName);
+            //checks for item required for room completion, sets status for leaving room if found
             if (itemName == "Final Key"){
                 HasFinalKey = true;
             }
@@ -68,6 +49,9 @@ public class Inventory : Photon.MonoBehaviour
 
     public bool searchItem(string itemName)
     {
+        //searches for a provided item name in the inventory array
+        //returns true if item found
+
         bool isFound = false;
         int i = 0;
         while (!isFound && i<numItems)
