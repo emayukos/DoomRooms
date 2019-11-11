@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LockedThing : MonoBehaviour
+public class Unlock : MonoBehaviour
 {
     public PhotonView photonView;
     GameObject inventory;
