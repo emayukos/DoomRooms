@@ -8,13 +8,17 @@ public class safe : MonoBehaviour
     GameObject codePanel, closedSafe, openedSafe;
 
     public bool isSafeOpened = false; // should not initially be open
-
     private bool UIopen = false;
-
     private bool isIn = false;
 
-    public string code = "3101";
+    public AudioClip safeopening;
+    private AudioSource source;
 
+
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +51,7 @@ public class safe : MonoBehaviour
     // used to update the safe state
     void openSafe()
     {
+        source.PlayOneShot(safeopening, 0.03f);
         codePanel.SetActive(false);
         closedSafe.SetActive(false);
         openedSafe.SetActive(true);
