@@ -45,4 +45,6 @@ MonoBehaviour:
   - TaggedPlayer
   - pickup
   - unlockThing
+  - DisplayLook
+  - AddText
   DisableAutoOpenWizard: 1

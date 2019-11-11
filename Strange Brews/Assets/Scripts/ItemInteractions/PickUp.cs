@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class PickUp : Photon.MonoBehaviour
 {
+    public GameObject inventory;
+    GameObject actionTextBox;
+
     private string itemNameFound = null;
     private string itemDescription = null;
-    GameObject inventory;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         inventory = GameObject.Find("Inventory");
+        actionTextBox = GameObject.Find("Action Log Text");
     }
 
     void Update()
@@ -23,7 +27,8 @@ public class PickUp : Photon.MonoBehaviour
             {
                 //add to inventory
                 //addItem(itemNameFound);
-                //pickup();
+                //interactionTextBox.GetComponent<InteractText>().DisplayLook("The " + itemNameFound + " was put in the inventory.");
+                actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
                 this.photonView.RPC("pickup", PhotonTargets.All);
                 
             }

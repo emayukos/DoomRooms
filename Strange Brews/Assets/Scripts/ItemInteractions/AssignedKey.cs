@@ -5,18 +5,8 @@ using UnityEngine;
 public class AssignedKey : MonoBehaviour
 {
     string keyName;
+    string unlockDescription;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public string getKeyName()
     {
@@ -26,6 +16,16 @@ public class AssignedKey : MonoBehaviour
     public void setKeyName(string name)
     {
         keyName = name;
+    }
+
+    public string getUnlockDescription()
+    {
+        return unlockDescription;
+    }
+
+    public void setUnlockDescription(string unlockDesc)
+    {
+        unlockDescription = unlockDesc;
     }
 
 }
