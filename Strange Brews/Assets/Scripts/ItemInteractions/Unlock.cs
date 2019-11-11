@@ -11,6 +11,7 @@ public class Unlock : MonoBehaviour
 
     private string lockedThingFound = null;
     private string lockedThingKey = null;
+    private string unlockDescription = null;
     private bool unlock = false;
 
 
@@ -36,7 +37,7 @@ public class Unlock : MonoBehaviour
                 if(unlock == true)
                 {
                     //Destroy(gameObject);
-                    actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, "The " + lockedThingFound + " was unlocked.");
+                    actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, unlockDescription);
                     this.photonView.RPC("unlockThing", PhotonTargets.All);
                 }
                 else
@@ -55,6 +56,7 @@ public class Unlock : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             lockedThingKey = GetComponent<AssignedKey>().getKeyName();
+            unlockDescription = GetComponent<AssignedKey>().getUnlockDescription();
             lockedThingFound = GetComponent<Interactable>().getLookDescription();
         }
 
@@ -64,7 +66,7 @@ public class Unlock : MonoBehaviour
     {
         lockedThingKey = null;
         lockedThingFound = null;
-
+        unlockDescription = null;
     }
 
     [PunRPC]

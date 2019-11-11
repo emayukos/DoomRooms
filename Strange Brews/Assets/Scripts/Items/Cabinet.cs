@@ -9,11 +9,7 @@ public class Cabinet : MonoBehaviour
     {
         GetComponent<Interactable>().setLookDescription("A locked cabinet.");
         GetComponent<AssignedKey>().setKeyName("Cabinet Key");
+        GetComponent<AssignedKey>().setUnlockDescription("The cabinet has been unlocked.");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
