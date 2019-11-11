@@ -5,15 +5,21 @@ using UnityEngine;
 public class LockedThing : MonoBehaviour
 {
     public PhotonView photonView;
-    string lockedThingFound = null;
-    bool unlock = false;
     GameObject inventory;
+    GameObject interactionTextBox;
+    GameObject actionTextBox;
+
+    private string lockedThingFound = null;
+    private string lockedThingKey = null;
+    private bool unlock = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         inventory = GameObject.Find("Inventory");
+        interactionTextBox = GameObject.Find("Interaction Text");
+        actionTextBox = GameObject.Find("Action Log Text");
     }
 
     // Update is called once per frame
@@ -24,17 +30,19 @@ public class LockedThing : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.G))
             {
                 //unlock
-                unlock = inventory.GetComponent<Inventory>().searchItem(lockedThingFound);
+                unlock = inventory.GetComponent<Inventory>().searchItem(lockedThingKey);
 
                 
                 if(unlock == true)
                 {
                     //Destroy(gameObject);
+                    actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, "The " + lockedThingFound + " was unlocked.");
                     this.photonView.RPC("unlockThing", PhotonTargets.All);
                 }
                 else
                 {
                     Debug.Log("This needs a key.");
+                    interactionTextBox.GetComponent<InteractText>().DisplayLook("This needs a key.");
                 }
                 
             }
@@ -46,13 +54,15 @@ public class LockedThing : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            lockedThingFound = GetComponent<AssignedKey>().getKeyName();
+            lockedThingKey = GetComponent<AssignedKey>().getKeyName();
+            lockedThingFound = GetComponent<Interactable>().getLookDescription();
         }
 
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
+        lockedThingKey = null;
         lockedThingFound = null;
 
     }
