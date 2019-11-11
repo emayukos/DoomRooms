@@ -7,11 +7,12 @@ public class Inventory : Photon.MonoBehaviour
     private bool HasFinalKey = false;
     private string[] itemlist = new string[3];
     private int numItems = 0;
+    GameObject inventoryMenuText;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        inventoryMenuText = GameObject.Find("Inventory List");
     }
 
     // Update is called once per frame
@@ -51,6 +52,9 @@ public class Inventory : Photon.MonoBehaviour
         {
             itemlist[numItems] = itemName;
             numItems++;
+
+            inventoryMenuText.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, itemName);
+
             //Debug.Log(itemName);
             if (itemName == "Final Key"){
                 HasFinalKey = true;
