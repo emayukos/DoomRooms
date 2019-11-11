@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class halfCircleEdgeCol : MonoBehaviour
 {
+    //creates a half-circle collider upon game start of a radius specified in the inspector
 
     public int NumEdges;
     public float Radius;
