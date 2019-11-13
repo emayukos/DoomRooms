@@ -11,6 +11,8 @@ public class codePanel : MonoBehaviour
     [SerializeField]
 	GameObject safe;
 
+    public PhotonView photonView;
+
     public AudioClip buttonclick;
     public AudioClip incorrectanswer;
     private AudioSource source;
@@ -54,8 +56,8 @@ public class codePanel : MonoBehaviour
 	{
 		if (codeTextValue.Equals(code))
 		{
+            this.photonView.RPC("openSafe", PhotonTargets.All);
             
-			safe.SendMessage("openSafe");
 		}
         else
         {

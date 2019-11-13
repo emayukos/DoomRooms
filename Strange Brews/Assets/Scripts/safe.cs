@@ -7,6 +7,8 @@ public class safe : MonoBehaviour
     [SerializeField]
     GameObject codePanel, closedSafe, openedSafe;
 
+    
+
     public bool isSafeOpened = false; // should not initially be open
     private bool UIopen = false;
     private bool isIn = false;
@@ -49,8 +51,11 @@ public class safe : MonoBehaviour
     }
 
     // used to update the safe state
+    [PunRPC]
     void openSafe()
     {
+        
+
         source.PlayOneShot(safeopening, 0.03f);
         codePanel.SetActive(false);
         closedSafe.SetActive(false);
@@ -58,20 +63,9 @@ public class safe : MonoBehaviour
         isSafeOpened = true;
     }
 
-    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name.Equals("mainPlayer(Clone)") && !isSafeOpened)
-        {
-            codePanel.SetActive(true); // open the code panel
-        }
-
-    }
-    */
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.name.Equals("mainPlayer(Clone)"))
+        if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             isIn = true;
         } 
@@ -80,7 +74,7 @@ public class safe : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.name.Equals("mainPlayer(Clone)"))
+        if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             isIn = false;
             codePanel.SetActive(false);
