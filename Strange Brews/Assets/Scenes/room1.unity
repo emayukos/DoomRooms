@@ -523,7 +523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425299400}
   m_LocalRotation: {x: -0.0144084785, y: -0.12874012, z: 0.47141466, w: -0.87234545}
-  m_LocalPosition: {x: -1.73, y: -2.51, z: 17.88}
+  m_LocalPosition: {x: -0.52, y: -2.5, z: 18}
   m_LocalScale: {x: 0.26074016, y: 0.20750308, z: 1}
   m_Children: []
   m_Father: {fileID: 1276955733}
@@ -1110,7 +1110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644337437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.023, y: 2.591, z: 0}
+  m_LocalPosition: {x: 0.023, y: 2.591, z: 18}
   m_LocalScale: {x: 0.7406205, y: 1.2062662, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2274,7 +2274,7 @@ SpriteRenderer:
   m_Size: {x: 8.4, y: 10.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1674767379
@@ -2438,7 +2438,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 6861222404971992230, guid: 6fd5850f09f674810af04c4b2e6de7d4,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].x

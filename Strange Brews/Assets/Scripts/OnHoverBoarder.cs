@@ -17,7 +17,5 @@ public class OnHoverBoarder : MonoBehaviour
 		GetComponent<Renderer>().material = nonBorder;
 	}
 	
-	
-
 
 }
