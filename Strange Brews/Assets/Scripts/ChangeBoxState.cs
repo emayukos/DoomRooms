@@ -10,24 +10,26 @@ public class ChangeBoxState : MonoBehaviour
 	private bool inRange = false;
 	private bool buttonCreated = false;
 	Vector2 initialButtonPosition;
+	public Vector2 buttonPositionInScene;
 
 
 	private void Start()
 	{
 		initialButtonPosition = buttonPrefab.transform.position;
+		// -3.488, -3.61, 0
 	}
 
 
 	private void Update()
 	{
-		if(inRange)
+		if(inRange && Input.GetKeyDown(KeyCode.E)) // make icon that says "press E" to open
 		{
 			// open box 
 			GetComponent<SpriteRenderer>().sprite = openBox;
-            // instantiate button object
+            // move button object into scene (inside box)
             if (!buttonCreated)
 			{
-				buttonPrefab.transform.position = transform.position;
+				buttonPrefab.transform.position = buttonPositionInScene;
 			    //Instantiate(buttonPrefab, transform.position, Quaternion.identity);
 				buttonCreated = true;
 			}
@@ -37,10 +39,7 @@ public class ChangeBoxState : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D col) // change this to on button press
 	{
-		if (col.gameObject.CompareTag("Player"))
-        {
-			inRange = true;
-        }
+		inRange |= col.gameObject.CompareTag("Player");
 	}
 	
 		private void OnTriggerExit2D(Collider2D col)
