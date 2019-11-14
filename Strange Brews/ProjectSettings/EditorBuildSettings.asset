@@ -76,8 +76,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: e5ae8b9a249be4ed688bcb75bf1d529d
   - enabled: 1
-    path: Assets/Scenes/room1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/OfficeScene.unity
+    guid: d1aab8eeb38a6e5428e70c394514d517
   - enabled: 1
     path: Assets/Scenes/Room2.unity
     guid: 1031c1c1b3dad4a95ae4782b182f94ce

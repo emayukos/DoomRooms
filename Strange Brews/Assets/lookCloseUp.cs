@@ -60,21 +60,33 @@ public class lookCloseUp : MonoBehaviour
     // these determine if the player is in the collision area
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
+        
+        if (collision.gameObject.CompareTag("Player"))
         {
-            isIn = true;
+            if (collision.GetComponent<PhotonView>().isMine)
+            {
+                isIn = true;
+            }
+            
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            // moving out of range will also close the close up view
-            isIn = false;
-            objectUI.SetActive(false);
-            UIopen = !UIopen;
+            
+            if (collision.GetComponent<PhotonView>().isMine)
+            {
+                // moving out of range will also close the close up view
+                isIn = false;
+                objectUI.SetActive(false);
+                UIopen = false;
+            }
+            
+            
         }
     }
 }

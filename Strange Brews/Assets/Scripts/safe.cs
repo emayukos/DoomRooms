@@ -7,7 +7,9 @@ public class safe : MonoBehaviour
     [SerializeField]
     GameObject codePanel, closedSafe, openedSafe;
 
-    
+    private bool isActive;
+
+
 
     public bool isSafeOpened = false; // should not initially be open
     private bool UIopen = false;
@@ -33,21 +35,25 @@ public class safe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isIn && Input.GetKeyDown("e") && !isSafeOpened)
+        if (isActive)
         {
-            Debug.Log("pressed e");
-            if (UIopen == false)
+            if (isIn && Input.GetKeyDown("e") && !isSafeOpened)
             {
-                codePanel.SetActive(true);
-                UIopen = !UIopen;
-            }
-            else
-            {
-                codePanel.SetActive(false);
-                UIopen = !UIopen;
+                Debug.Log("pressed e");
+                if (UIopen == false)
+                {
+                    codePanel.SetActive(true);
+                    UIopen = !UIopen;
+                }
+                else
+                {
+                    codePanel.SetActive(false);
+                    UIopen = !UIopen;
 
+                }
             }
         }
+
     }
 
     // used to update the safe state
@@ -80,6 +86,11 @@ public class safe : MonoBehaviour
             codePanel.SetActive(false);
             UIopen = !UIopen;
         }
+    }
+
+    public void activate()
+    {
+        isActive = true;
     }
 
 
