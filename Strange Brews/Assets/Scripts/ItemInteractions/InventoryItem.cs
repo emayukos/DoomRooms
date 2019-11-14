@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InventoryItem : Interactable
 {
+    //variable(s) for items that can be picked up and put in inventory
+
     protected string itemName;
 
 

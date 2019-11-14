@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class PickUp : Photon.MonoBehaviour
 {
-    public GameObject inventory;
+    GameObject inventory;
     GameObject actionTextBox;
 
     private string itemNameFound = null;
     private string itemDescription = null;
-    
 
-    // Start is called before the first frame update
+
     void Start()
     {
+        //find fixed game objects that will be updated with interactions
         inventory = GameObject.Find("Inventory");
         actionTextBox = GameObject.Find("Action Log Text");
     }
@@ -22,19 +22,18 @@ public class PickUp : Photon.MonoBehaviour
     {
         if (itemNameFound != null)
         {
-            
             if (Input.GetKeyDown(KeyCode.G))
             {
-                //add to inventory
-                //addItem(itemNameFound);
+                //adds item to local inventory text box
                 //interactionTextBox.GetComponent<InteractText>().DisplayLook("The " + itemNameFound + " was put in the inventory.");
-                actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
-                this.photonView.RPC("pickup", PhotonTargets.All);
-                
-            }
-            
-        }
 
+                //adds item to multiplayer inventory text box
+                actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
+                
+                //add item to inventory, remove from scene
+                this.photonView.RPC("pickup", PhotonTargets.All);
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)   //col -> other thing was collided with, if attached to coin -> col = player
@@ -55,7 +54,9 @@ public class PickUp : Photon.MonoBehaviour
     [PunRPC]
     private void pickup()
     {
+        //adds item to inventory
         inventory.GetComponent<Inventory>().addItem(itemNameFound);
+        //removes physical item object from scene
         PhotonNetwork.Destroy(gameObject);
     }
 }

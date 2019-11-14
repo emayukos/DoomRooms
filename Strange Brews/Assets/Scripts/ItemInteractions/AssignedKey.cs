@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AssignedKey : MonoBehaviour
 {
+    //holds unlocking variable(s) for locked objects
+
     string keyName;
     string unlockDescription;
 

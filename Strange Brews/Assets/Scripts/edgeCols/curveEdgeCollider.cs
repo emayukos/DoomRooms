@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class curveEdgeCollider : MonoBehaviour
 {
+    //creates a circular collider upon game start of an approximate angle and a radius specified in the inspector
+    // --- angle width has limitations to how specifically it can be sized, rounds down to nearest point due to process at **
+    //can then be rotated by -180 < degrees <= 180, to the degree given in the inspector for the 'rotation' variable
 
     public int NumEdges;
     public float Radius;
@@ -15,17 +18,17 @@ public class curveEdgeCollider : MonoBehaviour
     private float curRotation = 0.0f;
     
 
-    // Use this for initialization
     void Start()
     {
-        //(int)Math.Round(precise, 0);
+        // **
         diameterAngle = Mathf.RoundToInt(360.0f / inputAngle);
-
         anglepoint = NumEdges / diameterAngle;
+        // **
 
         EdgeCollider2D edgeCollider = GetComponent<EdgeCollider2D>();
         Vector2[] points = new Vector2[anglepoint];
 
+        // ** anglepoint must be an int due to 'for' loop creation mechanism
         for (int i = 0; i < anglepoint; i++)
         {
             float angle = 2 * Mathf.PI * i / NumEdges;
@@ -39,23 +42,12 @@ public class curveEdgeCollider : MonoBehaviour
 
     private void Update()
     {
-        //rotate collider to desired position
-
-        //Vector3 angle = transform.localEulerAngles;
-        //angle.z = Mathf.Clamp(angle.z + Time.deltaTime * rotateRate, 0.0f, 60.0f);
-        //rotater  = Mathf.Clamp(rbody.rotation + frotateBy, lowBound, highBound);
-        //rotator = rbody.rotation;
-        //parent.localEulerAngles = angle;
-
-        //parent.Rotate(rotateBy, Time.deltaTime * rotateRate);
-
         if (curRotation != rotation)
         {
             transform.Rotate(0.0f, 0.0f, rotation, Space.Self);
             transform.Rotate(0.0f, 0.0f, 0.0f, Space.Self);
             curRotation = rotation;
         }
-
     }
 
 }
