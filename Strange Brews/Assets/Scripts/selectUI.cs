@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class selectUI : MonoBehaviour
 {
-	private void OnTriggerEnter2D(Collider other)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
 		
 	}
 
-	private void OnTriggerExit2D(Collider other)
+	private void OnTriggerExit2D(Collider2D other)
 	{
 		
 	}
