@@ -47,4 +47,5 @@ MonoBehaviour:
   - unlockThing
   - DisplayLook
   - AddText
+  - openSafe
   DisableAutoOpenWizard: 1
