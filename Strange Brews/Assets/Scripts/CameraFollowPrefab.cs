@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class CameraFollowPrefab : MonoBehaviour
 {
-    //CREDIT TO: Unity Tutorial page https://learn.unity.com/tutorial/movement-basics?projectId=5c514956edbc2a002069467c#
+    //attempt base for camera follow a prefab spawned mainPlayer in photon multiplayer format
+    //currently doesn't work
 
-    public GameObject player;        //Public variable to store a reference to the player game object
-
+    GameObject player;        //Public variable to store a reference to the player game object
 
     private Vector3 offset;            //Private variable to store the offset distance between the player and camera
 
-    // Use this for initialization
     void Start()
     {
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
         offset = transform.position - player.transform.position;
+
+        //Assign player to camera, since in photon player spawns, cannot be assigned before
+        player = GameObject.Find("mainPlayer");
     }
 
     // LateUpdate is called after Update each frame

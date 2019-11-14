@@ -4,29 +4,25 @@ using UnityEngine;
 
 public class TriggerRotation : MonoBehaviour
 {
-    private Transform parent;
-    private int rotate = 0;
-    private Vector3 rotateBy;
-    private float frotateBy;
-    private float highBound, lowBound;
     private Rigidbody2D rbody;
-    float rotateRate = 50.0f;
-    private bool inBounds;
-    private float rotator;
+    private bool rotate = false;
+    private float rotateBy;
+    private float rotationSpeed = 1.0f; //set to public to manipulate if need be
+    private float highBound, lowBound;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        parent = transform.parent;
-        rbody = parent.gameObject.GetComponent<Rigidbody2D>();
+        rbody = transform.parent.gameObject.GetComponent<Rigidbody2D>();
 
-        if (parent.gameObject.name == "Mid Spinner")
+        //sets the limits of how far the turntable can rotate in either direction
+        if (rbody.gameObject.name == "Mid Spinner wall")
         {
             highBound = 0.0f;
             lowBound = -90.0f;
         }
 
-        if (parent.gameObject.name == "End Spinner")
+        if (rbody.gameObject.name == "End Spinner wall")
         {
             highBound = 60.0f;
             lowBound = -60.0f;
@@ -35,30 +31,10 @@ public class TriggerRotation : MonoBehaviour
 
     private void Update()
     {
-
-        //Vector3 angle = parent.localEulerAngles;
-        //angle.z = Mathf.Clamp(angle.z + Time.deltaTime * rotateRate, 0.0f, 60.0f);
-        //rotater  = Mathf.Clamp(rbody.rotation + frotateBy, lowBound, highBound);
-        rotator = rbody.rotation;
-        //parent.localEulerAngles = angle;
-
-        inBounds = rbody.rotation <= highBound && rbody.rotation >= lowBound;
-        
-
-        if (rotate != 0)
+        if (rotate)
         {
-            //parent.Rotate(rotateBy, Time.deltaTime * rotateRate);
-            rbody.MoveRotation(Mathf.Clamp(rbody.rotation + frotateBy, lowBound, highBound));
-            Debug.Log("clamp value: " + Mathf.Clamp(rotator + frotateBy, lowBound, highBound));
-            Debug.Log(rbody.rotation);
-            Debug.Log(inBounds + " " + lowBound);
-            if (inBounds)
-            {
-                
-                //parent.Rotate(rotateBy, Time.deltaTime * rotateRate);
-                Debug.Log(rbody.rotation);
-            }
-
+            //rotates object by rotateBy speed and direction within set bounds
+            rbody.MoveRotation(Mathf.Clamp(rbody.rotation + rotateBy, lowBound, highBound));
         }
     }
 
@@ -66,32 +42,24 @@ public class TriggerRotation : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            rotate = 1;
+            rotate = true;
         }
-        
-        //get parent
-        //transform parent rotation z=
-        // clockwise   => -
-        // c.clockwise => +
 
         if (gameObject.tag == "clockwise spin")
         {
-            //transform parent rotation z= -#
-            //rotateBy = Vector3.back;
-            frotateBy = -1.0f;
-            
+            //change rotation to clockwise spin
+            rotateBy = rotationSpeed * -1.0f;
         }
-
         if (gameObject.tag == "c.clockwise spin")
         {
-            //transform parent rotation z= +#
-            //rotateBy = Vector3.forward;
-            frotateBy = 1.0f;
+            //change rotation to counter-clockwise spin
+            rotateBy = rotationSpeed * 1.0f;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        rotate = 0;
+        rotate = false;
     }
+
 }

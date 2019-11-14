@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Template : MonoBehaviour
+public class ItemTemplate : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,12 +15,8 @@ public class Template : MonoBehaviour
 
         //All LockedThing objects
         GetComponent<AssignedKey>().setKeyName("");
+        GetComponent<AssignedKey>().setUnlockDescription("");
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

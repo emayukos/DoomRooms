@@ -95,7 +95,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2822197704444749393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61012424396ef418997510d63817b256, type: 3}
+  m_Script: {fileID: 11500000, guid: 470c85670c66bd0488cbae0b5b0dee0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   devTesting: 0

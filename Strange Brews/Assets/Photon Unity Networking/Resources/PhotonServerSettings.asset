@@ -44,4 +44,7 @@ MonoBehaviour:
   - RequestForPickupTimes
   - TaggedPlayer
   - pickup
+  - unlockThing
+  - DisplayLook
+  - AddText
   DisableAutoOpenWizard: 1
