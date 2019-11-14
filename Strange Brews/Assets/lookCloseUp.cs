@@ -83,7 +83,7 @@ public class lookCloseUp : MonoBehaviour
                 // moving out of range will also close the close up view
                 isIn = false;
                 objectUI.SetActive(false);
-                UIopen = !UIopen;
+                UIopen = false;
             }
             
             
