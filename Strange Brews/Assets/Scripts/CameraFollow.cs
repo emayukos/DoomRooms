@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    //CREDIT TO: Unity Tutorial page https://learn.unity.com/tutorial/movement-basics?projectId=5c514956edbc2a002069467c#
+
     public GameObject player;        //Public variable to store a reference to the player game object
 
 

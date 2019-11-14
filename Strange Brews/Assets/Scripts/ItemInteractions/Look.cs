@@ -9,9 +9,10 @@ public class Look : MonoBehaviour
 
     private string itemDescription = null;
 
-    // Start is called before the first frame update
+
     void Start()
     {
+        //find fixed game objects that will be updated with interactions
         inventory = GameObject.Find("Inventory");
         interactionTextBox = GameObject.Find("Interaction Text");
     }
@@ -22,14 +23,14 @@ public class Look : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.L))
             {
-                //display description
+                //display description of looked at object
                 Debug.Log(itemDescription);
                 interactionTextBox.GetComponent<InteractText>().DisplayLook(itemDescription);
             }
         }
     }
 
-    void OnTriggerEnter2D(Collider2D col)   //col -> other thing was collided with, if attached to coin -> col = player
+    void OnTriggerEnter2D(Collider2D col)   //col -> other thing was collided with
     {
         if (col.gameObject.CompareTag("Player"))
         {

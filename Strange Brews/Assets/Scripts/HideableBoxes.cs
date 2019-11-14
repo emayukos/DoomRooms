@@ -11,12 +11,15 @@ public class HideableBoxes : MonoBehaviour
 
     void Awake()
     {
+        //help menu is visible upon entry of first room
         helpOnOff = 1;
+        //inventory is not visible upon entry of any room
         invOnOff = -1;
     }
 
     private void Start()
     {
+        //find fixed game objects that will be updated with interactions
         helpMenu = GameObject.Find("Help Menu");
         inventoryMenu = GameObject.Find("Inventory Menu");
     }

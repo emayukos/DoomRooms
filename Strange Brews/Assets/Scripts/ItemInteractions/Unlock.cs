@@ -11,37 +11,36 @@ public class Unlock : MonoBehaviour
 
     private string lockedThingFound = null;
     private string lockedThingKey = null;
-    private string unlockDescription = null;
     private bool unlock = false;
 
 
-    // Start is called before the first frame update
     void Start()
     {
+        //find fixed game objects that will be updated with interactions
         inventory = GameObject.Find("Inventory");
         interactionTextBox = GameObject.Find("Interaction Text");
         actionTextBox = GameObject.Find("Action Log Text");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (lockedThingFound != null)
         {
             if (Input.GetKeyDown(KeyCode.G))
             {
-                //unlock
+                //true if the required item is in the inventory
                 unlock = inventory.GetComponent<Inventory>().searchItem(lockedThingKey);
 
                 
                 if(unlock == true)
                 {
-                    //Destroy(gameObject);
-                    actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, unlockDescription);
+                    //record unlocking action in 2-player log, then perform unlocking action
+                    actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, lockedThingFound);
                     this.photonView.RPC("unlockThing", PhotonTargets.All);
                 }
                 else
                 {
+                    //required item is not in the inventory, let the local player know
                     Debug.Log("This needs a key.");
                     interactionTextBox.GetComponent<InteractText>().DisplayLook("This needs a key.");
                 }
@@ -56,8 +55,7 @@ public class Unlock : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             lockedThingKey = GetComponent<AssignedKey>().getKeyName();
-            unlockDescription = GetComponent<AssignedKey>().getUnlockDescription();
-            lockedThingFound = GetComponent<Interactable>().getLookDescription();
+            lockedThingFound = GetComponent<AssignedKey>().getUnlockDescription();
         }
 
     }
@@ -66,12 +64,13 @@ public class Unlock : MonoBehaviour
     {
         lockedThingKey = null;
         lockedThingFound = null;
-        unlockDescription = null;
     }
 
     [PunRPC]
     private void unlockThing()
     {
+        //currently just destroys unlocked object
+        //later, add more complex animation/image and collider change effects
         PhotonNetwork.Destroy(gameObject);
     }
 

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class circleEdgeCollider : MonoBehaviour
 {
+    //creates a circular collider upon game start of a radius specified in the inspector
+    //currently, circle does not fully close, there is an opening before the start point, size dependent on NumEdges
+    //CREDIT TO: Talonj123 from https://answers.unity.com/questions/612222/inverted-2d-circle-collider.html
 
     public int NumEdges;
     public float Radius;

@@ -11,10 +11,20 @@ public class codePanel : MonoBehaviour
     [SerializeField]
 	GameObject safe;
 
+    public AudioClip buttonclick;
+    public AudioClip incorrectanswer;
+    private AudioSource source;
+
 	public string code = "3101";
 
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
-	string codeTextValue = "";
+
+
+    string codeTextValue = "";
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +43,8 @@ public class codePanel : MonoBehaviour
         // only add digits if the code is less than 4
         if (codeTextValue.Length < 4)
 		{
+            // the sound effect and the volume (x/1)
+            source.PlayOneShot(buttonclick, 1.0f);
 			codeTextValue += digit;
 		}
 		
@@ -42,12 +54,12 @@ public class codePanel : MonoBehaviour
 	{
 		if (codeTextValue.Equals(code))
 		{
+            
 			safe.SendMessage("openSafe");
 		}
         else
         {
-            // maybe play error sound effect
-            // make it say error for 2 seconds
+            source.PlayOneShot(incorrectanswer, 0.5f);
             codeTextValue = "";
         }
 	}
