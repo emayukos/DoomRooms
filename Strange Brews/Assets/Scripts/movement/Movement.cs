@@ -10,7 +10,7 @@ public class Movement : Photon.MonoBehaviour
      * this takes all the values (transform, position, etc.)
      * and passes it across the network
      */
-    public PhotonView photonView;
+    public PhotonView photoView; // thomas changed this variable name when debugging
 
     private Vector3 selfPosition;
 
@@ -21,7 +21,6 @@ public class Movement : Photon.MonoBehaviour
     private float characterscale;
 
     private Rigidbody2D rbody;
-
 
     private Vector2 position;
 
@@ -46,7 +45,7 @@ public class Movement : Photon.MonoBehaviour
         if (!devTesting)
         {
             /* this makes sure it only moves the one player */
-            if (photonView.isMine)
+            if (photoView.isMine)
             {
                 moveCharacter();
             }
