@@ -11,6 +11,8 @@ public class codePanel : MonoBehaviour
     [SerializeField]
 	GameObject safe;
 
+    
+
     public PhotonView photonView;
 
     public AudioClip buttonclick;
@@ -30,7 +32,7 @@ public class codePanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
@@ -65,4 +67,6 @@ public class codePanel : MonoBehaviour
             codeTextValue = "";
         }
 	}
+
+
 }
