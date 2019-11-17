@@ -16,14 +16,13 @@ public class buttonSlot : MonoBehaviour
 	// safe is revealed
 	public GameObject wallButton1; // need to put in scene outside of camera view before running 
 	public GameObject wallButton2; // initially in wall
+	public GameObject painting;
 	bool inRange = false;  // player is at slot
 	Vector2 initialButtonPosition; // initially have outside of scene somewhere
 	public Vector2 buttonPositionInScene;
 	bool playerHasButton = false;
 	bool buttonInWall = false;
 	bool buttonTaskCompleted = false;
-	//public WallButton WallButton;
-	int numButtonsPressed = 0;
 
 	private void Start()
 	{
@@ -43,6 +42,8 @@ public class buttonSlot : MonoBehaviour
 				Debug.Log("button task completed!");
 				// have both buttons be in pressed state and keep like that
 				// send message to function on painting object
+				painting.SendMessage("movePainting");
+				
 			}
 
 			if (inRange && playerHasButton && Input.GetKeyDown(KeyCode.G))

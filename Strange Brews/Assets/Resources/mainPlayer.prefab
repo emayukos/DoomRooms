@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   devTesting: 0
-  photonView: {fileID: 2429486654257784908}
+  photoView: {fileID: 2429486654257784908}
 --- !u!114 &2429486654257784908
 MonoBehaviour:
   m_ObjectHideFlags: 0

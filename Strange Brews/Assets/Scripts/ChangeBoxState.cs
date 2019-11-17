@@ -11,12 +11,16 @@ public class ChangeBoxState : MonoBehaviour
 	private bool buttonCreated = false;
 	Vector2 initialButtonPosition;
 	public Vector2 buttonPositionInScene;
+	private AudioSource source;
+	public AudioClip soundEffect;
 
 
 	private void Start()
 	{
 		initialButtonPosition = boxButtonPrefab.transform.position;
 		// -3.488, -3.61, 0
+		source = GetComponent<AudioSource>();
+		
 	}
 
 
@@ -26,6 +30,10 @@ public class ChangeBoxState : MonoBehaviour
 		{
 			// open box 
 			GetComponent<SpriteRenderer>().sprite = openBox;
+			if (soundEffect != null)
+            {
+                source.PlayOneShot(soundEffect);
+            }
             // move button object into scene (inside box)
             if (!buttonCreated)
 			{
@@ -47,11 +55,17 @@ public class ChangeBoxState : MonoBehaviour
 		if (col.gameObject.CompareTag("Player"))
         {
 			inRange = false;
+			
+			
             // close box when player moves out of trigger boundary
             GetComponent<SpriteRenderer>().sprite = closedBox;
             
             if(buttonCreated)
 			{
+				if (soundEffect != null)
+            {
+                source.PlayOneShot(soundEffect);
+            }
 				boxButtonPrefab.transform.position = initialButtonPosition;
 				buttonCreated = false;
 			}

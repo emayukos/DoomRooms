@@ -10,5 +10,9 @@ public class PaintingInteraction : MonoBehaviour
     public void movePainting() {
         // when button is pressed
         transform.position = transform.position + new Vector3(0, 5, 0);
+		//Destroy(gameObject);
+        
+        
+        
     }
 }
