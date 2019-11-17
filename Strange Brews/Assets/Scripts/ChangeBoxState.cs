@@ -6,7 +6,7 @@ public class ChangeBoxState : MonoBehaviour
 {
 	public Sprite closedBox;
 	public Sprite openBox;
-	public GameObject buttonPrefab;
+	public GameObject boxButtonPrefab;
 	private bool inRange = false;
 	private bool buttonCreated = false;
 	Vector2 initialButtonPosition;
@@ -15,7 +15,7 @@ public class ChangeBoxState : MonoBehaviour
 
 	private void Start()
 	{
-		initialButtonPosition = buttonPrefab.transform.position;
+		initialButtonPosition = boxButtonPrefab.transform.position;
 		// -3.488, -3.61, 0
 	}
 
@@ -29,7 +29,7 @@ public class ChangeBoxState : MonoBehaviour
             // move button object into scene (inside box)
             if (!buttonCreated)
 			{
-				buttonPrefab.transform.position = buttonPositionInScene;
+				boxButtonPrefab.transform.position = buttonPositionInScene;
 			    //Instantiate(buttonPrefab, transform.position, Quaternion.identity);
 				buttonCreated = true;
 			}
@@ -50,10 +50,9 @@ public class ChangeBoxState : MonoBehaviour
             // close box when player moves out of trigger boundary
             GetComponent<SpriteRenderer>().sprite = closedBox;
             
-            // if button object exists, destroy it
             if(buttonCreated)
 			{
-				buttonPrefab.transform.position = initialButtonPosition;
+				boxButtonPrefab.transform.position = initialButtonPosition;
 				buttonCreated = false;
 			}
         }
