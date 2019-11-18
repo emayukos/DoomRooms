@@ -55,3 +55,18 @@ TagManager:
   - name: player
     uniqueID: 4290405347
     locked: 0
+  - name: candle
+    uniqueID: 1370407315
+    locked: 0
+  - name: table
+    uniqueID: 244416385
+    locked: 0
+  - name: mantle
+    uniqueID: 3731854847
+    locked: 0
+  - name: boxes
+    uniqueID: 1277921941
+    locked: 0
+  - name: vials
+    uniqueID: 3717054221
+    locked: 0
