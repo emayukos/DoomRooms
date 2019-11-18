@@ -58,5 +58,7 @@ public class PickUp : Photon.MonoBehaviour
         inventory.GetComponent<Inventory>().addItem(itemNameFound);
         //removes physical item object from scene
         PhotonNetwork.Destroy(gameObject);
+        //gameObject.SetActive(false);
+       
     }
 }

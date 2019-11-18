@@ -35,6 +35,7 @@ public class ChangeBoxState : MonoBehaviour
                 source.PlayOneShot(soundEffect);
             }
             // move button object inside box if it hasn't been picked up
+            //if (boxButtonPrefab.activeInHierarchy == true )
             if(GameObject.Find("buttonUnpressed") != null)
 			{
 				boxButtonPrefab.transform.position = buttonPositionInScene;
