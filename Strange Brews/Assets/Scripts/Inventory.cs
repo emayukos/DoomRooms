@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : Photon.MonoBehaviour
 {
     private bool HasFinalKey = false;
-    private string[] itemlist = new string[3];
+    private string[] itemlist = new string[10];
     private int numItems = 0;
     GameObject inventoryMenuText;
 
@@ -31,10 +31,11 @@ public class Inventory : Photon.MonoBehaviour
         {
             //adds items to next open position in inventory array
             itemlist[numItems] = itemName;
+			Debug.Log(itemName);
             numItems++;
 
             //adds item to inventory display list
-            inventoryMenuText.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, itemName);
+            //inventoryMenuText.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, itemName);
 
             //checks for item required for room completion, sets status for leaving room if found
             if (itemName == "Final Key"){

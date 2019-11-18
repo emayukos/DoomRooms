@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class buttonSlot : MonoBehaviour
 {
 	// on trigger enter
 	// if E is pressed, check inventory for button (for now just use bool)
@@ -14,11 +14,87 @@ public class NewBehaviourScript : MonoBehaviour
 	// and toggle button1Pressed to true. if button1Pressed and button2Pressed, both buttons permanantly 
 	// get the button pressed sprite and they stop blinking. picture frame moves up and 
 	// safe is revealed
-	
+	public GameObject wallButton1; // need to put in scene outside of camera view before running 
+	public GameObject wallButton2; // initially in wall
+	public GameObject painting;
+	bool inRange = false;  // player is at slot
+	Vector2 initialButtonPosition; // initially have outside of scene somewhere
+	public Vector2 buttonPositionInScene;
+	bool playerHasButton = false;
+	bool buttonInWall = false;
+	bool buttonTaskCompleted = false;
 
-	// Update is called once per frame
-	void Update()
-    {
-        
-    }
+	private void Start()
+	{
+		initialButtonPosition = wallButton1.transform.position;
+	}
+
+	private void Update()
+	{
+		// press G to get button from inventory
+		// won't do anything if player doesn't have the button yet
+		if (!buttonTaskCompleted)
+		{
+			if (wallButton1.GetComponent<WallButton>().isPressed && wallButton2.GetComponent<WallButton>().isPressed)
+			{
+				// keep both buttons pressed
+				buttonTaskCompleted = true;
+				Debug.Log("button task completed!");
+				// have both buttons be in pressed state and keep like that
+				// send message to function on painting object
+				painting.SendMessage("movePainting");
+				
+			}
+
+			if (inRange && Input.GetKeyDown(KeyCode.G))
+			{
+				if (GameObject.Find("Inventory").GetComponent<Inventory>().searchItem("buttonUnpressed"))
+				{
+					// put button 1 in wall
+
+					//Instantiate(wallButton1, buttonPositionInScene, Quaternion.identity);
+					wallButton1.transform.position = buttonPositionInScene;
+					// make both buttons pressable
+					wallButton1.SendMessage("enableButton");
+					wallButton2.SendMessage("enableButton");
+					// have this and the other button light up and blink
+					buttonInWall = true;
+				}
+				else
+				{
+					Debug.Log("not working");
+				}
+
+			}
+
+			//if (inRange && buttonInWall)
+			//{
+			//	if (Input.GetKeyDown(KeyCode.E)) // press E to press button
+			//	{
+			//		// pressing button
+			//		wallButton1.SendMessage("pressButton");
+			//		// stop blinking
+			//		// if both buttons are pressed, keep them both pressed down
+			//	}
+			//	else // unpress button
+			//	{
+			//		wallButton1.SendMessage("unpressButton");
+			//	}
+
+			//}
+		}
+
+
+
+	}
+
+	private void OnTriggerEnter2D(Collider2D col) // change this to on button press
+	{
+		inRange |= col.gameObject.CompareTag("Player");
+	}
+
+	private void OnTriggerExit2D(Collider2D col)
+	{
+		inRange &= !col.gameObject.CompareTag("Player");
+	}
 }

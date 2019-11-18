@@ -6,17 +6,21 @@ public class ChangeBoxState : MonoBehaviour
 {
 	public Sprite closedBox;
 	public Sprite openBox;
-	public GameObject buttonPrefab;
+	public GameObject boxButtonPrefab;
 	private bool inRange = false;
-	private bool buttonCreated = false;
+	//private bool buttonCreated = false;
 	Vector2 initialButtonPosition;
 	public Vector2 buttonPositionInScene;
+	private AudioSource source;
+	public AudioClip soundEffect;
 
 
 	private void Start()
 	{
-		initialButtonPosition = buttonPrefab.transform.position;
+		initialButtonPosition = boxButtonPrefab.transform.position;
 		// -3.488, -3.61, 0
+		source = GetComponent<AudioSource>();
+		
 	}
 
 
@@ -26,12 +30,17 @@ public class ChangeBoxState : MonoBehaviour
 		{
 			// open box 
 			GetComponent<SpriteRenderer>().sprite = openBox;
-            // move button object into scene (inside box)
-            if (!buttonCreated)
+			if (soundEffect != null)
+            {
+                source.PlayOneShot(soundEffect);
+            }
+            // move button object inside box if it hasn't been picked up
+            //if (boxButtonPrefab.activeInHierarchy == true )
+            if(GameObject.Find("buttonUnpressed") != null)
 			{
-				buttonPrefab.transform.position = buttonPositionInScene;
+				boxButtonPrefab.transform.position = buttonPositionInScene;
 			    //Instantiate(buttonPrefab, transform.position, Quaternion.identity);
-				buttonCreated = true;
+				//buttonCreated = true;
 			}
 		}
 		
@@ -41,24 +50,29 @@ public class ChangeBoxState : MonoBehaviour
 	{
 		inRange |= col.gameObject.CompareTag("Player");
 	}
-	
-		private void OnTriggerExit2D(Collider2D col)
+
+	private void OnTriggerExit2D(Collider2D col)
 	{
 		if (col.gameObject.CompareTag("Player"))
-        {
+		{
 			inRange = false;
-            // close box when player moves out of trigger boundary
-            GetComponent<SpriteRenderer>().sprite = closedBox;
-            
-            // if button object exists, destroy it
-            if(buttonCreated)
+
+
+			// close box when player moves out of trigger boundary
+			GetComponent<SpriteRenderer>().sprite = closedBox;
+
+
+			if (soundEffect != null)
 			{
-				buttonPrefab.transform.position = initialButtonPosition;
-				buttonCreated = false;
+				source.PlayOneShot(soundEffect);
 			}
-        }
+			if (GameObject.Find("buttonUnpressed") != null)
+				boxButtonPrefab.transform.position = initialButtonPosition;
+		}
 	}
-
-
-
+        
 }
+
+
+
+
