@@ -34,7 +34,7 @@ public class Inventory : Photon.MonoBehaviour
             numItems++;
 
             //adds item to inventory display list
-            inventoryMenuText.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, itemName);
+            //inventoryMenuText.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, itemName);
 
             //checks for item required for room completion, sets status for leaving room if found
             if (itemName == "Final Key"){
