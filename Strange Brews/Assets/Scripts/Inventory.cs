@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : Photon.MonoBehaviour
 {
     private bool HasFinalKey = false;
-    private string[] itemlist = new string[3];
+    private string[] itemlist = new string[10];
     private int numItems = 0;
     GameObject inventoryMenuText;
 
@@ -31,6 +31,7 @@ public class Inventory : Photon.MonoBehaviour
         {
             //adds items to next open position in inventory array
             itemlist[numItems] = itemName;
+			Debug.Log(itemName);
             numItems++;
 
             //adds item to inventory display list
