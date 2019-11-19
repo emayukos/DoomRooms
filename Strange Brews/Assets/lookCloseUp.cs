@@ -25,7 +25,7 @@ public class lookCloseUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isIn && Input.GetKeyDown("e"))
+        if (isIn && Input.GetKeyDown(KeyCode.E))
         {
             // if e is pressed when the user is in range then
             // either the UI close up view is opened or closed
