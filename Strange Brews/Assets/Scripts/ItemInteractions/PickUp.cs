@@ -28,7 +28,7 @@ public class PickUp : Photon.MonoBehaviour
                 //interactionTextBox.GetComponent<InteractText>().DisplayLook("The " + itemNameFound + " was put in the inventory.");
 
                 //adds item to multiplayer inventory text box
-                actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
+                //actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
                 
                 //add item to inventory, remove from scene
                 this.photonView.RPC("pickup", PhotonTargets.All);
@@ -58,5 +58,7 @@ public class PickUp : Photon.MonoBehaviour
         inventory.GetComponent<Inventory>().addItem(itemNameFound);
         //removes physical item object from scene
         PhotonNetwork.Destroy(gameObject);
+        //gameObject.SetActive(false);
+       
     }
 }

@@ -8,7 +8,7 @@ public class ChangeBoxState : MonoBehaviour
 	public Sprite openBox;
 	public GameObject boxButtonPrefab;
 	private bool inRange = false;
-	private bool buttonCreated = false;
+	//private bool buttonCreated = false;
 	Vector2 initialButtonPosition;
 	public Vector2 buttonPositionInScene;
 	private AudioSource source;
@@ -34,12 +34,13 @@ public class ChangeBoxState : MonoBehaviour
             {
                 source.PlayOneShot(soundEffect);
             }
-            // move button object into scene (inside box)
-            if (!buttonCreated)
+            // move button object inside box if it hasn't been picked up
+            //if (boxButtonPrefab.activeInHierarchy == true )
+            if(GameObject.Find("buttonUnpressed") != null)
 			{
 				boxButtonPrefab.transform.position = buttonPositionInScene;
 			    //Instantiate(buttonPrefab, transform.position, Quaternion.identity);
-				buttonCreated = true;
+				//buttonCreated = true;
 			}
 		}
 		
@@ -49,29 +50,29 @@ public class ChangeBoxState : MonoBehaviour
 	{
 		inRange |= col.gameObject.CompareTag("Player");
 	}
-	
-		private void OnTriggerExit2D(Collider2D col)
+
+	private void OnTriggerExit2D(Collider2D col)
 	{
 		if (col.gameObject.CompareTag("Player"))
-        {
+		{
 			inRange = false;
-			
-			
-            // close box when player moves out of trigger boundary
-            GetComponent<SpriteRenderer>().sprite = closedBox;
-            
-            if(buttonCreated)
+
+
+			// close box when player moves out of trigger boundary
+			GetComponent<SpriteRenderer>().sprite = closedBox;
+
+
+			if (soundEffect != null)
 			{
-				if (soundEffect != null)
-            {
-                source.PlayOneShot(soundEffect);
-            }
-				boxButtonPrefab.transform.position = initialButtonPosition;
-				buttonCreated = false;
+				source.PlayOneShot(soundEffect);
 			}
-        }
+			if (GameObject.Find("buttonUnpressed") != null)
+				boxButtonPrefab.transform.position = initialButtonPosition;
+		}
 	}
-
-
-
+        
 }
+
+
+
+

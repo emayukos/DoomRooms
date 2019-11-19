@@ -1809,7 +1809,7 @@ GameObject:
   - component: {fileID: 1105648621}
   - component: {fileID: 1105648622}
   m_Layer: 0
-  m_Name: button_hole (1)
+  m_Name: buttonSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3131,7 +3131,7 @@ PrefabInstance:
     - target: {fileID: 57516206425987330, guid: 981c4f604ff524a10ae517ca017db09e,
         type: 3}
       propertyPath: m_Name
-      value: 'missingWallButtonUnpressed '
+      value: wallbutton1
       objectReference: {fileID: 0}
     - target: {fileID: 57516206425987332, guid: 981c4f604ff524a10ae517ca017db09e,
         type: 3}
@@ -3188,6 +3188,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 57516206425987331, guid: 981c4f604ff524a10ae517ca017db09e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 981c4f604ff524a10ae517ca017db09e, type: 3}
 --- !u!1 &1505819036 stripped
@@ -3209,7 +3214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnabled: 0
-  isPressed: 1
+  isPressed: 0
   buttonUnpressed: {fileID: 21300000, guid: 2969b42b41ee5a841a6e25668846fce0, type: 3}
   buttonPressed: {fileID: 21300000, guid: 6e058938710c1004bb120692f46dc561, type: 3}
   pressSoundEffect: {fileID: 0}
@@ -4479,7 +4484,7 @@ PrefabInstance:
     - target: {fileID: 57516206425987330, guid: 981c4f604ff524a10ae517ca017db09e,
         type: 3}
       propertyPath: m_Name
-      value: wall-buttonUnpressed
+      value: wallbutton2
       objectReference: {fileID: 0}
     - target: {fileID: 57516206425987332, guid: 981c4f604ff524a10ae517ca017db09e,
         type: 3}
@@ -4556,8 +4561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecba9bc5b13824033af93913a41f7560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isPressed: 1
+  isEnabled: 0
+  isPressed: 0
   buttonUnpressed: {fileID: 21300000, guid: 2969b42b41ee5a841a6e25668846fce0, type: 3}
   buttonPressed: {fileID: 21300000, guid: 8c43d9c6c7d5148139d0e619a5bd0603, type: 3}
   pressSoundEffect: {fileID: 8300000, guid: c7e6983830dbd48479246e0aac34a99b, type: 3}
@@ -4785,6 +4790,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3.13, y: 3.05}
   m_Direction: 0
+--- !u!114 &690681816120486576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690681816120486572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12221b675b3bc4033aed5cb9cfc99934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8516861246521564835
 PrefabInstance:
   m_ObjectHideFlags: 0

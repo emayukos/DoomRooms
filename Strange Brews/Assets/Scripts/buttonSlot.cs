@@ -46,33 +46,42 @@ public class buttonSlot : MonoBehaviour
 				
 			}
 
-			if (inRange && playerHasButton && Input.GetKeyDown(KeyCode.G))
+			if (inRange && Input.GetKeyDown(KeyCode.G))
 			{
-				// put button 1 in wall
-				wallButton1.transform.position = buttonPositionInScene;
-				// make both buttons pressable
-				wallButton1.SendMessage("enable");
-				wallButton2.SendMessage("enable");
-				// have this and the other button light up and blink
-				buttonInWall = true;
-				playerHasButton = false;
-			}
+				if (GameObject.Find("Inventory").GetComponent<Inventory>().searchItem("buttonUnpressed"))
+				{
+					// put button 1 in wall
 
-			if (inRange && buttonInWall)
-			{
-				if (Input.GetKeyDown(KeyCode.E)) // press E to press button
-				{
-					// pressing button
-					wallButton1.SendMessage("pressButton");
-					// stop blinking
-					// if both buttons are pressed, keep them both pressed down
+					//Instantiate(wallButton1, buttonPositionInScene, Quaternion.identity);
+					wallButton1.transform.position = buttonPositionInScene;
+					// make both buttons pressable
+					wallButton1.SendMessage("enableButton");
+					wallButton2.SendMessage("enableButton");
+					// have this and the other button light up and blink
+					buttonInWall = true;
 				}
-				else // unpress button
+				else
 				{
-					wallButton1.SendMessage("unpressButton");
+					Debug.Log("not working");
 				}
 
 			}
+
+			//if (inRange && buttonInWall)
+			//{
+			//	if (Input.GetKeyDown(KeyCode.E)) // press E to press button
+			//	{
+			//		// pressing button
+			//		wallButton1.SendMessage("pressButton");
+			//		// stop blinking
+			//		// if both buttons are pressed, keep them both pressed down
+			//	}
+			//	else // unpress button
+			//	{
+			//		wallButton1.SendMessage("unpressButton");
+			//	}
+
+			//}
 		}
 
 
