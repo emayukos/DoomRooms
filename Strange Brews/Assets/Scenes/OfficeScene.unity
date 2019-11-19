@@ -274,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75871596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.56, y: 10, z: 0}
+  m_LocalPosition: {x: -0.56, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1547,6 +1547,7 @@ GameObject:
   - component: {fileID: 1028087259}
   - component: {fileID: 1028087258}
   - component: {fileID: 1028087260}
+  - component: {fileID: 1028087262}
   - component: {fileID: 1028087261}
   m_Layer: 0
   m_Name: painting
@@ -1653,9 +1654,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1028087257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ddada5dd8745864096e8508b11dc64c, type: 3}
+  m_Script: {fileID: 11500000, guid: c7e64c0a52911124db1f65bf371d3704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1028087262
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028087257}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1047042704
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,6 +3239,7 @@ MonoBehaviour:
   isPressed: 0
   buttonUnpressed: {fileID: 21300000, guid: 2969b42b41ee5a841a6e25668846fce0, type: 3}
   buttonPressed: {fileID: 21300000, guid: 6e058938710c1004bb120692f46dc561, type: 3}
+  moveP: {fileID: 0}
   pressSoundEffect: {fileID: 0}
 --- !u!61 &1505819038
 BoxCollider2D:
@@ -4565,6 +4588,7 @@ MonoBehaviour:
   isPressed: 0
   buttonUnpressed: {fileID: 21300000, guid: 2969b42b41ee5a841a6e25668846fce0, type: 3}
   buttonPressed: {fileID: 21300000, guid: 8c43d9c6c7d5148139d0e619a5bd0603, type: 3}
+  moveP: {fileID: 0}
   pressSoundEffect: {fileID: 8300000, guid: c7e6983830dbd48479246e0aac34a99b, type: 3}
 --- !u!61 &57516206312303115
 BoxCollider2D:

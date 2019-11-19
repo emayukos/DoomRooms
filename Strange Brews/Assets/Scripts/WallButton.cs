@@ -10,6 +10,7 @@ public class WallButton : MonoBehaviour
 	private bool inRange = false;
 	public Sprite buttonUnpressed;
 	public Sprite buttonPressed;
+    public movePainting moveP;
 
 	private AudioSource source;
     public AudioClip pressSoundEffect;
@@ -63,6 +64,7 @@ public class WallButton : MonoBehaviour
 		{
 			GetComponent<SpriteRenderer>().sprite = buttonPressed;
 			isPressed = true;
+            moveP.movePaintUp();
 		}
 	}
 	
