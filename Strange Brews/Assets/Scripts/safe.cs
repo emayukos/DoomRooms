@@ -7,7 +7,7 @@ public class safe : MonoBehaviour
     [SerializeField]
     GameObject codePanel, closedSafe, openedSafe;
 
-    private bool isActive;
+    private bool isActive = true;
 
 
 
@@ -39,7 +39,6 @@ public class safe : MonoBehaviour
         {
             if (inRange && Input.GetKeyDown(KeyCode.E) && !isSafeOpened)
             {
-                Debug.Log("pressed e");
                 if (UIopen == false)
                 {
                     codePanel.SetActive(true);
