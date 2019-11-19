@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelChanger : MonoBehaviour
+public class LevelChanger : Photon.MonoBehaviour
 {
 	public Animator animator;
 	private int roomNumber = 1;

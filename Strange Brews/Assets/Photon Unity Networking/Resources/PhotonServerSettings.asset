@@ -48,4 +48,8 @@ MonoBehaviour:
   - DisplayLook
   - AddText
   - openSafe
+  - OpenBox
+  - CloseBox
+  - addItem
+  - searchItem
   DisableAutoOpenWizard: 1

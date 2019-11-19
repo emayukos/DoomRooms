@@ -80,7 +80,7 @@ public class WallButton : MonoBehaviour
 	
 		private void OnTriggerExit2D(Collider2D col)
 	{
-		inRange &= !col.gameObject.CompareTag("Player");
+		inRange &= !(col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine);
 	}
 	
 	

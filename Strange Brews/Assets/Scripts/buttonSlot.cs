@@ -90,11 +90,11 @@ public class buttonSlot : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D col) // change this to on button press
 	{
-		inRange |= col.gameObject.CompareTag("Player");
+		inRange |= col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine;
 	}
 
 	private void OnTriggerExit2D(Collider2D col)
 	{
-		inRange &= !col.gameObject.CompareTag("Player");
+		inRange &= !(col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine);
 	}
 }

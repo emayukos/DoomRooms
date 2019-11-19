@@ -28,6 +28,13 @@ public class ChangeBoxState : MonoBehaviour
 	{
 		if(inRange && Input.GetKeyDown(KeyCode.E)) // make icon that says "press E" to open
 		{
+			OpenBox();
+		}
+		
+	}
+	[PunRPC]
+	private void OpenBox()
+	{
 			// open box 
 			GetComponent<SpriteRenderer>().sprite = openBox;
 			if (soundEffect != null)
@@ -41,26 +48,31 @@ public class ChangeBoxState : MonoBehaviour
 				boxButtonPrefab.transform.position = buttonPositionInScene;
 			    //Instantiate(buttonPrefab, transform.position, Quaternion.identity);
 				//buttonCreated = true;
-			}
-		}
-		
+			}	
+	
 	}
+	
 
 	private void OnTriggerEnter2D(Collider2D col) // change this to on button press
 	{
-		inRange |= col.gameObject.CompareTag("Player");
+		inRange |= col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine;
 	}
 
 	private void OnTriggerExit2D(Collider2D col)
 	{
-		if (col.gameObject.CompareTag("Player"))
+		if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
 		{
 			inRange = false;
-
+			CloseBox();
+		}
+	}
+	
+	[PunRPC]
+	private void CloseBox()
+	{
 
 			// close box when player moves out of trigger boundary
 			GetComponent<SpriteRenderer>().sprite = closedBox;
-
 
 			if (soundEffect != null)
 			{
@@ -68,10 +80,12 @@ public class ChangeBoxState : MonoBehaviour
 			}
 			if (GameObject.Find("buttonUnpressed") != null)
 				boxButtonPrefab.transform.position = initialButtonPosition;
-		}
 	}
-        
+       
+    
+     //private void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) 
 }
+
 
 
 
