@@ -28,13 +28,17 @@ MonoBehaviour:
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
+  - AddText
   - Chat
   - ColorRpc
   - DestroyRpc
+  - DisplayLook
   - DoJump
   - Flash
   - InstantiateRpc
   - Marco
+  - openSafe
+  - pickup
   - PickupItemInit
   - Polo
   - PunPickup
@@ -43,9 +47,5 @@ MonoBehaviour:
   - RequestForPickupItems
   - RequestForPickupTimes
   - TaggedPlayer
-  - pickup
   - unlockThing
-  - DisplayLook
-  - AddText
-  - openSafe
   DisableAutoOpenWizard: 1
