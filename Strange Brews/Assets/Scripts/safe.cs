@@ -13,7 +13,7 @@ public class safe : MonoBehaviour
 
     public bool isSafeOpened = false; // should not initially be open
     private bool UIopen = false;
-    private bool isIn = false;
+    private bool inRange = false;
 
     public AudioClip safeopening;
     private AudioSource source;
@@ -37,7 +37,7 @@ public class safe : MonoBehaviour
     {
         if (isActive)
         {
-            if (isIn && Input.GetKeyDown("e") && !isSafeOpened)
+            if (inRange && Input.GetKeyDown(KeyCode.E) && !isSafeOpened)
             {
                 Debug.Log("pressed e");
                 if (UIopen == false)
@@ -60,8 +60,6 @@ public class safe : MonoBehaviour
     [PunRPC]
     void openSafe()
     {
-        
-
         source.PlayOneShot(safeopening, 0.03f);
         codePanel.SetActive(false);
         closedSafe.SetActive(false);
@@ -71,20 +69,28 @@ public class safe : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
+        if(collision.gameObject.CompareTag("Player"))
         {
-            isIn = true;
+            if (collision.GetComponent<PhotonView>().isMine)
+            {
+                inRange = true;
+            }
+            
         } 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
+        if(collision.gameObject.CompareTag("Player"))
         {
-            isIn = false;
-            codePanel.SetActive(false);
-            UIopen = !UIopen;
+            if (collision.GetComponent<PhotonView>().isMine)
+            {
+                inRange = false;
+                codePanel.SetActive(false);
+                UIopen = !UIopen;
+            }
+            
         }
     }
 
