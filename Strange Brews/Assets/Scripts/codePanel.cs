@@ -58,8 +58,7 @@ public class codePanel : MonoBehaviour
 	{
 		if (codeTextValue.Equals(code))
 		{
-            this.photonView.RPC("openSafe", PhotonTargets.All);
-            
+            this.photonView.RPC("openSafe", PhotonTargets.All); 
 		}
         else
         {
