@@ -8,7 +8,7 @@ public class PickUp : Photon.MonoBehaviour
     GameObject actionTextBox;
 
     private string itemNameFound = null;
-    private string itemDescription = null;
+    //private string itemDescription = null;
 
 
     void Start()

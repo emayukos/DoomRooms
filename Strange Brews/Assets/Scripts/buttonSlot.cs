@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class buttonSlot : MonoBehaviour
+public class buttonSlot : Photon.MonoBehaviour
 {
 	// on trigger enter
 	// if E is pressed, check inventory for button (for now just use bool)
@@ -22,7 +22,7 @@ public class buttonSlot : MonoBehaviour
 	public Vector2 buttonPositionInScene;
 	bool playerHasButton = false;
 	bool buttonInWall = false;
-	bool buttonTaskCompleted = false;
+	bool buttonTaskCompleted = false; // need rpc
 
 	private void Start()
 	{
@@ -38,12 +38,7 @@ public class buttonSlot : MonoBehaviour
 			if (wallButton1.GetComponent<WallButton>().isPressed && wallButton2.GetComponent<WallButton>().isPressed)
 			{
 				// keep both buttons pressed
-				buttonTaskCompleted = true;
-				Debug.Log("button task completed!");
-				// have both buttons be in pressed state and keep like that
-				// send message to function on painting object
-				painting.SendMessage("movePainting");
-				
+				tempFunctionRPC();				
 			}
 
 			if (inRange && Input.GetKeyDown(KeyCode.G))
@@ -51,14 +46,9 @@ public class buttonSlot : MonoBehaviour
 				if (GameObject.Find("Inventory").GetComponent<Inventory>().searchItem("buttonUnpressed"))
 				{
 					// put button 1 in wall
-
 					//Instantiate(wallButton1, buttonPositionInScene, Quaternion.identity);
-					wallButton1.transform.position = buttonPositionInScene;
-					// make both buttons pressable
-					wallButton1.SendMessage("enableButton");
-					wallButton2.SendMessage("enableButton");
-					// have this and the other button light up and blink
-					buttonInWall = true;
+					putButtonInWallRPC();
+					
 				}
 				else
 				{
@@ -96,5 +86,40 @@ public class buttonSlot : MonoBehaviour
 	private void OnTriggerExit2D(Collider2D col)
 	{
 		inRange &= !(col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine);
+	}
+	
+	
+	
+	void tempFunctionRPC()
+	{
+		photonView.RPC("tempFunction", PhotonTargets.All);
+	}
+	
+	[PunRPC]
+	void tempFunction()
+	{
+		buttonTaskCompleted = true;
+		Debug.Log("button task completed!");
+		// have both buttons be in pressed state and keep like that
+		// send message to function on painting object
+		painting.SendMessage("movePainting"); // change to RPC later
+	}
+	
+	
+	
+	void putButtonInWallRPC()
+	{
+		photonView.RPC("putButtonInWall", PhotonTargets.All);
+	}
+	
+	[PunRPC]
+	void putButtonInWall()
+	{
+		wallButton1.transform.position = buttonPositionInScene;
+		// make both buttons pressable
+		wallButton1.SendMessage("enableButton");
+		wallButton2.SendMessage("enableButton");
+		// have this and the other button light up and blink
+		buttonInWall = true;
 	}
 }

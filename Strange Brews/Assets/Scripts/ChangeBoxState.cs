@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeBoxState : MonoBehaviour
+public class ChangeBoxState : Photon.MonoBehaviour
 {
+	[SerializeField]
+	public GameObject boxButtonPrefab;
+	
 	public Sprite closedBox;
 	public Sprite openBox;
-	public GameObject boxButtonPrefab;
 	private bool inRange = false;
 	//private bool buttonCreated = false;
 	Vector2 initialButtonPosition;
 	public Vector2 buttonPositionInScene;
 	private AudioSource source;
 	public AudioClip soundEffect;
+	private bool isOpen = false;
 
 
 	private void Start()
@@ -28,15 +31,17 @@ public class ChangeBoxState : MonoBehaviour
 	{
 		if(inRange && Input.GetKeyDown(KeyCode.E)) // make icon that says "press E" to open
 		{
-			OpenBox();
+			this.photonView.RPC("OpenBox", PhotonTargets.All);
 		}
+		
 		
 	}
 	[PunRPC]
-	private void OpenBox()
+	void OpenBox()
 	{
 			// open box 
 			GetComponent<SpriteRenderer>().sprite = openBox;
+			isOpen = true;
 			if (soundEffect != null)
             {
                 source.PlayOneShot(soundEffect);
@@ -48,6 +53,7 @@ public class ChangeBoxState : MonoBehaviour
 				boxButtonPrefab.transform.position = buttonPositionInScene;
 			    //Instantiate(buttonPrefab, transform.position, Quaternion.identity);
 				//buttonCreated = true;
+				
 			}	
 	
 	}
@@ -63,14 +69,15 @@ public class ChangeBoxState : MonoBehaviour
 		if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
 		{
 			inRange = false;
-			CloseBox();
+			this.photonView.RPC("CloseBox", PhotonTargets.All);
 		}
 	}
 	
 	[PunRPC]
-	private void CloseBox()
+	void CloseBox()
 	{
-
+		if (isOpen)
+		{
 			// close box when player moves out of trigger boundary
 			GetComponent<SpriteRenderer>().sprite = closedBox;
 
@@ -80,7 +87,25 @@ public class ChangeBoxState : MonoBehaviour
 			}
 			if (GameObject.Find("buttonUnpressed") != null)
 				boxButtonPrefab.transform.position = initialButtonPosition;
+			isOpen = false;
+		}
 	}
+	
+	   // private void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    //{
+    //    // local players data
+    //    if (stream.isWriting)
+    //    {
+    //        stream.SendNext(transform.position);
+    //        stream.SendNext(transform.localScale);
+    //    }
+    //    else
+    //    {
+    //        selfPosition = (Vector3)stream.ReceiveNext();
+    //        selfScale = (Vector3)stream.ReceiveNext();
+
+    //    }
+    //}
        
     
      //private void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) 
