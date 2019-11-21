@@ -61,6 +61,7 @@ public class Inventory : Photon.MonoBehaviour
             if (itemlist[i] == itemName)
             {
                 notFound = false;
+                numItems--;
             }
             else
             {
@@ -74,7 +75,7 @@ public class Inventory : Photon.MonoBehaviour
             i++;
         }
 
-        //inventoryMenuText.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, InventoryToString());
+        inventoryMenuText.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, InventoryToString());
     }
 
 
