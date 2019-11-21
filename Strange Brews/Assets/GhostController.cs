@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GhostController : MonoBehaviour
 {
+	public PhotonView photoView;
     // movement variable
     public float moveSpeed = 4f;
 
@@ -64,6 +65,11 @@ public class GhostController : MonoBehaviour
         thisAnim.SetFloat("DirX", dir.x);
         thisAnim.SetFloat("DirY", dir.y);
     }
+    
+    
+    
+    
+    
 }
 /**
     //  What is the maximum speed we want the Ghost to walk at
