@@ -56,4 +56,9 @@ public class Door : Photon.MonoBehaviour
     	GetComponent<Renderer>().material = unborder;
     }
     
+    void HasFinalKey()
+	{
+		hasFinalKey = true;
+	}
+    
 }
