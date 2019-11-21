@@ -12,14 +12,20 @@ public class GhostController : MonoBehaviour
     Animator thisAnim;
     float lastX, lastY;
 
+    Rigidbody2D rbody;
+
     private void Start()
     {
         thisAnim = GetComponent<Animator>();
+        rbody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
         Move();
+
+        //stops rotation after hitting a collider
+        rbody.MoveRotation(0.0f);
     }
 
     void Move()
@@ -31,6 +37,10 @@ public class GhostController : MonoBehaviour
 
         transform.position += rightMovement;
         transform.position += upMovement;
+
+        //stops drifting with transform movement after hitting a collider
+        rbody.velocity = new Vector2(0, 0);
+        rbody.velocity = new Vector2(moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), moveSpeed * Time.deltaTime * Input.GetAxis("Vertical"));
 
         UpdateAnimation(heading);
     }
