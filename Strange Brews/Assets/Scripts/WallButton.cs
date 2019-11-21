@@ -14,6 +14,8 @@ public class WallButton : Photon.MonoBehaviour
 	private AudioSource source;
     public AudioClip pressSoundEffect;
 
+    public Light greenlight;
+
 
 	// can have another script that makes buttons blink if you wanted to
 
@@ -53,12 +55,16 @@ public class WallButton : Photon.MonoBehaviour
 	void pressButtonRPC()
 	{
 		photonView.RPC("pressButton", PhotonTargets.All);
+        //turn on light
+        greenlight.gameObject.SetActive(true);
 	}
 	
 	void unpressButtonRPC()
 	{
 		photonView.RPC("unpressButton", PhotonTargets.All);
-	}
+        //turn off light
+        greenlight.gameObject.SetActive(false);
+    }
 	
 	
 	[PunRPC] 

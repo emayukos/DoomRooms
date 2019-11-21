@@ -9173,6 +9173,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ghost_right_2_0
       objectReference: {fileID: 0}
+    - target: {fileID: 8260942065861457999, guid: 852a8cf46071e474699df90d22a4d55d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8260942065861457986, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9238,16 +9243,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
-        type: 3}
-      propertyPath: viewIdField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
-        type: 3}
-      propertyPath: instantiationId
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8260942065861457997, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -9263,15 +9258,25 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8260942065861457987, guid: 852a8cf46071e474699df90d22a4d55d,
+    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
-      propertyPath: moveSpeed
-      value: 180
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
+        type: 3}
+      propertyPath: instantiationId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6169753215467533995, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260942065861457987, guid: 852a8cf46071e474699df90d22a4d55d,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 852a8cf46071e474699df90d22a4d55d, type: 3}
