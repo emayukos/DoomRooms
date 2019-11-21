@@ -10,11 +10,10 @@ public class photonHandler : MonoBehaviour
     public photonButtons photonB;
 
     public GameObject mainPlayer;
+	//private GameObject myCharacter;
+	//public Animator animator;
 
-
-
-
-    private void Awake()
+	private void Awake()
     {
         // won't destroy this object when the scene changes bc we will need it later
         DontDestroyOnLoad(this.transform);
@@ -63,6 +62,7 @@ public class photonHandler : MonoBehaviour
     {
         Debug.Log("spawn player");
         PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
+		//animator = myCharacter.GetComponent<Animator>(); // added this
     }
 
     void OnDisable()
