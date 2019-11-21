@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GhostController : MonoBehaviour
 {
+	public PhotonView photoView;
     // movement variable
     public float moveSpeed = 4f;
 
@@ -34,13 +35,12 @@ public class GhostController : MonoBehaviour
 
         Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
-        //transform.position += rightMovement;
-        //transform.position += upMovement;
+        transform.position += rightMovement;
+        transform.position += upMovement;
 
         //stops drifting with transform movement after hitting a collider
-        //rbody.velocity = new Vector2(0, 0);
+        rbody.velocity = new Vector2(0, 0);
         rbody.velocity = new Vector2(moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), moveSpeed * Time.deltaTime * Input.GetAxis("Vertical"));
-        Debug.Log(moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal"));
 
         UpdateAnimation(heading);
     }
@@ -65,6 +65,11 @@ public class GhostController : MonoBehaviour
         thisAnim.SetFloat("DirX", dir.x);
         thisAnim.SetFloat("DirY", dir.y);
     }
+    
+    
+    
+    
+    
 }
 /**
     //  What is the maximum speed we want the Ghost to walk at
