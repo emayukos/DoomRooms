@@ -40,8 +40,8 @@ public class Movement : Photon.MonoBehaviour
 	float selfx;
 	float selfy;
 
-	private GameObject mainCam;
-	public GameObject plCam;
+	//private GameObject mainCam;
+	//public GameObject plCam;
 
 	//private photonHandler avatarSetup;
 
@@ -55,9 +55,9 @@ public class Movement : Photon.MonoBehaviour
 	{
 		if(!devTesting && photonView.isMine)
 		{
-			mainCam = GameObject.Find("Main Camera");
-			mainCam.SetActive(false);
-			plCam.SetActive(true);
+			//mainCam = GameObject.Find("Main Camera");
+			//mainCam.SetActive(false);
+			//plCam.SetActive(true);
 			
 		}
 	}

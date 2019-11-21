@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 7734862794941752596}
   - component: {fileID: 2341975774991126970}
   m_Layer: 0
-  m_Name: player (1)
+  m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,7 +419,6 @@ MonoBehaviour:
   devTesting: 0
   photoView: {fileID: 7734862794941752597}
   moveSpeed: 4
-  plCam: {fileID: 7734862795351448939}
 --- !u!114 &7734862794941752598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,7 +584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7734862795351448936
 Transform:
   m_ObjectHideFlags: 0
