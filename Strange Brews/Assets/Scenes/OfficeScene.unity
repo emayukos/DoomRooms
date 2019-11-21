@@ -2611,7 +2611,7 @@ Transform:
   m_GameObject: {fileID: 1028087257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.31, y: 0.11, z: 0}
-  m_LocalScale: {x: 0.512, y: 0.512, z: 0.512}
+  m_LocalScale: {x: 0.42796034, y: 0.42796034, z: 0.42796034}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
@@ -2656,13 +2656,13 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1028087262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2825,7 +2825,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 5.09
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4608,12 +4608,12 @@ PrefabInstance:
     - target: {fileID: 57516206425987332, guid: 981c4f604ff524a10ae517ca017db09e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.76
+      value: -6.53
       objectReference: {fileID: 0}
     - target: {fileID: 57516206425987332, guid: 981c4f604ff524a10ae517ca017db09e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.97
+      value: -5.34
       objectReference: {fileID: 0}
     - target: {fileID: 57516206425987332, guid: 981c4f604ff524a10ae517ca017db09e,
         type: 3}
@@ -11102,7 +11102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8440483052739532550
 MonoBehaviour:
   m_ObjectHideFlags: 0
