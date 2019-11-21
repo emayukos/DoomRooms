@@ -15,6 +15,7 @@ public class WallButton : Photon.MonoBehaviour
     public AudioClip pressSoundEffect;
 
     public Light greenlight;
+    bool lightOn = false;
 
 
 	// can have another script that makes buttons blink if you wanted to
@@ -39,7 +40,19 @@ public class WallButton : Photon.MonoBehaviour
 				unpressButtonRPC();
 			}
 
+            if (lightOn)
+            {
+                // turn on light
+                greenlight.gameObject.SetActive(true);
+            }
+            else
+            {
+                //turn off light
+                greenlight.gameObject.SetActive(false);
+            }
+
 		}
+
 	}
 	
 	void enableButtonRPC()
@@ -55,15 +68,11 @@ public class WallButton : Photon.MonoBehaviour
 	void pressButtonRPC()
 	{
 		photonView.RPC("pressButton", PhotonTargets.All);
-        //turn on light
-        greenlight.gameObject.SetActive(true);
 	}
 	
 	void unpressButtonRPC()
 	{
 		photonView.RPC("unpressButton", PhotonTargets.All);
-        //turn off light
-        greenlight.gameObject.SetActive(false);
     }
 	
 	
@@ -91,6 +100,7 @@ public class WallButton : Photon.MonoBehaviour
                 source.PlayOneShot(pressSoundEffect);
             }
 			Debug.Log("pressed");
+            lightOn = true;
 		}
 	}
 	[PunRPC] 
@@ -98,6 +108,7 @@ public class WallButton : Photon.MonoBehaviour
 	{
 	 	GetComponent<SpriteRenderer>().sprite = buttonUnpressed;
 		isPressed = false;
+        lightOn = false;
 	}
 	
 	
