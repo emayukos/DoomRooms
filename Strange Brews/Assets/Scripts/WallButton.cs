@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallButton : MonoBehaviour
+public class WallButton : Photon.MonoBehaviour
 {	
 	// make public until pickup script is working
     public bool isEnabled = false; // have buttons start off unpressable
@@ -10,7 +10,6 @@ public class WallButton : MonoBehaviour
 	private bool inRange = false;
 	public Sprite buttonUnpressed;
 	public Sprite buttonPressed;
-    private movePainting moveP;
 
 	private AudioSource source;
     public AudioClip pressSoundEffect;
@@ -31,43 +30,64 @@ public class WallButton : MonoBehaviour
 		{
 			if(inRange && Input.GetKeyDown(KeyCode.E)) 
 			{
-				pressButton();
-				// press sound effect only when first pressed
-                if (pressSoundEffect != null)
-                {
-                    source.PlayOneShot(pressSoundEffect);
-                }
-				Debug.Log("pressed");
+				pressButtonRPC();
 			}
 			if(inRange && Input.GetKeyUp(KeyCode.E))
 			{
-				unpressButton();
+				unpressButtonRPC();
 			}
 
 		}
 	}
 	
+	void enableButtonRPC()
+	{
+		photonView.RPC("enableButton", PhotonTargets.All);
+	}
+	
+	void disableButtonRPC()
+	{
+		photonView.RPC("disableButton", PhotonTargets.All);
+	}
+	
+	void pressButtonRPC()
+	{
+		photonView.RPC("pressButton", PhotonTargets.All);
+	}
+	
+	void unpressButtonRPC()
+	{
+		photonView.RPC("unpressButton", PhotonTargets.All);
+	}
+	
+	
+	[PunRPC] 
 	void enableButton()
 	{
 		isEnabled = true;
 	}
-	
+	[PunRPC] 
 	void disableButton()
 	{
 		isEnabled = false;
 	}
 	
-	
+	[PunRPC] 
 	void pressButton()  // only does something when button is enabled 
 	{
 		if (isEnabled)
 		{
 			GetComponent<SpriteRenderer>().sprite = buttonPressed;
 			isPressed = true;
-            moveP.movePaintUp();
+			// press sound effect only when first pressed
+           if (pressSoundEffect != null)
+            {
+                source.PlayOneShot(pressSoundEffect);
+            }
+			Debug.Log("pressed");
 		}
 	}
-	
+	[PunRPC] 
 	void unpressButton()
 	{
 	 	GetComponent<SpriteRenderer>().sprite = buttonUnpressed;
@@ -77,12 +97,12 @@ public class WallButton : MonoBehaviour
 	
 	private void OnTriggerEnter2D(Collider2D col) 
 	{
-		inRange |= col.gameObject.CompareTag("Player");
+		inRange |= (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine);
 	}
 	
 		private void OnTriggerExit2D(Collider2D col)
 	{
-		inRange &= !col.gameObject.CompareTag("Player");
+		inRange &= !(col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine);
 	}
 	
 	
