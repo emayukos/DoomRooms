@@ -6,8 +6,8 @@ public class Unlock : MonoBehaviour
 {
     public PhotonView photonView;
     GameObject inventory;
-    GameObject interactionTextBox;
-    GameObject actionTextBox;
+    GameObject personalTextBox;
+    GameObject networkTextBox;
 
     private string lockedThingFound = null;
     private string lockedThingKey = null;
@@ -18,15 +18,15 @@ public class Unlock : MonoBehaviour
     {
         //find fixed game objects that will be updated with interactions
         inventory = GameObject.Find("Inventory");
-        interactionTextBox = GameObject.Find("Interaction Text");
-        actionTextBox = GameObject.Find("Action Log Text");
+        personalTextBox = GameObject.Find("Personal Message Text");
+        networkTextBox = GameObject.Find("Network Message Text");
     }
 
     void Update()
     {
         if (lockedThingFound != null)
         {
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 //true if the required item is in the inventory
                 unlock = inventory.GetComponent<Inventory>().searchItem(lockedThingKey);
@@ -35,14 +35,16 @@ public class Unlock : MonoBehaviour
                 if(unlock == true)
                 {
                     //record unlocking action in 2-player log, then perform unlocking action
-                    actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, lockedThingFound);
+                    networkTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
+                    networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, lockedThingFound);
                     this.photonView.RPC("unlockThing", PhotonTargets.All);
                 }
                 else
                 {
                     //required item is not in the inventory, let the local player know
                     Debug.Log("This needs a key.");
-                    interactionTextBox.GetComponent<InteractText>().DisplayLook("This needs a key.");
+                    personalTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
+                    personalTextBox.GetComponent<InteractText>().DisplayLook("This needs a key.");
                 }
                 
             }

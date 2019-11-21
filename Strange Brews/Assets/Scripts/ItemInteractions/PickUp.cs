@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUp : Photon.MonoBehaviour
 {
     GameObject inventory;
-    GameObject actionTextBox;
+    GameObject networkTextBox;
 
     private string itemNameFound = null;
     //private string itemDescription = null;
@@ -15,20 +15,18 @@ public class PickUp : Photon.MonoBehaviour
     {
         //find fixed game objects that will be updated with interactions
         inventory = GameObject.Find("Inventory");
-        actionTextBox = GameObject.Find("Action Log Text");
+        networkTextBox = GameObject.Find("Network Message Text");
     }
 
     void Update()
     {
         if (itemNameFound != null)
         {
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                //adds item to local inventory text box
-                //interactionTextBox.GetComponent<InteractText>().DisplayLook("The " + itemNameFound + " was put in the inventory.");
-
                 //adds item to multiplayer inventory text box
-                //actionTextBox.GetComponent<InteractText>().photonView.RPC("AddText", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
+                networkTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
+                networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
                 
                 //add item to inventory, remove from scene
                 this.photonView.RPC("pickup", PhotonTargets.All);
