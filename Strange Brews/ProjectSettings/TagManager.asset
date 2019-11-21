@@ -53,9 +53,6 @@ TagManager:
   - name: item
     uniqueID: 3284626031
     locked: 0
-  - name: player
-    uniqueID: 4290405347
-    locked: 0
   - name: candle
     uniqueID: 1370407315
     locked: 0
@@ -73,4 +70,13 @@ TagManager:
     locked: 0
   - name: popups
     uniqueID: 4182541051
+    locked: 0
+  - name: classroom_behind
+    uniqueID: 3524559933
+    locked: 0
+  - name: classroom_front
+    uniqueID: 2648477091
+    locked: 0
+  - name: player
+    uniqueID: 4290405347
     locked: 0
