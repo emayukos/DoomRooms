@@ -1327,7 +1327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonB: {fileID: 2006652792}
-  mainPlayer: {fileID: 7734862794941752589, guid: 5219615474bb74127ac249d8e9cc1c15,
+  mainPlayer: {fileID: 8260942065861457999, guid: 852a8cf46071e474699df90d22a4d55d,
     type: 3}
 --- !u!4 &1525580312
 Transform:
