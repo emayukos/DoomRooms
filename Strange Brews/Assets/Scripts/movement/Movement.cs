@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Movement : Photon.MonoBehaviour
 {
     public bool devTesting;
@@ -38,6 +39,10 @@ public class Movement : Photon.MonoBehaviour
 	bool movement;
 	float selfx;
 	float selfy;
+
+	//private photonHandler avatarSetup;
+	
+	//public bool UseTransformView = true;
 	
 	
 
@@ -55,6 +60,7 @@ public class Movement : Photon.MonoBehaviour
         position = rbody.position;
         initial_y = position.y;
         thisAnim = GetComponent<Animator>();
+		//avatarSetup = GetComponent<photonHandler>();
 
     }
 
@@ -109,12 +115,15 @@ public class Movement : Photon.MonoBehaviour
 
         transform.position += rightMovement;
         transform.position += upMovement;
-
+		
         UpdateAnimation(heading);
     }
 
     private void smoothNetMovement()
     {
+		//if (UseTransformView)
+			//return; // this will take care of what the code below did before
+    	
         transform.position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 8);
         //transform.localScale = Vector3.Lerp(transform.localScale, selfScale, Time.deltaTime * 8);
     }
@@ -124,7 +133,7 @@ public class Movement : Photon.MonoBehaviour
 
     void UpdateAnimation(Vector3 dir)
     {
-    	
+  	
         if(dir.x == 0f && dir.y == 0f)
         {
 			movement = false;
@@ -155,6 +164,9 @@ public class Movement : Photon.MonoBehaviour
     private void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         // if it is the local player it streams the positions and other things
+        
+   //     if (UseTransformView)
+			//return; // this will take care of what the code below did before
         if (stream.isWriting)
         {
             stream.SendNext(transform.position);

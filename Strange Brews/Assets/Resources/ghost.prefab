@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6169753215467533995}
   - component: {fileID: -8109225739544241386}
   - component: {fileID: -5805484676410330473}
+  - component: {fileID: 2393944753296843420}
   m_Layer: 0
   m_Name: ghost
   m_TagString: Player
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1277921941
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 8067873471669184305, guid: 12845b09be5be465a8bb57ea11e2c56b,
     type: 3}
@@ -150,6 +151,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: -8109225739544241386}
   - {fileID: -5805484676410330473}
+  - {fileID: 2393944753296843420}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
@@ -263,20 +265,110 @@ MonoBehaviour:
     SynchronizeType: 0
     Name: Down_Speed
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: DirX
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: DirY
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Movement
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Last_DirectionX
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: Last_DirectionY
+  - Type: 4
+    SynchronizeType: 1
+    Name: ghostForward
+  - Type: 4
+    SynchronizeType: 1
+    Name: ghostBack
+  - Type: 4
+    SynchronizeType: 1
+    Name: ghostRight
+  - Type: 4
+    SynchronizeType: 1
+    Name: ghostLeft
   m_SynchronizeLayers:
-  - SynchronizeType: 0
+  - SynchronizeType: 1
     LayerIndex: 0
+--- !u!114 &2393944753296843420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8260942065861457999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    InterpolateMoveTowardsAcceleration: 2
+    InterpolateMoveTowardsDeceleration: 2
+    InterpolateSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: -1
+        value: 0
+        inSlope: 0
+        outSlope: Infinity
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 4
+        value: 4
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+    DrawErrorGizmo: 1
+  m_RotationModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0

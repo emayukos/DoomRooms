@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Inventory : Photon.MonoBehaviour
 {
-    private bool HasFinalKey = false;
+    //private bool HasFinalKey = false;
     private string[] itemlist = new string[10];
     private int numItems = 0;
     GameObject inventoryMenuText;
+	public GameObject door;
+
 
 
     void Start()
@@ -39,7 +41,8 @@ public class Inventory : Photon.MonoBehaviour
 
             //checks for item required for room completion, sets status for leaving room if found
             if (itemName == "Final Key"){
-                HasFinalKey = true;
+				door.SendMessage("HasFinalKey"); // send this to door
+                //HasFinalKey = true;
             }
         }
         else
@@ -65,9 +68,9 @@ public class Inventory : Photon.MonoBehaviour
         return isFound;
     }
 
-    public bool hasFinalKey()
-    {
-        return HasFinalKey;
-    }
+    //public bool hasFinalKey()
+    //{
+    //    return HasFinalKey;
+    //}
 
 }

@@ -5776,7 +5776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cfad72280824926b5d93c54b68cde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasFinalKey: 1
+  hasFinalKey: 0
   border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
   unborder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
   levelChanger: {fileID: 8516861246521564836}
@@ -6220,6 +6220,7 @@ GameObject:
   - component: {fileID: 1885260067}
   - component: {fileID: 1885260066}
   - component: {fileID: 1885260071}
+  - component: {fileID: 1885260072}
   m_Layer: 0
   m_Name: Final Key
   m_TagString: Untagged
@@ -6388,6 +6389,18 @@ MonoBehaviour:
   instantiationId: 6
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &1885260072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885260064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee46b010ac774e0b9a38862f66f6be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1905227445
 GameObject:
   m_ObjectHideFlags: 0
@@ -6511,6 +6524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7339006ebcf4083bcad9ab3e6cbd5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 1733116337}
 --- !u!4 &1949627560
 Transform:
   m_ObjectHideFlags: 0
