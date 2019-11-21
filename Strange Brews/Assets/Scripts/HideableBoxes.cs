@@ -36,11 +36,11 @@ public class HideableBoxes : MonoBehaviour
         {
             invOnOff = invOnOff * -1;
         }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            personalMessageBox.SetActive(false);
-            networkMessageBox.SetActive(false);
-        }
+        //if (Input.GetKeyDown(KeyCode.M))
+        //{
+        //    personalMessageBox.SetActive(false);
+        //    networkMessageBox.SetActive(false);
+        //}
 
 
         OpenClose(helpMenu, helpOnOff);

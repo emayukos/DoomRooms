@@ -351,7 +351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25847070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -0.97, z: 1613.6058}
+  m_LocalPosition: {x: 0.1, y: -1.74, z: 1613.6058}
   m_LocalScale: {x: 0.548, y: 0.582, z: 1}
   m_Children:
   - {fileID: 1975841417}
@@ -956,7 +956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304757870}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.10403991, y: -2.8314066, z: 1613.6058}
+  m_LocalPosition: {x: 0.10403991, y: -3.601407, z: 1613.6058}
   m_LocalScale: {x: 0.53580403, y: 0.53580403, z: 0.53580403}
   m_Children:
   - {fileID: 1936204366}
@@ -1018,7 +1018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &325961367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1288,8 +1288,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1010341265
-  m_SortingLayer: 2
+  m_SortingLayerID: 1277921941
+  m_SortingLayer: 7
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: e3b50ce07e20db5428b8ff5ead2949a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1310,7 +1310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375283185}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.40403998, y: -3.011407, z: 1613.6058}
+  m_LocalPosition: {x: 1.25, y: -3.5, z: 1613.6058}
   m_LocalScale: {x: 0.532, y: 0.532, z: 0.532}
   m_Children: []
   m_Father: {fileID: 1105833320}
@@ -2498,7 +2498,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 1, y: -1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -2569,7 +2569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590321571}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.8359604, y: -1.3114066, z: 1613.6058}
+  m_LocalPosition: {x: -4.81, y: -2.31, z: 1613.6058}
   m_LocalScale: {x: 0.36873728, y: 0.39163128, z: 1}
   m_Children: []
   m_Father: {fileID: 1059514452}
@@ -2590,7 +2590,7 @@ MonoBehaviour:
   boxButtonPrefab: {fileID: 690681816120486572}
   closedBox: {fileID: 21300000, guid: 35b5f5942cea14c66aa43958e988d1eb, type: 3}
   openBox: {fileID: 21300000, guid: f1f2b4113db6344a4ba5fb5aa3e7e0cc, type: 3}
-  buttonPositionInScene: {x: -6.56, y: -5.16}
+  buttonPositionInScene: {x: -4.81, y: -2.31}
   soundEffect: {fileID: 8300000, guid: df7407dbd6b444767957d10b03dd6d75, type: 3}
 --- !u!114 &590321576
 MonoBehaviour:
@@ -3174,8 +3174,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730770694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.3359604, y: -2.0714068, z: 1613.6058}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.31, y: -2.96, z: 1613.6058}
+  m_LocalScale: {x: 1, y: 0.73102397, z: 1}
   m_Children: []
   m_Father: {fileID: 1105833320}
   m_RootOrder: 2
@@ -3880,7 +3880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014552921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4559603, y: -2.0414066, z: 1613.6058}
+  m_LocalPosition: {x: -3.4559603, y: -2.811407, z: 1613.6058}
   m_LocalScale: {x: 0.637, y: 0.637, z: 0.637}
   m_Children:
   - {fileID: 496240813}
@@ -5476,7 +5476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313326175}
   m_LocalRotation: {x: -0, y: -0, z: -0.7057473, w: 0.7084636}
-  m_LocalPosition: {x: -1.7959601, y: -2.1114068, z: 1613.6058}
+  m_LocalPosition: {x: -1.7959601, y: -2.8814073, z: 1613.6058}
   m_LocalScale: {x: 0.5579998, y: 0.5579998, z: 0.558}
   m_Children: []
   m_Father: {fileID: 1105833320}
@@ -6690,7 +6690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1527237240
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9211,7 +9211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecba9bc5b13824033af93913a41f7560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 0
+  isEnabled: 1
   isPressed: 0
   buttonUnpressed: {fileID: 21300000, guid: 2969b42b41ee5a841a6e25668846fce0, type: 3}
   buttonPressed: {fileID: 21300000, guid: 8c43d9c6c7d5148139d0e619a5bd0603, type: 3}
@@ -13461,7 +13461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &8440483052739532550
 MonoBehaviour:
   m_ObjectHideFlags: 0

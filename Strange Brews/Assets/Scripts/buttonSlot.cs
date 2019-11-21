@@ -42,15 +42,17 @@ public class buttonSlot : Photon.MonoBehaviour
 				tempFunctionRPC();				
 			}
 
-			if (inRange && Input.GetKeyDown(KeyCode.G))
+			if (inRange && Input.GetKeyDown(KeyCode.E))
 			{
 				if (GameObject.Find("Inventory").GetComponent<Inventory>().searchItem("buttonUnpressed"))
 				{
 					// put button 1 in wall
 					//Instantiate(wallButton1, buttonPositionInScene, Quaternion.identity);
 					putButtonInWallRPC();
-					
-				}
+                    GameObject.Find("Inventory").GetComponent<Inventory>().removeItem("buttonUnpressed");
+
+
+                }
 				else
 				{
 					Debug.Log("not working");

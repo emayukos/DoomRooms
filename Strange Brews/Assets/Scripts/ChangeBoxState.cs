@@ -50,6 +50,9 @@ public class ChangeBoxState : Photon.MonoBehaviour
             //if (boxButtonPrefab.activeInHierarchy == true )
             if(GameObject.Find("buttonUnpressed") != null)
 			{
+            
+                buttonPositionInScene = transform.position;
+                buttonPositionInScene.y -= 0.5f;
 				boxButtonPrefab.transform.position = buttonPositionInScene;
 			    //Instantiate(buttonPrefab, transform.position, Quaternion.identity);
 				//buttonCreated = true;
