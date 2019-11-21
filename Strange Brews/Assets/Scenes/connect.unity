@@ -1306,6 +1306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1525580312}
   - component: {fileID: 1525580311}
+  - component: {fileID: 1525580313}
   m_Layer: 0
   m_Name: photonDontDestroy
   m_TagString: Untagged
@@ -1326,7 +1327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonB: {fileID: 2006652792}
-  mainPlayer: {fileID: 59312851396425131, guid: a887af8eb576f49bd944aa718dc36f28,
+  mainPlayer: {fileID: 7734862794941752589, guid: 5219615474bb74127ac249d8e9cc1c15,
     type: 3}
 --- !u!4 &1525580312
 Transform:
@@ -1342,6 +1343,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1525580313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525580310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1525580311}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 999
+  instantiationId: 999
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1526147232
 GameObject:
   m_ObjectHideFlags: 0

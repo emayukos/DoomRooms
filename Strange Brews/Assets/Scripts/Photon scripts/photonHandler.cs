@@ -11,13 +11,22 @@ public class photonHandler : MonoBehaviour
     public photonButtons photonB;
 
     public GameObject mainPlayer;
-	//private GameObject myCharacter;
+	private GameObject myCharacter;
+
+	public GameObject plCam;
+	private GameObject mainCam;
 	//public Animator animator;
 
 	private void Awake()
     {
         // won't destroy this object when the scene changes bc we will need it later
         DontDestroyOnLoad(this.transform);
+<<<<<<< HEAD
+		//PhotonNetwork.automaticallySyncScene = true;
+=======
+        // PhotonNetwork.automaticallySyncScene = true;
+
+>>>>>>> 69c6f5f9d369b4e6accfbcdca917d9f2475f0aaa
     }
 
     private void OnEnable()
@@ -50,20 +59,37 @@ public class photonHandler : MonoBehaviour
         PhotonNetwork.LoadLevel("MainMenu");
     }
 
+    
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name != "MainMenu")
+<<<<<<< HEAD
+		if (scene.name != "MainMenu")
+		{
+			SpawnPlayer();
+			Debug.Log("loaded room");
+		}
+        
+=======
+        if (scene.name != "MainMenu" && scene.name != "Connect")
         {
             SpawnPlayer();
+            Instantiate(plCam, plCam.transform.position, plCam.transform.rotation);
+            mainCam = GameObject.Find("Main Camera");
+            mainCam.SetActive(false);
+            plCam.SetActive(true);
+
             Debug.Log("loaded room");
         }
+>>>>>>> 69c6f5f9d369b4e6accfbcdca917d9f2475f0aaa
     }
 
     private void SpawnPlayer()
     {
         Debug.Log("spawn player");
 
-		PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
+		myCharacter = PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
+
+		//myCharacter.GetComponent<Canvas>().eventCamera = Camera.main;
 		//animator = myCharacter.GetComponent<Animator>(); // added this
 		// in resource folder
 		//myCharacter = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "ghost"), 
