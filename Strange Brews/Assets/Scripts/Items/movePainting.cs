@@ -14,7 +14,7 @@ public class movePainting : MonoBehaviour
     {
         originalPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
-        movePaintUp();
+        //movePaintUp();
         //stopPainting();
 
     }
