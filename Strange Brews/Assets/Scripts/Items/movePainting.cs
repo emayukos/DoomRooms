@@ -10,29 +10,30 @@ public class movePainting : MonoBehaviour
 
     float currentTime;
 
+    Vector3 stopPos;
+
     private void Start()
     {
         originalPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
+        stopPos = originalPosition + new Vector3(0, 5, 0);
         movePaintUp();
         //stopPainting();
 
     }
-    private void Update()
-    {
-        Vector3 stopPos = originalPosition + new Vector3(0, 5, 0);
-        if (transform.position.y > stopPos.y ){
-            rb.velocity = new Vector2(0, 0);
-        }
-    }
 
     // when the button is pressed, move the painint up by applying velocity for a short period of time 
-    public void movePaintUp() {
+    public void movePaintUp()
+    {
         //rb = GetComponent<Rigidbody2D>();
 
         rb.velocity = new Vector2(0, 2);
-        currentTime = Time.time;
-       
+
+        while (transform.position.y <= stopPos.y){
+            if (transform.position.y == stopPos.y) {
+                rb.velocity = new Vector2(0, 0); 
+            }
+        }
     }
     private void stopPainting() {
         StartCoroutine(Wait());
