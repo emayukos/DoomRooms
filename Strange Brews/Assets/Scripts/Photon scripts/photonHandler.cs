@@ -21,6 +21,8 @@ public class photonHandler : MonoBehaviour
     {
         // won't destroy this object when the scene changes bc we will need it later
         DontDestroyOnLoad(this.transform);
+        // PhotonNetwork.automaticallySyncScene = true;
+
     }
 
     private void OnEnable()
@@ -53,16 +55,17 @@ public class photonHandler : MonoBehaviour
         PhotonNetwork.LoadLevel("MainMenu");
     }
 
+    
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name != "MainMenu")
+        if (scene.name != "MainMenu" && scene.name != "Connect")
         {
             SpawnPlayer();
             Instantiate(plCam, plCam.transform.position, plCam.transform.rotation);
-			mainCam = GameObject.Find("Main Camera");
-			mainCam.SetActive(false);
-			plCam.SetActive(true);
-        
+            mainCam = GameObject.Find("Main Camera");
+            mainCam.SetActive(false);
+            plCam.SetActive(true);
+
             Debug.Log("loaded room");
         }
     }
