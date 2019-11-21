@@ -63,4 +63,5 @@ MonoBehaviour:
   - tempFunction
   - TurnOnProjector
   - TurnOffProjector
+  - movePaintUp
   DisableAutoOpenWizard: 1

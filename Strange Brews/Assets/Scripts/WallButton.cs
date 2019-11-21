@@ -22,8 +22,6 @@ public class WallButton : Photon.MonoBehaviour
 		source = GetComponent<AudioSource>();
 	}
 
-
-
 	private void Update()
 	{
 		if(isEnabled) // can only press button after we've enabled it from another script
@@ -100,7 +98,7 @@ public class WallButton : Photon.MonoBehaviour
 		inRange |= (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine);
 	}
 	
-		private void OnTriggerExit2D(Collider2D col)
+	private void OnTriggerExit2D(Collider2D col)
 	{
 		inRange &= !(col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine);
 	}
