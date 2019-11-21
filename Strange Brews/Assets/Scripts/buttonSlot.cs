@@ -103,6 +103,7 @@ public class buttonSlot : Photon.MonoBehaviour
 		// have both buttons be in pressed state and keep like that
 		// send message to function on painting object
 		painting.SendMessage("movePainting"); // change to RPC later
+		//movePainting.SendMessage("movePaintUp");
 	}
 	
 	

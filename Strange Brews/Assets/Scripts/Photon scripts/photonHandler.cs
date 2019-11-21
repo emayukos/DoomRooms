@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -61,8 +62,16 @@ public class photonHandler : MonoBehaviour
     private void SpawnPlayer()
     {
         Debug.Log("spawn player");
-        PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
+
+		PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
 		//animator = myCharacter.GetComponent<Animator>(); // added this
+		// in resource folder
+		//myCharacter = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "ghost"), 
+										//mainPlayer.transform.position,
+										//mainPlayer.transform.rotation, 0);
+		//myCharacter.transform.parent = mainPlayer.transform;
+		//animator = 
+		
     }
 
     void OnDisable()

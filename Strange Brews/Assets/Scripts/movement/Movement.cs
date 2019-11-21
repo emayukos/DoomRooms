@@ -133,17 +133,7 @@ public class Movement : Photon.MonoBehaviour
 
     void UpdateAnimation(Vector3 dir)
     {
-    	if(Input.GetKey(KeyCode.W)) { // if up key pressed
-			thisAnim.SetBool("ghostBack", true);
-		}
-		if(Input.GetKey(KeyCode.S)) { // if up key pressed
-			thisAnim.SetBool("ghostForward", true);
-		}
-		if(Input.GetKey(KeyCode.A)) { // if up key pressed
-			thisAnim.SetBool("ghostForward", true);
-		}
-		
-    	
+  	
         if(dir.x == 0f && dir.y == 0f)
         {
 			movement = false;
