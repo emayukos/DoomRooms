@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AppID: e56f959c-8c51-4c28-a5aa-e50c9843d7db
   VoiceAppID: 
-  ChatAppID: 
+  ChatAppID: e56f959c-8c51-4c28-a5aa-e50c9843d7db
   HostType: 1
   PreferredRegion: 0
   EnabledRegions: -1
@@ -28,8 +28,10 @@ MonoBehaviour:
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
+  - addItem
   - AddText
   - Chat
+  - CloseBox
   - ColorRpc
   - DestroyRpc
   - DisplayLook
@@ -37,6 +39,7 @@ MonoBehaviour:
   - Flash
   - InstantiateRpc
   - Marco
+  - OpenBox
   - openSafe
   - pickup
   - PickupItemInit
@@ -46,6 +49,16 @@ MonoBehaviour:
   - PunRespawn
   - RequestForPickupItems
   - RequestForPickupTimes
+  - searchItem
   - TaggedPlayer
   - unlockThing
+  - FadeToNextLevel
+  - OnFadeComplete
+  - disableButton
+  - enableButton
+  - pressButton
+  - unpressButton
+  - movePainting
+  - putButtonInWall
+  - tempFunction
   DisableAutoOpenWizard: 1

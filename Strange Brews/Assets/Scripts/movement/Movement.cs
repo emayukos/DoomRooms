@@ -16,6 +16,8 @@ public class Movement : Photon.MonoBehaviour
 
     private Vector3 selfScale;
 
+	private Animator selfAnim;
+
     private float velocity;
 
     private float characterscale;
@@ -25,6 +27,24 @@ public class Movement : Photon.MonoBehaviour
     private Vector2 position;
 
     private float initial_y;
+    
+    // variables from other scripts
+    public float moveSpeed = 4f;
+    
+    // Animation Variables
+    Animator thisAnim;
+    float lastX, lastY;
+
+	bool movement;
+	float selfx;
+	float selfy;
+	
+	
+
+
+
+
+    
 
 
     // Start is called before the first frame update
@@ -34,12 +54,14 @@ public class Movement : Photon.MonoBehaviour
         velocity = 5.0f;
         position = rbody.position;
         initial_y = position.y;
+        thisAnim = GetComponent<Animator>();
 
     }
 
-    // FixedUpdate is called at a fixed rate, while Update is simply called for every rendered frame
-    // FixedUpdate should be used to write the code related to the physics simulation (e.g. applying force, setting velocity and so on)
-    void FixedUpdate()
+
+	// FixedUpdate is called at a fixed rate, while Update is simply called for every rendered frame
+	// FixedUpdate should be used to write the code related to the physics simulation (e.g. applying force, setting velocity and so on)
+	void FixedUpdate()
     {
 
         if (!devTesting)
@@ -52,6 +74,7 @@ public class Movement : Photon.MonoBehaviour
             else
             {
                 smoothNetMovement();
+    
             }
         }
         else
@@ -62,24 +85,70 @@ public class Movement : Photon.MonoBehaviour
 
     }
 
-    private void moveCharacter()
+    //private void moveCharacter()
+    //{
+    //    float h = Input.GetAxis("Horizontal");
+    //    float v = Input.GetAxis("Vertical");
+
+    //    rbody.velocity = new Vector2(velocity * h, velocity * v);
+
+    //    //characterscale = (transform.position.y - (transform.position.y - initial_y) * 0.5f) / initial_y;
+
+    //    //transform.localScale = new Vector3(characterscale, characterscale, characterscale);
+        
+    //    Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
+        
+    //    //UpdateAnimation(heading);
+    //}
+    void moveCharacter()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        Vector3 rightMovement = Vector3.right * moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
+        Vector3 upMovement = Vector3.up * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
 
-        rbody.velocity = new Vector2(velocity * h, velocity * v);
+        Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
-        characterscale = (transform.position.y - (transform.position.y - initial_y) * 0.5f) / initial_y;
+        transform.position += rightMovement;
+        transform.position += upMovement;
 
-        transform.localScale = new Vector3(characterscale, characterscale, characterscale);
+        UpdateAnimation(heading);
     }
 
     private void smoothNetMovement()
     {
         transform.position = Vector3.Lerp(transform.position, selfPosition, Time.deltaTime * 8);
-        transform.localScale = Vector3.Lerp(transform.localScale, selfScale, Time.deltaTime * 8);
+        //transform.localScale = Vector3.Lerp(transform.localScale, selfScale, Time.deltaTime * 8);
     }
+    
+    
 
+
+    void UpdateAnimation(Vector3 dir)
+    {
+    	
+        if(dir.x == 0f && dir.y == 0f)
+        {
+			movement = false;
+            thisAnim.SetFloat("Last_DirectionX", lastX);
+            thisAnim.SetFloat("Last_DirectionY", lastY);
+            thisAnim.SetBool("Movement", movement);
+
+        }
+        else
+        {
+			movement = true;
+            lastX = dir.x;
+            lastY = dir.y;
+            thisAnim.SetBool("Movement", movement);
+
+        }
+
+		selfx = dir.x;
+		selfy = dir.y;
+
+        thisAnim.SetFloat("DirX", selfx);
+        thisAnim.SetFloat("DirY", selfy);
+        //myThirdPersonController myC= GetComponent<myThirdPersonController>();
+    }
 
 
 
@@ -89,12 +158,35 @@ public class Movement : Photon.MonoBehaviour
         if (stream.isWriting)
         {
             stream.SendNext(transform.position);
-            stream.SendNext(transform.localScale);
+            //stream.SendNext(transform.localScale);
+			stream.SendNext(thisAnim.GetBool("Movement"));
+			stream.SendNext(thisAnim.GetFloat("Last_DirectionX"));
+			stream.SendNext(thisAnim.GetFloat("Last_DirectionY"));
+			stream.SendNext(thisAnim.GetFloat("DirX"));
+			stream.SendNext(thisAnim.GetFloat("DirY"));
+			//stream.SendNext(myC._characterState); // int?
+			
+			
+			
         }
         else
         {
             selfPosition = (Vector3)stream.ReceiveNext();
-            selfScale = (Vector3)stream.ReceiveNext();
+			//selfScale = (Vector3)stream.ReceiveNext();
+			movement = (bool)stream.ReceiveNext();
+			lastX = (float)stream.ReceiveNext();
+			lastY = (float)stream.ReceiveNext();
+			selfx = (float)stream.ReceiveNext();
+			selfy = (float)stream.ReceiveNext();
+			//thisAnim.state = (int)stream.ReceiveNext();
+		
+			//myC._characterState = (CharacterState)stream.ReceiveNext();
+			//myC._characterState = (int)stream.ReceiveNext();
+			
+			
+
+            
+            
 
         }
     }

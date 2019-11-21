@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 8260942065861457986}
   - component: {fileID: 8260942065861457997}
   - component: {fileID: 8260942065861457996}
-  - component: {fileID: 8260942065861457987}
   - component: {fileID: 8260942065861457984}
   - component: {fileID: -2526687053237523062}
   - component: {fileID: 6169753215467533995}
+  - component: {fileID: -8109225739544241386}
+  - component: {fileID: -5805484676410330473}
   m_Layer: 0
   m_Name: ghost
   m_TagString: Player
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 8260942065861457999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.3, y: -0.61, z: 0}
-  m_LocalScale: {x: 0.481596, y: 0.481596, z: 0.481596}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.481596}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -105,19 +106,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8260942065861457987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8260942065861457999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5d8803b8b0bf469393d8c66a5176067, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 4
 --- !u!50 &8260942065861457984
 Rigidbody2D:
   serializedVersion: 4
@@ -138,7 +126,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &-2526687053237523062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +148,8 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 8260942065861457987}
+  - {fileID: -8109225739544241386}
+  - {fileID: -5805484676410330473}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
@@ -234,3 +223,60 @@ PolygonCollider2D:
       - {x: 0.525, y: -1.1999999}
       - {x: 0.525, y: -1.13}
       - {x: 0.45499998, y: -1.05}
+--- !u!114 &-8109225739544241386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8260942065861457999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470c85670c66bd0488cbae0b5b0dee0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  devTesting: 0
+  photoView: {fileID: -2526687053237523062}
+  moveSpeed: 4
+--- !u!114 &-5805484676410330473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8260942065861457999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 1
+    SynchronizeType: 0
+    Name: Speed
+  - Type: 1
+    SynchronizeType: 0
+    Name: Up_Speed
+  - Type: 1
+    SynchronizeType: 0
+    Name: Down_Speed
+  - Type: 1
+    SynchronizeType: 0
+    Name: DirX
+  - Type: 1
+    SynchronizeType: 0
+    Name: DirY
+  - Type: 4
+    SynchronizeType: 0
+    Name: Movement
+  - Type: 1
+    SynchronizeType: 0
+    Name: Last_DirectionX
+  - Type: 1
+    SynchronizeType: 0
+    Name: Last_DirectionY
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0

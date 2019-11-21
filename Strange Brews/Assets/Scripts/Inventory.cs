@@ -24,7 +24,7 @@ public class Inventory : Photon.MonoBehaviour
         else
             return true;
     }
-
+    [PunRPC]
     public void addItem(string itemName)
     {
         if (!full())
@@ -47,7 +47,7 @@ public class Inventory : Photon.MonoBehaviour
             Debug.Log("inventory is full");
         }
     }
-
+	[PunRPC]
     public bool searchItem(string itemName)
     {
         //searches for a provided item name in the inventory array

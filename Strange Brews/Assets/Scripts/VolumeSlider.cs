@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class VolumeSlider : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public UnityEngine.UI.Slider slider;
+    public UnityEngine.Audio.AudioMixer mixer;
+    public string parameterName;
+
+    private void Awake()
     {
-        
+        float savedVol = PlayerPrefs.GetFloat(parameterName, slider.maxValue);
+        SetVolume(savedVol);
+        slider.value = savedVol;
+        slider.onValueChanged.AddListener((float _) => SetVolume(_));
     }
 
-    // Update is called once per frame
-    void Update()
+    void SetVolume(float _value)
     {
-        
+        mixer.SetFloat(parameterName, ConvertToDecibel(_value / slider.maxValue));
+        PlayerPrefs.SetFloat(parameterName, _value);
+    }
+
+    public float ConvertToDecibel(float _value)
+    {
+        return Mathf.Log10(Mathf.Max(_value, 0.0001f)) * 20f;
     }
 }
