@@ -1329,7 +1329,6 @@ MonoBehaviour:
   photonB: {fileID: 2006652792}
   mainPlayer: {fileID: 7734862794941752589, guid: 5219615474bb74127ac249d8e9cc1c15,
     type: 3}
-  plCam: {fileID: 1589916778957909525, guid: d7efb9e8dd0934da1b8807483f8fea93, type: 3}
 --- !u!4 &1525580312
 Transform:
   m_ObjectHideFlags: 0

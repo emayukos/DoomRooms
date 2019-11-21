@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     {
         // this just moves it to the next scene in the queue
         // add to the queue in file/build settings
-        PhotonNetwork.LoadLevel("OfficeScene");
+        PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
