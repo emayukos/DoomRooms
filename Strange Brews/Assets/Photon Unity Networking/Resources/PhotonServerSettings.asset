@@ -66,4 +66,5 @@ MonoBehaviour:
   - removeItem
   - activate
   - brewPotion
+  - movePaintUp
   DisableAutoOpenWizard: 1
