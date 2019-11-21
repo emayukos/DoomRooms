@@ -13,9 +13,9 @@ public class photonHandler : MonoBehaviour
     public GameObject mainPlayer;
 	private GameObject myCharacter;
 
-	public GameObject plCam;
-	private GameObject mainCam;
-	//public Animator animator;
+	//public GameObject plCam;
+	//private GameObject mainCam;
+	////public Animator animator;
 
 	private void Awake()
     {
