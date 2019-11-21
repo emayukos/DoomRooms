@@ -23,6 +23,7 @@ public class buttonSlot : Photon.MonoBehaviour
 	bool playerHasButton = false;
 	bool buttonInWall = false;
 	bool buttonTaskCompleted = false; // need rpc
+	
 
 	private void Start()
 	{
@@ -41,15 +42,17 @@ public class buttonSlot : Photon.MonoBehaviour
 				tempFunctionRPC();				
 			}
 
-			if (inRange && Input.GetKeyDown(KeyCode.G))
+			if (inRange && Input.GetKeyDown(KeyCode.E))
 			{
 				if (GameObject.Find("Inventory").GetComponent<Inventory>().searchItem("buttonUnpressed"))
 				{
 					// put button 1 in wall
 					//Instantiate(wallButton1, buttonPositionInScene, Quaternion.identity);
 					putButtonInWallRPC();
-					
-				}
+                    GameObject.Find("Inventory").GetComponent<Inventory>().removeItem("buttonUnpressed");
+
+
+                }
 				else
 				{
 					Debug.Log("not working");
@@ -102,8 +105,8 @@ public class buttonSlot : Photon.MonoBehaviour
 		Debug.Log("button task completed!");
 		// have both buttons be in pressed state and keep like that
 		// send message to function on painting object
-		painting.SendMessage("movePainting"); // change to RPC later
-		//movePainting.SendMessage("movePaintUp");
+		//painting.SendMessage("movePainting"); // change to RPC later
+		painting.SendMessage("movePaintUp");
 	}
 	
 	

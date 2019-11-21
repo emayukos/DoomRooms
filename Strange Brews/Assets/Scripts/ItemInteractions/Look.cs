@@ -5,7 +5,7 @@ using UnityEngine;
 public class Look : MonoBehaviour
 {
     public GameObject inventory;
-    public GameObject interactionTextBox;
+    GameObject personalTextBox;
 
     private string itemDescription = null;
 
@@ -14,7 +14,7 @@ public class Look : MonoBehaviour
     {
         //find fixed game objects that will be updated with interactions
         inventory = GameObject.Find("Inventory");
-        interactionTextBox = GameObject.Find("Interaction Text");
+        personalTextBox = GameObject.Find("Personal Message Text");
     }
 
     void Update()
@@ -25,7 +25,8 @@ public class Look : MonoBehaviour
             {
                 //display description of looked at object
                 Debug.Log(itemDescription);
-                interactionTextBox.GetComponent<InteractText>().DisplayLook(itemDescription);
+                personalTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
+                personalTextBox.GetComponent<InteractText>().DisplayLook(itemDescription);
             }
         }
     }

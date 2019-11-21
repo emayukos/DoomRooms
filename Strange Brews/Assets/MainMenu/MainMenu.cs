@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement; // for the changing of the scenes
 public class MainMenu : MonoBehaviour
 {
     
-
+    //public PhotonNetwork PN;
 
     // To change the scene when the play button is clicked
     // make sure that this is called when the play button is clicked
@@ -14,7 +14,8 @@ public class MainMenu : MonoBehaviour
     {
         // this just moves it to the next scene in the queue
         // add to the queue in file/build settings
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PhotonNetwork.LoadLevel("OfficeScene");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 
