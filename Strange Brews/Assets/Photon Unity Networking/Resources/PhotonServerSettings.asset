@@ -64,4 +64,6 @@ MonoBehaviour:
   - TurnOnProjector
   - TurnOffProjector
   - removeItem
+  - activate
+  - brewPotion
   DisableAutoOpenWizard: 1
