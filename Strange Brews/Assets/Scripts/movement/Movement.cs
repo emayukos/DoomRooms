@@ -51,16 +51,16 @@ public class Movement : Photon.MonoBehaviour
 
 
 
-	private void Awake()
-	{
-		if(!devTesting && photonView.isMine)
-		{
-			//mainCam = GameObject.Find("Main Camera");
-			//mainCam.SetActive(false);
-			//plCam.SetActive(true);
+	//private void Awake()
+	//{
+	//	if(!devTesting && photonView.isMine)
+	//	{
+	//		//mainCam = GameObject.Find("Main Camera");
+	//		//mainCam.SetActive(false);
+	//		//plCam.SetActive(true);
 			
-		}
-	}
+	//	}
+	//}
 
 
 

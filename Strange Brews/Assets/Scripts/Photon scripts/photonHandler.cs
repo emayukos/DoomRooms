@@ -13,8 +13,8 @@ public class photonHandler : MonoBehaviour
     public GameObject mainPlayer;
 	private GameObject myCharacter;
 
-	public GameObject plCam;
-	private GameObject mainCam;
+	//public GameObject plCam;
+	//private GameObject mainCam;
 	//public Animator animator;
 
 	private void Awake()
@@ -57,12 +57,7 @@ public class photonHandler : MonoBehaviour
     {
         if (scene.name != "MainMenu")
         {
-            SpawnPlayer();
-            Instantiate(plCam, plCam.transform.position, plCam.transform.rotation);
-			mainCam = GameObject.Find("Main Camera");
-			mainCam.SetActive(false);
-			plCam.SetActive(true);
-        
+            SpawnPlayer();     
             Debug.Log("loaded room");
         }
     }
