@@ -10,7 +10,7 @@ public class movePainting : MonoBehaviour
 
     float currentTime;
 
-    private void Start()
+    private void Awake()
     {
         originalPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
