@@ -57,7 +57,7 @@ public class safe : MonoBehaviour
 
     // used to update the safe state
     [PunRPC]
-    void openSafe()
+    private void openSafe()
     {
         source.PlayOneShot(safeopening, 0.03f);
         codePanel.SetActive(false);
@@ -93,6 +93,9 @@ public class safe : MonoBehaviour
         }
     }
 
+
+
+    [PunRPC]
     public void activate()
     {
         isActive = true;
