@@ -38,8 +38,9 @@ public class GhostController : MonoBehaviour
         //transform.position += upMovement;
 
         //stops drifting with transform movement after hitting a collider
-        rbody.velocity = new Vector2(0, 0);
+        //rbody.velocity = new Vector2(0, 0);
         rbody.velocity = new Vector2(moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), moveSpeed * Time.deltaTime * Input.GetAxis("Vertical"));
+        Debug.Log(moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal"));
 
         UpdateAnimation(heading);
     }
