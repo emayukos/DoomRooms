@@ -274,11 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75871596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -0.56, y: -0.02, z: 0}
-=======
   m_LocalPosition: {x: -0.56, y: 0.02, z: 0}
->>>>>>> 1624bbe22609bb4770c0b8995eb4d86983d0dff7
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2114,13 +2110,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 1028087259}
-  - component: {fileID: 1028087258}
-  - component: {fileID: 1028087260}
-  - component: {fileID: 1028087262}
-  - component: {fileID: 1028087261}
-=======
   - component: {fileID: 733811287}
   - component: {fileID: 733811289}
   - component: {fileID: 733811288}
@@ -2279,7 +2268,6 @@ GameObject:
   m_Component:
   - component: {fileID: 972441291}
   - component: {fileID: 972441290}
->>>>>>> 1624bbe22609bb4770c0b8995eb4d86983d0dff7
   m_Layer: 0
   m_Name: table_front
   m_TagString: Untagged
@@ -2350,70 +2338,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!61 &1028087260
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028087257}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.04, y: 4.39}
-    newSize: {x: 3.04, y: 4.39}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.04, y: 4.39}
-  m_EdgeRadius: 0
---- !u!114 &1028087261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028087257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7e64c0a52911124db1f65bf371d3704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!50 &1028087262
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028087257}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!1 &1047042704
-=======
 --- !u!1 &1003795833
->>>>>>> 1624bbe22609bb4770c0b8995eb4d86983d0dff7
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8756,16 +8681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  isEnabled: 0
-  isPressed: 0
-  buttonUnpressed: {fileID: 21300000, guid: 2969b42b41ee5a841a6e25668846fce0, type: 3}
-  buttonPressed: {fileID: 21300000, guid: 6e058938710c1004bb120692f46dc561, type: 3}
-  moveP: {fileID: 0}
-  pressSoundEffect: {fileID: 0}
---- !u!61 &1505819038
-BoxCollider2D:
-=======
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -8866,7 +8781,6 @@ BoxCollider2D:
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &4430893627016291147
 CanvasRenderer:
->>>>>>> 1624bbe22609bb4770c0b8995eb4d86983d0dff7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10954,22 +10868,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 57516206312303113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecba9bc5b13824033af93913a41f7560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 0
-  isPressed: 0
-  buttonUnpressed: {fileID: 21300000, guid: 2969b42b41ee5a841a6e25668846fce0, type: 3}
-  buttonPressed: {fileID: 21300000, guid: 8c43d9c6c7d5148139d0e619a5bd0603, type: 3}
-  moveP: {fileID: 0}
-  pressSoundEffect: {fileID: 8300000, guid: c7e6983830dbd48479246e0aac34a99b, type: 3}
---- !u!61 &57516206312303115
-BoxCollider2D:
-=======
   m_GameObject: {fileID: 7019499951527093053}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.008, y: -0.011, z: 0}
@@ -10980,7 +10878,6 @@ BoxCollider2D:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &8062476897750079366
 AudioSource:
->>>>>>> 1624bbe22609bb4770c0b8995eb4d86983d0dff7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}

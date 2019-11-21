@@ -10,7 +10,6 @@ public class WallButton : Photon.MonoBehaviour
 	private bool inRange = false;
 	public Sprite buttonUnpressed;
 	public Sprite buttonPressed;
-    private movePainting moveP;
 
 	private AudioSource source;
     public AudioClip pressSoundEffect;
@@ -80,16 +79,12 @@ public class WallButton : Photon.MonoBehaviour
 		{
 			GetComponent<SpriteRenderer>().sprite = buttonPressed;
 			isPressed = true;
-<<<<<<< HEAD
-            moveP.movePaintUp();
-=======
 			// press sound effect only when first pressed
            if (pressSoundEffect != null)
             {
                 source.PlayOneShot(pressSoundEffect);
             }
 			Debug.Log("pressed");
->>>>>>> e175e3eb8b7e096cd342cc78d17119bb3e30bfbb
 		}
 	}
 	[PunRPC] 
