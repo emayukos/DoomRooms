@@ -6,8 +6,10 @@ public class HideableBoxes : MonoBehaviour
 {
     int helpOnOff;
     int invOnOff;
-    GameObject helpMenu;
-    GameObject inventoryMenu;
+    public GameObject helpMenu;
+    public GameObject inventoryMenu;
+    public GameObject personalMessageBox;
+    public GameObject networkMessageBox;
 
     void Awake()
     {
@@ -19,9 +21,7 @@ public class HideableBoxes : MonoBehaviour
 
     private void Start()
     {
-        //find fixed game objects that will be updated with interactions
-        helpMenu = GameObject.Find("Help Menu");
-        inventoryMenu = GameObject.Find("Inventory Menu");
+
     }
 
     // Update is called once per frame
@@ -36,6 +36,12 @@ public class HideableBoxes : MonoBehaviour
         {
             invOnOff = invOnOff * -1;
         }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            personalMessageBox.SetActive(false);
+            networkMessageBox.SetActive(false);
+        }
+
 
         OpenClose(helpMenu, helpOnOff);
         OpenClose(inventoryMenu, invOnOff);
