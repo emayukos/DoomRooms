@@ -12,6 +12,7 @@ public class photonHandler : MonoBehaviour
 
     public GameObject mainPlayer;
 	private GameObject myCharacter;
+	Camera mainCamera;
 	//public Animator animator;
 
 	private void Awake()
@@ -65,6 +66,7 @@ public class photonHandler : MonoBehaviour
         Debug.Log("spawn player");
 
 		myCharacter = PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
+		myCharacter.GetComponent<Canvas>().worldCamera = Camera.main;
 		//animator = myCharacter.GetComponent<Animator>(); // added this
 		// in resource folder
 		//myCharacter = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "ghost"), 

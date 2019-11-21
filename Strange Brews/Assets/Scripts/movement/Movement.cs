@@ -40,20 +40,32 @@ public class Movement : Photon.MonoBehaviour
 	float selfx;
 	float selfy;
 
+	private GameObject mainCam;
+	public GameObject plCam;
+
 	//private photonHandler avatarSetup;
-	
+
 	//public bool UseTransformView = true;
-	
-	
 
 
 
 
-    
+
+	private void Awake()
+	{
+		if(!devTesting && photonView.isMine)
+		{
+			mainCam = GameObject.Find("Main Camera");
+			mainCam.SetActive(false);
+			plCam.SetActive(true);
+			
+		}
+	}
 
 
-    // Start is called before the first frame update
-    void Start()
+
+	// Start is called before the first frame update
+	void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         velocity = 5.0f;
