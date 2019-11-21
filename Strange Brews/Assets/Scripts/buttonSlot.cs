@@ -23,6 +23,7 @@ public class buttonSlot : Photon.MonoBehaviour
 	bool playerHasButton = false;
 	bool buttonInWall = false;
 	bool buttonTaskCompleted = false; // need rpc
+	
 
 	private void Start()
 	{
@@ -102,8 +103,8 @@ public class buttonSlot : Photon.MonoBehaviour
 		Debug.Log("button task completed!");
 		// have both buttons be in pressed state and keep like that
 		// send message to function on painting object
-		painting.SendMessage("movePainting"); // change to RPC later
-		//movePainting.SendMessage("movePaintUp");
+		//painting.SendMessage("movePainting"); // change to RPC later
+		painting.SendMessage("movePaintUp");
 	}
 	
 	
