@@ -12,6 +12,9 @@ public class photonHandler : MonoBehaviour
 
     public GameObject mainPlayer;
 	private GameObject myCharacter;
+
+	public GameObject plCam;
+	private GameObject mainCam;
 	//public Animator animator;
 
 	private void Awake()
@@ -50,14 +53,17 @@ public class photonHandler : MonoBehaviour
         PhotonNetwork.LoadLevel("MainMenu");
     }
 
+    
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name != "MainMenu")
-        {
-            SpawnPlayer();
+
+		if (scene.name != "MainMenu")
+		{
+			SpawnPlayer();
+			Debug.Log("loaded room");
+		}
         
-            Debug.Log("loaded room");
-        }
+
     }
 
     private void SpawnPlayer()
@@ -65,6 +71,8 @@ public class photonHandler : MonoBehaviour
         Debug.Log("spawn player");
 
 		myCharacter = PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
+
+		//myCharacter.GetComponent<Canvas>().eventCamera = Camera.main;
 		//animator = myCharacter.GetComponent<Animator>(); // added this
 		// in resource folder
 		//myCharacter = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "ghost"), 
