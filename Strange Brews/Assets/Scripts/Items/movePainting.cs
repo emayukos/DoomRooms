@@ -27,12 +27,12 @@ public class movePainting : Photon.MonoBehaviour
         startPos = transform.position;
         stopPos = startPos + new Vector3(0, 15, 0);
         rb = GetComponent<Rigidbody2D>();
-        movePaintUp();
+        //movePaintUp();
         //stopPainting();
     }
     private void Update()
     {
-    stopPos = startPos + new Vector3(0, 5, 0);
+    //stopPos = startPos + new Vector3(0, 5, 0);
     if (transform.position.y > stopPos.y ){
         rb.velocity = new Vector2(0, 0);
     }
