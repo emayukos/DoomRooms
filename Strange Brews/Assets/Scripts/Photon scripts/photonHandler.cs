@@ -15,7 +15,7 @@ public class photonHandler : MonoBehaviour
 
 	//public GameObject plCam;
 	//private GameObject mainCam;
-	//public Animator animator;
+	////public Animator animator;
 
 	private void Awake()
     {
@@ -53,13 +53,17 @@ public class photonHandler : MonoBehaviour
         PhotonNetwork.LoadLevel("MainMenu");
     }
 
+    
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name != "MainMenu")
-        {
-            SpawnPlayer();     
-            Debug.Log("loaded room");
-        }
+
+		if (scene.name != "MainMenu")
+		{
+			SpawnPlayer();
+			Debug.Log("loaded room");
+		}
+        
+
     }
 
     private void SpawnPlayer()
