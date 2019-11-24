@@ -26,11 +26,13 @@ public class projectorInteraction : MonoBehaviour
             //for single player testing
             if (isOn)
             {
-                TurnOffProjector();
+                Debug.Log("in update, not calling turnoffprojector");
+                //TurnOffProjector();
             }
             else
             {
-                TurnOnProjector();
+                Debug.Log("in update, not calling turnoffprojector");
+                //TurnOnProjector();
             }
 
             // for photon
@@ -50,6 +52,7 @@ public class projectorInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("collider parameter wrong");
         // for single player testing
         if (col.gameObject.CompareTag("Player"))
         {
