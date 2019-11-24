@@ -25,10 +25,10 @@ public class movePainting : Photon.MonoBehaviour
     private void Start()
     {
         startPosition = transform.position;
-        endPosition = startPosition + new Vector3(0, 15, 0);
+        endPosition = startPosition + new Vector3(0f, 15f, 0f);
         rb = GetComponent<Rigidbody2D>();
-        movePaintUp();
         //stopPainting();
+        //movePaintUp();
     }
     //private void Update()
     //{
@@ -45,10 +45,15 @@ public class movePainting : Photon.MonoBehaviour
         //rb.velocity = new Vector3(0, 2, 0);
         transform.position = endPosition;
 
+        /**
+        rb.velocity = new Vector3(0, 2, 0);
+        while (Vector3.Distance(transform.position, endPosition) > 1.0f)
+        {
+            continue;
+        }
+        rb.velocity = new Vector3(0, 0, 0);
+        **/
 
-
-        //while (Vector3.Distance(transform.position, endPosition) > 1.0f) {
-        //    rb.AddForce(transform.up);
         //}
         /**
         currentLerpTime += Time.deltaTime;

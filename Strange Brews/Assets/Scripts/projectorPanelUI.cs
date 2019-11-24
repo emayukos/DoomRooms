@@ -14,8 +14,6 @@ public class projectorPanelUI : MonoBehaviour
     Input field4;
     Input field5;
 
-   
-
     public string code = "726541";
 
     public string codeTextVal = "";
@@ -31,8 +29,8 @@ public class projectorPanelUI : MonoBehaviour
         field6 = GameObject.Find("InputField6").GetComponent<Input>();
         field4 = GameObject.Find("InputField4").GetComponent<Input>();
         field5 = GameObject.Find("InputField5").GetComponent<Input>();
-
     }
+
     public void Update()
     {
         
