@@ -67,4 +67,6 @@ MonoBehaviour:
   - activate
   - brewPotion
   - movePaintUp
+  - OpenFileCabinet
+  - openFileCabinet
   DisableAutoOpenWizard: 1
