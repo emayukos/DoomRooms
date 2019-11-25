@@ -9,6 +9,7 @@ public class fileCabinet : MonoBehaviour
     public Sprite fileCabinetOpen;
     public GameObject panelUI;
 
+
     [PunRPC]
     private void openFileCabinet()
     {

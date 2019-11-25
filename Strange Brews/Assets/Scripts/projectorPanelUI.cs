@@ -14,6 +14,9 @@ public class projectorPanelUI : MonoBehaviour
     InputField field4;
     InputField field5;
 
+    [SerializeField]
+    GameObject fileCabinet;
+
     public PhotonView photonView;
 
     public AudioClip incorrectanswer;
@@ -48,6 +51,7 @@ public class projectorPanelUI : MonoBehaviour
         //cabinetClosed.SetActive(true);
         //cabinetOpen.SetActive(false);
         gameObject.SetActive(false);
+        Debug.Log(photonView);
 
     }
 
@@ -66,6 +70,7 @@ public class projectorPanelUI : MonoBehaviour
 
 
             // for photon
+            Debug.Log(photonView);
             this.photonView.RPC("openFileCabinet", PhotonTargets.All);
 
         }
