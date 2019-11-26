@@ -3371,6 +3371,7 @@ GameObject:
   - component: {fileID: 284743408}
   - component: {fileID: 284743409}
   - component: {fileID: 284743410}
+  - component: {fileID: 284743411}
   m_Layer: 0
   m_Name: end door
   m_TagString: Untagged
@@ -3479,8 +3480,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e66debb900307e4a889f06ba597596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
+  photonView: {fileID: 284743411}
   openPos: {fileID: 966365004}
+--- !u!114 &284743411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284743406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 11
+  instantiationId: 11
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &301378554
 GameObject:
   m_ObjectHideFlags: 0
@@ -7958,6 +7986,7 @@ GameObject:
   - component: {fileID: 692597131}
   - component: {fileID: 692597133}
   - component: {fileID: 692597132}
+  - component: {fileID: 692597134}
   m_Layer: 0
   m_Name: bottom door
   m_TagString: Untagged
@@ -8040,7 +8069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e66debb900307e4a889f06ba597596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
+  photonView: {fileID: 692597134}
   openPos: {fileID: 966365004}
 --- !u!61 &692597133
 BoxCollider2D:
@@ -8068,6 +8097,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &692597134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692597129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 3
+  instantiationId: 3
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &695375819
 GameObject:
   m_ObjectHideFlags: 0
@@ -8120,6 +8176,7 @@ GameObject:
   - component: {fileID: 696586539}
   - component: {fileID: 696586538}
   - component: {fileID: 696586540}
+  - component: {fileID: 696586541}
   m_Layer: 0
   m_Name: top right door
   m_TagString: Untagged
@@ -8228,8 +8285,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e66debb900307e4a889f06ba597596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
+  photonView: {fileID: 696586541}
   openPos: {fileID: 966365004}
+--- !u!114 &696586541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696586536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 6
+  instantiationId: 6
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &703625899
 GameObject:
   m_ObjectHideFlags: 0
@@ -9531,8 +9615,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799876804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4866438, y: -19.693132, z: 80.24609}
-  m_LocalScale: {x: 5.7720003, y: 0.771, z: 1}
+  m_LocalPosition: {x: -2.4866438, y: -19.854, z: 80.24609}
+  m_LocalScale: {x: 2, y: 1.093278, z: 1}
   m_Children: []
   m_Father: {fileID: 5977029}
   m_RootOrder: 0
@@ -9572,9 +9656,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -368797927
+  m_SortingLayer: 9
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d7e49428c646f439ca9736bfcfc5806f, type: 3}
   m_Color: {r: 1, g: 0.55099326, b: 0, a: 0.5882353}
   m_FlipX: 0
@@ -9598,6 +9682,7 @@ GameObject:
   - component: {fileID: 811625936}
   - component: {fileID: 811625935}
   - component: {fileID: 811625937}
+  - component: {fileID: 811625938}
   m_Layer: 0
   m_Name: top left door
   m_TagString: Untagged
@@ -9706,8 +9791,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e66debb900307e4a889f06ba597596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
+  photonView: {fileID: 811625938}
   openPos: {fileID: 966365004}
+--- !u!114 &811625938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811625933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 5
+  instantiationId: 5
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &811943132
 GameObject:
   m_ObjectHideFlags: 0
@@ -9733,8 +9845,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811943132}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: -2.8343325, y: -19.115435, z: 80.24609}
-  m_LocalScale: {x: 5.7720003, y: 0.6, z: 1}
+  m_LocalPosition: {x: -2.8343325, y: -19.462, z: 80.24609}
+  m_LocalScale: {x: 2, y: 1.2321025, z: 1}
   m_Children: []
   m_Father: {fileID: 1526800425}
   m_RootOrder: 0
@@ -9774,9 +9886,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -368797927
+  m_SortingLayer: 9
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d7e49428c646f439ca9736bfcfc5806f, type: 3}
   m_Color: {r: 1, g: 0.55099326, b: 0, a: 0.5882353}
   m_FlipX: 0
@@ -14841,8 +14953,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191531857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.4053, y: 0.55599976, z: 71.54492}
-  m_LocalScale: {x: 0.63074756, y: 0.51347697, z: 1}
+  m_LocalPosition: {x: 10.4314, y: 0.55599976, z: 71.54492}
+  m_LocalScale: {x: 0.61352813, y: 0.51347697, z: 1}
   m_Children: []
   m_Father: {fileID: 795495699}
   m_RootOrder: 0
@@ -15320,6 +15432,7 @@ GameObject:
   - component: {fileID: 1230279247}
   - component: {fileID: 1230279246}
   - component: {fileID: 1230279248}
+  - component: {fileID: 1230279249}
   m_Layer: 0
   m_Name: Bottom cage (1)
   m_TagString: Untagged
@@ -15473,8 +15586,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e66debb900307e4a889f06ba597596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
+  photonView: {fileID: 1230279249}
   openPos: {fileID: 966365004}
+--- !u!114 &1230279249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230279244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 7
+  instantiationId: 7
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1235279846
 GameObject:
   m_ObjectHideFlags: 0
@@ -16201,6 +16341,7 @@ GameObject:
   - component: {fileID: 1333289692}
   - component: {fileID: 1333289691}
   - component: {fileID: 1333289693}
+  - component: {fileID: 1333289694}
   m_Layer: 0
   m_Name: Bottom cage
   m_TagString: Untagged
@@ -16354,8 +16495,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e66debb900307e4a889f06ba597596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
+  photonView: {fileID: 1333289694}
   openPos: {fileID: 966365004}
+--- !u!114 &1333289694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333289689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 10
+  instantiationId: 10
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1337954075
 GameObject:
   m_ObjectHideFlags: 0
@@ -17878,8 +18046,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500859685}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.333, y: 4.971396, z: 6.5351562}
-  m_LocalScale: {x: 4.9795895, y: 2.51706, z: 1}
+  m_LocalPosition: {x: 2.3163, y: 4.971396, z: 6.5351562}
+  m_LocalScale: {x: 4.9457407, y: 2.51706, z: 1}
   m_Children: []
   m_Father: {fileID: 1922251023}
   m_RootOrder: 2
@@ -17947,7 +18115,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1155649369
   m_SortingLayer: -3
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: d7e49428c646f439ca9736bfcfc5806f, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -19699,6 +19867,7 @@ GameObject:
   - component: {fileID: 1622772127}
   - component: {fileID: 1622772126}
   - component: {fileID: 1622772128}
+  - component: {fileID: 1622772129}
   m_Layer: 0
   m_Name: bottom left door
   m_TagString: Untagged
@@ -19807,8 +19976,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e66debb900307e4a889f06ba597596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
+  photonView: {fileID: 1622772129}
   openPos: {fileID: 966365004}
+--- !u!114 &1622772129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622772124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 8
+  instantiationId: 8
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1641034276
 GameObject:
   m_ObjectHideFlags: 0
@@ -20403,7 +20599,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1155649369
   m_SortingLayer: -3
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: fa23b748ed425aa41a7e3cfeb6dd7034, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -24421,6 +24617,7 @@ GameObject:
   - component: {fileID: 2041216684}
   - component: {fileID: 2041216683}
   - component: {fileID: 2041216685}
+  - component: {fileID: 2041216686}
   m_Layer: 0
   m_Name: bottom right door
   m_TagString: Untagged
@@ -24529,8 +24726,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e66debb900307e4a889f06ba597596c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
+  photonView: {fileID: 2041216686}
   openPos: {fileID: 966365004}
+--- !u!114 &2041216686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041216681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 9
+  instantiationId: 9
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &2053272541
 GameObject:
   m_ObjectHideFlags: 0
