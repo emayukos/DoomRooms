@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class projectorInteraction : Photon.MonoBehaviour
+public class projectorInteraction : MonoBehaviour
 {
     public Sprite projOff;
     public Sprite projOn;
-    private bool inRange = false;
+    private bool inRange;
     public GameObject projectorScreen;
     private bool isOn = false;
+
 
 
     // Start is called before the first frame update
@@ -22,35 +23,67 @@ public class projectorInteraction : Photon.MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.E)) // make icon that says "press E" to open
         {
+            //for single player testing
             if (isOn)
             {
-                this.photonView.RPC("TurnOffProjector", PhotonTargets.All);
+                TurnOffProjector();
             }
             else
             {
-                this.photonView.RPC("TurnOnProjector", PhotonTargets.All);
-
+                TurnOnProjector();
             }
+
+            // for photon
+            //if (isOn)
+            //{
+            //    this.photonView.RPC("TurnOffProjector", PhotonTargets.All);
+            //}
+            //else
+            //{
+            //    this.photonView.RPC("TurnOnProjector", PhotonTargets.All);
+
+            //}
         }
 
 
     }
 
-    private void OnTriggerEnter(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        inRange |= col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine;
+        // for single player testing
+        if (col.gameObject.CompareTag("Player"))
+        {
+            inRange = true;
+        } else
+        {
+            Debug.Log("OnTriggerEnter comaring tag isn't player");
+        }
+
+        // for photon testing
+        //inRange |= col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine;
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
+        // For single player testing
+        if(col.gameObject.CompareTag("Player"))
         {
             inRange = false;
-            this.photonView.RPC("CloseBox", PhotonTargets.All);
         }
+        else
+        {
+            Debug.Log("OnTriggerExit comaring tag isn't player");
+        }
+
+        //// for photon testing
+        //if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
+        //{
+        //    inRange = false;
+        //    this.photonView.RPC("CloseBox", PhotonTargets.All);
+        //}
     }
 
-    [PunRPC]
+    // for single player testing
     void TurnOnProjector()
     {
         //Turn on projector
@@ -59,8 +92,17 @@ public class projectorInteraction : Photon.MonoBehaviour
         projectorScreen.SetActive(true);
 
     }
+    // for photon
+    //[PunRPC]
+    //void TurnOnProjector()
+    //{
+    //    //Turn on projector
+    //    GetComponent<SpriteRenderer>().sprite = projOn;
+    //    isOn = true;
+    //    projectorScreen.SetActive(true);
 
-    [PunRPC]
+    //}
+    // for single player testing
     void TurnOffProjector()
     {
         //Turn off projector
@@ -72,5 +114,18 @@ public class projectorInteraction : Photon.MonoBehaviour
             isOn = false;
         }
     }
+    // for photon
+    //[PunRPC]
+    //void TurnOffProjector()
+    //{
+    //    //Turn off projector
+    //    if (isOn)
+    //    {
+    //        //Turn projector off if projector if on and player presses "e" again
+    //        GetComponent<SpriteRenderer>().sprite = projOff;
+    //        projectorScreen.SetActive(false);
+    //        isOn = false;
+    //    }
+    //}
 
 }
