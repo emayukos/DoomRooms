@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testscripon : MonoBehaviour
+public class FinalKeyB : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<InventoryItem>().setItemName("Exit Key B");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

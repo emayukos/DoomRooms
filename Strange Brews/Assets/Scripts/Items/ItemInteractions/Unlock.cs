@@ -35,7 +35,7 @@ public class Unlock : MonoBehaviour
                 if(unlock == true)
                 {
                     //record unlocking action in 2-player log, then perform unlocking action
-                    networkTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
+                    //networkTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
                     networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, lockedThingFound);
                     this.photonView.RPC("unlockThing", PhotonTargets.All);
                 }
@@ -43,7 +43,7 @@ public class Unlock : MonoBehaviour
                 {
                     //required item is not in the inventory, let the local player know
                     Debug.Log("This needs a key.");
-                    personalTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
+                    //personalTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
                     personalTextBox.GetComponent<InteractText>().DisplayLook("This needs a key.");
                 }
                 
