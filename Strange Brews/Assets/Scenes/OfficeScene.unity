@@ -8349,7 +8349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cfad72280824926b5d93c54b68cde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasFinalKey: 1
+  hasFinalKey: 0
   border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
   unborder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
   levelChanger: {fileID: 8516861246521564836}
@@ -8942,7 +8942,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 244416385
   m_SortingLayer: 4
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: df3f7747a2c284e8baa2d36cd6874912, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14233,7 +14233,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 244416385
   m_SortingLayer: 4
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: c774819121e274e8483ce62deb446da4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
