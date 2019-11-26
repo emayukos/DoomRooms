@@ -7,12 +7,21 @@ public class projectorPanelUI : MonoBehaviour
 {
     [SerializeField]
     private bool isCorrect;
-    InputField field7;
-    InputField field1;
-    InputField field2;
-    InputField field6;
-    InputField field4;
-    InputField field5;
+
+    //InputField field7;
+    //InputField field1;
+    //InputField field2;
+    //InputField field6;
+    //InputField field4;
+    //InputField field5;
+
+    string field7 = "";
+    string field1 = "";
+    string field2 = "";
+    string field6 = "";
+    string field4 = "";
+    string field5 = "";
+
 
     [SerializeField]
     GameObject fileCabinet;
@@ -35,19 +44,22 @@ public class projectorPanelUI : MonoBehaviour
 
     public void Awake()
     {
-        field7 = GameObject.Find("InputField7").GetComponent<InputField>();
-        field1 = GameObject.Find("InputField1").GetComponent<InputField>();
-        field2 = GameObject.Find("InputField2").GetComponent<InputField>();
-        field6 = GameObject.Find("InputField6").GetComponent<InputField>();
-        field4 = GameObject.Find("InputField4").GetComponent<InputField>();
-        field5 = GameObject.Find("InputField5").GetComponent<InputField>();
+        //field7 = GameObject.Find("InputField7").GetComponent<InputField>();
+        //field1 = GameObject.Find("InputField1").GetComponent<InputField>();
+        //field2 = GameObject.Find("InputField2").GetComponent<InputField>();
+        //field6 = GameObject.Find("InputField6").GetComponent<InputField>();
+        //field4 = GameObject.Find("InputField4").GetComponent<InputField>();
+        //field5 = GameObject.Find("InputField5").GetComponent<InputField>();
         source = GetComponent<AudioSource>();
-
-
     }
 
     void Start()
     {
+        
+
+        Debug.Log("field1: " + field1);
+        Debug.Log("source: " + source);
+
         //cabinetClosed.SetActive(true);
         //cabinetOpen.SetActive(false);
         gameObject.SetActive(false);
@@ -57,8 +69,12 @@ public class projectorPanelUI : MonoBehaviour
 
     public void onSubmit() {
 
-        codeTextVal = field7.text + field2.text + field6.text + field5.text + field4.text + field1.text;
-        
+        Debug.Log("field1 fn: " + field1);
+        //Debug.Log("field1 text fn: " + field1);
+
+        //codeTextVal = field7.text + field2.text + field6.text + field5.text + field4.text + field1.text;
+        codeTextVal = field7 + field2 + field6 + field5 + field4 + field1;
+
         if (codeTextVal == code)
         {
             isCorrect = true;
@@ -76,7 +92,8 @@ public class projectorPanelUI : MonoBehaviour
         }
         else
         {
-            source.PlayOneShot(incorrectanswer, 0.5f);
+            //FIX SOUND THING
+            //source.PlayOneShot(incorrectanswer, 0.5f);
             Debug.Log("wrong code");
         }
 
@@ -87,5 +104,31 @@ public class projectorPanelUI : MonoBehaviour
     //    gameObject.SetActive(false);
     //}
 
+    public void addField1(string fieldValue)
+    {
+        field1 = fieldValue;
+        Debug.Log("test: " + field1);
+    }
+
+    public void addField2(string fieldValue)
+    {
+        field2 = fieldValue;
+    }
+    public void addField4(string fieldValue)
+    {
+        field4 = fieldValue;
+    }
+    public void addField5(string fieldValue)
+    {
+        field5 = fieldValue;
+    }
+    public void addField6(string fieldValue)
+    {
+        field6 = fieldValue;
+    }
+    public void addField7(string fieldValue)
+    {
+        field7 = fieldValue;
+    }
 
 }
