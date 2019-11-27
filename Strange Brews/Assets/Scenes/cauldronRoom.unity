@@ -2241,8 +2241,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284081871}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12924035, y: 3.0973241, z: 43.767982}
-  m_LocalScale: {x: 0.089453444, y: 0.089453444, z: 0.089453444}
+  m_LocalPosition: {x: 1.1, y: 3, z: 43.767982}
+  m_LocalScale: {x: 0.058860365, y: 0.0649432, z: 0.089453444}
   m_Children: []
   m_Father: {fileID: 1343913310}
   m_RootOrder: 6
@@ -6793,7 +6793,7 @@ MonoBehaviour:
   closedBox: {fileID: 21300000, guid: ff4baf636c23249fe903939be8c28bc1, type: 3}
   openBox: {fileID: 21300000, guid: 17bcf0d548fe44575a1adf5bf3b15b0c, type: 3}
   buttonPositionInScene: {x: 5.45, y: -3.04}
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: df7407dbd6b444767957d10b03dd6d75, type: 3}
 --- !u!114 &766885696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8128,7 +8128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886806789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.27324036, y: 2.940324, z: 43.767982}
+  m_LocalPosition: {x: 0.89, y: 2.95, z: 43.767982}
   m_LocalScale: {x: 0.2398, y: 0.2398, z: 0.2398}
   m_Children: []
   m_Father: {fileID: 1343913310}
@@ -12369,7 +12369,7 @@ MonoBehaviour:
   closedBox: {fileID: 21300000, guid: ff4baf636c23249fe903939be8c28bc1, type: 3}
   openBox: {fileID: 21300000, guid: 17bcf0d548fe44575a1adf5bf3b15b0c, type: 3}
   buttonPositionInScene: {x: -6.1, y: 0.8}
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: df7407dbd6b444767957d10b03dd6d75, type: 3}
 --- !u!61 &1577129239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13543,8 +13543,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700993697}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.052759644, y: 2.8733242, z: 43.767982}
-  m_LocalScale: {x: 0.39, y: 0.39, z: 0.39}
+  m_LocalPosition: {x: 1.36, y: 2.899, z: 43.767982}
+  m_LocalScale: {x: 0.3315, y: 0.33617997, z: 0.39}
   m_Children: []
   m_Father: {fileID: 1343913310}
   m_RootOrder: 8
@@ -14744,7 +14744,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1852495921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40164a6e2bb414657a75b725d0590cb5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7d24116dc0cc4e0c962b18e51d295c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: {fileID: 434789102}
@@ -14762,7 +14762,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043826103, y: 0.32831955}
+  m_Offset: {x: -0.043826103, y: -1.021173}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -14773,7 +14773,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.609327, y: 14.039003}
+  m_Size: {x: 11.609327, y: 11.340018}
   m_EdgeRadius: 0
 --- !u!114 &1852495925
 MonoBehaviour:
@@ -14791,12 +14791,12 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 0
+  synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 1852495923}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 8
   instantiationId: 8
