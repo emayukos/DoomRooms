@@ -11,11 +11,13 @@ public class Door : Photon.MonoBehaviour
     //public Text roomNumberText;
     //public Door controller; // might need this might not
     //public Inventory Inventory;
-	public bool hasFinalKey = false;
 	bool inRange = false;
 	public Material border;
 	public Material unborder;
 	public GameObject levelChanger;
+	private PickUp PickUp;
+	public bool hasFinalKey = false;
+	
 
 
 
@@ -38,9 +40,9 @@ public class Door : Photon.MonoBehaviour
         {
 			 inRange = true;
             Debug.Log("Player touched door.");
-            //if(Inventory.hasFinalKey())
-            if(hasFinalKey)
-            {	
+            if(PickUp.hasFinalKey())
+            {
+				hasFinalKey = true;
             	GetComponent<Renderer>().material = border; // give door border indicating it can be unlocked
                 Debug.Log("Player has key. Can press E to unlock door.");
             }
@@ -56,9 +58,9 @@ public class Door : Photon.MonoBehaviour
     	GetComponent<Renderer>().material = unborder;
     }
     
-    void HasFinalKey()
-	{
-		hasFinalKey = true;
-	}
+ //   void HasFinalKey()
+	//{
+	//	hasFinalKey = true;
+	//}
     
 }

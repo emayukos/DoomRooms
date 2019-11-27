@@ -19,6 +19,9 @@ public class codePanel : MonoBehaviour
     public AudioClip incorrectanswer;
     private AudioSource source;
 
+    private int spot;
+    private char[] chararray = { '0', '0', '0', '0' };
+
 	public string code = "3101";
 
     private void Awake()
@@ -28,7 +31,7 @@ public class codePanel : MonoBehaviour
 
 
 
-    string codeTextValue = "";
+    string codeTextValue = "0000";
     // Start is called before the first frame update
     void Start()
     {
@@ -45,11 +48,13 @@ public class codePanel : MonoBehaviour
     public void AddDigit(string digit)
 	{
         // only add digits if the code is less than 4
-        if (codeTextValue.Length < 4)
+        if (spot < 4)
 		{
             // the sound effect and the volume (x/1)
             source.PlayOneShot(buttonclick, 1.0f);
-			codeTextValue += digit;
+            chararray[spot] = digit[0];
+            codeTextValue = new string(chararray);
+            spot++;
 		}
 		
 	}
@@ -63,7 +68,11 @@ public class codePanel : MonoBehaviour
         else
         {
             source.PlayOneShot(incorrectanswer, 0.5f);
-            codeTextValue = "";
+            codeTextValue = "0000";
+
+            for (int i=0;i<4;i++) chararray[i] = '0';
+            
+            spot = 0;
         }
 	}
 
