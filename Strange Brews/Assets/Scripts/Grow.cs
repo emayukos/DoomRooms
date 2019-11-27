@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shrink : Photon.MonoBehaviour
+public class Grow : Photon.MonoBehaviour
 {
-	public float shrinkSpeed = 0.08f;
-	public float shrunkSize = 0.2f;
-	public bool shrink = false; // true when player should be shrinking
+	public float growSpeed = 0.08f;
+	public float originalSize = 0.5f;
+	public bool grow = false; // true when player should be shrinking
 	private AudioSource source;
     public AudioClip pressSoundEffect;
 
@@ -16,36 +16,33 @@ public class Shrink : Photon.MonoBehaviour
     private void Start()
 	{
 		source = GetComponent<AudioSource>();
-		//ShrinkPlayer(); // just for testing sound
 	}
 
     // Update is called once per frame
     void Update()
     {
-    	if(shrink) { 
-
-			//playSound = false; // so only played once
+    	if(grow) { 
     		//Scale this game object
- 			transform.localScale -= Vector3.one * shrinkSpeed * Time.deltaTime;
+ 			transform.localScale += Vector3.one * growSpeed * Time.deltaTime;
  			// stop when small enough
- 			if(transform.localScale.x <= shrunkSize) {
-				shrink = false;
+ 			if(transform.localScale.x >= originalSize) {
+				grow = false;
  			}
     	}  
     }
-    
-    public void ShrinkPlayerRPC() { 
-    	photonView.RPC("ShrinkPlayer", PhotonTargets.All);
+    public void GrowPlayerRPC() { 
+    	photonView.RPC("GrowPlayer", PhotonTargets.All);
     }
     
     
     [PunRPC]
-    public void ShrinkPlayer() {
-		shrink = true;
+    public void GrowPlayer() {
+		grow = true;
 		if (pressSoundEffect != null)
             {
                 source.PlayOneShot(pressSoundEffect);
             }
     }
-    
 }
+
+

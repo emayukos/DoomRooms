@@ -31,7 +31,9 @@ public class cauldron : MonoBehaviour
     [PunRPC]
     public void brewPotion()
     {
-        key.SetActive(true);
+        key.SetActive(true);  // could replace this with bottled potions for players to select
+        					  // and have finding the key be a smaller task in the room to get done first 
+        					  // and have the door be too small to get through 
         cauldronpanel.SetActive(false);
         potionMade = true;
     }

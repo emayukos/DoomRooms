@@ -66,4 +66,6 @@ MonoBehaviour:
   - unpressButton
   - doorClose
   - doorOpen
+  - ShrinkPlayer
+  - GrowPlayer
   DisableAutoOpenWizard: 1
