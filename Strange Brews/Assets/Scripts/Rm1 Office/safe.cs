@@ -7,7 +7,7 @@ public class safe : MonoBehaviour
     [SerializeField]
     GameObject codePanel, closedSafe, openedSafe;
 
-    private bool isActive false;
+    private bool isActive = false;
 
 
 
