@@ -68,4 +68,5 @@ MonoBehaviour:
   - doorOpen
   - ShrinkPlayer
   - GrowPlayer
+  - signalPainting
   DisableAutoOpenWizard: 1
