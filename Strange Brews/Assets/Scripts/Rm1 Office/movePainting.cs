@@ -30,19 +30,20 @@ public class movePainting : Photon.MonoBehaviour
         //movePaintUp();
         //stopPainting();
     }
+
     private void Update()
     {
-    //stopPos = startPos + new Vector3(0, 5, 0);
-    if (transform.position.y > stopPos.y ){
-        rb.velocity = new Vector2(0, 0);
-    }
+        //stopPos = startPos + new Vector3(0, 5, 0);
+        if (transform.position.y > stopPos.y ){
+            rb.velocity = new Vector2(0, 0);
+        }
     }
 
     // when the button is pressed, move the painint up by applying velocity for a short period of time 
     //[PunRPC]
     public void movePaintUp() {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector3(0, 2, 0);
+        //rb.velocity = new Vector3(0, 2, 0);
         //transform.position = endPosition;
 
 

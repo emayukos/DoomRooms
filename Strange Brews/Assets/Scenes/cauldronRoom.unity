@@ -14746,8 +14746,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1852495922}
   - component: {fileID: 1852495924}
-  - component: {fileID: 1852495923}
   - component: {fileID: 1852495925}
+  - component: {fileID: 1852495923}
   m_Layer: 0
   m_Name: InteractCauldron
   m_TagString: Untagged
@@ -14778,7 +14778,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1852495921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7d24116dc0cc4e0c962b18e51d295c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 40164a6e2bb414657a75b725d0590cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: {fileID: 434789102}
@@ -14830,7 +14830,7 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 1852495923}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 8
   instantiationId: 8
