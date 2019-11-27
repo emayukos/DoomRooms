@@ -18,8 +18,9 @@ GameObject:
   - component: {fileID: 8762338799233940131}
   - component: {fileID: 8632787874356112040}
   - component: {fileID: 7484291737280406259}
+  - component: {fileID: 6769728055319751575}
   m_Layer: 0
-  m_Name: ghost (1)
+  m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,3 +390,11 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.7
+--- !u!81 &6769728055319751575
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616610964151234683}
+  m_Enabled: 1

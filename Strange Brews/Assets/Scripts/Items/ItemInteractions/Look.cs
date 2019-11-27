@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Look : MonoBehaviour
 {
-    public GameObject inventory;
     GameObject personalTextBox;
 
     private string itemDescription = null;
@@ -13,7 +12,6 @@ public class Look : MonoBehaviour
     void Start()
     {
         //find fixed game objects that will be updated with interactions
-        inventory = GameObject.Find("Inventory");
         personalTextBox = GameObject.Find("Personal Message Text");
     }
 

@@ -64,4 +64,6 @@ MonoBehaviour:
   - tempFunction
   - unlockThing
   - unpressButton
+  - doorClose
+  - doorOpen
   DisableAutoOpenWizard: 1
