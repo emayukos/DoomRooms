@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HideableBoxes : MonoBehaviour
 {
-    int helpOnOff;
+    public int helpOnOff = 1;
     int invOnOff;
     public GameObject helpMenu;
     public GameObject inventoryMenu;
@@ -14,7 +14,7 @@ public class HideableBoxes : MonoBehaviour
     void Awake()
     {
         //help menu is visible upon entry of first room
-        helpOnOff = 1;
+        //helpOnOff = 1;
         //inventory is not visible upon entry of any room
         invOnOff = -1;
     }

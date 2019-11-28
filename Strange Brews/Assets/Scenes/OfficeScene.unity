@@ -1923,7 +1923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.40666667, y: 0.84875613}
   m_AnchorMax: {x: 0.81600004, y: 1}
-  m_AnchoredPosition: {x: 3, y: 0}
+  m_AnchoredPosition: {x: 3, y: -0.000015258789}
   m_SizeDelta: {x: 6, y: 0.000061035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432629786
@@ -2433,7 +2433,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 998
   m_TargetDisplay: 0
 --- !u!114 &576872991
 MonoBehaviour:
@@ -2978,7 +2978,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.08341634, y: 0.712}
   m_AnchorMax: {x: 0.92078215, y: 0.712}
-  m_AnchoredPosition: {x: -0.5, y: -88.5}
+  m_AnchoredPosition: {x: -0.50001526, y: -88.5}
   m_SizeDelta: {x: 1.0000153, y: 177}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662708302
@@ -3058,7 +3058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07450367, y: 0.055878054}
   m_AnchorMax: {x: 0.9250001, y: 0.8073171}
-  m_AnchoredPosition: {x: 0.000045776367, y: 0}
+  m_AnchoredPosition: {x: 0.00005340576, y: 0.000030517578}
   m_SizeDelta: {x: 0.000061035, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681516371
@@ -4460,7 +4460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028087257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.59596, y: 3.4585931, z: 1613.6058}
+  m_LocalPosition: {x: -1.54, y: 3.56, z: 1613.6058}
   m_LocalScale: {x: 0.512, y: 0.512, z: 0.512}
   m_Children: []
   m_Father: {fileID: 1059514452}
@@ -4500,7 +4500,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028087257}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4745,6 +4745,7 @@ MonoBehaviour:
   wallButton2: {fileID: 57516206312303113}
   painting: {fileID: 1028087257}
   buttonPositionInScene: {x: -6.35, y: -0.76}
+  buttonTaskCompleted: 0
 --- !u!61 &1105648622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6276,7 +6277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.84875613}
   m_AnchorMax: {x: 0.40666667, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000015258789}
   m_SizeDelta: {x: 0, y: 0.000022888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1427897895
@@ -8349,10 +8350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cfad72280824926b5d93c54b68cde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasFinalKey: 0
   border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
   unborder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
   levelChanger: {fileID: 8516861246521564836}
+  hasFinalKey: 0
 --- !u!212 &1733116341
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8808,11 +8809,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1885260065}
   - component: {fileID: 1885260070}
-  - component: {fileID: 1885260069}
   - component: {fileID: 1885260068}
   - component: {fileID: 1885260067}
   - component: {fileID: 1885260066}
   - component: {fileID: 1885260071}
+  - component: {fileID: 1885260072}
   m_Layer: 0
   m_Name: Final Key
   m_TagString: Untagged
@@ -8884,27 +8885,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.684315, y: 26.312004}
   m_EdgeRadius: 0
---- !u!50 &1885260069
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885260064}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &1885260070
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8970,17 +8950,29 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 0
+  synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 1885260067}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 6
   instantiationId: 6
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &1885260072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885260064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee46b010ac774e0b9a38862f66f6be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1900370139
 GameObject:
   m_ObjectHideFlags: 0
@@ -9196,6 +9188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81002f2c2b7153c4baca332a4c3f6dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  helpOnOff: 1
   helpMenu: {fileID: 1499023462}
   inventoryMenu: {fileID: 740659002}
   personalMessageBox: {fileID: 1427897893}
@@ -10519,12 +10512,12 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 0
+  synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 8761029052520516144}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 1
   instantiationId: 1
@@ -14973,6 +14966,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8761029052520516142}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8761029052520516144 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8070634092992012421, guid: cd3c8f6275b5940dfbb0387644abe2a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8761029052520516142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690681816120486572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dfd5a48d8924d61bee0d5a262d6355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8791421495830486226
 MonoBehaviour:
   m_ObjectHideFlags: 0
