@@ -25,13 +25,15 @@ public class PickUp : Photon.MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log("pickup");
                 //pop-up only when new message to display
                 //networkTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
 
                 //adds item to multiplayer inventory text box
                 networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
-                
+
                 //add item to inventory, remove from scene
+                //pickup();
                 this.photonView.RPC("pickup", PhotonTargets.All);
             }
         }
@@ -62,6 +64,7 @@ public class PickUp : Photon.MonoBehaviour
 				HasFinalKey = true;
 			}
         //removes physical item object from scene
+        //Destroy(gameObject);
         PhotonNetwork.Destroy(gameObject);
         //gameObject.SetActive(false);
        

@@ -9,14 +9,14 @@ public class SwitchDoor : MonoBehaviour
     private Vector3 closedPosition;
     private Vector3 openPosition;
 
-
-    void Awake()
+    private void Awake()
     {
         closedPosition = transform.position;
     }
 
     private void Start()
     {
+        closedPosition = transform.position;
         openPosition = openPos.transform.position;
     }
 

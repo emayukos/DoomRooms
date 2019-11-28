@@ -15,7 +15,7 @@ public class FoundSafe : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        safe.SetActive(false);
+        //safe.SetActive(false);
         originalColour = foundSafeSprite.color;
         foundSafeSprite.color = Color.clear;
     }
@@ -26,7 +26,9 @@ public class FoundSafe : MonoBehaviour
         if (inRange && Input.GetKeyDown(KeyCode.E))
         {
             networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "Pushing a brick revealed a hidden safe.");
+            foundSafeSprite.color = originalColour;
             this.photonview.RPC("activate", PhotonTargets.All, gameObject);
+            ///safe.GetComponent<HiddenSafe>().activate(gameObject);
         }
     }
 

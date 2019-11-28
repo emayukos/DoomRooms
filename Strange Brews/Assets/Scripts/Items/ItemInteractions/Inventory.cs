@@ -36,6 +36,7 @@ public class Inventory : Photon.MonoBehaviour
             numItems++;
 
             //adds item to inventory display list
+            //inventoryMenuText.GetComponent<InteractText>().DisplayLook(InventoryToString());
             inventoryMenuText.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, InventoryToString());
 
             //checks for item required for room completion, sets status for leaving room if found
