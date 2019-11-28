@@ -2433,7 +2433,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 998
   m_TargetDisplay: 0
 --- !u!114 &576872991
 MonoBehaviour:
@@ -4745,6 +4745,7 @@ MonoBehaviour:
   wallButton2: {fileID: 57516206312303113}
   painting: {fileID: 1028087257}
   buttonPositionInScene: {x: -6.35, y: -0.76}
+  buttonTaskCompleted: 0
 --- !u!61 &1105648622
 BoxCollider2D:
   m_ObjectHideFlags: 0

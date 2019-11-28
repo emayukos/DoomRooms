@@ -8,11 +8,14 @@ public class Inventory : Photon.MonoBehaviour
     private int numItems = 0;
     private string inventoryList = "";
     public GameObject inventoryMenuText;
+    
+    private AudioSource source;
+    public AudioClip rewardSound;
 
 
     void Start()
     {
-
+		source = GetComponent<AudioSource>();
     }
 
 
@@ -33,6 +36,13 @@ public class Inventory : Photon.MonoBehaviour
             itemlist[numItems] = itemName;
 			Debug.Log(itemName);
             numItems++;
+            if(itemName == "Final Key")
+			{
+				if (rewardSound != null)
+            	{
+                	source.PlayOneShot(rewardSound);
+            	}
+			}
 
             //adds item to inventory display list
             //inventoryMenuText.GetComponent<InteractText>().DisplayLook(InventoryToString());

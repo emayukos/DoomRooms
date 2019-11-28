@@ -22,7 +22,7 @@ public class buttonSlot : Photon.MonoBehaviour
 	public Vector2 buttonPositionInScene;
 	bool playerHasButton = false;
 	bool buttonInWall = false;
-	bool buttonTaskCompleted = false; // need rpc
+	public bool buttonTaskCompleted = false; // need rpc
 	
 
 	private void Start()
@@ -39,7 +39,7 @@ public class buttonSlot : Photon.MonoBehaviour
 			if (wallButton1.GetComponent<WallButton>().isPressed && wallButton2.GetComponent<WallButton>().isPressed)
 			{
 				// keep both buttons pressed
-				tempFunctionRPC();				
+				signalPaintingRPC();				
 			}
 
 			if (inRange && Input.GetKeyDown(KeyCode.E))
@@ -60,21 +60,21 @@ public class buttonSlot : Photon.MonoBehaviour
 
 			}
 
-			//if (inRange && buttonInWall)
-			//{
-			//	if (Input.GetKeyDown(KeyCode.E)) // press E to press button
-			//	{
-			//		// pressing button
-			//		wallButton1.SendMessage("pressButton");
-			//		// stop blinking
-			//		// if both buttons are pressed, keep them both pressed down
-			//	}
-			//	else // unpress button
-			//	{
-			//		wallButton1.SendMessage("unpressButton");
-			//	}
+		//	if (inRange && buttonInWall)
+		//	{
+		//		if (Input.GetKeyDown(KeyCode.E)) // press E to press button
+		//		{
+		//			// pressing button
+		//			wallButton1.SendMessage("pressButton");
+		//			// stop blinking
+		//			// if both buttons are pressed, keep them both pressed down
+		//		}
+		//		else // unpress button
+		//		{
+		//			wallButton1.SendMessage("unpressButton");
+		//		}
 
-			//}
+		//	}
 		}
 
 
@@ -93,19 +93,16 @@ public class buttonSlot : Photon.MonoBehaviour
 	
 	
 	
-	void tempFunctionRPC()
+	void signalPaintingRPC()
 	{
-		photonView.RPC("tempFunction", PhotonTargets.All);
+		photonView.RPC("signalPainting", PhotonTargets.All);
 	}
 	
 	[PunRPC]
-	void tempFunction()
+	void signalPainting()
 	{
 		buttonTaskCompleted = true;
 		Debug.Log("button task completed!");
-		// have both buttons be in pressed state and keep like that
-		// send message to function on painting object
-		//painting.SendMessage("movePainting"); // change to RPC later
 		painting.SendMessage("movePaintUp");
 	}
 	

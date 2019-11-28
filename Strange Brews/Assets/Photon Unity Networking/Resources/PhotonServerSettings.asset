@@ -72,6 +72,5 @@ MonoBehaviour:
   - setTopSwitch
   - setSwitchOff
   - setSwitchOn
-  - activateLight
-  - openDresser
+  - signalPainting
   DisableAutoOpenWizard: 1
