@@ -25,7 +25,7 @@ public class movePainting : Photon.MonoBehaviour
     private void Start()
     {
         startPos = transform.position;
-        stopPos = startPos + new Vector3(0, 15, 0);
+        stopPos = startPos + new Vector3(0, 3, 0);
         rb = GetComponent<Rigidbody2D>();
         //movePaintUp();
         //stopPainting();
@@ -42,7 +42,7 @@ public class movePainting : Photon.MonoBehaviour
     //[PunRPC]
     public void movePaintUp() {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector3(0, 2, 0);
+        rb.velocity = new Vector3(0, 1, 0);
         //transform.position = endPosition;
 
 

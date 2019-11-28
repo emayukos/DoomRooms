@@ -6,7 +6,6 @@ public class PickUp : Photon.MonoBehaviour
 {
     GameObject inventory;
     GameObject networkTextBox;
-	 bool HasFinalKey = false;
 
     private string itemNameFound = null;
     //private string itemDescription = null;
@@ -59,19 +58,14 @@ public class PickUp : Photon.MonoBehaviour
     {
         //adds item to inventory
         inventory.GetComponent<Inventory>().addItem(itemNameFound);
-        if(itemNameFound == "Final Key")
-			{
-				HasFinalKey = true;
-			}
+   //     if(itemNameFound == "Final Key")
+			//{
+			//	HasFinalKey = true;
+			//}
         //removes physical item object from scene
         //Destroy(gameObject);
         PhotonNetwork.Destroy(gameObject);
         //gameObject.SetActive(false);
        
-    }
-    
-    public bool hasFinalKey()
-    {
-        return HasFinalKey;
     }
 }

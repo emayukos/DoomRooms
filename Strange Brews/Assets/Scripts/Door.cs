@@ -15,10 +15,15 @@ public class Door : Photon.MonoBehaviour
 	public Material border;
 	public Material unborder;
 	public GameObject levelChanger;
-	private PickUp PickUp;
 	public bool hasFinalKey = false;
+	//public Inventory Inventory;
+	GameObject inventory;
 	
-
+	void Start()
+    {
+        //find fixed game objects that will be updated with interactions
+        inventory = GameObject.Find("Inventory");
+    }
 
 
 	private void Update()
@@ -40,15 +45,12 @@ public class Door : Photon.MonoBehaviour
         {
 			 inRange = true;
             Debug.Log("Player touched door.");
-            if(PickUp.hasFinalKey())
+			if (inventory.GetComponent<Inventory>().searchItem("Final Key"))
             {
 				hasFinalKey = true;
             	GetComponent<Renderer>().material = border; // give door border indicating it can be unlocked
                 Debug.Log("Player has key. Can press E to unlock door.");
             }
-            //else {
-                //Debug.Log("Player doesn't have key.");
-            //}
         }
     }
     
@@ -57,10 +59,5 @@ public class Door : Photon.MonoBehaviour
     	inRange = false;
     	GetComponent<Renderer>().material = unborder;
     }
-    
- //   void HasFinalKey()
-	//{
-	//	hasFinalKey = true;
-	//}
     
 }

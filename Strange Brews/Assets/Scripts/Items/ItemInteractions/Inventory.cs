@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Inventory : Photon.MonoBehaviour
 {
-    private bool HasFinalKey = false;
     private string[] itemlist = new string[30];
     private int numItems = 0;
     private string inventoryList = "";
@@ -38,12 +37,6 @@ public class Inventory : Photon.MonoBehaviour
             //adds item to inventory display list
             //inventoryMenuText.GetComponent<InteractText>().DisplayLook(InventoryToString());
             inventoryMenuText.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, InventoryToString());
-
-            //checks for item required for room completion, sets status for leaving room if found
-            // doesn't work here anymore??
-            //if (itemName == "Final Key"){
-            //    HasFinalKey = true;
-            //}
         }
         else
         {
@@ -98,11 +91,6 @@ public class Inventory : Photon.MonoBehaviour
         }
         return isFound;
     }
-
-    //public bool hasFinalKey()
-    //{
-    //    return HasFinalKey;
-    //}
 
     private string InventoryToString()
     {
