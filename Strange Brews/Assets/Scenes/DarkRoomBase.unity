@@ -12940,6 +12940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 886964131}
   - component: {fileID: 886964132}
+  - component: {fileID: 886964133}
   m_Layer: 0
   m_Name: Flashlight 2
   m_TagString: Untagged
@@ -13021,6 +13022,33 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &886964133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886964130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 20
+  instantiationId: 20
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &895129505
 GameObject:
   m_ObjectHideFlags: 0
@@ -31379,6 +31407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2108019062}
   - component: {fileID: 2108019063}
+  - component: {fileID: 2108019064}
   m_Layer: 0
   m_Name: Flashlight 1
   m_TagString: Untagged
@@ -31460,6 +31489,33 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2108019064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108019061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 21
+  instantiationId: 21
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &2118546722
 GameObject:
   m_ObjectHideFlags: 0
