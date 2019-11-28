@@ -16,7 +16,6 @@ public class DoubleSwitch : MonoBehaviour
     {
         outsideDoorsOpen = false;
         middleDoorOpen = true;
-        doorMiddle.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
     }
 
     public void Update()
@@ -26,23 +25,33 @@ public class DoubleSwitch : MonoBehaviour
             if (outsideDoorsOpen)
             {
                 Debug.Log("Outside doors should close.");
+                //doorOutside.GetComponent<SwitchDoor>().doorClose();
+                //doorCage.GetComponent<SwitchDoor>().doorClose();
                 doorOutside.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
                 doorCage.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
+                outsideDoorsOpen = !outsideDoorsOpen;
             }
             else
             {
                 Debug.Log("Outside doors should open.");
+                //doorOutside.GetComponent<SwitchDoor>().doorOpen();
+                //doorCage.GetComponent<SwitchDoor>().doorOpen();
                 doorOutside.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
                 doorCage.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
+                outsideDoorsOpen = !outsideDoorsOpen;
             }
 
             if (middleDoorOpen)
             {
+                //doorMiddle.GetComponent<SwitchDoor>().doorClose();
                 doorMiddle.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
+                middleDoorOpen = !middleDoorOpen;
             }
             else
             {
+                //doorMiddle.GetComponent<SwitchDoor>().doorOpen();
                 doorMiddle.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
+                middleDoorOpen = !middleDoorOpen;
             }
         }
     }

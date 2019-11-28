@@ -68,5 +68,8 @@ MonoBehaviour:
   - doorOpen
   - ShrinkPlayer
   - GrowPlayer
-  - signalPainting
+  - setBottomSwitch
+  - setTopSwitch
+  - setSwitchOff
+  - setSwitchOn
   DisableAutoOpenWizard: 1

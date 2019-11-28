@@ -13,6 +13,7 @@ public class DoorSwitch : Photon.MonoBehaviour
         //   animate here?
 
         Debug.Log("Door should open.");
+        //door.GetComponent<SwitchDoor>().doorOpen();
         door.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
     }
 
@@ -22,6 +23,7 @@ public class DoorSwitch : Photon.MonoBehaviour
         //   animate here?
 
         Debug.Log("Door should close.");
+        //door.GetComponent<SwitchDoor>().doorClose();
         door.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
     }
 }
