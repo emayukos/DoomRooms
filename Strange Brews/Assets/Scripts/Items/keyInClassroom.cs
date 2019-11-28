@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class keyInClassroom : MonoBehaviour
 {
+    private bool isActive;
+    private bool inRange;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,6 +14,11 @@ public class keyInClassroom : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         
     }
