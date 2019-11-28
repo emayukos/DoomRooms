@@ -16,7 +16,7 @@ MonoBehaviour:
   VoiceAppID: 
   ChatAppID: e56f959c-8c51-4c28-a5aa-e50c9843d7db
   HostType: 1
-  PreferredRegion: 8
+  PreferredRegion: 0
   EnabledRegions: -1
   Protocol: 0
   ServerAddress: 
@@ -28,45 +28,49 @@ MonoBehaviour:
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
+  - activate
   - addItem
   - AddText
+  - brewPotion
   - Chat
   - CloseBox
   - ColorRpc
   - DestroyRpc
+  - disableButton
   - DisplayLook
   - DoJump
+  - enableButton
+  - FadeToNextLevel
   - Flash
   - InstantiateRpc
   - Marco
+  - movePainting
   - OpenBox
+  - openFileCabinet
   - openSafe
   - pickup
   - PickupItemInit
   - Polo
+  - pressButton
   - PunPickup
   - PunPickupSimple
   - PunRespawn
+  - putButtonInWall
+  - removeItem
   - RequestForPickupItems
   - RequestForPickupTimes
   - searchItem
   - TaggedPlayer
-  - unlockThing
-  - FadeToNextLevel
-  - OnFadeComplete
-  - disableButton
-  - enableButton
-  - pressButton
-  - unpressButton
-  - movePainting
-  - putButtonInWall
   - tempFunction
-  - TurnOnProjector
-  - TurnOffProjector
-  - removeItem
-  - activate
-  - brewPotion
-  - movePaintUp
-  - OpenFileCabinet
-  - openFileCabinet
+  - unlockThing
+  - unpressButton
+  - doorClose
+  - doorOpen
+  - ShrinkPlayer
+  - GrowPlayer
+  - setBottomSwitch
+  - setTopSwitch
+  - setSwitchOff
+  - setSwitchOn
+  - signalPainting
   DisableAutoOpenWizard: 1
