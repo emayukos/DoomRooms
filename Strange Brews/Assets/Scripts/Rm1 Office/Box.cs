@@ -16,6 +16,11 @@ public class Box : Photon.MonoBehaviour
 	private AudioSource source;
 	public AudioClip soundEffect;
 	private bool isOpen = false;
+	public string sortingLayerClosed = "furniture 2";
+	public int sortingOrderClosed = 2;
+	public string sortingLayerOpen = "accessory 2.2";
+	public int sortingOrderOpen = 3; // to hide cobwebs, etc.
+	
 
 
 	private void Start()
@@ -31,7 +36,15 @@ public class Box : Photon.MonoBehaviour
 	{
 		if(inRange && Input.GetKeyDown(KeyCode.E)) // make icon that says "press E" to open
 		{
-			this.photonView.RPC("OpenBox", PhotonTargets.All);
+			if (isOpen)
+			{
+				photonView.RPC("CloseBox", PhotonTargets.All);
+			}
+			else
+			{
+				photonView.RPC("OpenBox", PhotonTargets.All);
+			}
+		
 		}
 		
 		
@@ -41,6 +54,8 @@ public class Box : Photon.MonoBehaviour
 	{
 			// open box 
 			GetComponent<SpriteRenderer>().sprite = openBox;
+			GetComponent<SpriteRenderer>().sortingLayerName = sortingLayerOpen;
+			GetComponent<SpriteRenderer>().sortingOrder = sortingOrderOpen;
 			isOpen = true;
 			if (soundEffect != null)
             {
@@ -83,6 +98,8 @@ public class Box : Photon.MonoBehaviour
 		{
 			// close box when player moves out of trigger boundary
 			GetComponent<SpriteRenderer>().sprite = closedBox;
+			GetComponent<SpriteRenderer>().sortingLayerName = sortingLayerClosed;
+			GetComponent<SpriteRenderer>().sortingOrder = sortingOrderClosed;
 
 			if (soundEffect != null)
 			{

@@ -971,6 +971,10 @@ MonoBehaviour:
   openBox: {fileID: 0}
   buttonPositionInScene: {x: 0, y: 0}
   soundEffect: {fileID: 0}
+  sortingLayerClosed: furniture 2
+  sortingOrderClosed: 2
+  sortingLayerOpen: accessory 2.2
+  sortingOrderOpen: 3
 --- !u!1 &83565857
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,6 +3877,10 @@ MonoBehaviour:
   openBox: {fileID: 0}
   buttonPositionInScene: {x: 0, y: 0}
   soundEffect: {fileID: 0}
+  sortingLayerClosed: furniture 2
+  sortingOrderClosed: 2
+  sortingLayerOpen: accessory 2.2
+  sortingOrderOpen: 3
 --- !u!82 &476977018
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4568,16 +4576,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2783468994888249675, guid: 99f23264b55d94506b6a098ec46293c1,
-        type: 3}
-      propertyPath: shrinkSpeed
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: -2783468994888249675, guid: 99f23264b55d94506b6a098ec46293c1,
-        type: 3}
-      propertyPath: shrunkSize
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2616610964151234683, guid: 99f23264b55d94506b6a098ec46293c1,
         type: 3}
       propertyPath: m_Name
@@ -4647,6 +4645,21 @@ PrefabInstance:
         type: 3}
       propertyPath: instantiationId
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2783468994888249675, guid: 99f23264b55d94506b6a098ec46293c1,
+        type: 3}
+      propertyPath: shrinkSpeed
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: -2783468994888249675, guid: 99f23264b55d94506b6a098ec46293c1,
+        type: 3}
+      propertyPath: shrunkSize
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2783468994888249675, guid: 99f23264b55d94506b6a098ec46293c1,
+        type: 3}
+      propertyPath: shrink
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4405039587703481566, guid: 99f23264b55d94506b6a098ec46293c1,
         type: 3}
@@ -6894,6 +6907,10 @@ MonoBehaviour:
   openBox: {fileID: 21300000, guid: 17bcf0d548fe44575a1adf5bf3b15b0c, type: 3}
   buttonPositionInScene: {x: 5.45, y: -3.04}
   soundEffect: {fileID: 8300000, guid: df7407dbd6b444767957d10b03dd6d75, type: 3}
+  sortingLayerClosed: furniture 2
+  sortingOrderClosed: 2
+  sortingLayerOpen: accessory 2.2
+  sortingOrderOpen: 3
 --- !u!114 &766885696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10218,6 +10235,10 @@ MonoBehaviour:
   openBox: {fileID: 0}
   buttonPositionInScene: {x: 0, y: 0}
   soundEffect: {fileID: 0}
+  sortingLayerClosed: furniture 2
+  sortingOrderClosed: 2
+  sortingLayerOpen: accessory 2.2
+  sortingOrderOpen: 3
 --- !u!1 &1233804262
 GameObject:
   m_ObjectHideFlags: 0
@@ -12512,6 +12533,10 @@ MonoBehaviour:
   openBox: {fileID: 21300000, guid: 17bcf0d548fe44575a1adf5bf3b15b0c, type: 3}
   buttonPositionInScene: {x: -6.1, y: 0.8}
   soundEffect: {fileID: 8300000, guid: df7407dbd6b444767957d10b03dd6d75, type: 3}
+  sortingLayerClosed: furniture 2
+  sortingOrderClosed: 2
+  sortingLayerOpen: accessory 2.2
+  sortingOrderOpen: 3
 --- !u!61 &1577129239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14451,6 +14476,10 @@ MonoBehaviour:
   openBox: {fileID: 21300000, guid: 17bcf0d548fe44575a1adf5bf3b15b0c, type: 3}
   buttonPositionInScene: {x: 0, y: 0}
   soundEffect: {fileID: 0}
+  sortingLayerClosed: furniture 2
+  sortingOrderClosed: 2
+  sortingLayerOpen: accessory 2.2
+  sortingOrderOpen: 3
 --- !u!114 &1804769267
 MonoBehaviour:
   m_ObjectHideFlags: 0

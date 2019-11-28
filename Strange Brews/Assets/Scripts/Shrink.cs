@@ -33,7 +33,7 @@ public class Shrink : Photon.MonoBehaviour
  			}
     	}  
     }
-    
+    // call this in other script when you want the player to shrink
     public void ShrinkPlayerRPC() { 
     	photonView.RPC("ShrinkPlayer", PhotonTargets.All);
     }
