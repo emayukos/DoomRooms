@@ -75,4 +75,5 @@ MonoBehaviour:
   - signalPainting
   - activateLight
   - openDresser
+  - drinkPotion
   DisableAutoOpenWizard: 1

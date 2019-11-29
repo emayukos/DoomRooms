@@ -28,6 +28,7 @@ public class tinydoor : Photon.MonoBehaviour
 		if (inRange && hasFinalKey && Input.GetKeyDown(KeyCode.E))
 		{
 			// can only go through door after shrinking
+			// check players shrink boolean
 			if(isShrunk)
 			{
 				// unlock door and go to next room
@@ -53,7 +54,7 @@ public class tinydoor : Photon.MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine) // will only recognize this when the player has the key and is a trigger
         {
-			 inRange = true;
+			inRange = true;
             Debug.Log("Player touched door.");
 			if (inventory.GetComponent<Inventory>().searchItem("Final Key"))
             {
