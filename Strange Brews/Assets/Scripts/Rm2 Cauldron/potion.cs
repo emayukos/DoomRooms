@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,14 +16,15 @@ public class potion : Photon.MonoBehaviour
 	private AudioSource source;
     public AudioClip drinkSoundEffect;
 	private GameObject Player;
-	private GameObject thisplayer; // figure out how to do this individually
+	//private GameObject thisplayer; // figure out how to do this individually
 	
 	
 
 	private void Start()
 	{
 		source = GetComponent<AudioSource>();
-		Player = GameObject.FindWithTag("Player");	
+		Player = GameObject.FindWithTag("Player");
+		//isActive(true); // for testing
 	}
 
 	private void Update()
@@ -50,7 +52,7 @@ public class potion : Photon.MonoBehaviour
 		Debug.Log("player drank potion");
 		yield return new WaitForSeconds(source.clip.length);
 		GetComponent<SpriteRenderer>().sprite = emptyBottle;
-		thisplayer.SendMessage("ShrinkPlayerRPC");
+		Player.SendMessage("ShrinkPlayerRPC");
 	}
 	
 	// for player 1

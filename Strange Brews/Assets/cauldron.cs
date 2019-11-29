@@ -15,8 +15,9 @@ public class cauldron : MonoBehaviour
     void Start()
     {
         cauldronpanel.SetActive(false);
-        potion1.SetActive(false);
-		potion2.SetActive(false);
+        // commented out for testing
+        //potion1.SetActive(false);
+		//potion2.SetActive(false);
     }
 
     // Update is called once per frame

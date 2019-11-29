@@ -71,6 +71,12 @@ public class tinydoor : Photon.MonoBehaviour
     	GetComponent<Renderer>().material = unborder;
     }
     
+    
+    void IsShrunk() {
+		isShrunk = true;
+    }
+    
+    
 }
 
 
