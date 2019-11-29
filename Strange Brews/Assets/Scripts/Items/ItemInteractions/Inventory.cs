@@ -30,6 +30,7 @@ public class Inventory : Photon.MonoBehaviour
     [PunRPC]
     public void addItem(string itemName)
     {
+        Debug.Log("addItemCalled");
         if (!full())
         {
             //adds items to next open position in inventory array
@@ -92,12 +93,13 @@ public class Inventory : Photon.MonoBehaviour
 
         bool isFound = false;
         int i = 0;
-        while (!isFound && i<numItems)
+        while (!isFound && i < numItems)
         {
             if (itemlist[i] == itemName)
             {
                 isFound = true;
             }
+            i++;
         }
         return isFound;
     }

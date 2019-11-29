@@ -10,14 +10,26 @@ public class CameraFollowPrefab : MonoBehaviour
     GameObject player;        //Public variable to store a reference to the player game object
 
     private Vector3 offset;            //Private variable to store the offset distance between the player and camera
+    private bool playerSet = false;
 
     void Start()
     {
-        //Calculate and store the offset value by getting the distance between the player's position and camera's position.
-        offset = transform.position - player.transform.position;
+        
+    }
 
-        //Assign player to camera, since in photon player spawns, cannot be assigned before
-        player = GameObject.Find("mainPlayer");
+    private void Update()
+    {
+        if (playerSet)
+        {
+            if (player != null)
+            {
+                //Calculate and store the offset value by getting the distance between the player's position and camera's position.
+                offset = player.transform.position;
+                offset.z -= 10.0f;
+                offset = offset - player.transform.position;
+                playerSet = true;
+            }
+        }
     }
 
     // LateUpdate is called after Update each frame
@@ -25,5 +37,11 @@ public class CameraFollowPrefab : MonoBehaviour
     {
         // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
         transform.position = player.transform.position + offset;
+    }
+
+    public void setPlayer(GameObject p)
+    {
+        player = p;
+        playerSet = true;
     }
 }
