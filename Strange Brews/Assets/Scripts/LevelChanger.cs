@@ -24,7 +24,7 @@ public class LevelChanger : Photon.MonoBehaviour
     private void Start()
     {
         //Fetch the GameObject's Collider (make sure they have a Collider component)
-        roomNumberText.text = "Room: " + roomNumber;
+        roomNumberText.text = "Room: " + (SceneManager.GetActiveScene().buildIndex - 1);
         source = GetComponent<AudioSource>(); // need this!
         
     }

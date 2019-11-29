@@ -95,7 +95,7 @@ public class projectorPanelUI : MonoBehaviour
         else
         {
             //FIX SOUND THING
-            //source.PlayOneShot(incorrectanswer, 0.5f);
+            source.PlayOneShot(incorrectanswer, 0.5f);
             Debug.Log("wrong code");
         }
 
