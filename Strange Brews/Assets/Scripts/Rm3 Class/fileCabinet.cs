@@ -6,7 +6,7 @@ public class fileCabinet : MonoBehaviour
 {
 
     public Sprite fileCabinetClosed;
-    public Sprite fileCabinetOpen;
+    public GameObject fileCabinetOpen;
     public GameObject panelUI;
     public GameObject classRoomKey;
 
@@ -19,7 +19,9 @@ public class fileCabinet : MonoBehaviour
     [PunRPC]
     private void openFileCabinet()
     {
-        GetComponent<SpriteRenderer>().sprite = fileCabinetOpen;
+        GetComponent<SpriteRenderer>().sprite = fileCabinetOpen.GetComponent<SpriteRenderer>().sprite;
+        transform.localScale = fileCabinetOpen.transform.localScale;
+        transform.position = fileCabinetOpen.transform.position;
         panelUI.SetActive(false);
         classRoomKey.SetActive(true);
     }
