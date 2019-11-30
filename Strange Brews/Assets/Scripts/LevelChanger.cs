@@ -21,11 +21,17 @@ public class LevelChanger : Photon.MonoBehaviour
 	//	} 
 	//}
 
-    private void Start()
+	//private void Awake()
+	//{
+	//	DontDestroyOnLoad(this.transform);
+	//}
+	private void Start()
     {
         //Fetch the GameObject's Collider (make sure they have a Collider component)
         roomNumberText.text = "Room: " + (SceneManager.GetActiveScene().buildIndex - 1);
         source = GetComponent<AudioSource>(); // need this!
+
+	
         
     }
 
@@ -65,6 +71,7 @@ public class LevelChanger : Photon.MonoBehaviour
     	// get the room number to carry to the next room again (should move this somewhere else)
     	roomNumber += 1;
 		roomNumberText.text = "Room: " + roomNumber; // update text 
-    	SceneManager.LoadScene(levelToLoad);
+		PhotonNetwork.LoadLevel(levelToLoad);
+    	//SceneManager.LoadScene(levelToLoad);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class photonHandler : MonoBehaviour
@@ -11,27 +12,28 @@ public class photonHandler : MonoBehaviour
     public photonButtons photonB;
 
     public GameObject mainPlayer;
-	private GameObject myCharacter;
+
 
 	//public GameObject plCam;
 	//private GameObject mainCam;
 	////public Animator animator;
 
 	private void Awake()
-    {
-        // won't destroy this object when the scene changes bc we will need it later
-        DontDestroyOnLoad(this.transform);
-    }
+	{
+		// won't destroy this object when the scene changes bc we will need it later
+		DontDestroyOnLoad(this.transform);
+		SceneManager.sceneLoaded += OnSceneFinishedLoading;
+	}
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
+    //private void OnEnable()
+    //{
+    //    SceneManager.sceneLoaded += OnSceneFinishedLoading;
+    //}
     public void createNewRoom()
     {
-        RoomOptions roomOptions = new RoomOptions();
-        roomOptions.MaxPlayers = 2;
-        PhotonNetwork.CreateRoom(photonB.createRoomInput.text, roomOptions, null);
+        //RoomOptions roomOptions = new RoomOptions();
+        //roomOptions.MaxPlayers = 2;
+        PhotonNetwork.CreateRoom(photonB.createRoomInput.text, new RoomOptions() { MaxPlayers = 2 }, null);
     }
 
     public void joinOrCreateRoom()
@@ -44,6 +46,7 @@ public class photonHandler : MonoBehaviour
 
     private void OnJoinedRoom()
     {
+		//nameInput.SendMessage("Run"); // added 
         moveScene();
         Debug.Log("We are connected to the room!");
     }
@@ -54,10 +57,10 @@ public class photonHandler : MonoBehaviour
     }
 
     
-    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    public void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
     {
 
-		if (scene.name != "MainMenu")
+		if (scene.name == "MainMenu")
 		{
 			SpawnPlayer();
 			Debug.Log("loaded room");
@@ -70,7 +73,18 @@ public class photonHandler : MonoBehaviour
     {
         Debug.Log("spawn player");
 
-		myCharacter = PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
+		PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
+
+		if (PhotonNetwork.isMasterClient)
+		{
+			PhotonNetwork.playerName = "player1";
+		}
+		else 
+		{ 
+			PhotonNetwork.playerName = "player2";
+		}
+		
+		
 
 		//myCharacter.GetComponent<Canvas>().eventCamera = Camera.main;
 		//animator = myCharacter.GetComponent<Animator>(); // added this
@@ -83,10 +97,10 @@ public class photonHandler : MonoBehaviour
 		
     }
 
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    //void OnDisable()
+    //{
+    //    SceneManager.sceneLoaded -= OnSceneLoaded;
+    //}
 
 
 
