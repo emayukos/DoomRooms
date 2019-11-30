@@ -8369,7 +8369,7 @@ MonoBehaviour:
   border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
   unborder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
   levelChanger: {fileID: 8516861246521564836}
-  hasFinalKey: 0
+  hasFinalKey: 1
 --- !u!212 &1733116341
 SpriteRenderer:
   m_ObjectHideFlags: 0

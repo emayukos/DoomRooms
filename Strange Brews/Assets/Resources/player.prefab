@@ -18,10 +18,11 @@ GameObject:
   - component: {fileID: 8762338799233940131}
   - component: {fileID: 8632787874356112040}
   - component: {fileID: 7484291737280406259}
-  - component: {fileID: 6769728055319751575}
   - component: {fileID: -2783468994888249675}
   - component: {fileID: 4405039587703481566}
   - component: {fileID: 460993403543457635}
+  - component: {fileID: 8634719202393878869}
+  - component: {fileID: 6022574246794261804}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -393,14 +394,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.7
---- !u!81 &6769728055319751575
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2616610964151234683}
-  m_Enabled: 1
 --- !u!114 &-2783468994888249675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,3 +522,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8634719202393878869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616610964151234683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967cb3e9a83504c9f9aebe309014b8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!81 &6022574246794261804
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616610964151234683}
+  m_Enabled: 1
