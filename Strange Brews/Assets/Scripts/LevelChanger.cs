@@ -21,7 +21,11 @@ public class LevelChanger : Photon.MonoBehaviour
 	//	} 
 	//}
 
-    private void Start()
+	//private void Awake()
+	//{
+	//	DontDestroyOnLoad(this.transform);
+	//}
+	private void Start()
     {
         //Fetch the GameObject's Collider (make sure they have a Collider component)
         roomNumberText.text = "Room: " + (SceneManager.GetActiveScene().buildIndex - 1);

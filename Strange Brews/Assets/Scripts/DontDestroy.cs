@@ -4,16 +4,21 @@ using UnityEngine;
 // attach to all objects you want to keep in next scene (player, canvas with text, etc.)
 public class DontDestroy : MonoBehaviour
 {
-    private static bool created = false;
+    //private static bool created = false;
+    
+    private void Awake()
+	{
+		DontDestroyOnLoad(this.transform);
+	}
 
-    void Awake()
-    {
-        if (!created)
-        {
-            DontDestroyOnLoad(this.gameObject);
-            created = true;
-            Debug.Log("Awake: " + this.gameObject);
-        }
-    }
+    //void Awake()
+    //{
+    //    if (!created)
+    //    {
+    //        DontDestroyOnLoad(this.gameObject);
+    //        created = true;
+    //        Debug.Log("Awake: " + this.gameObject);
+    //    }
+    //}
 
 }

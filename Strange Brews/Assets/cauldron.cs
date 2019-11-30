@@ -6,15 +6,18 @@ using UnityEngine.UI;
 public class cauldron : MonoBehaviour
 {
 
-    public GameObject key, cauldronpanel;
-    private bool inRange, isOpen, potionMade;
+    public GameObject potion1, potion2, cauldronpanel;
+    private bool inRange, isOpen;
+	public bool potionMade; // made public for testing
 
 
     // Start is called before the first frame update
     void Start()
     {
         cauldronpanel.SetActive(false);
-        key.SetActive(false);
+        // commented out for testing
+        //potion1.SetActive(false);
+		//potion2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,9 +34,8 @@ public class cauldron : MonoBehaviour
     [PunRPC]
     public void brewPotion()
     {
-        key.SetActive(true);  // could replace this with bottled potions for players to select
-        					  // and have finding the key be a smaller task in the room to get done first 
-        					  // and have the door be too small to get through 
+    	potion1.SetActive(true);
+		potion2.SetActive(true);
         cauldronpanel.SetActive(false);
         potionMade = true;
     }
