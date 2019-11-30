@@ -10,11 +10,6 @@ public class EndSwitches : MonoBehaviour
     public string key;
     public bool inRange = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -23,14 +18,14 @@ public class EndSwitches : MonoBehaviour
         {
             if (inventory.GetComponent<Inventory>().searchItem(key))
             {
-                //finalDoorControl.GetComponent<FinalDoor>().setSwitchOn(switchNum);
-                finalDoorControl.GetComponent<FinalDoor>().photonView.RPC("setSwitchOn", PhotonTargets.All, switchNum);
+                finalDoorControl.GetComponent<FinalDoor>().setSwitchOn(switchNum);
+                //finalDoorControl.GetComponent<FinalDoor>().photonView.RPC("setSwitchOn", PhotonTargets.All, switchNum);
             }
         }
         if(!inRange || Input.GetKeyUp(KeyCode.E))
         {
-            //finalDoorControl.GetComponent<FinalDoor>().setSwitchOff(switchNum);
-            finalDoorControl.GetComponent<FinalDoor>().photonView.RPC("setSwitchOff", PhotonTargets.All, switchNum);
+            finalDoorControl.GetComponent<FinalDoor>().setSwitchOff(switchNum);
+            //finalDoorControl.GetComponent<FinalDoor>().photonView.RPC("setSwitchOff", PhotonTargets.All, switchNum);
         }
     }
 

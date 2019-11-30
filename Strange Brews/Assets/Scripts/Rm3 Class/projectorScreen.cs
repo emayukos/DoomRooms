@@ -38,6 +38,7 @@ public class projectorScreen : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.CompareTag("Player"))
         {
             inRange = true;
@@ -51,19 +52,11 @@ public class projectorScreen : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {
             inRange = false;
             projectorScreenPanel.SetActive(false);
             UIopen = !UIopen;
-
-            //if (collision.GetComponent<PhotonView>().isMine)
-            //{
-            //    inRange = false;
-            //    projectorScreenPanel.SetActive(false);
-            //    UIopen = !UIopen;
-            //}
 
         }
     }

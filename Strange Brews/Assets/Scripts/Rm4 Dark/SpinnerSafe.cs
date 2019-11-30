@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class safe : MonoBehaviour
+public class SpinnerSafe : MonoBehaviour
 {
     [SerializeField]
-    GameObject codePanel, closedSafe, openedSafe;
-
-    private bool isActive = false;
-
-
+    GameObject codePanel, closedSafe, openedSafe, keyclue;
+    public GameObject triggeredKey;
 
     public bool isSafeOpened = false; // should not initially be open
     private bool UIopen = false;
@@ -30,27 +27,26 @@ public class safe : MonoBehaviour
         codePanel.SetActive(false);
         closedSafe.SetActive(true);
         openedSafe.SetActive(false);
+        keyclue.SetActive(false);
+        triggeredKey.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isActive)
+        if (inRange && Input.GetKeyDown(KeyCode.E) && !isSafeOpened)
         {
-            if (inRange && Input.GetKeyDown(KeyCode.E) && !isSafeOpened)
-            {
-                Debug.Log("isSafeOpened: " + isSafeOpened);
-                if (UIopen == false)
-                {
-                    codePanel.SetActive(true);
-                    UIopen = !UIopen;
-                }
-                else
-                {
-                    codePanel.SetActive(false);
-                    UIopen = !UIopen;
 
-                }
+            if (UIopen == false)
+            {
+                codePanel.SetActive(true);
+                UIopen = !UIopen;
+            }
+            else
+            {
+                codePanel.SetActive(false);
+                UIopen = !UIopen;
+
             }
         }
 
@@ -64,25 +60,27 @@ public class safe : MonoBehaviour
         codePanel.SetActive(false);
         closedSafe.SetActive(false);
         openedSafe.SetActive(true);
+        keyclue.SetActive(true);
+        triggeredKey.SetActive(true);
         isSafeOpened = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             if (collision.GetComponent<PhotonView>().isMine)
             {
                 inRange = true;
             }
-            
-        } 
+
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             if (collision.GetComponent<PhotonView>().isMine)
             {
@@ -90,17 +88,8 @@ public class safe : MonoBehaviour
                 codePanel.SetActive(false);
                 UIopen = !UIopen;
             }
-            
+
         }
     }
-
-
-
-    [PunRPC]
-    public void activate()
-    {
-        isActive = true;
-    }
-
 
 }

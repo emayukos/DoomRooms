@@ -49,12 +49,12 @@ public class movementDirectional : MonoBehaviour
             if (h < 0)
             {
                 //left
-                sightRotation = 180;
+                sightRotation = 180f;
             }
             if (h > 0)
             {
                 //right
-                sightRotation = 0;
+                sightRotation = 0f;
             }
         }
         else if (h == 0)
@@ -62,12 +62,12 @@ public class movementDirectional : MonoBehaviour
             if (v > 0)
             {
                 //up
-                sightRotation = 90;
+                sightRotation = 90f;
             }
             if (v < 0)
             {
                 //down
-                sightRotation = -90;
+                sightRotation = -90f;
             }
         }
         else
@@ -78,12 +78,12 @@ public class movementDirectional : MonoBehaviour
                 if (h < 0)
                 {
                     //diag up left
-                    sightRotation = 135;
+                    sightRotation = 135f;
                 }
                 if (h > 0)
                 {
                     //diag up right
-                    sightRotation = 45;
+                    sightRotation = 45f;
                 }
             }
             if (v < 0)
@@ -92,12 +92,12 @@ public class movementDirectional : MonoBehaviour
                 if (h < 0)
                 {
                     //diag down left
-                    sightRotation = -135;
+                    sightRotation = -135f;
                 }
                 if (h > 0)
                 {
                     //diag down right
-                    sightRotation = -45;
+                    sightRotation = -45f;
                 }
             }
         }
