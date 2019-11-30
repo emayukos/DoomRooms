@@ -5,8 +5,8 @@ using UnityEngine;
 public class SpinnerSafe : MonoBehaviour
 {
     [SerializeField]
-    GameObject codePanel, closedSafe, openedSafe;
-
+    GameObject codePanel, closedSafe, openedSafe, keyclue;
+    public GameObject triggeredKey;
 
     public bool isSafeOpened = false; // should not initially be open
     private bool UIopen = false;
@@ -27,6 +27,8 @@ public class SpinnerSafe : MonoBehaviour
         codePanel.SetActive(false);
         closedSafe.SetActive(true);
         openedSafe.SetActive(false);
+        keyclue.SetActive(false);
+        triggeredKey.SetActive(false);
     }
 
     // Update is called once per frame
@@ -58,6 +60,8 @@ public class SpinnerSafe : MonoBehaviour
         codePanel.SetActive(false);
         closedSafe.SetActive(false);
         openedSafe.SetActive(true);
+        keyclue.SetActive(true);
+        triggeredKey.SetActive(true);
         isSafeOpened = true;
     }
 

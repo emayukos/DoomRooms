@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : Photon.MonoBehaviour
 {
-    private string[] itemlist = new string[30];
+    private string[] itemlist = new string[10];
     private int numItems = 0;
     private string inventoryList = "";
     public GameObject inventoryMenuText;
@@ -22,7 +22,7 @@ public class Inventory : Photon.MonoBehaviour
     public bool full()
     {
         //checks if inventory array capacity has been met
-        if (numItems < 3)
+        if (numItems < 10)
             return false;
         else
             return true;
@@ -106,14 +106,14 @@ public class Inventory : Photon.MonoBehaviour
 
     private string InventoryToString()
     {
-        if(numItems == 0)
-        {
-            inventoryList = "";
-        }
+        inventoryList = "";
 
-        for (int i=0; i < numItems; i++)
+        if (numItems != 0)
         {
-            inventoryList += "\n" + itemlist[i];
+            for (int i = 0; i < numItems; i++)
+            {
+                inventoryList += "\n" + itemlist[i];
+            }
         }
 
         return inventoryList;

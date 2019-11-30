@@ -75,4 +75,6 @@ MonoBehaviour:
   - signalPainting
   - activateLight
   - openDresser
+  - openComputer
+  - activateKey
   DisableAutoOpenWizard: 1
