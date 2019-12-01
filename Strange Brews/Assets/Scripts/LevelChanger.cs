@@ -16,7 +16,7 @@ public class LevelChanger : Photon.MonoBehaviour
 	
 	private GameObject leftDoor;
 	Vector2 temp;
-	private GameObject player;
+	private GameObject[] players;
 	public Vector2 startPos;
 
 	//void Update()
@@ -32,10 +32,15 @@ public class LevelChanger : Photon.MonoBehaviour
 	//}
 
 	private void Awake()
-	{
-		player = GameObject.FindWithTag("Player");
+	{	
+		players = GameObject.FindGameObjectsWithTag("Player");
+		players[0].transform.position = startPos;
+		startPos.x -= 0.25f;
 		startPos.y += 1;
-		player.transform.position = startPos;
+		if (players.Length > 1)
+		{
+			players[1].transform.position = startPos;
+		}
 		
 	}
 

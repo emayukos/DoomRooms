@@ -242,6 +242,21 @@ PrefabInstance:
       propertyPath: roomNumberText
       value: 
       objectReference: {fileID: 768659713}
+    - target: {fileID: 8516861246620561881, guid: 83c0d701af6b047a58d1140abcd769fa,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 14944602}
+    - target: {fileID: 8516861246620561881, guid: 83c0d701af6b047a58d1140abcd769fa,
+        type: 3}
+      propertyPath: startPos.x
+      value: -5.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516861246620561881, guid: 83c0d701af6b047a58d1140abcd769fa,
+        type: 3}
+      propertyPath: startPos.y
+      value: -0.53
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8516861246716321871, guid: 83c0d701af6b047a58d1140abcd769fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83c0d701af6b047a58d1140abcd769fa, type: 3}
@@ -386,6 +401,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &14944602 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8516861246620561882, guid: 83c0d701af6b047a58d1140abcd769fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 14944597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &23910949
 GameObject:
   m_ObjectHideFlags: 0
@@ -16720,7 +16741,6 @@ GameObject:
   - component: {fileID: 1551622228}
   - component: {fileID: 1551622227}
   - component: {fileID: 1551622226}
-  - component: {fileID: 1551622225}
   m_Layer: 0
   m_Name: Canvas rm number
   m_TagString: Untagged
@@ -16728,18 +16748,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1551622225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551622224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967cb3e9a83504c9f9aebe309014b8c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1551622226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23516,11 +23524,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2137422130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40164a6e2bb414657a75b725d0590cb5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7d24116dc0cc4e0c962b18e51d295c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potion1: {fileID: 537978143}
-  potion2: {fileID: 221294318}
+  potion1: {fileID: 0}
+  potion2: {fileID: 0}
 --- !u!1 &2143483331
 GameObject:
   m_ObjectHideFlags: 0
@@ -23691,12 +23699,12 @@ PrefabInstance:
     - target: {fileID: 3594628821542396007, guid: 8c485a9a989264596b6eb095d635f162,
         type: 3}
       propertyPath: viewIdField
-      value: 17
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3594628821542396007, guid: 8c485a9a989264596b6eb095d635f162,
         type: 3}
       propertyPath: instantiationId
-      value: 17
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3594628821542396007, guid: 8c485a9a989264596b6eb095d635f162,
         type: 3}
