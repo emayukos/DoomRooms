@@ -79,4 +79,5 @@ MonoBehaviour:
   - openComputer
   - activateRPC
   - openChestRPC
+  - rotateWall
   DisableAutoOpenWizard: 1

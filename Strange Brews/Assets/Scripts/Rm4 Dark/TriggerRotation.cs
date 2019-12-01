@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerRotation : MonoBehaviour
 {
+    public PhotonView photonView;
     private Rigidbody2D rbody;
     private bool rotate = false;
     private float rotateBy;
@@ -34,7 +35,7 @@ public class TriggerRotation : MonoBehaviour
         if (rotate)
         {
             //rotates object by rotateBy speed and direction within set bounds
-            rbody.MoveRotation(Mathf.Clamp(rbody.rotation + rotateBy, lowBound, highBound));
+            photonView.RPC("rotateWall", PhotonTargets.All);
         }
     }
 
@@ -62,4 +63,9 @@ public class TriggerRotation : MonoBehaviour
         rotate = false;
     }
 
+    [PunRPC]
+    public void rotateWall()
+    {
+        rbody.MoveRotation(Mathf.Clamp(rbody.rotation + rotateBy, lowBound, highBound));
+    }
 }

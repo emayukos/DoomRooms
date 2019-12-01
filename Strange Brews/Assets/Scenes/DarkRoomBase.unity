@@ -1943,6 +1943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 71399412}
   - component: {fileID: 71399413}
+  - component: {fileID: 71399414}
   m_Layer: 0
   m_Name: Found Safe
   m_TagString: Untagged
@@ -2013,6 +2014,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &71399414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71399411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 34
+  instantiationId: 34
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &79172473
 GameObject:
   m_ObjectHideFlags: 0
@@ -13464,7 +13492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!120 &711029389
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -25059,6 +25087,7 @@ GameObject:
   - component: {fileID: 1308645543}
   - component: {fileID: 1308645545}
   - component: {fileID: 1308645544}
+  - component: {fileID: 1308645546}
   m_Layer: 0
   m_Name: endspin counter clockwise
   m_TagString: c.clockwise spin
@@ -25130,6 +25159,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca527b6f241ca94ea82b792cf5bc018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  photonView: {fileID: 1308645546}
+--- !u!114 &1308645546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308645541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 32
+  instantiationId: 32
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1316749889
 GameObject:
   m_ObjectHideFlags: 0
@@ -26054,7 +26111,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1}
+  m_Offset: {x: 0, y: 1.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -26065,7 +26122,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.5}
   m_EdgeRadius: 0
 --- !u!1 &1372821148
 GameObject:
@@ -26540,6 +26597,7 @@ GameObject:
   - component: {fileID: 1386793738}
   - component: {fileID: 1386793739}
   - component: {fileID: 1386793740}
+  - component: {fileID: 1386793741}
   m_Layer: 0
   m_Name: midspin counter clockwise
   m_TagString: c.clockwise spin
@@ -26601,6 +26659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca527b6f241ca94ea82b792cf5bc018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  photonView: {fileID: 1386793741}
 --- !u!68 &1386793740
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -26619,6 +26678,33 @@ EdgeCollider2D:
   m_Points:
   - {x: -1, y: 0.03}
   - {x: -1.9, y: 0.03}
+--- !u!114 &1386793741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386793736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 30
+  instantiationId: 30
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1387848038
 GameObject:
   m_ObjectHideFlags: 0
@@ -27050,7 +27136,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -34049,6 +34135,7 @@ GameObject:
   - component: {fileID: 1779221846}
   - component: {fileID: 1779221843}
   - component: {fileID: 1779221845}
+  - component: {fileID: 1779221847}
   m_Layer: 0
   m_Name: Mid Spinner wall
   m_TagString: Untagged
@@ -34230,6 +34317,33 @@ EdgeCollider2D:
   - {x: 2, y: -2}
   - {x: 2, y: -2.5}
   - {x: 2.9, y: -2.5}
+--- !u!114 &1779221847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779221842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 28
+  instantiationId: 28
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1785837988
 GameObject:
   m_ObjectHideFlags: 0
@@ -35176,7 +35290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1869608401
 Transform:
   m_ObjectHideFlags: 0
@@ -36085,6 +36199,7 @@ GameObject:
   - component: {fileID: 1919537672}
   - component: {fileID: 1919537673}
   - component: {fileID: 1919537674}
+  - component: {fileID: 1919537675}
   m_Layer: 0
   m_Name: midspin clockwise
   m_TagString: clockwise spin
@@ -36146,6 +36261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca527b6f241ca94ea82b792cf5bc018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  photonView: {fileID: 1919537675}
 --- !u!68 &1919537674
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -36164,6 +36280,33 @@ EdgeCollider2D:
   m_Points:
   - {x: -1, y: -0.03}
   - {x: -1.9, y: -0.03}
+--- !u!114 &1919537675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919537670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 31
+  instantiationId: 31
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1922188848
 GameObject:
   m_ObjectHideFlags: 0
@@ -39911,6 +40054,7 @@ GameObject:
   - component: {fileID: 2118546724}
   - component: {fileID: 2118546726}
   - component: {fileID: 2118546725}
+  - component: {fileID: 2118546727}
   m_Layer: 0
   m_Name: endspin clockwise
   m_TagString: clockwise spin
@@ -39982,6 +40126,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca527b6f241ca94ea82b792cf5bc018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  photonView: {fileID: 2118546727}
+--- !u!114 &2118546727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118546722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 33
+  instantiationId: 33
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &2119693227
 GameObject:
   m_ObjectHideFlags: 0
