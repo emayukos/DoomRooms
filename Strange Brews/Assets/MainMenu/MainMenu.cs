@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement; // for the changing of the scenes
 
 public class MainMenu : MonoBehaviour
 {
-    
+
     //public PhotonNetwork PN;
 
     // To change the scene when the play button is clicked
@@ -15,9 +15,9 @@ public class MainMenu : MonoBehaviour
         // this just moves it to the next scene in the queue
         // add to the queue in file/build settings
         PhotonNetwork.automaticallySyncScene = true;
-        PhotonNetwork.LoadLevelAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
         //SceneManager.LoadScene();
-
+       
     }
 
     // To quit the game

@@ -42,6 +42,7 @@ public class safe : MonoBehaviour
         {
             if (inRange && Input.GetKeyDown(KeyCode.E) && !isSafeOpened)
             {
+                Debug.Log("isSafeOpened: " + isSafeOpened);
                 if (UIopen == false)
                 {
                     codePanel.SetActive(true);

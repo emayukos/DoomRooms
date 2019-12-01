@@ -41,12 +41,13 @@ public class codePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		codeText.text = codeTextValue;
+        codeText.text = codeTextValue;
         
     }
 
     public void AddDigit(string digit)
 	{
+        Debug.Log("OnClick AddDigit");
         // only add digits if the code is less than 4
         if (spot < 4)
 		{

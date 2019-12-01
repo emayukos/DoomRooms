@@ -8,6 +8,7 @@ public class PickUp : Photon.MonoBehaviour
     GameObject networkTextBox;
 
     private string itemNameFound = null;
+    private bool inRange = false;
     //private string itemDescription = null;
 
 
@@ -22,7 +23,7 @@ public class PickUp : Photon.MonoBehaviour
     {
         if (itemNameFound != null)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (inRange && Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("pickup");
                 //pop-up only when new message to display
@@ -40,9 +41,10 @@ public class PickUp : Photon.MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)   //col -> other thing was collided with, if attached to coin -> col = player
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
         {
             itemNameFound = GetComponent<InventoryItem>().getItemName();
+			inRange = true;
         }
 
     }
@@ -50,6 +52,7 @@ public class PickUp : Photon.MonoBehaviour
     void OnTriggerExit2D(Collider2D col)
     {
         itemNameFound = null;
+		inRange = false;
 
     }
 

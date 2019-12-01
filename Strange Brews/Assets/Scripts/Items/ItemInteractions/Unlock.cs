@@ -89,10 +89,11 @@ public class Unlock : MonoBehaviour
             //itemInside.SetActive(true);
             //do what's needed to the lockedThing
             openSprite.transform.position = position;
-            PhotonNetwork.Destroy(closedSprite);
         }
-        
-        
+
+        PhotonNetwork.Destroy(closedSprite);
+
+
     }
 
 }
