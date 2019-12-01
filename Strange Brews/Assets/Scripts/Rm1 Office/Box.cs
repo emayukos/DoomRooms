@@ -59,7 +59,7 @@ public class Box : Photon.MonoBehaviour
 			isOpen = true;
 			if (soundEffect != null)
             {
-                source.PlayOneShot(soundEffect);
+                source.PlayOneShot(soundEffect, 2.0f);
             }
             // move button object inside box if it hasn't been picked up
             //if (boxButtonPrefab.activeInHierarchy == true )

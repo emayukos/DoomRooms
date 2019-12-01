@@ -77,4 +77,6 @@ MonoBehaviour:
   - openDresser
   - drinkPotion
   - openComputer
+  - activateRPC
+  - openChestRPC
   DisableAutoOpenWizard: 1
