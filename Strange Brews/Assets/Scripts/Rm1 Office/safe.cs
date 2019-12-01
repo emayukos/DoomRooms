@@ -18,10 +18,13 @@ public class safe : MonoBehaviour
     public AudioClip safeopening;
     private AudioSource source;
 
+    private PhotonView photonView;
+
 
     void Awake()
     {
         source = GetComponent<AudioSource>();
+        photonView = GetComponent<PhotonView>();
     }
 
     // Start is called before the first frame update
@@ -94,9 +97,13 @@ public class safe : MonoBehaviour
     }
 
 
+    public void activate()
+    {
+        photonView.RPC("activateRPC", PhotonTargets.All);
+    }
 
     [PunRPC]
-    public void activate()
+    public void activateRPC()
     {
         isActive = true;
     }

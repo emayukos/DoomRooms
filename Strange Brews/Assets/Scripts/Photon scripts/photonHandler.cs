@@ -21,6 +21,7 @@ public class photonHandler : MonoBehaviour
     {
         // won't destroy this object when the scene changes bc we will need it later
         DontDestroyOnLoad(this.transform);
+        PhotonNetwork.automaticallySyncScene = true;
     }
 
     private void OnEnable()
@@ -57,7 +58,7 @@ public class photonHandler : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
 
-		if (scene.name != "MainMenu")
+		if (scene.name != "MainMenu" && scene.name != "connect")
 		{
 			SpawnPlayer();
 			Debug.Log("loaded room");

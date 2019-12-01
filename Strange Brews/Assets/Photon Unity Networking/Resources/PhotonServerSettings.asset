@@ -76,4 +76,5 @@ MonoBehaviour:
   - activateLight
   - openDresser
   - drinkPotion
+  - activateRPC
   DisableAutoOpenWizard: 1
