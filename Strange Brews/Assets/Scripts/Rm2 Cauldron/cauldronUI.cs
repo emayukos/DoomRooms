@@ -10,13 +10,16 @@ public class cauldronUI : MonoBehaviour
 
     public string i11, i12, i21, i22, i31, i32;
 
-    public Inventory inventory;
+    private Inventory inventory;
 
     public PhotonView photonView;
 
     private bool found1, found2, found3;
 
-    
+    private void Start()
+    {
+        inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+    }
 
     // Update is called once per frame
     void Update()
