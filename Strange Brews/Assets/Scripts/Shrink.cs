@@ -10,6 +10,7 @@ public class Shrink : Photon.MonoBehaviour
 	private AudioSource source;
     public AudioClip pressSoundEffect;
 	private GameObject tinyDoor;
+	public bool shrunk = false;
 
     // have cute/funny shrinking sound effect play only on key press 
     // (after pressing E and the sound effect for drinking the potion)
@@ -17,7 +18,7 @@ public class Shrink : Photon.MonoBehaviour
     private void Start()
 	{
 		source = GetComponent<AudioSource>();
-		tinyDoor = GameObject.Find("tiny door");
+		tinyDoor = GameObject.FindGameObjectWithTag("tiny door"); // to make easier to find
 		//ShrinkPlayer(); // just for testing sound
 	}
 
@@ -32,24 +33,37 @@ public class Shrink : Photon.MonoBehaviour
  			// stop when small enough
  			if(transform.localScale.x <= shrunkSize) {
 				shrink = false;
+
  			}
     	}  
     }
     // call this in other script when you want the player to shrink
     public void ShrinkPlayerRPC() { 
-    	photonView.RPC("ShrinkPlayer", PhotonTargets.All);
+    	photonView.RPC("ShrinkPlayer", PhotonTargets.All); // change to master for now
     }
     
     
     [PunRPC]
     public void ShrinkPlayer() {
-		shrink = true;
-		if (pressSoundEffect != null)
-            {
-                source.PlayOneShot(pressSoundEffect, 2.0f);
-            }
-		tinyDoor.SendMessage("IsShrunk");
-        
+		if (!shrunk) 
+		{
+			shrink = true;
+			shrunk = true;
+			if (pressSoundEffect != null)
+			{
+				source.PlayOneShot(pressSoundEffect, 2.0f);
+			}
+			tinyDoor.SendMessage("IsShrunk");
+		}
     }
+    
+  //  public void doneShrinking() 
+  //  { 
+  //  	if(shrink)
+		//{
+			
+		//}
+    //}
+    
     
 }
