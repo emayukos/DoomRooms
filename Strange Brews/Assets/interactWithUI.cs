@@ -12,7 +12,7 @@ public class interactWithUI : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {	
         objectUI.SetActive(false);
         isActive = true;
         source = GetComponent<AudioSource>();
