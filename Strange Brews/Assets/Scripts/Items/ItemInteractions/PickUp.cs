@@ -33,8 +33,8 @@ public class PickUp : Photon.MonoBehaviour
                 networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
 
                 //add item to inventory, remove from scene
-                //pickup();
-                this.photonView.RPC("pickup", PhotonTargets.All);
+                pickup();
+                //this.photonView.RPC("pickup", PhotonTargets.All);
             }
         }
     }
@@ -49,6 +49,15 @@ public class PickUp : Photon.MonoBehaviour
 
     }
 
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
+        {
+            itemNameFound = GetComponent<InventoryItem>().getItemName();
+            inRange = true;
+        }
+    }
+
     void OnTriggerExit2D(Collider2D col)
     {
         itemNameFound = null;
@@ -56,7 +65,7 @@ public class PickUp : Photon.MonoBehaviour
 
     }
 
-    [PunRPC]
+    //[PunRPC]
     private void pickup()
     {
         //adds item to inventory
