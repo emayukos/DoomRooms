@@ -63,32 +63,39 @@ public class flipmat : Photon.MonoBehaviour
 		inRange |= col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine;
 	}
 
-	//private void OnTriggerExit2D(Collider2D col)
-	//{
-	//	if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
-	//	{
-	//		inRange = false;
-	//		this.photonView.RPC("CloseBox", PhotonTargets.All);
-	//	}
-	//}
-	
-	//[PunRPC]
-	//void CloseBox()
-	//{
-		//if (isOpen)
-		//{
-		//	// close box when player moves out of trigger boundary
-		//	GetComponent<SpriteRenderer>().sprite = closedBox;
-		//	//GetComponent<SpriteRenderer>().sortingLayerName = sortingLayerClosed;
-		//	//GetComponent<SpriteRenderer>().sortingOrder = sortingOrderClosed;
+    private void OnTriggerExit2D(Collider2D col) // change this to on button press
+    {
+        inRange = false;
+    }
 
-		//	if (soundEffect != null)
-		//	{
-		//		source.PlayOneShot(soundEffect);
-		//	}
-		//	if (GameObject.Find("Final Key") != null)
-		//		key.SetActive(false);
-		//	isOpen = false;
-		//}
-	//}
+
+
+    //private void OnTriggerExit2D(Collider2D col)
+    //{
+    //	if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
+    //	{
+    //		inRange = false;
+    //		this.photonView.RPC("CloseBox", PhotonTargets.All);
+    //	}
+    //}
+
+    //[PunRPC]
+    //void CloseBox()
+    //{
+    //if (isOpen)
+    //{
+    //	// close box when player moves out of trigger boundary
+    //	GetComponent<SpriteRenderer>().sprite = closedBox;
+    //	//GetComponent<SpriteRenderer>().sortingLayerName = sortingLayerClosed;
+    //	//GetComponent<SpriteRenderer>().sortingOrder = sortingOrderClosed;
+
+    //	if (soundEffect != null)
+    //	{
+    //		source.PlayOneShot(soundEffect);
+    //	}
+    //	if (GameObject.Find("Final Key") != null)
+    //		key.SetActive(false);
+    //	isOpen = false;
+    //}
+    //}
 }

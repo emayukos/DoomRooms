@@ -47,12 +47,12 @@ public class cauldronUI : MonoBehaviour
         }
         if (inventory.searchItem(i21) && inventory.searchItem(i22))
         {
-            group1.foundIngredients();
+            group2.foundIngredients();
             found2 = true;
         }
         if (inventory.searchItem(i31) && inventory.searchItem(i32))
         {
-            group1.foundIngredients();
+            group3.foundIngredients();
             found3 = true;
         }
     }
