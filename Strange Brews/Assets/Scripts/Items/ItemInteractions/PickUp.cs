@@ -49,6 +49,15 @@ public class PickUp : Photon.MonoBehaviour
 
     }
 
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
+        {
+            itemNameFound = GetComponent<InventoryItem>().getItemName();
+            inRange = true;
+        }
+    }
+
     void OnTriggerExit2D(Collider2D col)
     {
         itemNameFound = null;
