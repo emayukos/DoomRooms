@@ -1304,6 +1304,8 @@ GameObject:
   m_Component:
   - component: {fileID: 108391004}
   - component: {fileID: 108391003}
+  - component: {fileID: 108391006}
+  - component: {fileID: 108391005}
   m_Layer: 0
   m_Name: cr_rug_green
   m_TagString: Untagged
@@ -1374,6 +1376,43 @@ Transform:
   m_Father: {fileID: 1692396863}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &108391005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108391002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e5322a2017b44e597a37267955bf0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxButtonPrefab: {fileID: 254793965}
+  closedBox: {fileID: 21300000, guid: 060a1708dda68422f97ea92bedb7523b, type: 3}
+  openBox: {fileID: 21300000, guid: 1f64276f9f52c483f839f20d60e847b7, type: 3}
+  buttonPositionInScene: {x: 2.67, y: 0.46}
+  soundEffect: {fileID: 0}
+  sortingLayerClosed: furniture 2
+  sortingOrderClosed: 2
+  sortingLayerOpen: accessory 2.2
+  sortingOrderOpen: 3
+--- !u!58 &108391006
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108391002}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.046635915, y: 0.03298879}
+  serializedVersion: 2
+  m_Radius: 1.646961
 --- !u!1 &119871821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,7 +2637,7 @@ GameObject:
   - component: {fileID: 221294321}
   - component: {fileID: 221294320}
   m_Layer: 0
-  m_Name: shrinking potion 2 (1)
+  m_Name: shrinking potion 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3001,7 +3040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254793965}
   m_LocalRotation: {x: -0, y: -0, z: -0.46558326, w: 0.8850041}
-  m_LocalPosition: {x: 0.28, y: -0.96, z: 539.3676}
+  m_LocalPosition: {x: -3.76, y: -3.11, z: 539.3676}
   m_LocalScale: {x: 0.11136104, y: 0.089300334, z: 0.14147408}
   m_Children: []
   m_Father: {fileID: 596288562}
@@ -19909,16 +19948,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
-        type: 3}
-      propertyPath: viewIdField
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
-        type: 3}
-      propertyPath: instantiationId
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8260942065861457997, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -19933,6 +19962,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
+        type: 3}
+      propertyPath: viewIdField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
+        type: 3}
+      propertyPath: instantiationId
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6169753215467533995, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}

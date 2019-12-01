@@ -44,7 +44,7 @@ public class tinydoor : Photon.MonoBehaviour
             	{
                 	source.PlayOneShot(messageSound);
             	}
-                networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "Player to big to fit through door!");
+                networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "One or more players too big to fit through door!");
 			}
 
 		}

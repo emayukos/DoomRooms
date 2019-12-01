@@ -13,6 +13,11 @@ public class LevelChanger : Photon.MonoBehaviour
 	public AudioClip unlockSound;
 	//public AudioClip doorOpenSound;
 	private AudioSource source;
+	
+	private GameObject leftDoor;
+	Vector2 temp;
+	private GameObject player;
+	public Vector2 startPos;
 
 	//void Update()
 	//{
@@ -25,11 +30,30 @@ public class LevelChanger : Photon.MonoBehaviour
 	//{
 	//	DontDestroyOnLoad(this.transform);
 	//}
+
+	private void Awake()
+	{
+		player = GameObject.FindWithTag("Player");
+		startPos.y += 1;
+		player.transform.position = startPos;
+		
+	}
+
+
+
+
 	private void Start()
     {
         //Fetch the GameObject's Collider (make sure they have a Collider component)
         roomNumberText.text = "Room: " + (SceneManager.GetActiveScene().buildIndex - 1);
         source = GetComponent<AudioSource>(); // need this!
+        if (GameObject.Find("leftdoor") != null) {
+			leftDoor = GameObject.Find("leftdoor");
+			temp.x = leftDoor.transform.position.x + 1;
+			temp.y = leftDoor.transform.position.y + 1;
+			gameObject.transform.position = temp;
+		 
+		}
 
 	
         
