@@ -8,7 +8,7 @@ public class kitchenCabinetKey : MonoBehaviour
     void Start()
     {
         GetComponent<Interactable>().setLookDescription("A key that has 'Kitchen T' written on it.");
-        GetComponent<InventoryItem>().setItemName("Kitchen Key");
+        GetComponent<InventoryItem>().setItemName("Kitchen A Key");
     }
 
 }

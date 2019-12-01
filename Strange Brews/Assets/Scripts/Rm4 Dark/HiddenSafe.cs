@@ -6,6 +6,7 @@ public class HiddenSafe : MonoBehaviour
 {
     [SerializeField]
     GameObject codePanel, foundSafe, inventory, safeContents;
+    public GameObject networkTextBox;
 
     private string itemName;
     private bool isActive = true;
@@ -29,6 +30,7 @@ public class HiddenSafe : MonoBehaviour
     {
         codePanel.SetActive(false);
         itemName = safeContents.GetComponent<InventoryItem>().getItemName();
+        Debug.Log(itemName);
     }
 
     // Update is called once per frame
@@ -59,11 +61,14 @@ public class HiddenSafe : MonoBehaviour
     [PunRPC]
     private void openSafe()
     {
-        source.PlayOneShot(safeopening, 0.03f);
+        //source.PlayOneShot(safeopening, 0.03f);
+        Debug.Log("openSafe called");
+        inventory.GetComponent<Inventory>().photonView.RPC("addItem", PhotonTargets.All, itemName);
+        networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The " + itemName + " was taken and put in the inventory.");
         codePanel.SetActive(false);
         foundSafe.SetActive(false);
         isSafeOpened = true;
-        inventory.GetComponent<Inventory>().photonView.RPC("addItem", PhotonTargets.All, itemName);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

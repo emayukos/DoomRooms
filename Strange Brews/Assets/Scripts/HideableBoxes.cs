@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HideableBoxes : MonoBehaviour
 {
-    public int helpOnOff = 1;
+    public int helpOnOff = 1;   // 1 is On, -1 is Off
     int invOnOff;
     public GameObject helpMenu;
     public GameObject inventoryMenu;

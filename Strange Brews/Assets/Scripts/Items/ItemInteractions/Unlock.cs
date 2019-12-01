@@ -13,6 +13,11 @@ public class Unlock : MonoBehaviour
     private string lockedThingKey = null;
     private bool unlock = false;
 
+    public bool itemIsInside = false;
+    //public GameObject itemInside;
+    public GameObject openSprite, closedSprite;
+    private Vector3 position;
+
 
     void Start()
     {
@@ -20,6 +25,12 @@ public class Unlock : MonoBehaviour
         inventory = GameObject.Find("Inventory");
         personalTextBox = GameObject.Find("Personal Message Text");
         networkTextBox = GameObject.Find("Network Message Text");
+
+        if (itemIsInside)
+        {
+            //itemInside.SetActive(false);
+            position = closedSprite.transform.position;
+        }
     }
 
     void Update()
@@ -73,7 +84,16 @@ public class Unlock : MonoBehaviour
     {
         //currently just destroys unlocked object
         //later, add more complex animation/image and collider change effects
-        PhotonNetwork.Destroy(gameObject);
+        if (itemIsInside)
+        {
+            //itemInside.SetActive(true);
+            //do what's needed to the lockedThing
+            openSprite.transform.position = position;
+        }
+
+        PhotonNetwork.Destroy(closedSprite);
+
+
     }
 
 }
