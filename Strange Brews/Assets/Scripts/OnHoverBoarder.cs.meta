@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
+  - border: {fileID: 2100000, guid: 89037e0d1111d4d85a79e9e6531f5acf, type: 2}
   - nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
