@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BlurRadius: 2.8
+    - _BlurRadius: 7.5
     - _BumpScale: 1
     - _BumperAmt: 128
     - _Cutoff: 0.5
@@ -82,5 +82,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
-    - _DistortColor: {r: 0.21714075, g: 0.9245283, b: 0.21368816, a: 1}
+    - _DistortColor: {r: 0.091564946, g: 0.31132078, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
