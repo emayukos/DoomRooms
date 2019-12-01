@@ -10,7 +10,9 @@ public class cauldron : MonoBehaviour
     private interactWithUI iwUI;
 
     private void Start()
-    {
+    {	
+    	potion1.SetActive(false);
+    	potion2.SetActive(false);
         iwUI = GetComponent<interactWithUI>();
     }
 
