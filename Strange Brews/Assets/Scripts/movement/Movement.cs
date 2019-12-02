@@ -40,6 +40,8 @@ public class Movement : Photon.MonoBehaviour
 	float selfx;
 	float selfy;
 
+
+
 	//private GameObject mainCam;
 	//public GameObject plCam;
 
@@ -58,7 +60,7 @@ public class Movement : Photon.MonoBehaviour
 	//		//mainCam = GameObject.Find("Main Camera");
 	//		//mainCam.SetActive(false);
 	//		//plCam.SetActive(true);
-			
+
 	//	}
 	//}
 

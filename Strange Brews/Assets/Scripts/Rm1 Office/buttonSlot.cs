@@ -23,6 +23,8 @@ public class buttonSlot : Photon.MonoBehaviour
 	bool playerHasButton = false;
 	bool buttonInWall = false;
 	public bool buttonTaskCompleted = false; // need rpc
+
+    public safe safeObject;
 	
 
 	private void Start()
@@ -39,7 +41,8 @@ public class buttonSlot : Photon.MonoBehaviour
 			if (wallButton1.GetComponent<WallButton>().isPressed && wallButton2.GetComponent<WallButton>().isPressed)
 			{
 				// keep both buttons pressed
-				signalPaintingRPC();				
+				signalPaintingRPC();
+                safeObject.activate();
 			}
 
 			if (inRange && Input.GetKeyDown(KeyCode.E))

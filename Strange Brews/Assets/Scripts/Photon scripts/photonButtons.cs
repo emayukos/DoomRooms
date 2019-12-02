@@ -11,7 +11,7 @@ public class photonButtons : MonoBehaviour
 	public InputField createRoomInput, joinRoomInput;
     
     // when the button is clicked, create the game 
-	[System.Obsolete]
+	//[System.Obsolete]
 	public void onClickCreateRoom()
 	{
         pHandler.createNewRoom();

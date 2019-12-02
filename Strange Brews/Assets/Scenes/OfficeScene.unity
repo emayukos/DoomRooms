@@ -2347,7 +2347,6 @@ GameObject:
   - component: {fileID: 576872990}
   - component: {fileID: 576872989}
   - component: {fileID: 576872988}
-  - component: {fileID: 576872991}
   m_Layer: 0
   m_Name: Canvas rm number
   m_TagString: Untagged
@@ -2435,18 +2434,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 998
   m_TargetDisplay: 0
---- !u!114 &576872991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576872986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967cb3e9a83504c9f9aebe309014b8c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &590301931
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,6 +4734,7 @@ MonoBehaviour:
   painting: {fileID: 1028087257}
   buttonPositionInScene: {x: -6.326, y: -0.64}
   buttonTaskCompleted: 0
+  safeObject: {fileID: 0}
 --- !u!61 &1105648622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8863,6 +8851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17dfb56ef27714fee8209ea8b2ca8e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookDescription: 
+  itemName: 
 --- !u!114 &1885260067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8989,6 +8979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee46b010ac774e0b9a38862f66f6be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookDescription: 
 --- !u!1 &1900370139
 GameObject:
   m_ObjectHideFlags: 0
@@ -14765,6 +14756,16 @@ PrefabInstance:
       propertyPath: roomNumberText
       value: 
       objectReference: {fileID: 110431842}
+    - target: {fileID: 8516861246620561881, guid: 83c0d701af6b047a58d1140abcd769fa,
+        type: 3}
+      propertyPath: startPos.x
+      value: -6.804876
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516861246620561881, guid: 83c0d701af6b047a58d1140abcd769fa,
+        type: 3}
+      propertyPath: startPos.y
+      value: -3.126452
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8516861246716321871, guid: 83c0d701af6b047a58d1140abcd769fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83c0d701af6b047a58d1140abcd769fa, type: 3}

@@ -5,8 +5,27 @@ using UnityEngine.UI;
 
 
 public class ShowPlayerInfo : Photon.MonoBehaviour
-
 {
+	// on the character
+	//[SerializedField]
+	public Text mTextOverHead;
+	private Vector2 textPos;
+	//private Vector2 mTextOverPos;
+
+	void Awake() {
+		textPos = transform.position;
+		mTextOverHead.text = "Hi";
+	}
+	void LateUpdate() {
+
+		// add a tiny bit of height?
+		textPos.y += 10; // adjust as you see fit.
+		mTextOverHead.transform.position = textPos;
+	}
+}
+		
+		
+		
 //    private Canvas textGo;
 //    private TextMesh tm;
 //    public bool DisableOnOwnObjects;
@@ -46,4 +65,4 @@ public class ShowPlayerInfo : Photon.MonoBehaviour
 //            tm.text = "n/a";
 //        }
 //    }
-}
+

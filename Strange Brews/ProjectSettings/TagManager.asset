@@ -10,6 +10,7 @@ TagManager:
   - c.clockwise spin
   - clockwise spin
   - flashlight
+  - tiny door
   layers:
   - Default
   - TransparentFX
