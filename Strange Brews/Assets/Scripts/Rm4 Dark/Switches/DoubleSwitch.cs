@@ -8,6 +8,10 @@ public class DoubleSwitch : MonoBehaviour
     public GameObject doorMiddle;
     public GameObject doorCage;
 
+    public PhotonView thisPhotonView;
+    public GameObject outsideLight;
+    public GameObject middleLight;
+
     private bool inRange;
     private bool outsideDoorsOpen;
     private bool middleDoorOpen;
@@ -16,6 +20,8 @@ public class DoubleSwitch : MonoBehaviour
     {
         outsideDoorsOpen = false;
         middleDoorOpen = true;
+        outsideLight.SetActive(false);
+        middleLight.SetActive(false);
     }
 
     public void Update()
@@ -29,6 +35,7 @@ public class DoubleSwitch : MonoBehaviour
                 //doorCage.GetComponent<SwitchDoor>().doorClose();
                 doorOutside.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
                 doorCage.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
+                thisPhotonView.RPC("MiddleLightOn", PhotonTargets.All);
                 outsideDoorsOpen = !outsideDoorsOpen;
             }
             else
@@ -38,6 +45,7 @@ public class DoubleSwitch : MonoBehaviour
                 //doorCage.GetComponent<SwitchDoor>().doorOpen();
                 doorOutside.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
                 doorCage.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
+                thisPhotonView.RPC("OutsideLightsOn", PhotonTargets.All);
                 outsideDoorsOpen = !outsideDoorsOpen;
             }
 
@@ -76,5 +84,19 @@ public class DoubleSwitch : MonoBehaviour
         {
             inRange = false;
         }
+    }
+
+    [PunRPC]
+    private void OutsideLightsOn()
+    {
+        outsideLight.SetActive(true);
+        middleLight.SetActive(false);
+    }
+
+    [PunRPC]
+    private void MiddleLightOn()
+    {
+        middleLight.SetActive(true);
+        outsideLight.SetActive(false);
     }
 }

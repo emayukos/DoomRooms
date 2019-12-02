@@ -82,4 +82,6 @@ MonoBehaviour:
   - rotateWall
   - openNightStand
   - syncWalls
+  - MiddleLightOn
+  - OutsideLightsOn
   DisableAutoOpenWizard: 1
