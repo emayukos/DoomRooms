@@ -95,4 +95,8 @@ MonoBehaviour:
   - rightLightOn
   - wrongLightOff
   - wrongLightOn
+  - isNotOpenForOther
+  - isOpenForOther
+  - TurnOffProjector
+  - TurnOnProjector
   DisableAutoOpenWizard: 1
