@@ -25752,6 +25752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b9ca76f8791f84f86d055e7b46958c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalTextBox: {fileID: 478356206}
   realFlashlight: {fileID: 552935372}
 --- !u!212 &1365750561
 SpriteRenderer:
@@ -29890,6 +29891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b9ca76f8791f84f86d055e7b46958c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalTextBox: {fileID: 478356206}
   realFlashlight: {fileID: 1299197978}
 --- !u!212 &1573981789
 SpriteRenderer:
