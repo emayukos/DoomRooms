@@ -2806,8 +2806,8 @@ GameObject:
   - component: {fileID: 208941245}
   - component: {fileID: 208941244}
   - component: {fileID: 208941243}
-  - component: {fileID: 208941242}
   - component: {fileID: 208941241}
+  - component: {fileID: 208941242}
   m_Layer: 0
   m_Name: cr_rug_green
   m_TagString: Untagged
@@ -2842,8 +2842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &208941243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2884,7 +2884,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.057655, y: -0.6063333}
+  m_Offset: {x: -2.057655, y: -0.10838452}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2895,7 +2895,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4637256, y: 2.6883492}
+  m_Size: {x: 1.4637256, y: 1.6924508}
   m_EdgeRadius: 0
 --- !u!212 &208941245
 SpriteRenderer:
@@ -4161,8 +4161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &334491619
 GameObject:
   m_ObjectHideFlags: 0
@@ -7117,8 +7117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fd1ba537ff5429a8a8fb5e55e3264f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  unborder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  unborder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   levelChanger: {fileID: 14944598}
   hasFinalKey: 0
   isShrunk: 0
@@ -7436,7 +7436,7 @@ MonoBehaviour:
   group2: {fileID: 2022882409}
   group3: {fileID: 957389740}
   i11: Fairy Wings
-  i12: Crows Feet
+  i12: Crows Foot
   i21: Goblin Tears
   i22: Vampire Blood
   i31: Unicorn Horn
@@ -9782,8 +9782,8 @@ GameObject:
   m_Component:
   - component: {fileID: 799851537}
   - component: {fileID: 799851536}
-  - component: {fileID: 799851538}
   - component: {fileID: 799851539}
+  - component: {fileID: 799851538}
   m_Layer: 0
   m_Name: cr_crystal_ball_green
   m_TagString: Untagged
@@ -9866,8 +9866,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!61 &799851539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10927,11 +10927,11 @@ GameObject:
   m_Component:
   - component: {fileID: 918846253}
   - component: {fileID: 918846252}
-  - component: {fileID: 918846251}
   - component: {fileID: 918846250}
   - component: {fileID: 918846249}
   - component: {fileID: 918846248}
   - component: {fileID: 918846247}
+  - component: {fileID: 918846251}
   m_Layer: 0
   m_Name: cr_box_short (6)
   m_TagString: Untagged
@@ -11122,8 +11122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!212 &918846252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11964,8 +11964,8 @@ GameObject:
   - component: {fileID: 995650152}
   - component: {fileID: 995650151}
   - component: {fileID: 995650150}
-  - component: {fileID: 995650149}
   - component: {fileID: 995650154}
+  - component: {fileID: 995650149}
   m_Layer: 0
   m_Name: Vampire Blood
   m_TagString: Untagged
@@ -12048,8 +12048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!61 &995650150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12466,6 +12466,7 @@ GameObject:
   - component: {fileID: 1073867582}
   - component: {fileID: 1073867581}
   - component: {fileID: 1073867585}
+  - component: {fileID: 1073867586}
   m_Layer: 0
   m_Name: Fairy Wings
   m_TagString: Untagged
@@ -12615,6 +12616,19 @@ MonoBehaviour:
   instantiationId: 16
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &1073867586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073867579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee46b010ac774e0b9a38862f66f6be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookDescription: 
 --- !u!1 &1078813551
 GameObject:
   m_ObjectHideFlags: 0
@@ -13669,7 +13683,7 @@ Transform:
   m_LocalScale: {x: 0.445, y: 0.662872, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1229159793
 MonoBehaviour:
@@ -15876,6 +15890,7 @@ GameObject:
   - component: {fileID: 1522388997}
   - component: {fileID: 1522389000}
   - component: {fileID: 1522388999}
+  - component: {fileID: 1522389001}
   m_Layer: 0
   m_Name: cr_scrolls
   m_TagString: Untagged
@@ -16158,6 +16173,20 @@ PolygonCollider2D:
       - {x: -0.645, y: -0.85999995}
       - {x: -0.645, y: -0.95}
       - {x: -0.59499997, y: -1.01}
+--- !u!114 &1522389001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522388994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1524733438
 GameObject:
   m_ObjectHideFlags: 0
@@ -17008,6 +17037,7 @@ GameObject:
   - component: {fileID: 1626716692}
   - component: {fileID: 1626716693}
   - component: {fileID: 1626716694}
+  - component: {fileID: 1626716695}
   m_Layer: 0
   m_Name: chest_opened
   m_TagString: Untagged
@@ -17027,6 +17057,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1073867580}
+  - {fileID: 1658588035}
   m_Father: {fileID: 182389970}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17140,6 +17171,20 @@ PolygonCollider2D:
       - {x: 0.29999998, y: -1.29}
       - {x: 0.34, y: -1.26}
       - {x: 0.65999997, y: -0.96}
+--- !u!114 &1626716695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626716691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1632414105
 GameObject:
   m_ObjectHideFlags: 0
@@ -17442,22 +17487,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1626716692}
     m_Modifications:
     - target: {fileID: 4390509797973862951, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_Name
-      value: Crows Feet
+      value: Crows Foot
       objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.19
+      value: 0.17291072
       objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.071
+      value: -0.1774795
       objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
@@ -17467,17 +17512,17 @@ PrefabInstance:
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
@@ -17487,7 +17532,7 @@ PrefabInstance:
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
@@ -17507,12 +17552,17 @@ PrefabInstance:
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.580038
+      value: 0.8445192
       objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.36721164
+      value: 0.5346499
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4559722
       objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862946, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
@@ -17539,8 +17589,26 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4390509797973862945, guid: 4d145562dac644b77a18e8511fdf0936,
+        type: 3}
+      propertyPath: lookDescription
+      value: Crows Foot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390509797973862945, guid: 4d145562dac644b77a18e8511fdf0936,
+        type: 3}
+      propertyPath: itemName
+      value: Crows Foot
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4390509797973862950, guid: 4d145562dac644b77a18e8511fdf0936, type: 3}
+    - {fileID: 4390509797973862944, guid: 4d145562dac644b77a18e8511fdf0936, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4d145562dac644b77a18e8511fdf0936, type: 3}
+--- !u!4 &1658588035 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4390509797973862947, guid: 4d145562dac644b77a18e8511fdf0936,
+    type: 3}
+  m_PrefabInstance: {fileID: 1658588034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1661166816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17678,7 +17746,8 @@ PrefabInstance:
       propertyPath: buttonPositionInScene.y
       value: -3.8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8165066731555891880, guid: 8c485a9a989264596b6eb095d635f162, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8c485a9a989264596b6eb095d635f162, type: 3}
 --- !u!4 &1661166817 stripped
 Transform:
@@ -17686,6 +17755,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1661166816}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1661166818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1458335756675108255, guid: 8c485a9a989264596b6eb095d635f162,
+    type: 3}
+  m_PrefabInstance: {fileID: 1661166816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1661166819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661166818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1661557116
 GameObject:
   m_ObjectHideFlags: 0
@@ -17884,11 +17973,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1689335042}
   - component: {fileID: 1689335048}
-  - component: {fileID: 1689335047}
   - component: {fileID: 1689335046}
   - component: {fileID: 1689335045}
   - component: {fileID: 1689335044}
   - component: {fileID: 1689335043}
+  - component: {fileID: 1689335047}
   m_Layer: 0
   m_Name: cr_box_short (7)
   m_TagString: Untagged
@@ -18093,8 +18182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!212 &1689335048
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21367,8 +21456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!61 &2028373271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21488,6 +21577,7 @@ GameObject:
   - component: {fileID: 2046015194}
   - component: {fileID: 2046015196}
   - component: {fileID: 2046015195}
+  - component: {fileID: 2046015197}
   m_Layer: 0
   m_Name: cr_book_front
   m_TagString: Untagged
@@ -21696,6 +21786,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2046015197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046015191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &2058469685
 GameObject:
   m_ObjectHideFlags: 0
@@ -23051,10 +23155,10 @@ GameObject:
   - component: {fileID: 2137422135}
   - component: {fileID: 2137422133}
   - component: {fileID: 2137422132}
-  - component: {fileID: 2137422134}
   - component: {fileID: 2137422139}
   - component: {fileID: 2137422138}
   - component: {fileID: 2137422137}
+  - component: {fileID: 2137422134}
   m_Layer: 0
   m_Name: 'cauldron '
   m_TagString: Untagged
@@ -23212,8 +23316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!212 &2137422135
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23586,7 +23690,8 @@ PrefabInstance:
       propertyPath: sortingLayerOpen
       value: furniture 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8165066731555891880, guid: 8c485a9a989264596b6eb095d635f162, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8c485a9a989264596b6eb095d635f162, type: 3}
 --- !u!4 &7581892202529904962 stripped
 Transform:
@@ -23594,6 +23699,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7581892202529904961}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7581892202529904963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1458335756675108255, guid: 8c485a9a989264596b6eb095d635f162,
+    type: 3}
+  m_PrefabInstance: {fileID: 7581892202529904961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7581892202529904964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7581892202529904963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1001 &8260942065492256794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23676,6 +23801,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
+        type: 3}
+      propertyPath: viewIdField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
+        type: 3}
+      propertyPath: instantiationId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8260942065861457997, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -23690,16 +23825,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
-        type: 3}
-      propertyPath: viewIdField
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
-        type: 3}
-      propertyPath: instantiationId
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6169753215467533995, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
