@@ -14,6 +14,9 @@ public class potion2 : Photon.MonoBehaviour
     public AudioClip drinkSoundEffect;
 	private GameObject Player;
 	private PhotonPlayer photonPlayer;
+	//private tinydoor tinyDoor;
+	// only send message after second potion is drunk
+	private GameObject tinyDoor;
 	//public GameObject potion2Prefab;
 	//public bool stop = false;
 	//private GameObject thisplayer; // figure out how to do this individually
@@ -26,7 +29,9 @@ public class potion2 : Photon.MonoBehaviour
 
 	private void Start()
 	{
+		tinyDoor = GameObject.FindWithTag("tiny door"); // to make easier to find
 		source = GetComponent<AudioSource>();
+		
 		// disable script on other potion until this one is destroyed
 		//potion2Prefab.GetComponent<potion2>().enabled = false;
 
@@ -70,6 +75,7 @@ public class potion2 : Photon.MonoBehaviour
 		Destroy(gameObject);
 		//if(Player.PhotonView.isMine)
 		Player.SendMessage("ShrinkPlayerRPC");
+		tinyDoor.SendMessage("IsShrunk");
 	}
 	
 	//// call shrink player RPC for photonPlayer

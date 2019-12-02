@@ -39,11 +39,10 @@ public class classList : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
-            inRange = true;
-            //if (collision.GetComponent<PhotonView>().isMine)
-            //{
-            //    inRange = true;
-            //}
+            if (collision.GetComponent<PhotonView>().isMine)
+            {
+                inRange = true;
+            }
 
         }
     }
@@ -53,16 +52,12 @@ public class classList : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
-            inRange = false;
-            classListUI.SetActive(false);
-            UIopen = !UIopen;
-
-            //if (collision.GetComponent<PhotonView>().isMine)
-            //{
-            //    inRange = false;
-            //    projectorScreenPanel.SetActive(false);
-            //    UIopen = !UIopen;
-            //}
+            if (collision.GetComponent<PhotonView>().isMine)
+            {
+                inRange = false;
+                classListUI.SetActive(false);
+                UIopen = !UIopen;
+            }
 
         }
     }

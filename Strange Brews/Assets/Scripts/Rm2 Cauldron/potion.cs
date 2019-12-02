@@ -18,6 +18,7 @@ public class potion : Photon.MonoBehaviour
 	private GameObject Player;
 	private PhotonPlayer photonPlayer;
 	public GameObject potion2Prefab;
+	private bool notDone = true;
 	//public bool stop = false;
 	//private GameObject thisplayer; // figure out how to do this individually
 
@@ -40,12 +41,15 @@ public class potion : Photon.MonoBehaviour
 	private void Update()
 	{
 		// make potion script for other player that checks that it's not their view
-		if(inRange && Input.GetKeyDown(KeyCode.E)) 
+		if(inRange && Input.GetKeyDown(KeyCode.E) && notDone) 
 		{
-			if(!(Player.GetComponent<Shrink>().shrunk)) // if player hasn't shrunk already
-			{
-				drinkPotionRPC();
-			}
+			// first potion so won't be shrunk already unless this block has already executed
+			drinkPotionRPC();
+			
+			//if(!(Player.GetComponent<Shrink>().shrunk)) // if player hasn't shrunk already
+			//{
+			//	drinkPotionRPC();
+			//}
 			
 			//stop = true;
 		}
