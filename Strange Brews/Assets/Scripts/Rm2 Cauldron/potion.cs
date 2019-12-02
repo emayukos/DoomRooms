@@ -66,6 +66,7 @@ public class potion : Photon.MonoBehaviour
 	[PunRPC]
 	IEnumerator drinkPotion()  // don't know if allowed to use this format so test
 	{
+		notDone = false;
 		source.clip = drinkSoundEffect;
 		source.Play();
 		Debug.Log("player drank potion");

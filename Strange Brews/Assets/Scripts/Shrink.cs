@@ -18,7 +18,6 @@ public class Shrink : Photon.MonoBehaviour
     private void Start()
 	{
 		source = GetComponent<AudioSource>();
-		//tinyDoor = GameObject.FindGameObjectWithTag("tiny door"); // to make easier to find
 		//ShrinkPlayer(); // just for testing sound
 	}
 
