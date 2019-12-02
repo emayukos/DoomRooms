@@ -27,6 +27,7 @@ public class Inventory : Photon.MonoBehaviour
         else
             return true;
     }
+
     [PunRPC]
     public void addItem(string itemName)
     {
