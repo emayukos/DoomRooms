@@ -24,7 +24,7 @@ public class buttonSlot : Photon.MonoBehaviour
 	bool buttonInWall = false;
 	public bool buttonTaskCompleted = false; // need rpc
 
-    public safe safeObject;
+    //public safe safeObject;
 	
 
 	private void Start()
@@ -42,7 +42,7 @@ public class buttonSlot : Photon.MonoBehaviour
 			{
 				// keep both buttons pressed
 				signalPaintingRPC();
-                safeObject.activate();
+                //safeObject.activate();
 			}
 
 			if (inRange && Input.GetKeyDown(KeyCode.E))

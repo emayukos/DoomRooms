@@ -4,23 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/connect.unity
-    guid: 7cc8df8a343424e83a7cd0e6bfa4e2ab
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: e5ae8b9a249be4ed688bcb75bf1d529d
-  - enabled: 1
-    path: Assets/Scenes/classroom.unity
-    guid: 4b67d6391b8c1414cab874e6ae65bf80
-  - enabled: 1
-    path: Assets/Scenes/cauldronRoom.unity
-    guid: 1afab8f37ead64595a1a24b579c1bbee
-  - enabled: 1
-    path: Assets/Scenes/OfficeScene.unity
-    guid: 3a44222a23f914b46be6652402eb9d42
-  - enabled: 1
-    path: Assets/Scenes/DarkRoomBase.unity
-    guid: 48ec25574e2e32c43a2145088b2b9cd0
+  m_Scenes: []
   m_configObjects: {}
