@@ -91,4 +91,8 @@ MonoBehaviour:
   - ComOn
   - LightOn
   - LightOff
+  - rightLightOff
+  - rightLightOn
+  - wrongLightOff
+  - wrongLightOn
   DisableAutoOpenWizard: 1
