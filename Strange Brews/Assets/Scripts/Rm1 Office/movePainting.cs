@@ -18,6 +18,8 @@ public class movePainting : Photon.MonoBehaviour
 
     float currentTime;
 
+    GameObject networkTextBox;
+
     void movePaintUpRPC() {
         photonView.RPC("movePaintUp", PhotonTargets.All);
     }
@@ -27,6 +29,7 @@ public class movePainting : Photon.MonoBehaviour
         startPos = transform.position;
         stopPos = startPos + new Vector3(0, 3, 0);
         rb = GetComponent<Rigidbody2D>();
+        networkTextBox = GameObject.Find("Network Message Text");
         //movePaintUp();
         //stopPainting();
     }
@@ -43,6 +46,7 @@ public class movePainting : Photon.MonoBehaviour
     public void movePaintUp() {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector3(0, 1, 0);
+        networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The Painting started floating upward to reveal a safe!");
         //transform.position = endPosition;
 
 
@@ -60,7 +64,7 @@ public class movePainting : Photon.MonoBehaviour
         **/
 
         //while (transform.position.y < (originalPosition.y + 10)){
-         //   rb.velocity = new Vector3(0, 2, 0);
+        //   rb.velocity = new Vector3(0, 2, 0);
         //}
         //rb.velocity = new Vector3(0, 0, 0);
 
