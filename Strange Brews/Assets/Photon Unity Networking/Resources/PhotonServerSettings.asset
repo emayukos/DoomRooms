@@ -86,4 +86,5 @@ MonoBehaviour:
   - OutsideLightsOn
   - pressurePadDown
   - pressurePadUp
+  - deleteObject
   DisableAutoOpenWizard: 1
