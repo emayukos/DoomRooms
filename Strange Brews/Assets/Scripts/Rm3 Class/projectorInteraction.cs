@@ -10,6 +10,7 @@ public class projectorInteraction : MonoBehaviour
     public GameObject projectorScreen;
     private bool isOn = false;
     private AudioSource projectorOnAudio;
+    GameObject networkTextBox;
 
 
 
@@ -18,6 +19,7 @@ public class projectorInteraction : MonoBehaviour
     {
         projectorScreen.SetActive(false);
         projectorOnAudio = GetComponent<AudioSource>();
+        networkTextBox = GameObject.Find("Network Message Text");
     }
 
     // Update is called once per frame
@@ -29,10 +31,14 @@ public class projectorInteraction : MonoBehaviour
             if (isOn)
             {
                 TurnOffProjector();
+                networkTextBox.GetComponent<InteractText>().photonView.RPC(
+                    "DisplayLook", PhotonTargets.All, "The projector has been turned off!");
             }
             else
             {
                 TurnOnProjector();
+                networkTextBox.GetComponent<InteractText>().photonView.RPC(
+                    "DisplayLook", PhotonTargets.All, "The projector has been turned on!");
             }
 
             // for photon

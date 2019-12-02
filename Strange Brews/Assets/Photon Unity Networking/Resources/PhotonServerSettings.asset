@@ -87,4 +87,6 @@ MonoBehaviour:
   - pressurePadDown
   - pressurePadUp
   - deleteObject
+  - isNotOpenForOther
+  - isOpenForOther
   DisableAutoOpenWizard: 1

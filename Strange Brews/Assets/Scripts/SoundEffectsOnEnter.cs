@@ -9,17 +9,19 @@ public class SoundEffectsOnEnter : MonoBehaviour
 	public AudioClip doorOpenSound;
 	public AudioClip doorCloseSound;
     private AudioSource source;
+    
     void Start()
     {
     	source = GetComponent<AudioSource>(); // need this!
-       	//GetComponent<AudioSource> ().loop = true;
+		//GetComponent<AudioSource> ().loop = true;
+		source.volume = 1.0f; // to lower volume
         StartCoroutine(playEngineSound());
     }
  
     IEnumerator playEngineSound()
     {
         source.clip =  doorOpenSound;
-        source.Play();
+		source.Play();
         yield return new WaitForSeconds(source.clip.length);
         source.clip = doorCloseSound;
         source.Play();
