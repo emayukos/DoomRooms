@@ -5,7 +5,7 @@ using UnityEngine;
 public class crystalBall : MonoBehaviour
 {
 
-    private bool inRange, isOpen, otherInRange;
+    private bool inRange, isOpen, otherIsOpen;
     private AudioSource source;
 
     public AudioClip connectedSound;
@@ -69,13 +69,13 @@ public class crystalBall : MonoBehaviour
     [PunRPC]
     void isOpenForOther()
     {
-        isOpen = true;
+        otherIsOpen = true;
     }
 
     [PunRPC]
     void isNotOpenForOther()
     {
-        isOpen = false;
+        otherIsOpen = false;
     }
 
     
@@ -106,7 +106,7 @@ public class crystalBall : MonoBehaviour
     
     public bool isItOpen()
     {
-        return isOpen;
+        return otherIsOpen;
     }
 
 
@@ -117,10 +117,6 @@ public class crystalBall : MonoBehaviour
             if (collision.GetComponent<PhotonView>().isMine)
             {
                 inRange = true;
-            }
-            else
-            {
-                otherInRange = true;
             }
         }
     }
@@ -133,10 +129,6 @@ public class crystalBall : MonoBehaviour
             {
                 inRange = false;
                 closeUI();
-            }
-            else
-            {
-                otherInRange = false;
             }
         }
     }
