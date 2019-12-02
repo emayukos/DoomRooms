@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlashlightStandIn : Photon.MonoBehaviour
 {
+    public GameObject personalTextBox;
     public GameObject realFlashlight;
     GameObject player;
     private bool inRange = false;
@@ -15,13 +16,14 @@ public class FlashlightStandIn : Photon.MonoBehaviour
     {
         if(inRange && Input.GetKeyDown(KeyCode.E))
         {
+            personalTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "A blacklight flashlight was picked up.");
             activateFL();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             player = collision.gameObject;
             inRange = true;
@@ -30,7 +32,7 @@ public class FlashlightStandIn : Photon.MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             player = null;
             inRange = false;
@@ -41,7 +43,7 @@ public class FlashlightStandIn : Photon.MonoBehaviour
     {
         realFlashlight.GetComponent<FlashlightFollow>().activateLight(player);
         //realFlashlight.GetComponent<FlashlightFollow>().photonView.RPC("activateLight", PhotonTargets.All, player);
-        Destroy(gameObject);
-        //PhotonNetwork.Destroy(gameObject);
+        //Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
     }
 }
