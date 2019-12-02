@@ -79,4 +79,5 @@ MonoBehaviour:
   - openComputer
   - activateRPC
   - openChestRPC
+  - deleteObject
   DisableAutoOpenWizard: 1
