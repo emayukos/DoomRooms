@@ -709,6 +709,7 @@ GameObject:
   - component: {fileID: 156953626}
   - component: {fileID: 156953630}
   - component: {fileID: 156953625}
+  - component: {fileID: 156953631}
   m_Layer: 0
   m_Name: cr_door_right
   m_TagString: Untagged
@@ -889,6 +890,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 5}
   m_EdgeRadius: 0
+--- !u!114 &156953631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156953624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &208986299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3225,6 +3240,20 @@ PolygonCollider2D:
       - {x: 0.42999998, y: 0.099999994}
       - {x: 0.42999998, y: 0.089999996}
       - {x: -0.34, y: 0.089999996}
+--- !u!114 &783133429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783133425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &783133430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3881,6 +3910,7 @@ GameObject:
   - component: {fileID: 1029608652}
   - component: {fileID: 1029608653}
   - component: {fileID: 1029608654}
+  - component: {fileID: 1029608655}
   m_Layer: 0
   m_Name: class_lisht-24
   m_TagString: Untagged
@@ -4006,6 +4036,20 @@ MonoBehaviour:
   openSoundEffect: {fileID: 0}
   closeSoundEffect: {fileID: 0}
   objectUI: {fileID: 1051798430}
+--- !u!114 &1029608655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029608649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1033358468
 GameObject:
   m_ObjectHideFlags: 0
@@ -5952,6 +5996,7 @@ GameObject:
   - component: {fileID: 1433076873}
   - component: {fileID: 1433076876}
   - component: {fileID: 1433076877}
+  - component: {fileID: 1433076878}
   m_Layer: 0
   m_Name: file_cabinet (1)
   m_TagString: Untagged
@@ -6092,6 +6137,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1433076878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433076872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1001 &1433919560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9175,3 +9234,17 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6422694429017090418}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6422694429017090422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422694429017090419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
