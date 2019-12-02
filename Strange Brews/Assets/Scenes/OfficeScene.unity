@@ -7417,7 +7417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 89037e0d1111d4d85a79e9e6531f5acf, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
   nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
 --- !u!114 &1527237244
 MonoBehaviour:
