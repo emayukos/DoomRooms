@@ -4256,6 +4256,8 @@ MonoBehaviour:
   otherCrystalBall: {fileID: 799851540}
   UIConnecting: {fileID: 1406574182}
   UIConnected: {fileID: 1050352324}
+  connected: 0
+  group: {fileID: 2036490115}
 --- !u!114 &334451266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10213,6 +10215,8 @@ MonoBehaviour:
   otherCrystalBall: {fileID: 334451265}
   UIConnecting: {fileID: 1406574182}
   UIConnected: {fileID: 1050352324}
+  connected: 0
+  group: {fileID: 2036490115}
 --- !u!114 &799851541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18317,16 +18321,6 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 4390509797973862945, guid: 4d145562dac644b77a18e8511fdf0936,
-        type: 3}
-      propertyPath: lookDescription
-      value: Crows Foot
-      objectReference: {fileID: 0}
-    - target: {fileID: 4390509797973862945, guid: 4d145562dac644b77a18e8511fdf0936,
-        type: 3}
-      propertyPath: itemName
-      value: Crows Foot
-      objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862949, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_Offset.x
@@ -18346,6 +18340,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1.502429
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390509797973862945, guid: 4d145562dac644b77a18e8511fdf0936,
+        type: 3}
+      propertyPath: lookDescription
+      value: Crows Foot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390509797973862945, guid: 4d145562dac644b77a18e8511fdf0936,
+        type: 3}
+      propertyPath: itemName
+      value: Crows Foot
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4390509797973862950, guid: 4d145562dac644b77a18e8511fdf0936, type: 3}
@@ -22386,6 +22390,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 831850657}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2036490114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2036490116}
+  - component: {fileID: 2036490115}
+  m_Layer: 0
+  m_Name: CrystalBallGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2036490115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036490114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89fb048e8b38145b3a4d8cb069c6d04b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball1: {fileID: 334451265}
+  ball2: {fileID: 799851540}
+--- !u!4 &2036490116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036490114}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.962208, y: 2.254181, z: -6.263617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2046015191
 GameObject:
