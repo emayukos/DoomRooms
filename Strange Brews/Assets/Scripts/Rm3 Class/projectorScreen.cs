@@ -41,11 +41,10 @@ public class projectorScreen : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.CompareTag("Player"))
         {
-            inRange = true;
-            //if (collision.GetComponent<PhotonView>().isMine)
-            //{
-            //    inRange = true;
-            //}
+            if (collision.GetComponent<PhotonView>().isMine)
+            {
+                inRange = true;
+            }
 
         }
     }
@@ -54,9 +53,13 @@ public class projectorScreen : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            inRange = false;
-            projectorScreenPanel.SetActive(false);
-            UIopen = !UIopen;
+            if (collision.GetComponent<PhotonView>().isMine)
+            {
+                inRange = false;
+                projectorScreenPanel.SetActive(false);
+                UIopen = !UIopen;
+            }
+            
 
         }
     }

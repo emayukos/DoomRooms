@@ -2711,10 +2711,10 @@ RectTransform:
   m_Father: {fileID: 1051798431}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23, y: 0.0000076294}
-  m_SizeDelta: {x: 717.9, y: 877.1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000052210326, y: 0}
+  m_SizeDelta: {x: 367.8, y: 29.299988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &723505421
 MonoBehaviour:
@@ -3880,6 +3880,7 @@ GameObject:
   - component: {fileID: 1029608650}
   - component: {fileID: 1029608652}
   - component: {fileID: 1029608653}
+  - component: {fileID: 1029608654}
   m_Layer: 0
   m_Name: class_lisht-24
   m_TagString: Untagged
@@ -3990,6 +3991,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   classListUI: {fileID: 1051798430}
+--- !u!114 &1029608654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029608649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77eba604288734b3388ef80e4bde280d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openSoundEffect: {fileID: 0}
+  closeSoundEffect: {fileID: 0}
+  objectUI: {fileID: 1051798430}
 --- !u!1 &1033358468
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,7 +4180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1051798431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4966,7 +4982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1308994886
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8266,6 +8282,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelChanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516861246620561876, guid: 83c0d701af6b047a58d1140abcd769fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8516861246620561883, guid: 83c0d701af6b047a58d1140abcd769fa,
         type: 3}
