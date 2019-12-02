@@ -4155,6 +4155,7 @@ GameObject:
   - component: {fileID: 334451265}
   - component: {fileID: 334451267}
   - component: {fileID: 334451266}
+  - component: {fileID: 334451268}
   m_Layer: 0
   m_Name: cr_crystal_ball_blue
   m_TagString: Untagged
@@ -4295,6 +4296,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.529861, y: 7.0441556}
   m_EdgeRadius: 0
+--- !u!114 &334451268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334451261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 334451263}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 25
+  instantiationId: 25
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &334491619
 GameObject:
   m_ObjectHideFlags: 0
@@ -10058,6 +10086,7 @@ GameObject:
   - component: {fileID: 799851539}
   - component: {fileID: 799851538}
   - component: {fileID: 799851540}
+  - component: {fileID: 799851541}
   m_Layer: 0
   m_Name: cr_crystal_ball_green
   m_TagString: Untagged
@@ -10184,6 +10213,33 @@ MonoBehaviour:
   otherCrystalBall: {fileID: 334451265}
   UIConnecting: {fileID: 1406574182}
   UIConnected: {fileID: 1050352324}
+--- !u!114 &799851541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799851535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 799851537}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 26
+  instantiationId: 26
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &800989476
 GameObject:
   m_ObjectHideFlags: 0
