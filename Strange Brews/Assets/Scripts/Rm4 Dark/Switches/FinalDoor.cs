@@ -22,8 +22,8 @@ public class FinalDoor : MonoBehaviour
         //Debug.Log("Switch 0: " + switches[0] + "   Switch 1: " + switches[1]);
         if(switches[0] && switches[1])
         {
-            endDoor.GetComponent<SwitchDoor>().doorOpen();
-            //endDoor.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
+            //endDoor.GetComponent<SwitchDoor>().doorOpen();
+            endDoor.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
         }
     }
 

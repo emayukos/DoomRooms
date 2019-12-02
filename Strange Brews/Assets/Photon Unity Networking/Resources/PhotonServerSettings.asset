@@ -87,4 +87,8 @@ MonoBehaviour:
   - pressurePadDown
   - pressurePadUp
   - deleteObject
+  - ComOff
+  - ComOn
+  - LightOn
+  - LightOff
   DisableAutoOpenWizard: 1
