@@ -22081,7 +22081,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.1
+  m_EdgeRadius: 0.07
   m_Points:
   - {x: 0, y: 1.9}
   - {x: 0, y: 0}
@@ -26380,7 +26380,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.01
+  m_EdgeRadius: 0.03
   m_Points:
   - {x: -0.08, y: -0.1}
   - {x: -0.08, y: -1.95}
@@ -27046,6 +27046,7 @@ GameObject:
   - component: {fileID: 1365750561}
   - component: {fileID: 1365750560}
   - component: {fileID: 1365750563}
+  - component: {fileID: 1365750564}
   m_Layer: 0
   m_Name: Flashlight 2 stand-in
   m_TagString: Untagged
@@ -27156,6 +27157,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &1365750564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365750559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 43
+  instantiationId: 43
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1368206395
 GameObject:
   m_ObjectHideFlags: 0
@@ -31276,6 +31304,7 @@ GameObject:
   - component: {fileID: 1573981789}
   - component: {fileID: 1573981788}
   - component: {fileID: 1573981791}
+  - component: {fileID: 1573981792}
   m_Layer: 0
   m_Name: Flashlight 1 stand-in
   m_TagString: Untagged
@@ -31354,7 +31383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573981787}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.79, y: -2.33, z: -6.873217}
+  m_LocalPosition: {x: -0.95, y: -2.3, z: -6.873217}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -31386,6 +31415,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &1573981792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573981787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 42
+  instantiationId: 42
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &1576094288
 GameObject:
   m_ObjectHideFlags: 0
@@ -42190,7 +42246,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.01
+  m_EdgeRadius: 0.03
   m_Points:
   - {x: -0.08, y: 1.95}
   - {x: -0.08, y: 0.1}
