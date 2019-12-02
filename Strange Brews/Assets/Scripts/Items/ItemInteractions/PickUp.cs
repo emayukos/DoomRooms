@@ -70,14 +70,22 @@ public class PickUp : Photon.MonoBehaviour
     {
         //adds item to inventory
         inventory.GetComponent<Inventory>().addItem(itemNameFound);
-   //     if(itemNameFound == "Final Key")
-			//{
-			//	HasFinalKey = true;
-			//}
+        //     if(itemNameFound == "Final Key")
+        //{
+        //	HasFinalKey = true;
+        //}
         //removes physical item object from scene
         //Destroy(gameObject);
-        PhotonNetwork.Destroy(gameObject);
+        //PhotonNetwork.Destroy(gameObject);
         //gameObject.SetActive(false);
-       
+
+        this.photonView.RPC("deleteObject", PhotonTargets.All);
+
+    }
+
+    [PunRPC]
+    private void deleteObject()
+    {
+        Destroy(gameObject);
     }
 }
