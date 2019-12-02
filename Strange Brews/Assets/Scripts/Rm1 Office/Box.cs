@@ -63,7 +63,7 @@ public class Box : Photon.MonoBehaviour
             }
             // move button object inside box if it hasn't been picked up
             //if (boxButtonPrefab.activeInHierarchy == true )
-            if(GameObject.Find("buttonUnpressed") != null)
+            if(boxButtonPrefab != null)
 			{
             
                 buttonPositionInScene = transform.position;
@@ -105,7 +105,7 @@ public class Box : Photon.MonoBehaviour
 			{
 				source.PlayOneShot(soundEffect);
 			}
-			if (GameObject.Find("buttonUnpressed") != null)
+			if (boxButtonPrefab != null)
 				boxButtonPrefab.transform.position = initialButtonPosition;
 			isOpen = false;
 		}

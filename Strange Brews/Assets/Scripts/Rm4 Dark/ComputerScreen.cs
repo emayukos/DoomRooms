@@ -40,20 +40,15 @@ public class ComputerScreen : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             inRange = true;
-            //if (collision.GetComponent<PhotonView>().isMine)
-            //{
-            //    inRange = true;
-            //}
-
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             inRange = false;
             computerScreenPanel.SetActive(false);

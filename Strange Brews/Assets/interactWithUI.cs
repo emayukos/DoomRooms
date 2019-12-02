@@ -72,6 +72,8 @@ public class interactWithUI : MonoBehaviour
             if (collision.GetComponent<PhotonView>().isMine)
             {
                 inRange = false;
+                objectUI.SetActive(false);
+                isOpen = false;
             }
         }
     }

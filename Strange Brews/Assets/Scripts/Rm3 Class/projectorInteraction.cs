@@ -9,6 +9,7 @@ public class projectorInteraction : MonoBehaviour
     private bool inRange;
     public GameObject projectorScreen;
     private bool isOn = false;
+    private AudioSource projectorOnAudio;
 
 
 
@@ -16,6 +17,7 @@ public class projectorInteraction : MonoBehaviour
     void Start()
     {
         projectorScreen.SetActive(false);
+        projectorOnAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,9 +53,13 @@ public class projectorInteraction : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         // for single player testing
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") )
         {
-            inRange = true;
+            if (col.GetComponent<PhotonView>().isMine)
+            {
+                inRange = true;
+            }
+            
         } else
         {
             Debug.Log("OnTriggerEnter comaring tag isn't player");
@@ -68,7 +74,11 @@ public class projectorInteraction : MonoBehaviour
         // For single player testing
         if(col.gameObject.CompareTag("Player"))
         {
-            inRange = false;
+            if (col.GetComponent<PhotonView>().isMine)
+            {
+                inRange = false;
+            }
+                
         }
         else
         {
@@ -90,6 +100,7 @@ public class projectorInteraction : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = projOn;
         isOn = true;
         projectorScreen.SetActive(true);
+        projectorOnAudio.Play();
 
     }
     // for photon
@@ -112,6 +123,7 @@ public class projectorInteraction : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = projOff;
             projectorScreen.SetActive(false);
             isOn = false;
+            projectorOnAudio.Pause();
         }
     }
     // for photon

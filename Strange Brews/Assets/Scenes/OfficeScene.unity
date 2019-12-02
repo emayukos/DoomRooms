@@ -4390,7 +4390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1028087258
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6661,8 +6661,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485058053}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -0.76, y: -0.9044817, z: -15.37}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.06, y: -0.31, z: -17.1}
+  m_LocalScale: {x: 0.2530713, y: 0.2685762, z: 0.17984982}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -14564,12 +14564,12 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 0
+  synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 7172342519918580117}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 5
   instantiationId: 5

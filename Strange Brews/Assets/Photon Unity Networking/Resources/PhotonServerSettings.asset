@@ -79,4 +79,12 @@ MonoBehaviour:
   - openComputer
   - activateRPC
   - openChestRPC
+  - rotateWall
+  - openNightStand
+  - syncWalls
+  - MiddleLightOn
+  - OutsideLightsOn
+  - pressurePadDown
+  - pressurePadUp
+  - deleteObject
   DisableAutoOpenWizard: 1
