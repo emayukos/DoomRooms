@@ -43,8 +43,10 @@ public class potion : Photon.MonoBehaviour
 		// make potion script for other player that checks that it's not their view
 		if(inRange && Input.GetKeyDown(KeyCode.E) && notDone) 
 		{
+			Debug.Log("player got first potion");
 			// first potion so won't be shrunk already unless this block has already executed
 			drinkPotionRPC();
+			
 			
 			//if(!(Player.GetComponent<Shrink>().shrunk)) // if player hasn't shrunk already
 			//{
@@ -66,6 +68,7 @@ public class potion : Photon.MonoBehaviour
 	[PunRPC]
 	IEnumerator drinkPotion()  // don't know if allowed to use this format so test
 	{
+		notDone = false;
 		source.clip = drinkSoundEffect;
 		source.Play();
 		Debug.Log("player drank potion");
