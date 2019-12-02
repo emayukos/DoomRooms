@@ -35,6 +35,8 @@ public class projectorPanelUI : MonoBehaviour
 
     public string codeTextVal = "";
 
+    GameObject networkTextBox;
+
     ////for single player testing
     //public GameObject cabinetOpen;
     //public GameObject cabinetClosed;
@@ -64,6 +66,7 @@ public class projectorPanelUI : MonoBehaviour
         //cabinetOpen.SetActive(false);
         gameObject.SetActive(false);
         Debug.Log(photonView);
+        networkTextBox = GameObject.Find("Network Message Text");
 
     }
 
@@ -90,7 +93,8 @@ public class projectorPanelUI : MonoBehaviour
             // for photon
             Debug.Log(photonView);
             this.photonView.RPC("openFileCabinet", PhotonTargets.All);
-
+            networkTextBox.GetComponent<InteractText>().photonView.RPC(
+                    "DisplayLook", PhotonTargets.All, "Correct Answer! The filling cabinet has been opened");
         }
         else
         {
