@@ -4513,7 +4513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb38545664444715b49ed998a03f801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keypad: {fileID: 4430893628087058192}
 --- !u!1 &1059514451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4735,7 +4734,7 @@ MonoBehaviour:
   painting: {fileID: 1028087257}
   buttonPositionInScene: {x: -6.326, y: -0.64}
   buttonTaskCompleted: 0
-  safeObject: {fileID: 0}
+  safeObject: {fileID: 8791421495830486226}
 --- !u!61 &1105648622
 BoxCollider2D:
   m_ObjectHideFlags: 0
