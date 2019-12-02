@@ -5,53 +5,108 @@ using UnityEngine;
 public class crystalBall : MonoBehaviour
 {
 
-    private bool inRange, isOpen, isActive;
-    public GameObject objectUI;
-    public AudioClip openAudio, closeAudio;
+    private bool inRange, isOpen, otherInRange;
     private AudioSource source;
 
+    public AudioClip connectedSound;
+
+    public crystalBall otherCrystalBall;
+
+    public GameObject UIConnecting;
+    public GameObject UIConnected;
+
+    private bool connected;
+
+    private PhotonView photonView;
 
     // Start is called before the first frame update
     void Start()
     {
-        objectUI.SetActive(false);
-        isActive = true;
+        UIConnecting.SetActive(false);
+        UIConnected.SetActive(false);
+
         source = GetComponent<AudioSource>();
+
+        photonView = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (inRange && Input.GetKeyDown(KeyCode.E) && isActive)
+        if (inRange && Input.GetKeyDown(KeyCode.E))
         {
-            if (!isOpen) openUI();
+            if (!isOpen)
+            {
+                if (connected == true) openConnectedUI();
+                else openConnectingUI();
+            }
+            
             if (isOpen) closeUI();
+
             isOpen = !isOpen;
+
+            if (isOpen) photonView.RPC("isOpenForOther", PhotonTargets.All);
+            else photonView.RPC("isNotOpenForOther", PhotonTargets.All);
+            
         }
+
+
+        // check to see if the other player has the crystal ball open
+        if (otherCrystalBall.isItOpen() == true && connected == false)
+        {
+            connected = true;
+            if (isOpen) openConnectedUI();
+        }
+        else if (otherCrystalBall.isItOpen() == false && connected == true)
+        {
+            connected = false;
+            if (isOpen) openConnectingUI();
+        }
+
+        
     }
 
-    public void openUI()
+    [PunRPC]
+    void isOpenForOther()
     {
-        if (openAudio != null) source.PlayOneShot(openAudio);
-        objectUI.SetActive(true);
+        isOpen = true;
     }
+
+    [PunRPC]
+    void isNotOpenForOther()
+    {
+        isOpen = false;
+    }
+
+    
+
+    public void openConnectingUI()
+    {
+        UIConnecting.SetActive(true);
+        UIConnected.SetActive(false);
+    }
+
+    public void openConnectedUI()
+    {
+        if (connectedSound != null) source.PlayOneShot(connectedSound);
+        UIConnected.SetActive(true);
+        UIConnecting.SetActive(false);
+    }
+
+    
 
     public void closeUI()
     {
-        if (closeAudio != null) source.PlayOneShot(closeAudio);
-        objectUI.SetActive(false);
+        // close both
+        UIConnected.SetActive(false);
+        UIConnecting.SetActive(false);
+
     }
 
-
-    public void activate()
+    
+    public bool isItOpen()
     {
-        isActive = true;
-    }
-
-    public void deactivate()
-    {
-        isActive = false;
-        objectUI.SetActive(false);
+        return isOpen;
     }
 
 
@@ -63,6 +118,10 @@ public class crystalBall : MonoBehaviour
             {
                 inRange = true;
             }
+            else
+            {
+                otherInRange = true;
+            }
         }
     }
 
@@ -73,6 +132,11 @@ public class crystalBall : MonoBehaviour
             if (collision.GetComponent<PhotonView>().isMine)
             {
                 inRange = false;
+                closeUI();
+            }
+            else
+            {
+                otherInRange = false;
             }
         }
     }
