@@ -80,4 +80,6 @@ MonoBehaviour:
   - activateRPC
   - openChestRPC
   - rotateWall
+  - openNightStand
+  - syncWalls
   DisableAutoOpenWizard: 1

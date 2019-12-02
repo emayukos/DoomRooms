@@ -8,9 +8,10 @@ public class setCameraFollow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             camera1.GetComponent<CameraFollowPrefab>().setPlayer(collision.gameObject);
+            collision.gameObject.GetComponent<CircleCollider2D>().enabled = false;
             Destroy(gameObject);
         }
     }

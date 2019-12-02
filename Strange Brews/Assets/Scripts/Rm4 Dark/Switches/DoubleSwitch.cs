@@ -61,7 +61,10 @@ public class DoubleSwitch : MonoBehaviour
         //switch goes down
         //   light change call here?
 
-        inRange = true;
+        if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
+        {
+            inRange = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -69,6 +72,9 @@ public class DoubleSwitch : MonoBehaviour
         //switch goes up
         //   light change call here?
 
-        inRange = false;
+        if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
+        {
+            inRange = false;
+        }
     }
 }

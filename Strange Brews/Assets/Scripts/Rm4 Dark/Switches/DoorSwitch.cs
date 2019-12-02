@@ -12,18 +12,25 @@ public class DoorSwitch : Photon.MonoBehaviour
         //switch goes down
         //   animate here?
 
-        Debug.Log("Door should open.");
-        //door.GetComponent<SwitchDoor>().doorOpen();
-        door.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
+        if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
+        {
+            Debug.Log("Door should open.");
+            //door.GetComponent<SwitchDoor>().doorOpen();
+            door.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
+        }
     }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         //switch goes up
         //   animate here?
-
-        Debug.Log("Door should close.");
-        //door.GetComponent<SwitchDoor>().doorClose();
-        door.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
+        if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
+        {
+            Debug.Log("Door should close.");
+            //door.GetComponent<SwitchDoor>().doorClose();
+            door.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
+        }
     }
+
 }
