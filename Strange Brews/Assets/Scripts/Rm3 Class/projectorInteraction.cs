@@ -9,6 +9,7 @@ public class projectorInteraction : MonoBehaviour
     private bool inRange;
     public GameObject projectorScreen;
     private bool isOn = false;
+    private AudioSource projectorOnAudio;
 
 
 
@@ -16,6 +17,7 @@ public class projectorInteraction : MonoBehaviour
     void Start()
     {
         projectorScreen.SetActive(false);
+        projectorOnAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -90,6 +92,7 @@ public class projectorInteraction : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = projOn;
         isOn = true;
         projectorScreen.SetActive(true);
+        projectorOnAudio.Play();
 
     }
     // for photon
@@ -112,6 +115,7 @@ public class projectorInteraction : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = projOff;
             projectorScreen.SetActive(false);
             isOn = false;
+            projectorOnAudio.Pause();
         }
     }
     // for photon
