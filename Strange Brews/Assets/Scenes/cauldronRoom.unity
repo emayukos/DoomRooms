@@ -15066,12 +15066,12 @@ PrefabInstance:
     - target: {fileID: 2283686229894785587, guid: 77e64d267df0044319181742639591ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.36
+      value: -3.875
       objectReference: {fileID: 0}
     - target: {fileID: 2283686229894785587, guid: 77e64d267df0044319181742639591ba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.32
+      value: -6.052
       objectReference: {fileID: 0}
     - target: {fileID: 2283686229894785587, guid: 77e64d267df0044319181742639591ba,
         type: 3}
@@ -15091,12 +15091,12 @@ PrefabInstance:
     - target: {fileID: 2283686229894785587, guid: 77e64d267df0044319181742639591ba,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5604269
+      value: 0.03708308
       objectReference: {fileID: 0}
     - target: {fileID: 2283686229894785587, guid: 77e64d267df0044319181742639591ba,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8282039
+      value: 0.99931216
       objectReference: {fileID: 0}
     - target: {fileID: 2283686229894785587, guid: 77e64d267df0044319181742639591ba,
         type: 3}
@@ -15116,7 +15116,17 @@ PrefabInstance:
     - target: {fileID: 2283686229894785587, guid: 77e64d267df0044319181742639591ba,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -68.171005
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283686229894785587, guid: 77e64d267df0044319181742639591ba,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.038040083
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283686229894785587, guid: 77e64d267df0044319181742639591ba,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.039638225
       objectReference: {fileID: 0}
     - target: {fileID: 3474980403940383072, guid: 77e64d267df0044319181742639591ba,
         type: 3}
@@ -15153,6 +15163,16 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.2574608
       objectReference: {fileID: 0}
+    - target: {fileID: 4487001712499006275, guid: 77e64d267df0044319181742639591ba,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 19.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487001712499006275, guid: 77e64d267df0044319181742639591ba,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 17.89
+      objectReference: {fileID: 0}
     - target: {fileID: 6641284401351836624, guid: 77e64d267df0044319181742639591ba,
         type: 3}
       propertyPath: itemName
@@ -15163,6 +15183,12 @@ PrefabInstance:
       propertyPath: lookDescription
       value: Unicorn Horn
       objectReference: {fileID: 0}
+    - target: {fileID: 1951168797404058081, guid: 77e64d267df0044319181742639591ba,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f3bf6a4c3a87d4ba4b74d44e7692fd32,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77e64d267df0044319181742639591ba, type: 3}
 --- !u!1 &1309399700 stripped
@@ -18291,6 +18317,16 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4390509797973862945, guid: 4d145562dac644b77a18e8511fdf0936,
+        type: 3}
+      propertyPath: lookDescription
+      value: Crows Foot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390509797973862945, guid: 4d145562dac644b77a18e8511fdf0936,
+        type: 3}
+      propertyPath: itemName
+      value: Crows Foot
+      objectReference: {fileID: 0}
     - target: {fileID: 4390509797973862949, guid: 4d145562dac644b77a18e8511fdf0936,
         type: 3}
       propertyPath: m_Offset.x
@@ -18310,16 +18346,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1.502429
-      objectReference: {fileID: 0}
-    - target: {fileID: 4390509797973862945, guid: 4d145562dac644b77a18e8511fdf0936,
-        type: 3}
-      propertyPath: lookDescription
-      value: Crows Foot
-      objectReference: {fileID: 0}
-    - target: {fileID: 4390509797973862945, guid: 4d145562dac644b77a18e8511fdf0936,
-        type: 3}
-      propertyPath: itemName
-      value: Crows Foot
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4390509797973862950, guid: 4d145562dac644b77a18e8511fdf0936, type: 3}
