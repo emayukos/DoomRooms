@@ -18,7 +18,7 @@ public class movePainting : Photon.MonoBehaviour
 
     float currentTime;
 
-	public GameObject keypad; // for safe
+	//public GameObject keypad; // for safe
 
     GameObject networkTextBox;
 
@@ -49,7 +49,6 @@ public class movePainting : Photon.MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector3(0, 1, 0);
         networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The Painting started floating upward to reveal a safe!");
-		keypad.SetActive(true);
         //transform.position = endPosition;
 
 
