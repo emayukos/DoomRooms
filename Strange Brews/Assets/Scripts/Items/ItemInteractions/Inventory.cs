@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : Photon.MonoBehaviour
 {
-    private string[] itemlist = new string[10];
+    private string[] itemlist = new string[15];
     private int numItems = 0;
     private string inventoryList = "";
     public GameObject inventoryMenuText;
@@ -22,7 +22,7 @@ public class Inventory : Photon.MonoBehaviour
     public bool full()
     {
         //checks if inventory array capacity has been met
-        if (numItems < 10)
+        if (numItems < 15)
             return false;
         else
             return true;
