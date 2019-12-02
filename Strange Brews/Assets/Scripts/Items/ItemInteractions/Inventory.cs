@@ -32,6 +32,13 @@ public class Inventory : Photon.MonoBehaviour
     public void addItem(string itemName)
     {
         Debug.Log("addItemCalled");
+        if (searchItem(itemName) == true)
+        {
+            Debug.Log("item was already in the inventory");
+            return;
+        }
+
+        
         if (!full())
         {
             //adds items to next open position in inventory array
