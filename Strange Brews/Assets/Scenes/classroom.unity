@@ -3071,7 +3071,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 3}
   m_EdgeRadius: 0
@@ -3260,7 +3260,7 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 484374837346257393}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 1
   instantiationId: 1
@@ -8991,6 +8991,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 484374837346257391}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &484374837346257393 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 484374836848943898, guid: 1ccca99824ede418b8cebac9ffa68303,
+    type: 3}
+  m_PrefabInstance: {fileID: 484374837346257391}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783133425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e71227204224d6a940f3202aa5b84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6422694429017090418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9097,6 +9109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 3.5596294
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099630670706505845, guid: dfba58f68e23d44619c6b6c00ccc3309,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfba58f68e23d44619c6b6c00ccc3309, type: 3}

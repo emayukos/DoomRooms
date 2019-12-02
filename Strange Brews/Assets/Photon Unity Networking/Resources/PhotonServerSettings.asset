@@ -89,4 +89,6 @@ MonoBehaviour:
   - deleteObject
   - isNotOpenForOther
   - isOpenForOther
+  - TurnOffProjector
+  - TurnOnProjector
   DisableAutoOpenWizard: 1

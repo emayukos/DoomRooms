@@ -100,6 +100,7 @@ public class projectorInteraction : MonoBehaviour
     }
 
     // for single player testing
+    [PunRPC]
     void TurnOnProjector()
     {
         //Turn on projector
@@ -120,6 +121,7 @@ public class projectorInteraction : MonoBehaviour
 
     //}
     // for single player testing
+    [PunRPC]
     void TurnOffProjector()
     {
         //Turn off projector
