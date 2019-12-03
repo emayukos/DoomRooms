@@ -6,11 +6,11 @@ public class ComputerScreen : MonoBehaviour
 {
     public GameObject computerScreenPanel;
     public GameObject openScreenPanel;
-
-    //private bool isActive = true;
+    public PhotonView photonView;
 
     private bool UIopen = false;
     private bool inRange = false;
+    private bool unlocked = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +26,28 @@ public class ComputerScreen : MonoBehaviour
         {
             if (UIopen == false)
             {
-                computerScreenPanel.SetActive(true);
+                if (!unlocked)
+                {
+                    //password unlocking only for 1 player's screen
+                    computerScreenPanel.SetActive(true);
+                }
+                else
+                {
+                    //Clue seen for both, both can try safe later
+                    photonView.RPC("ComOn", PhotonTargets.All);
+                }
                 UIopen = !UIopen;
             }
             else
             {
-                computerScreenPanel.SetActive(false);
+                if (!unlocked)
+                {
+                    computerScreenPanel.SetActive(false);
+                }
+                else
+                {
+                    photonView.RPC("ComOff", PhotonTargets.All);
+                }
                 UIopen = !UIopen;
             }
         }
@@ -63,5 +79,18 @@ public class ComputerScreen : MonoBehaviour
         openScreenPanel.SetActive(true);
         computerScreenPanel.SetActive(false);
         computerScreenPanel = openScreenPanel;
+        unlocked = true;
+    }
+
+    [PunRPC]
+    public void ComOn()
+    {
+        computerScreenPanel.SetActive(true);
+    }
+
+    [PunRPC]
+    public void ComOff()
+    {
+        computerScreenPanel.SetActive(false);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class crystalBall : MonoBehaviour
 {
 
-    private bool inRange, isOpen, otherIsOpen;
+    private bool inRange, isOpen, thisIsOpen;
     private AudioSource source;
 
     public AudioClip connectedSound;
@@ -15,9 +15,11 @@ public class crystalBall : MonoBehaviour
     public GameObject UIConnecting;
     public GameObject UIConnected;
 
-    private bool connected;
+    public bool connected;
 
     private PhotonView photonView;
+
+    public crystalBallGroup group;
 
     // Start is called before the first frame update
     void Start()
@@ -37,30 +39,20 @@ public class crystalBall : MonoBehaviour
         {
             if (!isOpen)
             {
-                if (connected == true) openConnectedUI();
-                else openConnectingUI();
+                openUI();
             }
-            
-            if (isOpen) closeUI();
-
-            isOpen = !isOpen;
-
-            if (isOpen) photonView.RPC("isOpenForOther", PhotonTargets.All);
-            else photonView.RPC("isNotOpenForOther", PhotonTargets.All);
-            
+            else
+            {
+                closeUI();
+            }
+            isOpen = !isOpen;            
         }
 
 
         // check to see if the other player has the crystal ball open
-        if (otherCrystalBall.isItOpen() == true && connected == false)
+        if (group.isConnected() != connected && isOpen)
         {
-            connected = true;
-            if (isOpen) openConnectedUI();
-        }
-        else if (otherCrystalBall.isItOpen() == false && connected == true)
-        {
-            connected = false;
-            if (isOpen) openConnectingUI();
+            openUI();
         }
 
         
@@ -69,28 +61,32 @@ public class crystalBall : MonoBehaviour
     [PunRPC]
     void isOpenForOther()
     {
-        otherIsOpen = true;
+        thisIsOpen = true;
     }
 
     [PunRPC]
     void isNotOpenForOther()
     {
-        otherIsOpen = false;
+        thisIsOpen = false;
     }
 
-    
 
-    public void openConnectingUI()
+    public void openUI()
     {
-        UIConnecting.SetActive(true);
-        UIConnected.SetActive(false);
-    }
+        if (group.isConnected())
+        {
+            UIConnected.SetActive(true);
+            UIConnecting.SetActive(false);
+            connected = true;
+        }
+        else
+        {
+            UIConnected.SetActive(false);
+            UIConnecting.SetActive(true);
+            connected = false;
+        }
 
-    public void openConnectedUI()
-    {
-        if (connectedSound != null) source.PlayOneShot(connectedSound);
-        UIConnected.SetActive(true);
-        UIConnecting.SetActive(false);
+        photonView.RPC("isOpenForOther", PhotonTargets.All);
     }
 
     
@@ -100,13 +96,14 @@ public class crystalBall : MonoBehaviour
         // close both
         UIConnected.SetActive(false);
         UIConnecting.SetActive(false);
+        photonView.RPC("isNotOpenForOther", PhotonTargets.All);
 
     }
 
     
     public bool isItOpen()
     {
-        return otherIsOpen;
+        return thisIsOpen;
     }
 
 
