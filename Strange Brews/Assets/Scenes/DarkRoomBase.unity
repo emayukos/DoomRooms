@@ -12044,6 +12044,7 @@ GameObject:
   - component: {fileID: 632318155}
   - component: {fileID: 632318156}
   - component: {fileID: 632318157}
+  - component: {fileID: 632318158}
   m_Layer: 0
   m_Name: Safe Activation
   m_TagString: Untagged
@@ -12079,6 +12080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   safe: {fileID: 1423161783}
   photonview: {fileID: 1423161785}
+  thisPhotonView: {fileID: 632318158}
   foundSafeSprite: {fileID: 71399413}
   networkTextBox: {fileID: 1925076005}
 --- !u!61 &632318157
@@ -12107,6 +12109,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &632318158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632318154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 44
+  instantiationId: 44
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!1 &634665901
 GameObject:
   m_ObjectHideFlags: 0

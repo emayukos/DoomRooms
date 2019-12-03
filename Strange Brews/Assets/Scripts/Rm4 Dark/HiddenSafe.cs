@@ -93,10 +93,9 @@ public class HiddenSafe : MonoBehaviour
 
 
     [PunRPC]
-    public void activate(GameObject obj)
+    public void activate()
     {
         isActive = true;
-        obj.SetActive(false);
     }
 
 

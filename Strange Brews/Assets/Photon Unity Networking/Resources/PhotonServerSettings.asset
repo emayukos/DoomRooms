@@ -101,4 +101,5 @@ MonoBehaviour:
   - TurnOnProjector
   - activateFL
   - FLFollowPlayer
+  - deactivateThis
   DisableAutoOpenWizard: 1

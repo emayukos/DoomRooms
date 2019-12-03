@@ -6,6 +6,7 @@ public class FoundSafe : MonoBehaviour
 {
     public GameObject safe;
     public PhotonView photonview;
+    public PhotonView thisPhotonView;
     public SpriteRenderer foundSafeSprite;
     public GameObject networkTextBox;
 
@@ -26,8 +27,8 @@ public class FoundSafe : MonoBehaviour
         if (inRange && Input.GetKeyDown(KeyCode.E))
         {
             networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "Pushing a brick revealed a hidden safe.");
-            foundSafeSprite.color = originalColour;
-            this.photonview.RPC("activate", PhotonTargets.All, gameObject);
+            this.photonview.RPC("activate", PhotonTargets.All);
+            thisPhotonView.RPC("deactivateThis", PhotonTargets.All);
             ///safe.GetComponent<HiddenSafe>().activate(gameObject);
         }
     }
@@ -49,5 +50,11 @@ public class FoundSafe : MonoBehaviour
         }
     }
 
+    [PunRPC]
+    public void deactivateThis()
+    {
+        foundSafeSprite.color = originalColour;
+        gameObject.SetActive(false);
+    }
 
 }
