@@ -28,19 +28,25 @@ public class FlashlightFollow : MonoBehaviour
     {
         if (On)
         {
-            transform.position = playerThis.transform.position;
-            //transform.rotation = playerThis.transform.rotation;
-            //Debug.Log(sightRotation);
-            rbody.MoveRotation(sightRotation);
+            photonView.RPC("FLFollowPlayer", PhotonTargets.All);
         }
-
     }
 
     [PunRPC]
     public void activateLight(GameObject player)
     {
+        //can't pass GameObjects through RPCs, light only follows player position on .isMine screen, goes infinitely up on other, out of sight
         playerThis = player;
         On = true;
+    }
+
+    [PunRPC]
+    public void FLFollowPlayer()
+    {
+        transform.position = playerThis.transform.position;
+        //transform.rotation = playerThis.transform.rotation;
+        //Debug.Log(sightRotation);
+        rbody.MoveRotation(sightRotation);
     }
 
     public bool isOn()

@@ -2032,7 +2032,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.9}
+  m_Offset: {x: 1.2, y: -17}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2043,7 +2043,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1}
+  m_Size: {x: 15.5, y: 13}
   m_EdgeRadius: 0
 --- !u!114 &79172477
 MonoBehaviour:
@@ -11599,7 +11599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &608495308
 Transform:
   m_ObjectHideFlags: 0
@@ -13114,8 +13114,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1010341265
-  m_SortingLayer: 2
+  m_SortingLayerID: 1277921941
+  m_SortingLayer: 7
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d7e49428c646f439ca9736bfcfc5806f, type: 3}
   m_Color: {r: 0.9339623, g: 0.87992173, b: 0.8326362, a: 1}
@@ -19787,8 +19787,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1608737291
-  m_SortingLayer: 1
+  m_SortingLayerID: 1277921941
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d7e49428c646f439ca9736bfcfc5806f, type: 3}
   m_Color: {r: 0.9921569, g: 0.9294118, b: 0.8745099, a: 1}
@@ -25182,7 +25182,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225515486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -27068,6 +27068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personalTextBox: {fileID: 478356206}
   realFlashlight: {fileID: 552935372}
+  thisPhotonView: {fileID: 1365750564}
 --- !u!212 &1365750561
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27653,7 +27654,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385308181}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -31326,6 +31327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personalTextBox: {fileID: 478356206}
   realFlashlight: {fileID: 1299197978}
+  thisPhotonView: {fileID: 1573981792}
 --- !u!212 &1573981789
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31383,7 +31385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573981787}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.95, y: -2.3, z: -6.873217}
+  m_LocalPosition: {x: -11.04, y: -2.91, z: -6.873217}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40452,8 +40454,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1010341265
-  m_SortingLayer: 2
+  m_SortingLayerID: 1277921941
+  m_SortingLayer: 7
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d7e49428c646f439ca9736bfcfc5806f, type: 3}
   m_Color: {r: 0.9333334, g: 0.87843144, b: 0.8313726, a: 1}
