@@ -87,6 +87,14 @@ MonoBehaviour:
   - pressurePadDown
   - pressurePadUp
   - deleteObject
+  - ComOff
+  - ComOn
+  - LightOn
+  - LightOff
+  - rightLightOff
+  - rightLightOn
+  - wrongLightOff
+  - wrongLightOn
   - isNotOpenForOther
   - isOpenForOther
   - TurnOffProjector
