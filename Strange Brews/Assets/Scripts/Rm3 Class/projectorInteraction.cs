@@ -11,15 +11,17 @@ public class projectorInteraction : MonoBehaviour
     private bool isOn = false;
     private AudioSource projectorOnAudio;
     GameObject networkTextBox;
+    private PhotonView photonView;
 
 
-
+    //void turnOnProjectorRPC() { }
     // Start is called before the first frame update
     void Start()
     {
         projectorScreen.SetActive(false);
         projectorOnAudio = GetComponent<AudioSource>();
         networkTextBox = GameObject.Find("Network Message Text");
+        photonView = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -30,13 +32,15 @@ public class projectorInteraction : MonoBehaviour
             //for single player testing
             if (isOn)
             {
+                photonView.RPC("TurnOffProjector", PhotonTargets.All);
                 TurnOffProjector();
                 networkTextBox.GetComponent<InteractText>().photonView.RPC(
                     "DisplayLook", PhotonTargets.All, "The projector has been turned off!");
             }
             else
             {
-                TurnOnProjector();
+                photonView.RPC("TurnOnProjector", PhotonTargets.All);
+                //TurnOnProjector();
                 networkTextBox.GetComponent<InteractText>().photonView.RPC(
                     "DisplayLook", PhotonTargets.All, "The projector has been turned on!");
             }
