@@ -1217,9 +1217,9 @@ GameObject:
   - component: {fileID: 325961368}
   - component: {fileID: 325961367}
   - component: {fileID: 325961369}
-  - component: {fileID: 325961370}
   - component: {fileID: 325961372}
   - component: {fileID: 325961371}
+  - component: {fileID: 325961370}
   m_Layer: 0
   m_Name: calendar
   m_TagString: Untagged
@@ -1329,8 +1329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!82 &325961371
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2506,9 +2506,9 @@ GameObject:
   - component: {fileID: 590321573}
   - component: {fileID: 590321572}
   - component: {fileID: 590321575}
-  - component: {fileID: 590321576}
   - component: {fileID: 590321577}
   - component: {fileID: 590321578}
+  - component: {fileID: 590321576}
   m_Layer: 0
   m_Name: closedbox
   m_TagString: Untagged
@@ -2634,8 +2634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!82 &590321577
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4390,7 +4390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1028087258
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4734,7 +4734,7 @@ MonoBehaviour:
   painting: {fileID: 1028087257}
   buttonPositionInScene: {x: -6.326, y: -0.64}
   buttonTaskCompleted: 0
-  safeObject: {fileID: 0}
+  safeObject: {fileID: 8791421495830486226}
 --- !u!61 &1105648622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7298,9 +7298,9 @@ GameObject:
   - component: {fileID: 1527237241}
   - component: {fileID: 1527237240}
   - component: {fileID: 1527237242}
-  - component: {fileID: 1527237243}
   - component: {fileID: 1527237244}
   - component: {fileID: 1527237245}
+  - component: {fileID: 1527237243}
   m_Layer: 0
   m_Name: bookcase_front (1)
   m_TagString: Untagged
@@ -7418,7 +7418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
-  nonBorder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &1527237244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8354,8 +8354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cfad72280824926b5d93c54b68cde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  border: {fileID: 2100000, guid: 80f01538302194c5fbc21ded4dae0b9a, type: 2}
-  unborder: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  unborder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   levelChanger: {fileID: 8516861246521564836}
   hasFinalKey: 1
 --- !u!212 &1733116341
@@ -14600,6 +14600,7 @@ GameObject:
   - component: {fileID: 8791421495830486226}
   - component: {fileID: 8062476897750079368}
   - component: {fileID: 8440483052739532550}
+  - component: {fileID: 8440483052739532551}
   m_Layer: 0
   m_Name: Safe
   m_TagString: Untagged
@@ -14623,17 +14624,31 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 0
+  synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 7172342519918580117}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 5
   instantiationId: 5
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &8440483052739532551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8440483052739532549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92121ec088a23451a8a09e9f2216ce11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 2100000, guid: 9c4ca71ea7ffd4d0e88b5b0418035f11, type: 2}
+  nonBorder: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1001 &8516861246521564835
 PrefabInstance:
   m_ObjectHideFlags: 0

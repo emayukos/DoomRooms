@@ -59,9 +59,13 @@ public class projectorInteraction : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         // for single player testing
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") )
         {
-            inRange = true;
+            if (col.GetComponent<PhotonView>().isMine)
+            {
+                inRange = true;
+            }
+            
         } else
         {
             Debug.Log("OnTriggerEnter comaring tag isn't player");
@@ -76,7 +80,11 @@ public class projectorInteraction : MonoBehaviour
         // For single player testing
         if(col.gameObject.CompareTag("Player"))
         {
-            inRange = false;
+            if (col.GetComponent<PhotonView>().isMine)
+            {
+                inRange = false;
+            }
+                
         }
         else
         {

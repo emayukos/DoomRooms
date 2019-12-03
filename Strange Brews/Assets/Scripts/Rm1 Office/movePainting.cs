@@ -18,6 +18,8 @@ public class movePainting : Photon.MonoBehaviour
 
     float currentTime;
 
+	//public GameObject keypad; // for safe
+
     GameObject networkTextBox;
 
     void movePaintUpRPC() {

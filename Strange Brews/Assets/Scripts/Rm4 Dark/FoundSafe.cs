@@ -34,7 +34,7 @@ public class FoundSafe : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             inRange = true;
         }
@@ -43,7 +43,7 @@ public class FoundSafe : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             inRange = false;
         }
