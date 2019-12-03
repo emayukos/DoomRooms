@@ -72,9 +72,6 @@ TagManager:
   - name: accessory 1.3
     uniqueID: 3731854847
     locked: 0
-  - name: player
-    uniqueID: 4290405347
-    locked: 0
   - name: furniture 2
     uniqueID: 1277921941
     locked: 0
@@ -86,4 +83,7 @@ TagManager:
     locked: 0
   - name: popups
     uniqueID: 4182541051
+    locked: 0
+  - name: player
+    uniqueID: 4290405347
     locked: 0
