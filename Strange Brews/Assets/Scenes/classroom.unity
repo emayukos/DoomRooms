@@ -9307,7 +9307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryMenuText: {fileID: 1735843659}
-  rewardSound: {fileID: 0}
+  rewardSound: {fileID: 8300000, guid: 0bc7d247276254686b236a1ebba5f0d6, type: 3}
 --- !u!4 &1954106747
 Transform:
   m_ObjectHideFlags: 0

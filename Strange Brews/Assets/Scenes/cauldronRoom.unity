@@ -9624,7 +9624,7 @@ MonoBehaviour:
   ingredientGroup: {fileID: 265934739}
   item1: {fileID: 1967776421}
   item2: {fileID: 1964779370}
-  isItem1: 1
+  isItem1: 0
 --- !u!1 &652550582
 GameObject:
   m_ObjectHideFlags: 0

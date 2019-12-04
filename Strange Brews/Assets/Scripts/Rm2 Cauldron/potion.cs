@@ -30,6 +30,7 @@ public class potion : Photon.MonoBehaviour
 
 	private void Start()
 	{
+		Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
 		source = GetComponent<AudioSource>();
 		// disable script on other potion until this one is destroyed
 		potion2Prefab.GetComponent<potion2>().enabled = false;

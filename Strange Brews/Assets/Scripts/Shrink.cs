@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Hashtable = ExitGames.Client.Photon.Hashtable; // need at top of script
 
 public class Shrink : Photon.MonoBehaviour
 {
@@ -9,16 +10,26 @@ public class Shrink : Photon.MonoBehaviour
 	public bool shrink = false; // true when player should be shrinking
 	private AudioSource source;
     public AudioClip pressSoundEffect;
-	//private GameObject tinyDoor;
-	public bool shrunk = false;
+    Hashtable hash = new Hashtable();
 
-    // have cute/funny shrinking sound effect play only on key press 
-    // (after pressing E and the sound effect for drinking the potion)
-    
-    private void Start()
+	//private GameObject tinyDoor;
+	[System.Obsolete]
+	public bool shrunk;
+
+	// have cute/funny shrinking sound effect play only on key press 
+	// (after pressing E and the sound effect for drinking the potion)
+
+	[System.Obsolete]
+	private void Start()
 	{
+
 		source = GetComponent<AudioSource>();
 		//ShrinkPlayer(); // just for testing sound
+		shrunk = false;
+		// need hashtable to set custom properties
+		hash.Add("shrunk", shrunk); 
+		PhotonNetwork.player.SetCustomProperties(hash);
+		shrunk = (bool)PhotonNetwork.player.customProperties["shrunk"];
 	}
 
     // Update is called once per frame
@@ -43,11 +54,14 @@ public class Shrink : Photon.MonoBehaviour
     
     
     [PunRPC]
-    public void ShrinkPlayer() {
+	[System.Obsolete]
+	public void ShrinkPlayer() {
 		if (!shrunk) 
 		{
 			shrink = true;
 			shrunk = true;
+			hash["shrunk"] = shrunk; // set to true
+			PhotonNetwork.player.SetCustomProperties(hash);
 			if (pressSoundEffect != null)
 			{
 				source.PlayOneShot(pressSoundEffect, 2.0f);
