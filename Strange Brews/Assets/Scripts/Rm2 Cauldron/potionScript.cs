@@ -93,7 +93,7 @@ public class potionScript : Photon.MonoBehaviour
 		//Destroy(gameObject);
 		//if(Player.PhotonView.isMine)
 		Player.SendMessage("ShrinkPlayerRPC");
-		if(counter == 2)
+		if(counter >= 2)
 		{
 			tinyDoor.SendMessage("IsShrunk");
 		}

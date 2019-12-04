@@ -13349,7 +13349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fbf4319db94a4aab815c8145581648e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookDescription: Vampire blood
+  lookDescription: Vampire Blood
   itemName: Vampire Blood
 --- !u!114 &995650152
 MonoBehaviour:

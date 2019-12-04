@@ -16310,6 +16310,16 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8070634092992012420, guid: cd3c8f6275b5940dfbb0387644abe2a1,
+        type: 3}
+      propertyPath: lookDescription
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070634092992012420, guid: cd3c8f6275b5940dfbb0387644abe2a1,
+        type: 3}
+      propertyPath: itemName
+      value: Button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd3c8f6275b5940dfbb0387644abe2a1, type: 3}
 --- !u!4 &8761029052520516143 stripped
