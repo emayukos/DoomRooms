@@ -20788,7 +20788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryMenuText: {fileID: 1518575549}
-  rewardSound: {fileID: 0}
+  rewardSound: {fileID: 8300000, guid: 0bc7d247276254686b236a1ebba5f0d6, type: 3}
 --- !u!4 &1015138232
 Transform:
   m_ObjectHideFlags: 0
@@ -26622,7 +26622,6 @@ GameObject:
   - component: {fileID: 1331167519}
   - component: {fileID: 1331167518}
   - component: {fileID: 1331167517}
-  - component: {fileID: 1331167516}
   m_Layer: 0
   m_Name: Canvas rm number
   m_TagString: Untagged
@@ -26630,18 +26629,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1331167516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331167515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967cb3e9a83504c9f9aebe309014b8c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1331167517
 MonoBehaviour:
   m_ObjectHideFlags: 0

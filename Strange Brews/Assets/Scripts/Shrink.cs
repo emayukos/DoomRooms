@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Hashtable = ExitGames.Client.Photon.Hashtable; // need at top of script
 
 public class Shrink : Photon.MonoBehaviour
 {
@@ -9,23 +10,34 @@ public class Shrink : Photon.MonoBehaviour
 	public bool shrink = false; // true when player should be shrinking
 	private AudioSource source;
     public AudioClip pressSoundEffect;
-	//private GameObject tinyDoor;
-	public bool shrunk = false;
+    Hashtable hash = new Hashtable();
+    //GameObject networkTextBox;
 
-    // have cute/funny shrinking sound effect play only on key press 
-    // (after pressing E and the sound effect for drinking the potion)
-    
-    private void Start()
+	//private GameObject tinyDoor;
+	//[System.Obsolete]
+	public bool shrunk;
+
+	// have cute/funny shrinking sound effect play only on key press 
+	// (after pressing E and the sound effect for drinking the potion)
+
+	[System.Obsolete]
+	private void Start()
 	{
+		//networkTextBox = GameObject.Find("Network Message Text");
 		source = GetComponent<AudioSource>();
 		//ShrinkPlayer(); // just for testing sound
+		shrunk = false;
+		// need hashtable to set custom properties
+		hash.Add("shrunk", shrunk); 
+		PhotonNetwork.player.SetCustomProperties(hash);
+		shrunk = (bool)PhotonNetwork.player.customProperties["shrunk"];
 	}
 
     // Update is called once per frame
     void Update()
     {
     	if(shrink) { 
-
+			//networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "Player drank shrinking potion!");
 			//playSound = false; // so only played once
     		//Scale this game object
  			transform.localScale -= Vector3.one * shrinkSpeed * Time.deltaTime;
@@ -43,11 +55,15 @@ public class Shrink : Photon.MonoBehaviour
     
     
     [PunRPC]
-    public void ShrinkPlayer() {
+	public void ShrinkPlayer() {
 		if (!shrunk) 
 		{
 			shrink = true;
 			shrunk = true;
+			hash["shrunk"] = shrunk; // set to true
+			Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
+			PhotonNetwork.player.SetCustomProperties(hash);
+			Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
 			if (pressSoundEffect != null)
 			{
 				source.PlayOneShot(pressSoundEffect, 2.0f);

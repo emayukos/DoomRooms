@@ -33,6 +33,11 @@ public class LevelChanger : Photon.MonoBehaviour
 
 	private void Awake()
 	{	
+		// check to ensure it's not the first scene
+		// (doing this in first scene won't work if both players
+		// are joining at different times
+		//if(SceneManager.GetActiveScene().name != "OfficeScene")
+		//{
 		players = GameObject.FindGameObjectsWithTag("Player");
 		players[0].transform.position = startPos;
 		startPos.x -= 0.25f;
@@ -41,6 +46,15 @@ public class LevelChanger : Photon.MonoBehaviour
 		{
 			players[1].transform.position = startPos;
 		}
+		
+		if (SceneManager.GetActiveScene().name == "classroom")
+		{
+			players[0].SendMessage("GrowPlayerRPC");
+			players[1].SendMessage("GrowPlayerRPC");
+
+		}
+
+
 		
 	}
 
