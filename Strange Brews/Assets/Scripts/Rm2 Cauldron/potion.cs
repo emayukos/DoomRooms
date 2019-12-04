@@ -19,6 +19,7 @@ public class potion : Photon.MonoBehaviour
 	private PhotonPlayer photonPlayer;
 	public GameObject potion2Prefab;
 	private bool notDone = true;
+	GameObject networkTextBox;
 	//public bool stop = false;
 	//private GameObject thisplayer; // figure out how to do this individually
 
@@ -30,6 +31,7 @@ public class potion : Photon.MonoBehaviour
 
 	private void Start()
 	{
+		networkTextBox = GameObject.Find("Network Message Text");
 		Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
 		source = GetComponent<AudioSource>();
 		// disable script on other potion until this one is destroyed
@@ -43,9 +45,10 @@ public class potion : Photon.MonoBehaviour
 	{
 		// make potion script for other player that checks that it's not their view
 		if(inRange && Input.GetKeyDown(KeyCode.E) && notDone) 
-		{
+		{	
 			Debug.Log("player got first potion");
 			// first potion so won't be shrunk already unless this block has already executed
+			networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "One player drank shrinking potion!");
 			drinkPotionRPC();
 			
 			

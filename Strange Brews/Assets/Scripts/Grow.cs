@@ -17,10 +17,7 @@ public class Grow : Photon.MonoBehaviour
     private void Start()
 	{
 		source = GetComponent<AudioSource>();
-		if (SceneManager.GetActiveScene().name == "classroom")
-		{
-			photonView.RPC("GrowPlayer", PhotonTargets.All);
-		}
+
 	}
 
     // Update is called once per frame
@@ -35,6 +32,11 @@ public class Grow : Photon.MonoBehaviour
  			}
     	}  
     }
+    
+    public void GrowPlayerRPC()
+	{
+		photonView.RPC("GrowPlayer", PhotonTargets.All);
+	}
     
     [PunRPC]
     public void GrowPlayer() {

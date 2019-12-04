@@ -11,9 +11,10 @@ public class Shrink : Photon.MonoBehaviour
 	private AudioSource source;
     public AudioClip pressSoundEffect;
     Hashtable hash = new Hashtable();
+    //GameObject networkTextBox;
 
 	//private GameObject tinyDoor;
-	[System.Obsolete]
+	//[System.Obsolete]
 	public bool shrunk;
 
 	// have cute/funny shrinking sound effect play only on key press 
@@ -22,7 +23,7 @@ public class Shrink : Photon.MonoBehaviour
 	[System.Obsolete]
 	private void Start()
 	{
-
+		//networkTextBox = GameObject.Find("Network Message Text");
 		source = GetComponent<AudioSource>();
 		//ShrinkPlayer(); // just for testing sound
 		shrunk = false;
@@ -36,7 +37,7 @@ public class Shrink : Photon.MonoBehaviour
     void Update()
     {
     	if(shrink) { 
-
+			//networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "Player drank shrinking potion!");
 			//playSound = false; // so only played once
     		//Scale this game object
  			transform.localScale -= Vector3.one * shrinkSpeed * Time.deltaTime;
@@ -54,14 +55,15 @@ public class Shrink : Photon.MonoBehaviour
     
     
     [PunRPC]
-	[System.Obsolete]
 	public void ShrinkPlayer() {
 		if (!shrunk) 
 		{
 			shrink = true;
 			shrunk = true;
 			hash["shrunk"] = shrunk; // set to true
+			Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
 			PhotonNetwork.player.SetCustomProperties(hash);
+			Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
 			if (pressSoundEffect != null)
 			{
 				source.PlayOneShot(pressSoundEffect, 2.0f);

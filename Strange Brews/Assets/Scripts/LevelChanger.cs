@@ -46,7 +46,14 @@ public class LevelChanger : Photon.MonoBehaviour
 		{
 			players[1].transform.position = startPos;
 		}
-		//}
+		
+		if (SceneManager.GetActiveScene().name == "classroom")
+		{
+			players[0].SendMessage("GrowPlayerRPC");
+			players[1].SendMessage("GrowPlayerRPC");
+
+		}
+
 
 		
 	}
