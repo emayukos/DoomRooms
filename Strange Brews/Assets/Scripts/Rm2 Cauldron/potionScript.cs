@@ -75,7 +75,7 @@ public class potionScript : Photon.MonoBehaviour
 		{
 			networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "One player drank the shrinking potion!");
 		}
-		if(counter == 2)
+		if(counter >= 2)
 		{
 			networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "Both players drank the shrinking potion!");
 		}
