@@ -5,8 +5,10 @@ using UnityEngine;
 public class crystalBall : MonoBehaviour
 {
 
-    private bool inRange, isOpen, thisIsOpen;
+    private bool inRange, isOpen;
     private AudioSource source;
+
+    int thisIsOpen;
 
     public AudioClip connectedSound;
 
@@ -61,13 +63,13 @@ public class crystalBall : MonoBehaviour
     [PunRPC]
     void isOpenForOther()
     {
-        thisIsOpen = true;
+        thisIsOpen++;
     }
 
     [PunRPC]
     void isNotOpenForOther()
     {
-        thisIsOpen = false;
+        thisIsOpen--;
     }
 
 
@@ -103,7 +105,7 @@ public class crystalBall : MonoBehaviour
     
     public bool isItOpen()
     {
-        return thisIsOpen;
+        return thisIsOpen > 0;
     }
 
 
