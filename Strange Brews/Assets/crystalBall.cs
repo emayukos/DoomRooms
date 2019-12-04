@@ -8,7 +8,7 @@ public class crystalBall : MonoBehaviour
     private bool inRange, isOpen;
     private AudioSource source;
 
-    int thisIsOpen;
+    private int thisIsOpen;
 
     public AudioClip connectedSound;
 
