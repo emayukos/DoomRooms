@@ -7009,12 +7009,12 @@ PrefabInstance:
     - target: {fileID: 8260942065861457986, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3
+      value: -6.38
       objectReference: {fileID: 0}
     - target: {fileID: 8260942065861457986, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.61
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 8260942065861457986, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
@@ -9820,6 +9820,16 @@ PrefabInstance:
       propertyPath: roomNumberText
       value: 
       objectReference: {fileID: 1036839671}
+    - target: {fileID: 8516861246620561881, guid: 83c0d701af6b047a58d1140abcd769fa,
+        type: 3}
+      propertyPath: startPos.x
+      value: -6.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516861246620561881, guid: 83c0d701af6b047a58d1140abcd769fa,
+        type: 3}
+      propertyPath: startPos.y
+      value: -1.45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83c0d701af6b047a58d1140abcd769fa, type: 3}
 --- !u!1 &2069975255 stripped
