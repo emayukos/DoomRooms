@@ -10776,7 +10776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &552935373
 Transform:
   m_ObjectHideFlags: 0
@@ -11438,6 +11438,16 @@ PrefabInstance:
       propertyPath: roomNumberText
       value: 
       objectReference: {fileID: 440664271}
+    - target: {fileID: 8516861246620561881, guid: 83c0d701af6b047a58d1140abcd769fa,
+        type: 3}
+      propertyPath: startPos.x
+      value: -11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516861246620561881, guid: 83c0d701af6b047a58d1140abcd769fa,
+        type: 3}
+      propertyPath: startPos.y
+      value: -1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83c0d701af6b047a58d1140abcd769fa, type: 3}
 --- !u!1 &586071895 stripped
@@ -26172,7 +26182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1299197979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27220,7 +27230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1365750560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31479,7 +31489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1573981788
 MonoBehaviour:
   m_ObjectHideFlags: 0
