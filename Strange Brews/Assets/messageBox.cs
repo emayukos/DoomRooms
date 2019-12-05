@@ -13,13 +13,13 @@ public class messageBox : MonoBehaviour
     private float timeLeft;
     public float showMessageTime = 5.0f;
 
+
     [PunRPC]
     public void MessageDisplayLook(string description)
     {
-        //changes Text to show only new text 
-        textLine.text += description + "\n";
+        //changes Text to show only new text
         timeLeft = showMessageTime;
-        Debug.Log(textLine.text);
+        textLine.text += description + "\n";
     }
 
     [PunRPC]
@@ -32,9 +32,8 @@ public class messageBox : MonoBehaviour
     public void AddText(string description)
     {
         //appends new text onto existing display
-        textLine.text += "\n" + description;
         timeLeft = showMessageTime;
-        Debug.Log(textLine.text);
+        textLine.text += "\n" + description;
     }
 
     [PunRPC]
@@ -45,12 +44,16 @@ public class messageBox : MonoBehaviour
 
     private void Update()
     {
-        timeLeft -= Time.deltaTime;
-        Debug.Log(timeLeft);
-        if (timeLeft < 0)
+        if (timeLeft > 0f)
+        {
+            timeLeft -= Time.deltaTime;
+        }
+        
+        if (timeLeft < 0f)
         {
             photonView.RPC("ResetMessageBox", PhotonTargets.All);
         }
+        
     }
 
 }
