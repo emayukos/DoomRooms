@@ -11,6 +11,7 @@ public class Shrink : Photon.MonoBehaviour
 	private AudioSource source;
     public AudioClip pressSoundEffect;
     Hashtable hash = new Hashtable();
+    private GameObject tinyDoor;
     //GameObject networkTextBox;
 
 	//private GameObject tinyDoor;
@@ -61,13 +62,22 @@ public class Shrink : Photon.MonoBehaviour
 			shrink = true;
 			shrunk = true;
 			hash["shrunk"] = shrunk; // set to true
-			Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
+			//Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
 			PhotonNetwork.player.SetCustomProperties(hash);
 			Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
+			Debug.Log(PhotonNetwork.playerList[1].CustomProperties);
+			
 			if (pressSoundEffect != null)
 			{
 				source.PlayOneShot(pressSoundEffect, 2.0f);
 			}
+			if ((bool)PhotonNetwork.playerList[0].CustomProperties["shrunk"] == true && (bool)PhotonNetwork.playerList[1].CustomProperties["shrunk"] == true)
+			{
+				tinyDoor = GameObject.FindWithTag("tiny door"); // to make easier to find
+				tinyDoor.SendMessage("IsShrunkRPC");
+				Debug.Log("calling door script");
+			}
+
 		}
     }
     

@@ -1,0 +1,2690 @@
+
+
+Thomas's commits
+----------------
+
+commit d049b1d01a9578e4dbf9144f5ff0bd91b7bc40df
+Merge: c9d91f4 5cd1db2
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Dec 2 23:16:03 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit c9d91f40cfff39d31e0a7407c17ef5c6547376dc
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Dec 2 23:14:17 2019 -0600
+
+    syncing projector down and up with photon
+
+commit f900cd896f43435cdabe3dae2cac4fdb3fdc0d7e
+Merge: 1204fae 0f6ebbd
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Dec 2 22:44:37 2019 -0600
+
+    commiting to solve merge conflicts
+
+commit 1204faef299e79d139a9e62622a47aa7fbddfd42
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Dec 2 22:42:05 2019 -0600
+
+    Added messages to classroom
+
+commit 9c0ffa905da286eae6ffec6a87084e3419e63c6d
+Merge: b53f40b 4175d1a
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Dec 2 04:29:14 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit b53f40b461b804762f65423effd73993e56eaf1c
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Dec 2 04:28:56 2019 -0600
+
+    Working on classroom sounds again
+
+commit 509a479228bfb2794c3627dfdf6dc27014bf2a38
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Dec 2 02:59:05 2019 -0600
+
+    Added sound to projector
+
+commit 9a24c37fcd9c2369982aac0ce82bbf9b866b5177
+Author: thw923 <thw923@usask.ca>
+Date:   Sun Dec 1 22:33:10 2019 -0600
+
+    adjusting the colliders in the classroom. again.
+
+commit 888440dbc1c82849564871ae40bbe576179bb183
+Merge: 9527d33 391bea2
+Author: thw923 <thw923@usask.ca>
+Date:   Sun Dec 1 22:18:12 2019 -0600
+
+    solving merge conflicts
+
+commit 9527d338d19dd9cfc8319b022143177a9ac41626
+Merge: 40ef018 2d90908
+Author: thw923 <thw923@usask.ca>
+Date:   Sun Dec 1 21:47:44 2019 -0600
+
+    adding stuff from pul
+
+commit 40ef018dcba7ff0e5ab0e07cecae45446836169d
+Author: thw923 <thw923@usask.ca>
+Date:   Sun Dec 1 21:45:45 2019 -0600
+
+    Working on messages
+
+commit 6cda55c5bb5c34126d02d7a1c33d716f705578de
+Merge: 6bf26e3 9884ccb
+Author: thw923 <thw923@usask.ca>
+Date:   Sun Dec 1 21:05:37 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit 6bf26e330968da485f65c66e8abbd675f5b2f1a7
+Author: thw923 <thw923@usask.ca>
+Date:   Sun Dec 1 21:04:44 2019 -0600
+
+    working on colliders and audio in classroom
+
+commit fb4c3c28c63c4e299b2979f70fbf473507220431
+Merge: 9a8b993 56c820f
+Author: thw923 <thw923@usask.ca>
+Date:   Sat Nov 30 17:44:55 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit 9a8b993b829fda89d606720b65a39a8d6dbaa723
+Author: thw923 <thw923@usask.ca>
+Date:   Sat Nov 30 17:44:46 2019 -0600
+
+    touching up colliders in office room
+
+commit 62846ab7bfb9af81ceae07dde1efc8e25a5bf413
+Merge: d699066 6818833
+Author: thw923 <thw923@usask.ca>
+Date:   Sat Nov 30 17:11:53 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit d6990668f968b9a4672ee3306952e7708a79f386
+Merge: 60e6d3b 3df2493
+Author: thw923 <thw923@usask.ca>
+Date:   Sat Nov 30 17:09:56 2019 -0600
+
+    fixing merge conficts
+
+commit 60e6d3bae5987c5d024777e4ada64d5139d1b981
+Author: thw923 <thw923@usask.ca>
+Date:   Sat Nov 30 17:08:21 2019 -0600
+
+    adjusted office room colliders, and buttons
+
+commit 1d1be997f6c544c9586ac6288f1bc66f1fa80661
+Merge: 75677d7 ff5969c
+Author: thw923 <thw923@usask.ca>
+Date:   Sat Nov 30 19:35:45 2019 -0600
+
+    solving merge conflicts
+
+commit 75677d7699f79cebe7557c2de2fad5bf1e5d521b
+Author: thw923 <thw923@usask.ca>
+Date:   Sat Nov 30 19:31:52 2019 -0600
+
+    commiting before pull, working on office colliders
+
+commit 79e67ea550d8e177eef5ce2eb8242c1903921ccd
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 28 10:45:57 2019 -0600
+
+    wroking in classroom. fixed layers, fixed filing cabinent, working on key pickup
+
+commit 247c3343d48afa6af1ae8cd2de4f025256aa83d5
+Merge: aa96eae ff079a6
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 28 10:09:28 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit aa96eae729eef7ef8b9bc7c5a68e77ee1b98a600
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 28 10:09:11 2019 -0600
+
+    commiting before pulling, working on the classroom, working on UI
+
+commit abf3ef57dec4ab65c97b4fd2a9d6b793b751c66f
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Nov 25 21:57:59 2019 -0600
+
+    commiting for upcoming push and pull
+
+commit 1b0fe092254d52984e252ce29552b8b8c9239ee1
+Merge: 49dbbd4 0e7f023
+Author: thw923 <thw923@usask.ca>
+Date:   Sun Nov 24 02:35:41 2019 -0600
+
+    sup sup sup
+
+commit 49dbbd460f77df7ef6fdb9a55892cef2e977f638
+Author: thw923 <thw923@usask.ca>
+Date:   Sun Nov 24 02:31:25 2019 -0600
+
+    sup sup p2
+
+commit 00c2cfcad534b8b72cd30ccf1c56fbdff7441730
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 21 13:09:10 2019 -0600
+
+    comit before pushing
+
+commit e6859b5d9633da7f1e8096a44126ad5b8f21eec0
+Merge: 2d5ad0d a5d2f73
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 21 13:07:41 2019 -0600
+
+    comit before pushing
+
+commit 2d5ad0d4fd203ae11ed316da8e2386abe6821699
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 21 13:00:59 2019 -0600
+
+    commit before pushing
+
+commit 5b115591c15515307acba2d503d676e6dbedbaff
+Merge: c2f0d32 79cfe1a
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 21 14:16:18 2019 -0600
+
+    fixing merge conflicts
+
+commit c2f0d32d577c9cf628a15a19f47028147fcc6325
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 21 14:12:25 2019 -0600
+
+    pulling on nov 21
+
+commit 63e71225a1d2e53c544336e8690c80b9989e80ce
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 21 01:50:06 2019 -0600
+
+    sup sup
+
+commit 8f1b012fcd00639bd1998a9e37b085d19c104e79
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 21 01:28:16 2019 -0600
+
+    sup
+
+commit 08b6d071bbe6fca44a2a787f2bfba9182b9afc5b
+Merge: 1546091 e175e3e
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 21 01:13:45 2019 -0600
+
+    fixing merge conflicts
+
+commit 1546091419843e864d536dfdb1506148fb64bbc8
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 21 01:06:45 2019 -0600
+
+    pulling in all the right places
+
+commit a6351a44069947ce5efe22c1a7b5bd1d2005a10c
+Merge: 9b8308e 1624bbe
+Author: thw923 <thw923@usask.ca>
+Date:   Tue Nov 19 21:04:37 2019 -0600
+
+    fixing merge conflicts
+
+commit 9b8308e9982db9791d5063001c2c454b3a30ba96
+Author: thw923 <thw923@usask.ca>
+Date:   Tue Nov 19 21:03:55 2019 -0600
+
+    commiting painting script before pushing
+
+commit a38c1768d3a275e8e67240e85abe65abc7c9c6bd
+Merge: cff63bd f0d2ffb
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Nov 18 18:01:05 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit cff63bdbbb9811e41fa7d7a6bc1ab3fb304a6476
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Nov 18 18:00:52 2019 -0600
+
+    pulling for mags
+
+commit d85583a7886a45b05a600a1104fb25d316a0f6f7
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Nov 18 21:06:40 2019 -0600
+
+    test merge with conflics with chandra
+
+commit d8c0de9b935099441ae55163bde2829699588731
+Merge: 285ba2c e68214c
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Nov 18 21:02:39 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit 285ba2c78578115d2094ea2803df1eec900f7e40
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Nov 18 21:02:28 2019 -0600
+
+    commiting before pull for chandra
+
+commit 4fa8d648a092ba08f4648d5407996e28216f3a45
+Author: thw923 <thw923@usask.ca>
+Date:   Sun Nov 17 01:40:27 2019 -0600
+
+    commiting my painting scripts
+
+commit a087fcab1e567fdf0ef063bcfeb4cbffe11f7b4a
+Author: thw923 <thw923@usask.ca>
+Date:   Sat Nov 16 23:19:59 2019 -0600
+
+    commiting before I pull
+
+commit 5f13178b358e310169d9313f74ba43b42382e6a6
+Merge: 321b67c 0066df5
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 14 22:55:00 2019 -0600
+
+    merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit 321b67c34c2295ca7b72df262c5caafc85826b0c
+Merge: 1bbf33d 8b312cf
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 14 22:23:52 2019 -0600
+
+    pulling changes
+
+commit 1bbf33d7734ad3042be4311412dda4ee821517aa
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 14 22:17:22 2019 -0600
+
+    Mostly done the player animations
+
+commit e0c484002e63e50b85c8778465166826bc95bbd9
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 14 01:51:58 2019 -0600
+
+    trying to fix my fuck up
+
+commit 6f89754055a7fa16010784cb138cde9cc2e7b7b9
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 14 01:29:33 2019 -0600
+
+    welp, hopefully I dont fuck this one up
+
+commit 4f53e5e5a84f6a5755125776feab71d39a10ba14
+Merge: e9d5f89 321fd97
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Nov 14 00:46:03 2019 -0600
+
+    trying to pull from emily
+
+commit e9d5f8936b098ea3002430a57c6ad9ec52c8ecc4
+Author: thw923 <thw923@usask.ca>
+Date:   Wed Nov 13 23:51:23 2019 -0600
+
+    working on the office scene
+
+commit 717e9ab13d3e93ab6dda90b75be1ab38f382c5ff
+Merge: 8780409 7b88ee5
+Author: thw923 <thw923@usask.ca>
+Date:   Wed Nov 13 22:26:13 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit 8780409bf9370dc9f4827acbe601d0747b955338
+Merge: a42f200 4fccac6
+Author: thw923 <thw923@usask.ca>
+Date:   Fri Nov 8 18:57:54 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit a42f200699ac5813f2a8a148075371b955a976ef
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Oct 31 14:55:27 2019 -0600
+
+    working on scene transitions still
+
+commit 92aea918663a44952094c2cdf774ac45615f0b57
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Oct 31 14:54:47 2019 -0600
+
+    working on scene transitions with multiplayer
+
+commit 24116ed0d531d7db5114ce299a7e36fab28674cf
+Merge: fbc8b3d 829b1bf
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Oct 31 17:04:49 2019 -0600
+
+    Commiting before pulling, still working on spawning players
+
+commit fbc8b3d525c9eca56b40b831e83c5a69014c01c9
+Author: thw923 <thw923@usask.ca>
+Date:   Thu Oct 31 17:01:08 2019 -0600
+
+     I still working on spawning both players
+
+commit 6cbdaf2ddbc81cd5197ea1d3417a77ca561108c4
+Merge: 6203897 23f7c1e
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Oct 28 20:41:51 2019 -0600
+
+    part two of commiting changes to resolve git merging conflict
+
+commit 620389752e6f83de29c67a1cf8da3bb28e7c2774
+Merge: b90fb4d 9ccc990
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Oct 28 20:37:45 2019 -0600
+
+    Merge branch 'master' of git.cs.usask.ca:ninexoney/strange-brews
+
+commit b90fb4d0da0849182fb9ee9e72502116d5bd6f90
+Author: thw923 <thw923@usask.ca>
+Date:   Fri Oct 25 21:36:34 2019 -0600
+
+    test test
+
+commit 6d7a1c7546c0eef960f8d0189ef82bdce420d228
+Author: thw923 <thw923@usask.ca>
+Date:   Fri Oct 25 21:35:08 2019 -0600
+
+    test
+
+commit 338057c309d2d635675833d2d74c7162a8fc51d3
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Oct 7 21:02:17 2019 -0600
+
+    Removed the Library files for the last time...
+
+commit 7c4f74cc9d63aa71ba8198970c38676822cae78d
+Merge: a2866f3 e61784a
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Oct 7 21:01:02 2019 -0600
+
+    Removing Library files again
+
+commit a2866f3240b1b90d8d6ae6d145ee38c6d5446bdd
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Oct 7 20:49:47 2019 -0600
+
+    Deleted Library files from repository.
+
+commit 0fcba396b1f3c63ab1dcbf8c69df12c1843d382d
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Oct 7 20:48:15 2019 -0600
+
+    removed Temp/UnityLockFile
+
+commit 7fab3b53f00d31bd5d33bf34711bde561c407055
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Oct 7 20:46:16 2019 -0600
+
+    Fixed .gitignore by copying the file to the correct directory location.
+
+commit dbc3a1beb32d212050a0acab571d9086f10231f6
+Author: thw923 <thw923@usask.ca>
+Date:   Mon Oct 7 18:29:51 2019 -0600
+
+    test commit
+
+Maggie's commits
+----------------
+
+commit f3be85f27d88a94689006d4d5f459310009e0833
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Dec 2 16:55:40 2019 -0600
+
+    added punRPC TO projector
+
+commit bcf5c1b6a42922394f3b991cc54b0b1562cd4b3c
+Merge: da5a876 f900cd8
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Dec 2 16:48:42 2019 -0600
+
+    h
+
+commit da5a876d547e97c0d93d040683a5670993722d84
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Dec 2 16:41:06 2019 -0600
+
+    before pulling final classroom
+
+commit 21e612e818ddf2efe1fb4f5c47e9d9701995a3aa
+Merge: 3e2f2e1 a98c8e6
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Dec 2 15:44:07 2019 -0600
+
+    Safe should work Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 3e2f2e18990b0a033d7f32df3ff93340002adfbd
+Merge: 56ae369 94b0020
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Dec 2 15:44:01 2019 -0600
+
+    g
+
+commit 56ae369c11b7859e543f8cc5355435067fcab48c
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Dec 2 15:39:25 2019 -0600
+
+    m
+
+commit 5c52a56407e031e44476f702cdfd5b6655e8a5c1
+Merge: 8c851d5 756e09a
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Dec 2 15:07:55 2019 -0600
+
+    j
+
+commit 8c851d5eecffe7eeefaf53be09ab15c45dba9f5f
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Dec 2 15:05:27 2019 -0600
+
+    monday
+
+commit 391bea2a576b814f1463ac8edffa35280b478d53
+Merge: c326f61 f1e3ff9
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Dec 1 16:01:46 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit c326f61d1de6815d1174ad392befa218ed4ece46
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Dec 1 16:01:00 2019 -0600
+
+    added dark room graphics
+
+commit eeebf3b1bb4eff445e6092e6d0d6fcbd3cc2e993
+Merge: 4ffa1a9 2d90908
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Dec 1 15:59:11 2019 -0600
+
+    helloMerge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 4ffa1a9a1ef6c69afe4f35db5c3fea40c42d4a6c
+Merge: 1f9dd74 9884ccb
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Dec 1 15:02:07 2019 -0600
+
+    supMerge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 1f9dd744ab7e0cd78649731e85d22431b701d847
+Merge: 9b83c7e 6cd5f0b
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Dec 1 14:59:57 2019 -0600
+
+    "n"
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 9b83c7e66595474063637506cfeae5657a15f8cf
+Merge: d48464f 2f83982
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Dec 1 14:55:32 2019 -0600
+
+    "pulling chandra's dark room changes"
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit d48464f1e1531cb03547307913b259ab39701aea
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Dec 1 14:54:26 2019 -0600
+
+    fra
+
+commit a4709174a28a23f3d305e567d623cffca6cb1c6e
+Merge: e8a2171 932a1cc
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Dec 1 14:03:29 2019 -0600
+
+    kept my build settings
+
+commit e8a2171928ef8d0f2fb33554a3e9233fe2702074
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Dec 1 14:00:11 2019 -0600
+
+    fixed classroom PanelUI bugs
+
+commit 333bc4be3286912fafee02c8ebd25efc1fd5b21c
+Merge: 5a91c8d fb4c3c2
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sat Nov 30 17:48:01 2019 -0600
+
+    ha
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 5a91c8d16e49d1c9e1cc99dd3e00e6c290713bc5
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sat Nov 30 17:47:29 2019 -0600
+
+    g
+
+commit 56c820fae795de6a09b3e957642d5bbfa595c20b
+Merge: 3843359 62846ab
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sat Nov 30 17:14:34 2019 -0600
+
+    pulling before pushing new graphics
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 3843359713018d1bce4e98a280325ec413f6c6b2
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sat Nov 30 17:14:18 2019 -0600
+
+    added new cauldron room graphics
+
+commit a39d686d3c2a67eee361fea14e475fed3ad366ea
+Merge: 16f5d61 3df2493
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sat Nov 30 17:09:14 2019 -0600
+
+    commiting again
+
+commit 16f5d615c0fd25c2d71780bd20df81e25e6881d2
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sat Nov 30 17:05:57 2019 -0600
+
+    commiting before pulling changes to office
+
+commit 33edb8fbe1a6f996ddf1aa375874ed6753cfeda7
+Merge: c8dd3b6 2a36cff
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Nov 28 19:12:26 2019 -0600
+
+    adding key and door interaction
+
+commit c8dd3b60d558d17faea10e3e2d3d8d641ea3a4a1
+Merge: 173c291 79e67ea
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Nov 28 10:47:26 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 173c2913b1607bc9aaa6cb8d027b261336edd832
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Nov 28 10:47:16 2019 -0600
+
+    hi
+
+commit 3361dc8a834ea29bb60904af38b0008d97daf82b
+Merge: 0209f94 ff079a6
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Nov 28 10:21:51 2019 -0600
+
+    hi again
+
+commit 0209f949b7e7cf1bbfc4b90f2171846ebf9c1d04
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Nov 28 10:17:36 2019 -0600
+
+    hi
+
+commit d464b00305aafd3c5cbb7535758d3f3ae509fb39
+Merge: 474d839 c3053b8
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Nov 25 19:42:15 2019 -0600
+
+    ba
+
+commit 474d8397cdc9bbe4509941215d056727a76f81e8
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Nov 25 19:28:37 2019 -0600
+
+    la
+
+commit 19623807d27141fbddd052fc1a043e4ae1b716f7
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Nov 25 14:38:46 2019 -0600
+
+    commiting before going back to most recent version
+
+commit dd4b8e913080a0902624dac103a3ed1d4099376e
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Nov 24 15:27:50 2019 -0600
+
+    ugh
+
+commit 4f83adeb4e5e110c1cb3658f935c46bf6196e995
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sun Nov 24 15:24:11 2019 -0600
+
+    not working putting away
+
+commit 0e7f0234055795c202d3479cea369782b0ce480a
+Merge: 30f234c cb7577c
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sat Nov 23 20:27:38 2019 -0600
+
+    hi
+
+commit 30f234c9430978b2044c3b1621c888a28d455db6
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sat Nov 23 20:21:34 2019 -0600
+
+    adding interaction to classroom
+
+commit 4bd5764fac10a82d2f4a9585b52966ad1873a4ec
+Merge: a1d0dc5 00c2cfc
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Nov 21 13:14:04 2019 -0600
+
+    hehe
+
+commit a1d0dc5b29f6f78ae8c033a23b3d6f6eae15ccd1
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Nov 21 13:11:50 2019 -0600
+
+    sup
+
+commit f33c54eca24de108752799f3cad3e84727d450d4
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Wed Nov 20 20:35:54 2019 -0600
+
+    added the projectorInteraction script to projector in classroom scene
+
+commit e175e3eb8b7e096cd342cc78d17119bb3e30bfbb
+Merge: bebb004 6a15b36
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Wed Nov 20 18:21:39 2019 -0600
+
+    merging
+
+commit bebb0045c6edcee89db131d6dfe6be3eb83e5f26
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Wed Nov 20 18:17:18 2019 -0600
+
+    created classroom scene
+
+commit 4f9c3def37ee91befb35fe4fb1daa4c4433c9403
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Tue Nov 19 13:18:50 2019 -0600
+
+    added player prefab
+
+commit f0d2ffb123d7027e61d47b1ef5d6419e12b139ed
+Merge: c0ffee9 385d0c8
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Nov 18 17:58:53 2019 -0600
+
+    agh
+
+commit c0ffee9321c548fa5ba4cddac2453f0dcbc5c77a
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Mon Nov 18 17:57:23 2019 -0600
+
+    added dungeon room with player movement
+
+commit a0b423b640c810dd0630e227da82a9f6608bbb1b
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Nov 14 17:47:10 2019 -0600
+
+    added front walking animation sprite sheet
+
+commit 0066df587fc54acfde6eb3fc8906b73eea3adab3
+Merge: 73d2c24 8b312cf
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Nov 14 16:49:24 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 73d2c24be99cf0ffd17583b6289114b337f69f4e
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Nov 14 16:44:49 2019 -0600
+
+    TW - commiting before pull. need those animations
+
+commit 4d1ddc0ec40dd04a87feaa4d6a698504b34dba15
+Merge: ac6f407 4f53e5e
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Wed Nov 13 18:54:42 2019 -0600
+
+    thom trying to commit so Mags can pull
+
+commit ac6f40740089cc2308d70ec66814c5a1a5bbeef4
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Wed Nov 13 18:50:25 2019 -0600
+
+    test commit before pulling
+
+commit f8ebefa859dc85d118526673aedf7e84b4566a9a
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Thu Oct 10 12:15:44 2019 -0600
+
+    added object images into graphics folder
+
+commit 1a2d842bdc5f166ab90726eedde5c75043a7d95c
+Merge: 78ec59f 90ee6b1
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Wed Oct 9 15:54:35 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 78ec59f552ead71de0fe834299cb2378cb8255e8
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Wed Oct 9 15:53:10 2019 -0600
+
+    Created graphics folder and added background
+
+commit c01efcf81768e45bde403dba51f6773e8018fee6
+Author: maggiejohnstone <m.nichole.j@gmail.com>
+Date:   Sat Oct 5 13:50:51 2019 -0600
+
+    created game
+
+Chandra's commits 
+-----------------
+commit f67304cfa0d02d5e5deba29c223bf5e4ffc7f046
+Merge: c14c603 6f284eb
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Tue Dec 3 13:03:46 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/ProjectSettings/EditorBuildSettings.asset
+
+commit c14c6035b9f2d000802655df6ce701b73e37f6a6
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 19:55:57 2019 -0600
+
+    - Dark Room added Exit Scene change to final end scene
+
+commit 60ba916b84c58f150e1e938a6b4aaed08d5f65d4
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 19:30:06 2019 -0600
+
+    - fixed hidden wall safe reveal for multiplayer in Dark Room
+
+commit 157eb18547b90fe93f63ea04dee54e64eac138d2
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 19:21:56 2019 -0600
+
+    - flashlight should now disappear on both players' screens
+    - key placeholder sprites in top room turned off
+    - flashlight visual on both screens bug identified, unsure how to fix
+    --- commented in flashlightFollow script
+
+commit 5cd1db295ce2271d44854f6a42c00ee6ddee5be4
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 17:15:41 2019 -0600
+
+    -readying for push
+
+commit 89ef9ccd6225443d12d6d34da460a6804d0f28c7
+Merge: e00d493 7de2638
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 17:14:52 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset
+
+commit e00d49354ba19f5306c5742e93e08d0589a2705f
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 17:13:25 2019 -0600
+
+    - changed player 3 non-trigger colliders to just one capsule colliders
+    - fixed end switch colliders and layers
+
+commit b102774831d696ebf098967e8ba62b3cccbd2359
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 17:07:16 2019 -0600
+
+    - Dk Rm fixed flashlight stand-in destroy
+    - altered end spinner collider, still sticky
+
+commit 3218cfe49351a3be63140c26e2869eb08cdbff2d
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 16:58:58 2019 -0600
+
+    - re-commit for recent scene save
+
+commit 4abe6b959159fd6280e8a605de7d1a2514aa2634
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 16:56:46 2019 -0600
+
+    - Dk Rm changed 7 light clue to floor instead of wall
+
+commit b9f4ae079d00936140d56d2d8105bb93716e2f3d
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 16:49:57 2019 -0600
+
+    - in Dark Room
+    --- fixed computer screen clue issue for multiplayer
+    --- implemented endSwitch lights
+
+commit d02a78a65e678adccc82e0c4c77e75d5efda2771
+Merge: 4d268f9 16ec601
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 14:54:01 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/CH spritesmats/bStain mats/SwitchBoard.mat.meta
+    #       Strange Brews/ProjectSettings/EditorBuildSettings.asset
+
+commit 4d268f9d42e92d260813b36edb275c237fe49b1f
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 14:52:43 2019 -0600
+
+    - for merge
+
+commit 4ef8b4d3056d5fcf1fbcdc97f9bce792c7d2a931
+Merge: 0d97d30 62b2104
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Dec 2 14:42:56 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset
+    #       Strange Brews/ProjectSettings/EditorBuildSettings.asset
+    #       Strange Brews/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+
+commit 0d97d3047dbb7a085b0f7e224950e0272a283cd9
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 23:44:30 2019 -0600
+
+    - Dark Room pressure pad graphics set and working
+
+commit 73588345ecac9215347e86212d66eefa7f00b631
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 23:26:07 2019 -0600
+
+    - Dark Room double-switch boards, buttons and lights in working order
+
+commit df7e13807743b8f71b318aa100b29859c0c97504
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 21:40:56 2019 -0600
+
+    -flashlight pick up fixed
+
+commit 4094c3bf9944e1adeb51d3cc4da5ea6efb471e74
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 21:35:44 2019 -0600
+
+    - Fixed multiplayer non-synched scripts for Dark Room
+
+commit 39de82593f5c771d5452e5c77df7a194313ac8f1
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 16:41:40 2019 -0600
+
+    -added Dark Room sprites for furniture
+
+commit 23baf65fcd04e522b543b7c42480ebfc98d0cf0e
+Merge: d16f839 391bea2
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 16:03:03 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/ProjectSettings/EditorBuildSettings.asset
+
+commit d16f8394a481e0b22d64c0a60ea0856b3197b0b4
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 16:02:00 2019 -0600
+
+    -In Dark Room dresser bug fixed and spinners spin for both players
+
+commit 9884ccb351c01ed908e6e159936bc097d7fcc005
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 15:00:39 2019 -0600
+
+    -saved the scene this time
+
+commit 6cd5f0ba92c2bbc3189eb17efe0cad03994406d1
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 14:59:08 2019 -0600
+
+    -small changes?
+
+commit 2f839826cbda66056f9ca2f200874c5c7e2dcadb
+Merge: dbc75f7 a470917
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 14:51:35 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+
+commit dbc75f7d909eac7baeb84330ee6ca438c9bc837c
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 14:50:39 2019 -0600
+
+    -spinners in Dark Room working-ish
+    ---no longer phase through
+    ---still kinda janky, but work
+
+commit d2bed8aff5167fb458e9be0d534a52f86a4a51ff
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Dec 1 13:05:04 2019 -0600
+
+    - changed player trigger collider from circle2d to polygon2d
+
+commit 68188332319320d11d89756076ae5ee9c4eab3ca
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sat Nov 30 17:07:41 2019 -0600
+
+    - Dark room invisible numbers adjusted
+    --- now all are fully invisible on floor, wall, and folding screen
+    --- all are visible under flashlight light
+
+commit ff5969c59b1e922cb4f47a11cf5d2e367ca5cbaf
+Merge: bc965a9 5d76ab3
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sat Nov 30 02:18:11 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset
+    #       Strange Brews/ProjectSettings/EditorBuildSettings.asset
+    #       Strange Brews/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+
+commit bc965a9f50a99fad37d42229bd796e47c64b1f1f
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sat Nov 30 02:09:50 2019 -0600
+
+    - all safes, computers, and clue pop-ups functional
+    - all inventory items can be picked up
+    - level is essentially funtional and playable
+
+commit 308a2b1c84ff72d4d4e3c22b2e8b683adcfcd8ec
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Fri Nov 29 17:38:25 2019 -0600
+
+    - In Dark Room
+    --- safes both working on photon network
+    --- switches all working on photon network, end switches glitch fixed
+    --- flashlights working with player prefab on network
+    --- camera follow working with player prefab on network
+
+commit 2a36cff60cb68a6e61c561c63821c1995af9e6da
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 28 16:20:38 2019 -0600
+
+    - classroom in working order
+    - wall colliders in place
+    - small change in LevelChanger to always give current room number, no manual adjustment needed
+
+commit f08816de7afddc9b2adee649607d07cf847435b3
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 28 16:10:15 2019 -0600
+
+    - pickup and inventory working
+
+commit a0d08a7bac24f00df7e5cf5f162e291b8fd28b26
+Merge: 258b8b8 773dd3d
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 28 15:59:12 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/Scenes/classroom.unity
+    #       Strange Brews/ProjectSettings/EditorBuildSettings.asset
+
+commit 258b8b8c51ff7de96d0402432689d64bea093e8d
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 28 15:56:40 2019 -0600
+
+    - organized classroom
+
+commit c75f87c4b20f548ded28e92df68a042e0150b66e
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 28 12:50:37 2019 -0600
+
+    - merged and build added
+
+commit 99eea8d699ad30cd1acd0420e593060c6d9ec4e3
+Merge: df46e90 79e67ea
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 28 12:42:53 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset
+
+commit df46e906875f64813087d9de0c36827bb171b5aa
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 28 12:33:57 2019 -0600
+
+    - merge readying again
+
+commit 555e20a353c199e111e7847084e39356c19c7213
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 28 12:30:34 2019 -0600
+
+    -readying for  merge
+
+commit 46b483c81e70f8d8f6f2111093c2509a2f1ab4bd
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 28 09:18:27 2019 -0600
+
+    - added photonView to flashlight lights
+
+commit f554a1d9839be69f894cbd647311efea235d3d87
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 28 09:17:30 2019 -0600
+
+    - added some sprites to Dark Room
+    - added dressers and contained keys implementations
+    - made flashlights able to be picked up, then follow the player
+    --- may need to be adjusted for player prefab
+
+commit 20c3f39b6330a943299eeb0cf636db57664aff01
+Merge: 1205b87 b3c6920
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 27 22:45:49 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+
+commit 1205b877b457551747459c19b077315dbd562944
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 27 19:30:07 2019 -0600
+
+    - all door switches working in single-payer testing in Dark Room
+
+commit 030e83721be923233a518108200bafd630f49a51
+Merge: 362ccb2 cc6af59
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 27 15:27:35 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+
+commit 362ccb253a128daa8772026e5121d6e77ffcb90f
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 27 15:27:12 2019 -0600
+
+    -end scene adjustments, final
+
+commit 1ff6c0ce35d8b70aad99dc63f8063fd49216035d
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 27 00:07:58 2019 -0600
+
+    - untested hidden safe implementation in Dark Room
+
+commit c956bab795e09b17d9e25ac89dcb1e8cef48e44a
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Tue Nov 26 15:48:31 2019 -0600
+
+    -fixed blacklight/camera issue
+
+commit d2ffe9b900324ae8a83343464d722cd1962ffadf
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Tue Nov 26 15:44:51 2019 -0600
+
+    - minor adjustment
+
+commit 6445b9ed20e76e78dd0ffa5c059c4e27b184ace1
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Tue Nov 26 15:40:42 2019 -0600
+
+    - fine tuned and finished walls graphics
+    --- colliders yet to fine-tune to player
+    - initial door switch and double switch set-up
+    --- untested in multiplayer
+    -some script organization done
+
+commit 421c0c6c9129030176cdbb791296faf0e269725f
+Merge: cceb1c4 f746d03
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Tue Nov 26 11:33:32 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/CH spritesmats.meta
+
+commit cceb1c4b9d306282195126f0099f3d08ed0b6586
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Tue Nov 26 11:32:48 2019 -0600
+
+    - established background graphics for walls, exit stairs, jail bars
+
+commit 72a4871d560fced109e24cd124015cdbf908e2a0
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Tue Nov 26 03:56:33 2019 -0600
+
+    - some small organizing of sprites into folders
+    - moved some scripts to 'scripts' folder
+    - added some brick walls to dark room
+
+commit 2debe4ccbe199a51244e52dd6fff041ad8e643fc
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 25 20:48:11 2019 -0600
+
+    - final end scene adjustment
+
+commit c3053b86d9154de1a76dfb9ee88fae934c50334d
+Merge: d586f18 199df24
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 25 18:05:52 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+
+commit d586f18dd758f3ea346c9f4587db22df1fb495e9
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 25 18:05:31 2019 -0600
+
+    - got projector interaction working
+
+commit c5c151a51a8aa17e792e8da69b854109fa543631
+Merge: 756d64d abf3ef5
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 25 16:10:45 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+
+commit 756d64dbee277e7991813557daefff59e5dac61b
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 25 16:10:04 2019 -0600
+
+    -readying for pull
+
+commit bfb0bad897ca391d88df717d83ddb7369aa6d1c8
+Merge: 3896ff7 0e7f023
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 25 15:35:25 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+
+commit 3896ff7f0e7d8a53e174fdf6c24817686db9bd33
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 25 15:35:22 2019 -0600
+
+    -readying for pull
+
+commit 80435ce2aecb83a0d26f6ba98c1d14253949081c
+Merge: 573178c 219fd79
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 15:04:59 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+
+commit 573178c15f353772e9af78847ee508069105c629
+Merge: b2901d8 1b72c9d
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 15:04:24 2019 -0600
+
+    Merge branch 'RevertFix'
+
+commit b2901d84c1054017389794890cecb1f9a0218423
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 15:03:11 2019 -0600
+
+    - fixed ghost prefab
+
+commit 1b72c9d3a51ed42789c967b17b327176e66c0d99
+Merge: 54d31c6 72a7c8b
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 14:56:22 2019 -0600
+
+    Merge branch 'master' into RevertFix
+
+commit 54d31c614acf41258dd5b76ecf6efcf0f09e79be
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 14:48:25 2019 -0600
+
+    - gitfix
+
+commit 72a7c8b1704d26c2680f9117dd6967c54ed1a3e3
+Merge: 0217995 9f96116
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 14:10:54 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+
+commit 02179954849e7f1cfc619dfeb3521bd4471fc535
+Merge: 5fd42ef ca780f0
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 14:00:17 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+
+commit 5fd42efa5ef30e14c72576118997bcaa4982eda4
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 13:58:51 2019 -0600
+
+    - possible end scene for game
+
+commit 895f190110ea8dca48b31b6f9d47edf4b4f4cb44
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 12:04:23 2019 -0600
+
+    - minor fixes
+    - changed player spawn point
+    - changed player prefab
+    --- scale
+    --- colliders
+    - no getting rid or message boxes with m
+
+commit e3b281ffcb7985fe8e589abdbcc5700cef52bb72
+Merge: 6534915 a3875d3
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 11:08:58 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/Scenes/OfficeScene.unity
+
+commit 6534915a876a96ce72b3b8b4aedfa5a48c038ef7
+Merge: 00e782a 79cfe1a
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 11:03:13 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git into CauldronRmCols
+    
+    # Conflicts:
+    #       Strange Brews/Assets/Resources/ghost.prefab
+    #       Strange Brews/Assets/Scenes/OfficeScene.unity
+    #       Strange Brews/Assets/Scripts/Inventory.cs
+
+commit 00e782a8a40816b8850612a9f55499eaa9118b6f
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 09:50:25 2019 -0600
+
+    - button lights work in 2player
+
+commit 87287cc66a33e7ae61e8b04a4ac00b1be6b788fb
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Thu Nov 21 01:40:25 2019 -0600
+
+    - finished message boxes
+    --- help, inventory, personal, network
+    --- uncommented scripts referencing them
+    - minor moving around of a few things
+    - changed 'G' to 'E' in PickUp and Unlock for consistency
+
+commit 6d7816dfb895001ed7e6e276dec1baa4f2254a49
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 23:46:17 2019 -0600
+
+    - set colliders for office scene
+    - implemented green 'on' lights for buttons
+    - ghost colliders and scale altered
+
+commit 45a77d7da85f0f7dd877d2457e1ac275b758f5e3
+Merge: f33c54e 95b7d10
+Author: Chandra Lyons (cml422) <chandra.lyons@usask.ca>
+Date:   Wed Nov 20 21:00:40 2019 -0600
+
+    Merge branch 'CauldronRmCols' into 'master'
+    
+    Cauldron rm cols
+    
+    See merge request ninexoney/strange-brews!1
+
+commit 95b7d10e48437370c2546752f4e772942a46f9cf
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 20:51:54 2019 -0600
+
+    - readying for merge
+
+commit b054dd8cf60af8b943b545a42f9776a8446c6474
+Merge: db64e54 f33c54e
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 20:47:15 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git into CauldronRmCols
+    
+    # Conflicts:
+    #       Strange Brews/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+
+commit db64e546039217198295c03763e854714922bbf9
+Merge: 06fa795 e8b472d
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 20:19:30 2019 -0600
+
+    Merge branch 'master' into CauldronRmCols
+
+commit 06fa7953a6eb5571a72175469ffc0551590fc34e
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 20:19:16 2019 -0600
+
+    - trying to fix merge issues
+
+commit 06aa75427e0412a8ed467fde940d77b40fbbd1e4
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 20:02:12 2019 -0600
+
+    -- merge revert small changes
+
+commit e8b472d020cd1fbd312f25fe923f603056094610
+Merge: b8c079e e175e3e
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 19:28:59 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/Scenes/cauldronRoom.unity
+    #       Strange Brews/ProjectSettings/TagManager.asset
+    #       Strange Brews/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+
+commit b8c079ef7fbb887695a57a5ba5236cb49256c3eb
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 19:23:22 2019 -0600
+
+    - added polygon2D colliders to room borders and all furniture
+    - organized objects into empty objects named appropriately
+    - organized layers for all furniture
+    - some changes currently made to ghost_right_2_0 prefab
+    --- rigidbody lines added to movement script for drifting and rotating
+    --- changed to velocity movement due to clipping through colliders
+    --- movespeed changed from 4 to 180 for velocity movement
+
+commit a7aef53552f1fd91577a1f00c54839e4add85431
+Merge: 8f92f4d 44f90e8
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 14:07:16 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+
+commit 8f92f4d60b7a6c4d7fcdc92efc0d665b13cf85aa
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 14:04:59 2019 -0600
+
+    - all room expansion except jail bars finalized
+
+commit ecf3b08dad9ee23ecb750d3d78b0cfe4c5417c6d
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Nov 20 13:48:54 2019 -0600
+
+    - organized layout of things and items, puzzle orders
+
+commit fa85235aee0a9dafc89c029bf5c03a50d986aa07
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Tue Nov 19 19:23:11 2019 -0600
+
+    - Added wall, furniture and switch wall indicators in dark room
+    - jail bar outlines added
+
+commit 385d0c86792dba1348ba54c35cf15b188588c007
+Merge: 3a2e9c0 d85583a
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 18 15:53:16 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/Scenes/tScene1.unity.meta
+
+commit 3a2e9c061612a93902954c3cc7a8d13179571150
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 18 15:51:29 2019 -0600
+
+    Revert "-- merge conflict test change"
+    
+    This reverts commit d774f41889db68582366e7ff841ae2d6c9ed3dfb.
+
+commit d774f41889db68582366e7ff841ae2d6c9ed3dfb
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 18 15:00:19 2019 -0600
+
+    -- merge conflict test change
+
+commit 3b955609aa866a7c56c42fe0774150273226eb33
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 18 14:57:24 2019 -0600
+
+    Revert "-- merge test change 2"
+    
+    This reverts commit c8fec83d6be62e0be5aa0c6f1db531a4e930cab4.
+
+commit a9805f74dad63cdbefc093b72a54cae6dae4afd0
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 18 14:57:18 2019 -0600
+
+    Revert "--merge tool test change"
+    
+    This reverts commit 65e9a77d3c5966aede9ba9515891b33faa48fbef.
+
+commit c8fec83d6be62e0be5aa0c6f1db531a4e930cab4
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 18 14:50:49 2019 -0600
+
+    -- merge test change 2
+
+commit 65e9a77d3c5966aede9ba9515891b33faa48fbef
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 18 14:49:48 2019 -0600
+
+    --merge tool test change
+
+commit 5149e093b530a462d26ec0645e57dd9b4b73a981
+Merge: 456c105 e68214c
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 18 14:46:11 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+
+commit 456c1051ec522dfcc327dd980d161dd31a535297
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 18 14:44:59 2019 -0600
+
+    - commit of updated files before merge
+
+commit cacd008a9943da85478786670c4278fcacd25423
+Merge: f36c016 654eba7
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 11 15:29:34 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+
+commit f36c016b29365dc34bca5fb4f379c2c8ee558a56
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 11 14:40:21 2019 -0600
+
+    - cleaned/commented/added documentation to scripts written by me, Chandra
+
+commit 408e08a36b233dcbfd28bd81670d0bbb6ee8d2d0
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 11 12:01:20 2019 -0600
+
+    - added unlock description to cabinet and ItemTemplate for action log interaction
+    - renamed 'Template' in Item Script folder 'ItemTemplate' for clarity
+
+commit 004ccf133d360cb0db3c4052561065482a9ed6c8
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 11 11:47:11 2019 -0600
+
+    - renamed 'LockedThing' script to more action descriptive 'Unlock'
+
+commit 0f9ec04d6b06bb8a92fc9f5ee1316c630c1f0530
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Mon Nov 11 11:39:24 2019 -0600
+
+    - implemented hideable inventory menu
+    --- show/hide using the 'i' key
+    --- grabbed items added as picked up
+
+commit 0ea040fe05c112a9d06b16f25e03b10fe0730347
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sun Nov 10 19:59:17 2019 -0600
+
+    - interaction text box functioning
+    --- only applies to single player
+    --- registers 'look' text and 'cannot unlock yet' text
+    --- text disappears upon next action
+    - action text log
+    --- shows on both players' screens
+    --- registers 'pickup' and 'unlock' text
+    --- text is added to log, does not disappear upon next action
+    - help menu ready, dimensions fixed if not final
+
+commit b42c9dee7b784eab2f8e75af7df0f45f6fad2932
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sat Nov 9 14:26:48 2019 -0600
+
+    - added help menu turned on/off by 'h' key
+
+commit 8d1f166c32b352e1f6d85d3806583c5503d0e90b
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Sat Nov 9 13:03:27 2019 -0600
+
+    - re-added missing movement script for player
+    - fixed Dark Room sprites
+    - added PunRPC method to LockedThing so it works on both players' games
+
+commit 4fccac66add605807d6764ec92c28add96979ef2
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Fri Nov 8 12:13:32 2019 -0600
+
+    imported package for Dark Room scene to use as base in final version
+
+commit 829b1bf296deb4f471042a877c1591d5837adf22
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Oct 30 17:14:52 2019 -0600
+
+    -organisation of objects in scene 1
+     --grouped walls into 'walls'
+     --grouped keys into 'items'
+    -fixed keys colliders to be neater, and accessible from all angles
+    -slightly changes keys dimensions and cabinet position
+    -added photon code to pickup script so objects are destroyed accross server to both players
+
+commit 4ec5ed5122d9332461cda650624db3a680aa9593
+Merge: dcbb575 23f7c1e
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Wed Oct 30 00:07:14 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews.git
+    
+    # Conflicts:
+    #       Strange Brews/Assets/Resources.meta
+    #       Strange Brews/Assets/Scenes/connect.unity
+    #       Strange Brews/Assets/Scripts/ItemInteractions.meta
+    #       Strange Brews/Assets/keys.unitypackage.meta
+    #       Strange Brews/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+
+commit dcbb57545f14eee427396113ccbf5c0a0330ce32
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Tue Oct 29 23:53:15 2019 -0600
+
+    setup PUN with appID
+
+commit ee5f1ed9b977076f95d3fe5c9a578aa9fa39c7fd
+Author: Chandra Lyons <cml422@usask.ca>
+Date:   Tue Oct 29 22:52:30 2019 -0600
+
+    committing organizational changes before pull merge
+
+commit 901742e957bc3bb2cd17ad4c8d99484ef2c89fee
+Author: Chandra Lyons (cml422) <chandra.lyons@usask.ca>
+Date:   Sat Oct 5 12:59:35 2019 -0600
+
+    Add new Unity .gitignore file
+commit 1bfb20be3b15e873ed24488b1a0128e0d4d7dd74
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Dec 4 13:14:46 2019 -0600
+
+    Fixing crystal ball bug still.
+
+commit fcf8918931aa0697f7d6c4e8772a322cf75fb8fe
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Dec 4 12:50:44 2019 -0600
+
+    Fixing bug with crystal balls.
+
+commit 5bf08d92183ab9a9003de8ccb5178a5fc745a6f0
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Dec 3 16:39:56 2019 -0600
+
+    Added the new help menu to the office and the classroom. Also fixed colliders and some script issues in the classroom.
+
+commit bd916f6935e2745919054fbba9691b0220a1aa9d
+Merge: 1b56f03 ee92332
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Dec 3 16:22:27 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 1b56f037a64ce373bac31f97af20c0de7e10042f
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Dec 3 16:20:21 2019 -0600
+
+    Fixed small layer in cauldron room.
+
+commit 4d7fd3c7f1f58924d32691e04db52c99b7abcc61
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Dec 3 16:18:48 2019 -0600
+
+    Fixed colliders, UI's, and layout in the cauldron room. Also, revamped the help menu.
+
+commit fae2edfad00cae2882022637386d76a00270d566
+Merge: 077deaf d049b1d
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 18:45:21 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 077deaf1904b31551e26f8b9d1757a794f3ff9c4
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 18:44:37 2019 -0600
+
+    Turned the menus and message boxes back on in the cauldron room to fix the pickup script
+
+commit 9c3a6f7bff6a6a81bab320e783a4a04045a6efa5
+Merge: 3b1a7bd f3be85f
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 17:04:32 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 3b1a7bdcd766e18f67c57446e6939f0f805357ab
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 17:04:14 2019 -0600
+
+    Testing crystal balls.
+
+commit 0f6ebbd9d287a1c2c66146bc0bc6db29e25673e0
+Merge: 32fe680 efb7185
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 16:38:30 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 32fe680100c18578d3a41483d130f5c329e993ee
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 16:38:12 2019 -0600
+
+    Still fixing crystal balls
+
+commit b09144831b1faf5f42c242dff59ecbb3123c2fd2
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 16:34:25 2019 -0600
+
+    Bugs with Crystal balls
+
+commit 0b07d3ccb0192b49754338ccbbdffb7fd7e49195
+Merge: 6ce9b54 a98c8e6
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 16:32:52 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 6ce9b54a45a06871b2f59be923fa1286f5d1caee
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 16:32:07 2019 -0600
+
+    Adding the crystal ball function.
+
+commit 16ec6016c23910ba84a08fefe8828d561ae26cd3
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 14:48:46 2019 -0600
+
+    Tried to fix the safe interaction and fixed the chest UI in the cauldron room.
+
+commit 62b210490f94d37c21e85fb6a57522bd5e138ff6
+Merge: da9e25d ad95086
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 14:31:07 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit da9e25dbb18f6a99ac047f0e356a39da5e656eb9
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 14:30:46 2019 -0600
+
+    Fixed multiplayer interaction in the classroom.
+
+commit 736f0485d360cbb4dc78eb2b1384a72c601d75f0
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 13:55:46 2019 -0600
+
+    Fixed some colliders
+
+commit 2d49616a4cda2f69285792d05a1133a6fdb778a4
+Merge: 221df22 4164a9e
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 13:50:39 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 221df22d3ff233a5c2e15b70c26e3cd3e1cb965b
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 13:50:18 2019 -0600
+
+    Fixed the UI interaction so when you walk away it should close.
+
+commit d11bb0e43d5f60fa9249aa8c7a8ab6c6f74285bb
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 13:39:19 2019 -0600
+
+    Fixing the cauldron room
+
+commit ba509734e6c59930728d03fbeaeff489d2bee928
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Dec 2 13:15:27 2019 -0600
+
+    Trying to fix the inventory with multiplayer.
+
+commit 3f013814398fbb2ae4eae18c257c30801b89cd0b
+Merge: e0b3ba9 e38f109
+Author: emma <efwarkentin@gmail.com>
+Date:   Sun Dec 1 18:29:31 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit e0b3ba96624fe694485213a97393b258d091bce0
+Merge: 309ec01 9a24c37
+Author: emma <efwarkentin@gmail.com>
+Date:   Sun Dec 1 18:27:19 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 309ec01302afc7c5d937579e59d965246cbd6e5d
+Author: emma <efwarkentin@gmail.com>
+Date:   Sun Dec 1 18:26:08 2019 -0600
+
+    Added script for crystal ball
+
+commit ec2a51f0101b3687ab2cf87d724281ee7265d267
+Author: emma <efwarkentin@gmail.com>
+Date:   Sun Dec 1 15:51:45 2019 -0600
+
+    Fixed the cauldron UI to work with ingredients. Also moved around some colliders to separate objects.
+
+commit 0a0e84dfc5a4a17c7f41d00a84b7d4e671d0d987
+Author: emma <efwarkentin@gmail.com>
+Date:   Sun Dec 1 01:01:26 2019 -0600
+
+    Put new graphics into the cauldron UI
+
+commit 5289b10d858042ea53ddbfcd239ff7fdf632eacd
+Author: emma <efwarkentin@gmail.com>
+Date:   Sun Dec 1 00:06:07 2019 -0600
+
+    Added the interaction to the chest in the potion room.
+
+commit b7f6e68bc04b543b6265377b460d9b48aa782260
+Author: emma <efwarkentin@gmail.com>
+Date:   Sat Nov 30 18:25:03 2019 -0600
+
+    Changed main menu back
+
+commit 33881cd89bc6fd23038ccf73c524486c4bcddd59
+Merge: 526357c 1392666
+Author: emma <efwarkentin@gmail.com>
+Date:   Sat Nov 30 18:20:56 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 526357c46497267bb8d3da9b6c82d0d2bec50365
+Author: emma <efwarkentin@gmail.com>
+Date:   Sat Nov 30 18:16:52 2019 -0600
+
+    Trying to fix multiplayer.
+
+commit b3c6920f86168357bcaf9d73f1ea80034b9419c6
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Nov 27 17:29:10 2019 -0600
+
+    Small bug
+
+commit cd2c5562d62f861f7b3e7ee3a82cedf17d0cddc2
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Nov 27 17:28:21 2019 -0600
+
+    Made office playable.
+
+commit 7e011e0f69ef228d04bff2fc5450af9acc0cfd93
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Nov 27 17:15:49 2019 -0600
+
+    Fixing painting
+
+commit d47af8d7959211e3fdd091ad0a91eb7db984fa30
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Nov 26 22:31:16 2019 -0600
+
+    Added some sound effects to the cauldron room and made the safe keypad show it needs 4 numbers.
+
+commit f746d0302c969aec4416acf75391ebc888572179
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Nov 26 10:14:56 2019 -0600
+
+    Fixing bugs in the cauldron room.
+
+commit e207b3265adec440420261ae29da4a17b4a95782
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Nov 26 09:57:00 2019 -0600
+
+    Setting up the cauldron UI
+
+commit 7234bbdd4cd1df19161c3a20d2d33e74f9b7f6ca
+Merge: ca167a2 abf3ef5
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Nov 25 16:10:36 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit ca167a246cadbeaa800c112fa124198fdd67ef9a
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Nov 25 16:07:02 2019 -0600
+
+    Fixed the key layer in the office scene and added a UI to the cauldron.
+
+commit 69c6f5f9d369b4e6accfbcdca917d9f2475f0aaa
+Merge: cc5fc71 4bd5764
+Author: emma <efwarkentin@gmail.com>
+Date:   Thu Nov 21 13:47:23 2019 -0600
+
+    merging
+
+commit cc5fc71448f62d219ba3cef6105aa94d37a38548
+Author: emma <efwarkentin@gmail.com>
+Date:   Thu Nov 21 13:41:47 2019 -0600
+
+    Fixed some layers for the office room.
+
+commit fe78e00476e974b3e6134eea21013abc38218322
+Author: emma <efwarkentin@gmail.com>
+Date:   Thu Nov 21 12:59:29 2019 -0600
+
+    Trying to fix the photon player spawning.
+
+commit 811b27c530297ffcd685ed0f29246852948f34f7
+Author: emma <efwarkentin@gmail.com>
+Date:   Thu Nov 21 12:39:17 2019 -0600
+
+    Added the mini menu volume settings
+
+commit 44f90e8a001bca139d74c5e27dc0b99c8d6614c5
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Nov 19 17:33:28 2019 -0600
+
+    Added the volume sliders to the mini menu in the scene
+
+commit d3407a1ac22ea0b4aff611e41302add2ee42cce0
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Nov 19 17:21:12 2019 -0600
+
+    Volume sliders work in main menu but not in mini menu yet.
+
+commit 1624bbe22609bb4770c0b8995eb4d86983d0dff7
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Nov 19 13:38:45 2019 -0600
+
+    Added the ghost player model to the scenes
+
+commit 59dd96ed5ac4fd935dfe0c1ad854c215b14f3998
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Nov 19 12:53:15 2019 -0600
+
+    Added a basic audio mixer and pickup now works with the key.
+
+commit 9ee5abfe3228193ab47ad13dcda269f6066c4776
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Nov 19 12:27:39 2019 -0600
+
+    Added a key to the inside of the safe, pickup is not working yet.
+
+commit 1d7c0982655c2c03489a3dc1bc4aec0bb2bd0063
+Author: emma <efwarkentin@gmail.com>
+Date:   Tue Nov 19 11:58:05 2019 -0600
+
+    Added the mini menu and the music to the office scene
+
+commit fd2a23ccb8a756b896cf4119afab9096d54e90f4
+Author: emma <efwarkentin@gmail.com>
+Date:   Thu Nov 14 10:43:08 2019 -0600
+
+    Added close up view to the calendar and the one bookcase for the riddle.
+
+commit dbb703da23d24f640c09e3ea5a3347a57ad68ca6
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Nov 13 20:17:22 2019 -0600
+
+    Added the safe to the safe room.
+
+commit bce6cc1c2e893324fa51a39828013e1e8cf898c8
+Merge: b106e90 e0c4840
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Nov 13 19:54:21 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit b106e9044f5b971f212abb4f3f8d2355362c59dc
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Nov 13 19:52:14 2019 -0600
+
+    Modified lookCloseUp script to make it more robust
+
+commit 69f91e6da61caaab05db210407a29f4c8d433f37
+Merge: a9dff3f 7b88ee5
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Nov 13 18:19:44 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit a9dff3f2639001706d20ad10a4d875bce6d4610e
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Nov 13 17:43:20 2019 -0600
+
+    Added music and created a script looking at certain items close up.
+
+commit 654eba723d10f6e7036d400ff95a03f270cdb3ab
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Nov 11 14:56:24 2019 -0600
+
+    Added sound effects to the safe
+
+commit bf7c78e60e60354a76860dbb851d3f6e8ed5373d
+Merge: d3988bb 408e08a
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Nov 11 12:21:10 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit d3988bb0051439edaa2e3c22c34d155deb5e587f
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Nov 11 12:14:39 2019 -0600
+
+    Added the safe mechanic prefab
+
+commit 23f7c1e4f2ae42347e279d087520e4b830bbe651
+Author: emma <efwarkentin@gmail.com>
+Date:   Sun Oct 27 17:11:19 2019 -0600
+
+    Fixed up the connect menu and bug with multiplayer spawning player in second room
+
+commit 6e061f7b2fa4a86808456b52352bdeadd5993eff
+Author: emma <efwarkentin@gmail.com>
+Date:   Sat Oct 26 23:08:53 2019 -0600
+
+    Set up secondary player for multiplayer.
+
+commit ec7628b08ba3e35b2adc85cf490989069f6485c2
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Oct 14 16:11:08 2019 -0600
+
+    Movement scaling is now based on y position
+
+commit 3d84ee5696d82db2aeb5ae9d00c560495b461a92
+Author: emma <efwarkentin@gmail.com>
+Date:   Thu Oct 10 12:23:04 2019 -0600
+
+    Cleaned up Debug messages
+
+commit 085af6d3d3da9c46b289ee981b16d0d611586937
+Author: emma <efwarkentin@gmail.com>
+Date:   Thu Oct 10 10:11:53 2019 -0600
+
+    Erros with scaling when the player isn't moving
+
+commit e80a08ae4d287b54d6f0610576353a56bfe1db49
+Author: emma <efwarkentin@gmail.com>
+Date:   Thu Oct 10 09:59:18 2019 -0600
+
+    Some final tweaks
+
+commit 2d47d4b14617b46ce18911e2d960569461b25884
+Author: emma <efwarkentin@gmail.com>
+Date:   Thu Oct 10 00:02:44 2019 -0600
+
+    Revert "Cleaned up the movement script"
+    
+    This reverts commit 748b28fe369104eba40b0568608471e6711200d3.
+
+commit eb345c02350c2e45c041d3ae90d2732ee4e47781
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Oct 9 23:49:00 2019 -0600
+
+    Revert "Cleaned up the movement script"
+    
+    This reverts commit 748b28fe369104eba40b0568608471e6711200d3.
+
+commit 748b28fe369104eba40b0568608471e6711200d3
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Oct 9 23:46:13 2019 -0600
+
+    Cleaned up the movement script
+
+commit 90ee6b15c65a8611321ddad51a2ee075bb6b9c91
+Merge: eb6f63e 8f7bee9
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Oct 9 15:44:40 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit eb6f63e84e608eb5ed897b3a974612d1bce2c9cf
+Author: emma <efwarkentin@gmail.com>
+Date:   Wed Oct 9 15:43:22 2019 -0600
+
+    Added script for scaling movement
+
+commit e61784a72b23de1c0b525458ab574439ea064b0a
+Author: emma <efwarkentin@gmail.com>
+Date:   Mon Oct 7 08:58:31 2019 -0600
+
+commit 1c07e90344fda4e8b2e5d1d8110b17d1de1f8051
+Merge: c47fcdb 1bfb20b
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Dec 4 13:16:29 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit c47fcdb6ee4e6d588d8e567ecb33b5b55e2b1868
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Dec 4 13:16:23 2019 -0600
+
+    updated room counter rooms. updated messages for potions. Inventory still not working.
+
+commit e82a3d80618295f67aec51612d837fe92d57bb72
+Merge: 562889c fcf8918
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Dec 4 12:52:05 2019 -0600
+
+    merging
+
+commit 562889cf3e3ed367ba7de54e0057286f05296d26
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Dec 4 12:51:22 2019 -0600
+
+    pulling
+
+commit f092821ec8dc4eb13b1f0bad4878b003cd5644f0
+Author: Emi <ems032@mail.usask.ca>
+Date:   Tue Dec 3 23:34:03 2019 -0600
+
+    pushing changes
+
+commit 95776d414f770a76923f1162700321da7bf0f739
+Author: Emi <ems032@mail.usask.ca>
+Date:   Tue Dec 3 23:32:48 2019 -0600
+
+    all potion, shrinking and growing interactions are now fully working (fixed bugs). added message boxes and made other minor changes to cauldron room.
+
+commit 40ed8f4be83e0d4cb8969e7dfe8222410a717dac
+Author: Emi <ems032@mail.usask.ca>
+Date:   Tue Dec 3 20:27:12 2019 -0600
+
+    got potion interactions to work when both players click on one potion at the same time (scene will have one potion for each player). added sound effects for key in every room (final key must be named 'Final Key'). Added minor changes in cauldron and office room.
+
+commit ee9233241eaaed5e9ff33775dbbe0332c6e6b386
+Author: Emi <ems032@mail.usask.ca>
+Date:   Tue Dec 3 15:40:49 2019 -0600
+
+    added call to grow script for when players are in the classroom
+
+commit 6f284ebca586c7aa6ab2e50c34b90784c0bfd86b
+Merge: 2f9c4da fae2edf
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 18:50:54 2019 -0600
+
+    merging
+
+commit 2f9c4da8b577dd5cebe2038987e088e7e3328761
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 18:49:36 2019 -0600
+
+    pull before merging
+
+commit b841303e8af8b710a7a06d239093a5a6e262494e
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 18:46:38 2019 -0600
+
+    modified boxes in cauldron room
+
+commit 7de2638fa8518eef3caae196f298c0a6bc041666
+Merge: 7281c94 9c3a6f7
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 17:05:35 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 7281c94ee4ee7ca5104aa98ff2c6659f6cf4f104
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 17:05:28 2019 -0600
+
+    modified box script
+
+commit efb7185175a09de33129314106e4e7a47d55d7f4
+Merge: 7d5b4ae b091448
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 16:35:10 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 7d5b4ae0bef23a8c00584508be50a3d3569bc0dd
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 16:33:20 2019 -0600
+
+    commit before pull
+
+commit a98c8e6eb995e191e8bdf1abbd8fc81178bb83e9
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 15:44:08 2019 -0600
+
+    safe
+
+commit 94b0020bece18b433cdac26a42b004a4bc141184
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 15:15:32 2019 -0600
+
+    modified scripts in office room to activate safe when painting moves up. replaced shaders in office scene.
+
+commit 756e09ae26cff8e2dbb5db58068a27d6062c133f
+Merge: f0db3fb d02a78a
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 14:56:08 2019 -0600
+
+    merge before pulling
+
+commit f0db3fb06dd1814f87cc49181b2934a2398922bb
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 14:54:28 2019 -0600
+
+    fixed error in box scripts
+
+commit ad9508645804f6e1d1e8e99b257fd52b94533e50
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 14:30:56 2019 -0600
+
+    made changes to potion scripts
+
+commit 4164a9e49af6e432dbc4e1a2d0752be158fb67de
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 13:50:24 2019 -0600
+
+    pushing minor collider changes
+
+commit 17ad867abb94ca74c6cd65350a9ae4f612cf7891
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Dec 2 13:32:54 2019 -0600
+
+    mod for inventory script
+
+commit 4175d1a56aeda6045533d16c21ab834cbafe0d70
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Dec 1 19:27:41 2019 -0600
+
+    Cauldron room working when testing with single player in unity, but when testing with build, objects aren't getting destroyed
+
+commit e38f109944990d02bd064c2f16c5b057b1551752
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Dec 1 18:26:44 2019 -0600
+
+    fixed shaders. need to readd onhoverboarder script to objects in rooms
+
+commit f1e3ff9f6bd922af563ea4877587056db1a8af24
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Dec 1 15:59:22 2019 -0600
+
+    changed back shader
+
+commit 2d9090888b061f19047b133bf3887401667f1cde
+Merge: ba2ac1e 9884ccb
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Dec 1 15:08:59 2019 -0600
+
+    merging
+
+commit ba2ac1ea34fbb56a4f930cc6fcb3f09c3e143f89
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Dec 1 15:07:46 2019 -0600
+
+    added object interactions and all changes made to my test room to the cauldron room.
+
+commit 932a1ccf388fd1c8677eca4896463910aa035858
+Merge: e32c5ad d2bed8a
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Dec 1 13:05:31 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit e32c5ad68fe9a989d19a686ea82c3a8b12375210
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Dec 1 13:05:22 2019 -0600
+
+    commit before merging
+
+commit ab65ae892ad654b1a25201317534e51853f969bf
+Merge: 67c0003 0a0e84d
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Dec 1 11:26:28 2019 -0600
+
+    pulling changes to cauldron room
+
+commit 67c0003a6d3acc190c4bf80cd0e321409d126bb9
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Dec 1 11:25:13 2019 -0600
+
+    added player public variable to specifiy player spawn points in level changer. must hardcode this for each scene since room is not always in the same location. right now, 1 is added to the y access for the points you specify so players will spawn in different places, but will probably modify this later. added object interactions in Emily's test room.
+
+commit 139266655454181e240aa4207c8933a59428db8b
+Merge: 3cc002a fb4c3c2
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sat Nov 30 18:11:08 2019 -0600
+
+    merging
+
+commit 3cc002ab911e6af172884148dd603aaafdd88919
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sat Nov 30 18:09:51 2019 -0600
+
+    modified pickup script so it checks that the right player is within range before picking up an object. Got potion interactions working in multiplayer. Now, a player can only select one potion at a time, and the RPC functions are only called if the player hasn't shrunk already. Once a player has shrunk, the corresponding bottle they drank from will become empty. The other player must select the other bottle to shrink.
+
+commit 3df249323dc67cdc09b7b9c006acf71ce77b7694
+Merge: 48bc093 ff5969c
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sat Nov 30 14:09:27 2019 -0600
+
+    merging
+
+commit 48bc093a3095ff77d4a220e2885d223f1e1b9624
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sat Nov 30 14:08:14 2019 -0600
+
+    got multiplayer working when pressing play at different times
+
+commit 5d76ab3cf4b0166d0689a789cdfb4cece40e6e18
+Author: Emi <ems032@mail.usask.ca>
+Date:   Fri Nov 29 00:14:52 2019 -0600
+
+    implemented  potion drinking and shrinking interaction for one player (neeed to adjust scale of empty bottle sprite).
+
+commit c285b084ea76f6fa450dc7373b29934d649c684f
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 28 20:07:53 2019 -0600
+
+    merging...
+
+commit fde0b77851f9c80d390a3e1a6d8629f0c6927da3
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 28 20:02:53 2019 -0600
+
+    merging
+
+commit 58346f8d56264272fb2521be440e862a39542478
+Merge: 2f5da9d 2a36cff
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 28 20:01:44 2019 -0600
+
+    merge
+
+commit 2f5da9d349d9c28f8cce66d8692a28bd92213874
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 28 20:00:53 2019 -0600
+
+    level changer working in first two rooms (add levelchanger objects to other scenes for it to work). wrote potion script (haven't implemented it for multiplayer yet)
+
+commit 773dd3dc22ffb7bcc93974b78f83dd4bb1ba39b1
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 28 13:51:14 2019 -0600
+
+    added key pickup and door interactions to classroom. Also added inventory object, men text boxes, and LevelChanger
+
+commit ff079a6e7ffe3cf8ea0668e32a01afcca4081235
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 28 02:00:52 2019 -0600
+
+    added message sound effect in cauldron room, and code for sound effect when putting key in inventory in the inventory script
+
+commit b884fb42b85944d543bf57f366549353790127ce
+Merge: b016d75 20c3f39
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 27 22:54:34 2019 -0600
+
+    merging
+
+commit b016d75a942d795aca15dd01a409d30180ad9b1c
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 27 22:53:04 2019 -0600
+
+    added all box interactions in cauldron room, and changed sorted order for open boxes in Box script
+
+commit 562a0297fb58aa3bc86680a7188cbd39bdbfa917
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 27 17:30:18 2019 -0600
+
+    merge
+
+commit 4c0d64503b14bd67e9bb1e021737df38213103de
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 27 16:13:32 2019 -0600
+
+    fixed door interactions
+
+commit cc6af59f228e82afbbda0f28f5e405eaf35ff27a
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 27 14:13:14 2019 -0600
+
+    added scripts and sounds effects for shrinking and growing players
+
+commit 877b19ebc00f6b29b0d3f03c60a2b6a6593d7d0a
+Merge: bea9901 d47af8d
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 27 00:26:55 2019 -0600
+
+    merging
+
+commit bea9901a642424d83454edaff5125e100b46b869
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 27 00:24:49 2019 -0600
+
+    added script for cauldron room (that we can maybe use)
+
+commit 199df24f2d40892a1181dcf29d54623e285184c6
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Nov 25 17:52:46 2019 -0600
+
+    added borders and some box interactions in Cauldron room
+
+commit cb7577c17e314197dcaf7d1e02d27d9dc68357ad
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 15:32:50 2019 -0600
+
+     h
+
+commit 7f7bf0fdcfe6c3e5a1ab7776743f8d30a33c2ec4
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 15:15:46 2019 -0600
+
+    .
+
+commit 161cc8218e9b17df038fa9ce84ed1f297bf9ffc2
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 15:07:59 2019 -0600
+
+    merge
+
+commit 219fd79221df933fe14c0a2b82ad6c7606df6444
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 15:02:06 2019 -0600
+
+    fix
+
+commit e4923b8f78769ab2ee032783101b3b23c8b64081
+Merge: 9f96116 54d31c6
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 14:51:03 2019 -0600
+
+    Merge branch 'RevertFix' of https://git.cs.usask.ca/ninexoney/strange-brews into HEAD
+
+commit 9f96116543eb1d8778764d726040d2af3f1d34ed
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 14:03:39 2019 -0600
+
+    .
+
+commit c0bd879f0a62ac98794e0fa07f3e7ecfdcaef311
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 13:59:56 2019 -0600
+
+    trying to fix conflicts
+
+commit ca780f0831a75f4ca8852ae1d617a3bfc7ae36b3
+Merge: ea414ac 69c6f5f
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 13:55:04 2019 -0600
+
+    merge
+
+commit ea414acc5d16ff1c47051c70d730bdf07e9dac2b
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 13:53:47 2019 -0600
+
+    merging
+
+commit a5d2f73b1a6c882a0c424137fdab05a9d6636846
+Merge: 0216d49 fe78e00
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 13:00:09 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 0216d4994722198c93d6353faf389dce3fa4847c
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 13:00:04 2019 -0600
+
+    merging
+
+commit 63f75b7cbaf8f16291bca7c30f51affb00d3d9c0
+Merge: 49a5746 811b27c
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 12:42:48 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 49a574603897f3fa5438b699780775e7632843ac
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 12:42:38 2019 -0600
+
+    changed cameras again
+
+commit 1d8e2b31795daef562362c81217f4956f0238e35
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 12:28:18 2019 -0600
+
+    added cameras to each player
+
+commit be155bbf414c8a326046b5972553ea1f3b214c43
+Merge: 658c044 895f190
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 12:06:04 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit 658c04404bc3031baa2e97e940e35662235f6a47
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 12:05:59 2019 -0600
+
+    merging
+
+commit 7351b810e9cf8d8aedccaca34f94b54bba22befb
+Merge: 41e5bb2 e3b281f
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 11:10:44 2019 -0600
+
+    merging
+
+commit 41e5bb23eec7273f955b7bdff61f322f18d8b847
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 11:09:48 2019 -0600
+
+    changed position where player spawns
+
+commit a3875d3e5be23f9c2edbee149bbe376a5f1a6e5c
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 10:33:08 2019 -0600
+
+    attempt to fix view for second player
+
+commit 035a49e84a452d10ac09330c08394c9fd9d13a4c
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 21 10:01:55 2019 -0600
+
+    added movePainting script to object
+
+commit 79cfe1a09ee13d05e976c3c5e9f60f29f6a792b3
+Merge: a770760 45a77d7
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 20 23:52:05 2019 -0600
+
+    merging
+
+commit a770760b4ef23befcaf4956436ec773dde933155
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 20 23:48:42 2019 -0600
+
+    got animations working for multiplayer. set up key interactions with door in unity. now players need key to change scene.
+
+commit a939e93ca9daee2a98182fd9d35d5723df300b66
+Merge: e7ec852 e175e3e
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 20 19:05:45 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit e7ec852fa9e653d49ad1e4b50379a569ef4a53f4
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 20 19:05:39 2019 -0600
+
+    commit before merging
+
+commit 6a15b36d333040b274bd2a5b3e90316d14661913
+Merge: 21adbea 44f90e8
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 20 16:27:24 2019 -0600
+
+    conclude merge
+
+commit 21adbeacb033ac6d2577367d88c543a7f3dfcffd
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 20 14:41:34 2019 -0600
+
+    combined movement/multiplayer and movement/animation script so it's working in multiplayer. still need to send animations over the network.
+
+commit 7f58c3656e3f029e5416794add4704ede8b99287
+Author: Emi <ems032@mail.usask.ca>
+Date:   Tue Nov 19 20:21:02 2019 -0600
+
+    modified scripts and objects for door, buttons, box, and level changer to work with multiplayer.
+
+commit 1e8e93d4a035b71e126d211ea0758195491ddfc6
+Merge: fcdab58 1624bbe
+Author: Emi <ems032@mail.usask.ca>
+Date:   Tue Nov 19 14:57:47 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit fcdab585fbfd37407f2e9a92a05737e6fd353448
+Author: Emi <ems032@mail.usask.ca>
+Date:   Tue Nov 19 14:46:58 2019 -0600
+
+    commiting changes before merge
+
+commit e68214cb37da126c53ea8e55d0aa5209e188dcb9
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Nov 18 13:04:01 2019 -0600
+
+    got button interactions working
+
+commit ea7e056bee9de347f710a5f66e01e1948798c9db
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Nov 18 12:16:44 2019 -0600
+
+    pick up working for button
+
+commit 07b8c86624cab4d38b7fd9e069596a700d7a0a3e
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Nov 17 02:08:41 2019 -0600
+
+    Created level changer animation and script for fading in and out between scenes.Added more interactions to door, and door sound effects on scene change. Also added sound effects for box.
+
+commit 60b4ffe3845a606c9306be8c3a7e8711e9189dd8
+Merge: a98aaf1 4fa8d64
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sat Nov 16 20:14:44 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit a98aaf102b06a22448f74e0a7cfce65fbc2f53ed
+Merge: 5f13178 eec71c1
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sat Nov 16 20:13:53 2019 -0600
+
+    Merge branch 'my-temp-work'
+
+commit eec71c1c74aa2b61d5a2059a1bbbe0e1b17e224a
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sat Nov 16 20:05:37 2019 -0600
+
+    added WallButtons and buttonSlot script, and added button sound effects. Note: need to add another button sprite
+
+commit 8b312cfecf206e76d00018ffa7b8614d260f56a7
+Author: Emi <ems032@mail.usask.ca>
+Date:   Thu Nov 14 16:13:58 2019 -0600
+
+    modified scene changer script to work with multiplayer, and added scripts and objects from old room.
+
+commit 509473ecb3955ab986a88094925b4871dedf2af3
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 13 20:48:40 2019 -0600
+
+    added shaders and box script to room. pick-up script not correctly added into scene yet.
+
+commit 321fd973736e571bb01c9dbce000231d1bb143cd
+Merge: 281b0a7 69f91e6
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 13 18:26:36 2019 -0600
+
+    merge
+
+commit 281b0a75adf800eabd634047c83ab67548f5c8b9
+Merge: 898ab3b 7b88ee5
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 13 18:23:47 2019 -0600
+
+    merge
+
+commit 898ab3bc2f6ed6e13faf9c0b1a039ca408333d67
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 13 17:54:10 2019 -0600
+
+    commit before merging
+
+commit 137e62f59583474ad1bc7e7ad475c709733738dd
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Nov 13 02:43:20 2019 -0600
+
+    implemented and added shader scripts, folders, and textures to repository for object outlines when within range to pickup. also adjusted room dimensions and implemented box and buttons (still need to finish up implementation of buttons though).
+
+commit 7b88ee59b536ec3ddf4b1da8aab05c1f805acc55
+Merge: 124d8f9 cacd008
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Nov 11 15:58:23 2019 -0600
+
+    attempt to fix merge conflicts
+
+commit 124d8f9ec837ca410724349f9d3bf5f431c2ba67
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Nov 11 15:48:47 2019 -0600
+
+    created folder for prefabs, added prefabs for buttons and box that Maggie drew. Alao added first part of ChangeBoxState script
+
+commit 9ccc99075845d7cd29a1f5a14b58e2aff9faeecf
+Author: Emi <ems032@mail.usask.ca>
+Date:   Mon Oct 21 14:09:31 2019 -0600
+
+    added revisions to GUI for connecting to room
+
+commit 32d40c2abc49f8e74e876843e8bdc793cb0cf4ff
+Author: Emi <ems032@mail.usask.ca>
+Date:   Sun Oct 20 11:04:27 2019 -0600
+
+    cleaned up files and implemented basic GUI for connecting to photon and joining room. still need to get message to display on press of join room button.
+
+commit 15f13bc35fb0910919554dfc428b6e12009a8313
+Author: Emi <ems032@mail.usask.ca>
+Date:   Tue Oct 15 12:35:01 2019 -0600
+
+    add remaing files for photon
+
+commit 3d0a48873a0d3aa7f7906161eb6a87ebe742c521
+Author: Emi <ems032@mail.usask.ca>
+Date:   Tue Oct 15 12:15:27 2019 -0600
+
+    added photon
+
+commit 93aff8ac74ee43202ef55db92c732d1df8de178e
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Oct 9 22:38:20 2019 -0600
+
+    commit for rest of files for demo
+
+commit 9a23b8065ef1d736df14bf010dab0448491d662c
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Oct 9 22:21:54 2019 -0600
+
+    modified Movement script.
+
+commit 1b2ac8fc4a947f124d5942bb721a99a600b6d478
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Oct 9 21:52:14 2019 -0600
+
+    modified Movement script and added second scene for next room. Added boundary box colliders around room(s) and got Door script working.
+
+commit 2b4d3b9611c2665c31db9a4abc092f4fe80be3fc
+Merge: ab5d089 1a2d842
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Oct 9 16:07:31 2019 -0600
+
+    Merge branch 'master' of https://git.cs.usask.ca/ninexoney/strange-brews
+
+commit ab5d089d0d49d1579de42bbfef5c3a6f9f84088e
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Oct 9 16:04:54 2019 -0600
+
+    adding house package for doors, etc.
+
+commit 8f7bee966931ab0e69d2a3e456f9db539ca4b751
+Author: Emi <ems032@mail.usask.ca>
+Date:   Wed Oct 9 15:36:29 2019 -0600
+
+    adding four scripts.
+
+commit 636f679ab134dbdda89f4fddc6ad639e4b892802
+Author: Emily Smith (ems032) <ems032@mail.usask.ca>
+Date:   Sat Oct 5 12:47:28 2019 -0600
+
+    Initial commit
