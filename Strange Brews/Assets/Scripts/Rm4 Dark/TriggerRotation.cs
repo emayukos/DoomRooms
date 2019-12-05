@@ -32,7 +32,7 @@ public class TriggerRotation : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (rotate)
         {
