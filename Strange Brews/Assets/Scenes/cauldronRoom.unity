@@ -22977,7 +22977,7 @@ PrefabInstance:
     - target: {fileID: 1456674337176704913, guid: 9f7e2ce44246443cb8ee48fd63baed94,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5124643999000629607, guid: 9f7e2ce44246443cb8ee48fd63baed94,
         type: 3}
@@ -27133,6 +27133,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
+        type: 3}
+      propertyPath: viewIdField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
+        type: 3}
+      propertyPath: instantiationId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8260942065861457997, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -27147,16 +27157,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
-        type: 3}
-      propertyPath: viewIdField
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -2526687053237523062, guid: 852a8cf46071e474699df90d22a4d55d,
-        type: 3}
-      propertyPath: instantiationId
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6169753215467533995, guid: 852a8cf46071e474699df90d22a4d55d,
         type: 3}

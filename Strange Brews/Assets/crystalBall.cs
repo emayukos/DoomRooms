@@ -46,8 +46,7 @@ public class crystalBall : MonoBehaviour
             else
             {
                 closeUI();
-            }
-            isOpen = !isOpen;            
+            }           
         }
 
 
@@ -61,34 +60,48 @@ public class crystalBall : MonoBehaviour
     }
 
     [PunRPC]
-    void isOpenForOther()
+    public void isOpenForOther()
     {
         thisIsOpen++;
+        //Debug.Log("added to thisIsOpen, now: " + thisIsOpen);
     }
 
     [PunRPC]
-    void isNotOpenForOther()
+    public void isNotOpenForOther()
     {
         thisIsOpen--;
+        if (thisIsOpen < 0) thisIsOpen = 0;
+        //Debug.Log("subtracted from thisIsOpen, now: " + thisIsOpen);
     }
 
 
     public void openUI()
     {
+        if (isOpen == false)
+        {
+            photonView.RPC("isOpenForOther", PhotonTargets.All);
+        }
+
+        isOpen = true;
         if (group.isConnected())
         {
             UIConnected.SetActive(true);
             UIConnecting.SetActive(false);
             connected = true;
+            
         }
         else
         {
             UIConnected.SetActive(false);
             UIConnecting.SetActive(true);
             connected = false;
+            
         }
 
-        photonView.RPC("isOpenForOther", PhotonTargets.All);
+        
+        
+
+
     }
 
     
@@ -98,8 +111,11 @@ public class crystalBall : MonoBehaviour
         // close both
         UIConnected.SetActive(false);
         UIConnecting.SetActive(false);
-        photonView.RPC("isNotOpenForOther", PhotonTargets.All);
-
+        if (isOpen)
+        {
+            photonView.RPC("isNotOpenForOther", PhotonTargets.All);
+        }
+        isOpen = false;
     }
 
     
