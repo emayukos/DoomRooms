@@ -114,6 +114,7 @@ public class Inventory : Photon.MonoBehaviour
 
     private string InventoryToString()
     {
+        
         inventoryList = "";
 
         if (numItems != 0)
@@ -122,6 +123,10 @@ public class Inventory : Photon.MonoBehaviour
             {
                 inventoryList += "\n" + itemlist[i];
             }
+        }
+        else
+        {
+            inventoryList = "empty";
         }
 
         return inventoryList;

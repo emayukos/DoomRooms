@@ -104,4 +104,5 @@ MonoBehaviour:
   - deactivateThis
   - activateFlashlight
   - delete
+  - IsShrunk
   DisableAutoOpenWizard: 1

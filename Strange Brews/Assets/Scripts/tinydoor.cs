@@ -71,11 +71,16 @@ public class tinydoor : Photon.MonoBehaviour
     	GetComponent<Renderer>().material = unborder;
     }
     
+
     
+    public void IsShrunkRPC() { 
+    	photonView.RPC("IsShrunk", PhotonTargets.All); // change to master for now
+    }
+    
+    [PunRPC]
     void IsShrunk() {
 		isShrunk = true;
     }
-    
     
 }
 

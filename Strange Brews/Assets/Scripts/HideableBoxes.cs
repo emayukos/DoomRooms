@@ -35,6 +35,7 @@ public class HideableBoxes : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             invOnOff = invOnOff * -1;
+
         }
         //if (Input.GetKeyDown(KeyCode.M))
         //{

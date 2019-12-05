@@ -10,12 +10,14 @@ public class InteractText : MonoBehaviour
     public PhotonView photonView;
     public Text textLine;
 
+
     [PunRPC]
     public void DisplayLook(string description)
     {
         Debug.Log("Gets to display look");
         //changes Text to show only new text 
         textLine.text = description;
+        Debug.Log(textLine.text);
     }
 
     [PunRPC]
@@ -24,7 +26,9 @@ public class InteractText : MonoBehaviour
         Debug.Log("Gets to addText");
         //appends new text onto existing display
         textLine.text += "\n" + description;
+        Debug.Log(textLine.text);
     }
+
 
 
 }

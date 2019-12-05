@@ -30,7 +30,7 @@ public class PickUp : Photon.MonoBehaviour
                 //networkTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
 
                 //adds item to multiplayer inventory text box
-                networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
+                networkTextBox.GetComponent<messageBox>().photonView.RPC("MessageDisplayLook", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
 
                 //add item to inventory, remove from scene
                 //pickup();

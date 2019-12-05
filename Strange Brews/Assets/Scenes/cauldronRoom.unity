@@ -2903,7 +2903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &194555036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4104,7 +4104,7 @@ MonoBehaviour:
   helpMenu: {fileID: 98500477}
   inventoryMenu: {fileID: 841410528}
   personalMessageBox: {fileID: 194555035}
-  networkMessageBox: {fileID: 1350588402}
+  networkMessageBox: {fileID: 1632414105}
 --- !u!114 &290945391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10724,12 +10724,12 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 3
+  synchronization: 0
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 841410531}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 13
   instantiationId: 13
@@ -11331,7 +11331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &841410529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12177,7 +12177,8 @@ AudioSource:
   m_GameObject: {fileID: 918846246}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3545321340923618661, guid: 7187a66011cf44048bfcf071a565084d,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -16928,7 +16929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1350588403
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18538,7 +18539,8 @@ AudioSource:
   m_GameObject: {fileID: 1516594223}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3545321340923618661, guid: 7187a66011cf44048bfcf071a565084d,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -18850,7 +18852,8 @@ AudioSource:
   m_GameObject: {fileID: 1522388994}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3545321340923618661, guid: 7187a66011cf44048bfcf071a565084d,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -20041,7 +20044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1632414106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20095,8 +20098,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.096462905, y: 0}
   m_AnchorMax: {x: 0.897, y: 0.100694835}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -5.9}
+  m_AnchoredPosition: {x: 0, y: 5}
+  m_SizeDelta: {x: 0, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1633289543
 GameObject:
@@ -20796,6 +20799,12 @@ PrefabInstance:
       propertyPath: openBox
       value: 
       objectReference: {fileID: 1923686450}
+    - target: {fileID: 8650671392320002781, guid: 8c485a9a989264596b6eb095d635f162,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3545321340923618661, guid: 7187a66011cf44048bfcf071a565084d,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 8165066731555891880, guid: 8c485a9a989264596b6eb095d635f162, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8c485a9a989264596b6eb095d635f162, type: 3}
@@ -23602,9 +23611,9 @@ GameObject:
   - component: {fileID: 1957358043}
   - component: {fileID: 1957358048}
   - component: {fileID: 1957358047}
-  - component: {fileID: 1957358046}
   - component: {fileID: 1957358045}
   - component: {fileID: 1957358044}
+  - component: {fileID: 1957358046}
   m_Layer: 5
   m_Name: Network Message Text
   m_TagString: Untagged
@@ -23628,8 +23637,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.020805113, y: 0.08647315}
   m_AnchorMax: {x: 0.97919494, y: 0.92}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
-  m_SizeDelta: {x: -0.000061035, y: 0.0000076294}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.0000076293945}
+  m_SizeDelta: {x: -0, y: -0.0000076294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1957358044
 MonoBehaviour:
@@ -23680,11 +23689,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957358042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba932998b95f19741bf5c395eaa425b5, type: 3}
+  m_Script: {fileID: 11500000, guid: def2f06bb6ac842aca3ddede556df16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: 1957358044}
   textLine: {fileID: 1957358047}
+  showMessageTime: 5
 --- !u!114 &1957358047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26675,6 +26685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potion1: {fileID: 1700315752}
+  brewPotionSound: {fileID: 8300000, guid: 1045f274a87d8439aa6c3dcf72ffca27, type: 3}
 --- !u!1 &2143483331
 GameObject:
   m_ObjectHideFlags: 0
@@ -26857,6 +26868,12 @@ PrefabInstance:
       propertyPath: instantiationId
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 6700150628390367750, guid: ddcb6fca8c907467badd327bb4380253,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3545321340923618661, guid: 7187a66011cf44048bfcf071a565084d,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 6700150628390367751, guid: ddcb6fca8c907467badd327bb4380253, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ddcb6fca8c907467badd327bb4380253, type: 3}
@@ -27022,6 +27039,12 @@ PrefabInstance:
       propertyPath: openBox
       value: 
       objectReference: {fileID: 1354826258}
+    - target: {fileID: 8650671392320002781, guid: 8c485a9a989264596b6eb095d635f162,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3545321340923618661, guid: 7187a66011cf44048bfcf071a565084d,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 8165066731555891880, guid: 8c485a9a989264596b6eb095d635f162, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8c485a9a989264596b6eb095d635f162, type: 3}

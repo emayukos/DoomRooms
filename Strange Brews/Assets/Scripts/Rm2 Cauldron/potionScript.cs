@@ -16,7 +16,7 @@ public class potionScript : Photon.MonoBehaviour
 	private PhotonPlayer photonPlayer;
 	//private tinydoor tinyDoor;
 	// only send message after second potion is drunk
-	private GameObject tinyDoor;
+	//private GameObject tinyDoor;
 	GameObject networkTextBox;
 	private int counter = 0;
 	//public GameObject potion2Prefab;
@@ -32,7 +32,7 @@ public class potionScript : Photon.MonoBehaviour
 	private void Start()
 	{
 		networkTextBox = GameObject.Find("Network Message Text");
-		tinyDoor = GameObject.FindWithTag("tiny door"); // to make easier to find
+		//tinyDoor = GameObject.FindWithTag("tiny door"); // to make easier to find
 		source = GetComponent<AudioSource>();
 		
 		// disable script on other potion until this one is destroyed
@@ -70,19 +70,19 @@ public class potionScript : Photon.MonoBehaviour
 		source.clip = drinkSoundEffect;
 		source.Play();
 		// should we change this so only the player who drank gets this?
-		++counter;
-		if(counter == 1)
-		{
-			networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "One player drank the shrinking potion!");
-		}
-		if(counter >= 2)
-		{
-			networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "Both players drank the shrinking potion!");
-		}
-		else // for debugging
-		{
-			networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, counter + " player drank the shrinking potion!");
-		}
+		//++counter;
+		//if(counter == 1)
+		//{
+		//	networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "One player drank the shrinking potion!");
+		//}
+		//if(counter >= 2)
+		//{
+		//	networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "Both players drank the shrinking potion!");
+		//}
+		//else // for debugging
+		//{
+		//	networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, counter + " player drank the shrinking potion!");
+		//}
 		
 		//Debug.Log("player drank potion");
 		yield return new WaitForSeconds(source.clip.length);
@@ -93,10 +93,10 @@ public class potionScript : Photon.MonoBehaviour
 		//Destroy(gameObject);
 		//if(Player.PhotonView.isMine)
 		Player.SendMessage("ShrinkPlayerRPC");
-		if(counter >= 2)
-		{
-			tinyDoor.SendMessage("IsShrunk");
-		}
+		//if(counter >= 2)
+		//{
+		//	tinyDoor.SendMessage("IsShrunk");
+		//}
 		
 	}
 	
