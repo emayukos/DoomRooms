@@ -43,7 +43,7 @@ public class Inventory : Photon.MonoBehaviour
         {
             //adds items to next open position in inventory array
             itemlist[numItems] = itemName;
-			Debug.Log(itemName);
+			
             numItems++;
             if(itemName == "Final Key")
 			{
@@ -52,7 +52,7 @@ public class Inventory : Photon.MonoBehaviour
                 	source.PlayOneShot(rewardSound);
             	}
 			}
-
+            Debug.Log(itemName);
             //adds item to inventory display list
             //inventoryMenuText.GetComponent<InteractText>().DisplayLook(InventoryToString());
             inventoryMenuText.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, InventoryToString());
