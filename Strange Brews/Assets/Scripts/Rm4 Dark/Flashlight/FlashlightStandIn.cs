@@ -17,9 +17,12 @@ public class FlashlightStandIn : Photon.MonoBehaviour
     {
         if(inRange && Input.GetKeyDown(KeyCode.E))
         {
-            personalTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "A blacklight flashlight was picked up.");
-            //activateFL();
-            thisPhotonView.RPC("activateFL", PhotonTargets.All);
+            if (!player.GetComponent<FlashlightActivate>().haveAFlashlight())
+            {
+                personalTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "A blacklight flashlight was picked up.");
+                //activateFL();
+                thisPhotonView.RPC("activateFL", PhotonTargets.All);
+            }
         }
     }
 
@@ -44,9 +47,17 @@ public class FlashlightStandIn : Photon.MonoBehaviour
     [PunRPC]
     private void activateFL()
     {
-        realFlashlight.GetComponent<FlashlightFollow>().activateLight(player);
+        player.GetComponent<FlashlightActivate>().photonView.RPC("activateFlashlight", PhotonTargets.All);
+        //realFlashlight.GetComponent<FlashlightFollow>().activateLight(player);
         //realFlashlight.GetComponent<FlashlightFollow>().photonView.RPC("activateLight", PhotonTargets.All, player);
         //Destroy(gameObject);
-        PhotonNetwork.Destroy(gameObject);
+        //PhotonNetwork.Destroy(gameObject);
+        thisPhotonView.RPC("delete", PhotonTargets.All);
+    }
+
+    [PunRPC]
+    private void delete()
+    {
+        Destroy(gameObject);
     }
 }
