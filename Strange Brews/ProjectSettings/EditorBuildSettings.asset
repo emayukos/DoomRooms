@@ -11,7 +11,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: e5ae8b9a249be4ed688bcb75bf1d529d
+<<<<<<< HEAD
   - enabled: 0
+=======
+  - enabled: 1
+    path: Assets/Scenes/cauldronRoom.unity
+    guid: 1afab8f37ead64595a1a24b579c1bbee
+  - enabled: 1
+    path: Assets/Scenes/DarkRoomBase.unity
+    guid: 48ec25574e2e32c43a2145088b2b9cd0
+  - enabled: 1
+>>>>>>> 9e910d12d0d3bfdf83ed74d846e41bc01a409111
     path: Assets/Scenes/classroom.unity
     guid: 4b67d6391b8c1414cab874e6ae65bf80
   - enabled: 0
@@ -20,9 +30,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OfficeScene.unity
     guid: 3a44222a23f914b46be6652402eb9d42
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/DarkRoomBase.unity
     guid: 48ec25574e2e32c43a2145088b2b9cd0
+=======
+>>>>>>> 9e910d12d0d3bfdf83ed74d846e41bc01a409111
   - enabled: 0
     path: Assets/Scenes/EndScene.unity
     guid: 4357b864dd5ffd649a8daec0e166ca6e
