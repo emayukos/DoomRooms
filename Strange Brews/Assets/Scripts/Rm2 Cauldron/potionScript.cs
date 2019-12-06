@@ -47,10 +47,10 @@ public class potionScript : Photon.MonoBehaviour
 		// make potion script for other player that checks that it's not their view
 		if(inRange && Input.GetKeyDown(KeyCode.E)) 
 		{
-			if(!Player.GetComponent<Shrink>().shrunk) // if player hasn't shrunk already
-			{
-				drinkPotionRPC();
-			}
+			//if(!Player.GetComponent<Shrink>().shrunk) // if player hasn't shrunk already
+			//{
+			drinkPotionRPC();
+			//}
 			
 			//stop = true;
 		}
@@ -96,7 +96,7 @@ public class potionScript : Photon.MonoBehaviour
 		Player.SendMessage("ShrinkPlayerRPC");
 		//if(counter >= 2)
 		//{
-		//	tinyDoor.SendMessage("IsShrunk");
+		//tinyDoor.SendMessage("IsShrunk");
 		//}
 		
 	}

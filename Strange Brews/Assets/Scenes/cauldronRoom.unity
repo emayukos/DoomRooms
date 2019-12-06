@@ -26902,7 +26902,7 @@ PrefabInstance:
     - target: {fileID: 6700150628390367748, guid: ddcb6fca8c907467badd327bb4380253,
         type: 3}
       propertyPath: synchronization
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700150628390367748, guid: ddcb6fca8c907467badd327bb4380253,
         type: 3}

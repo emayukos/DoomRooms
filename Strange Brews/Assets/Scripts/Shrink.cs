@@ -10,7 +10,7 @@ public class Shrink : Photon.MonoBehaviour
 	public bool shrink = false; // true when player should be shrinking
 	private AudioSource source;
     public AudioClip pressSoundEffect;
-    Hashtable hash = new Hashtable();
+    //Hashtable hash = new Hashtable();
     private GameObject tinyDoor;
     //GameObject networkTextBox;
 
@@ -29,9 +29,9 @@ public class Shrink : Photon.MonoBehaviour
 		//ShrinkPlayer(); // just for testing sound
 		shrunk = false;
 		// need hashtable to set custom properties
-		hash.Add("shrunk", shrunk); 
-		PhotonNetwork.player.SetCustomProperties(hash);
-		shrunk = (bool)PhotonNetwork.player.customProperties["shrunk"];
+		//hash.Add("shrunk", shrunk); 
+		//PhotonNetwork.player.SetCustomProperties(hash);
+		//shrunk = (bool)PhotonNetwork.player.customProperties["shrunk"];
 	}
 
     // Update is called once per frame
@@ -61,22 +61,23 @@ public class Shrink : Photon.MonoBehaviour
 		{
 			shrink = true;
 			shrunk = true;
-			hash["shrunk"] = shrunk; // set to true
+			//hash["shrunk"] = shrunk; // set to true
 			//Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
-			PhotonNetwork.player.SetCustomProperties(hash);
-			Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
-			Debug.Log(PhotonNetwork.playerList[1].CustomProperties);
+			//PhotonNetwork.player.SetCustomProperties(hash);
+			//Debug.Log(PhotonNetwork.playerList[0].CustomProperties);
+			//Debug.Log(PhotonNetwork.playerList[1].CustomProperties);
 			
 			if (pressSoundEffect != null)
 			{
 				source.PlayOneShot(pressSoundEffect, 2.0f);
 			}
-			if ((bool)PhotonNetwork.playerList[0].CustomProperties["shrunk"] == true && (bool)PhotonNetwork.playerList[1].CustomProperties["shrunk"] == true)
-			{
-				tinyDoor = GameObject.FindWithTag("tiny door"); // to make easier to find
-				tinyDoor.SendMessage("IsShrunkRPC");
-				Debug.Log("calling door script");
-			}
+			//if ((bool)PhotonNetwork.playerList[0].CustomProperties["shrunk"] == true && (bool)PhotonNetwork.playerList[1].CustomProperties["shrunk"] == true)
+			//{
+			tinyDoor = GameObject.FindWithTag("tiny door"); // to make easier to find
+			Debug.Log("found tiny door");
+			tinyDoor.SendMessage("IsShrunkRPC");
+			Debug.Log("calling door script");
+			//
 
 		}
     }
