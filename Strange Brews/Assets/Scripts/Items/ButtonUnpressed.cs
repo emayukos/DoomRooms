@@ -8,9 +8,9 @@ public class ButtonUnpressed : MonoBehaviour
     void Start()
     {
         //All Interactable objects
-        GetComponent<Interactable>().setLookDescription("buttonUnpressed");
+        GetComponent<Interactable>().setLookDescription("Button");
         //All InventoryItem objects
-        GetComponent<InventoryItem>().setItemName("buttonUnpressed");
+        GetComponent<InventoryItem>().setItemName("Button");
     }
 
 }
