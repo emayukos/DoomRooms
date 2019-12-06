@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/classroom.unity
     guid: 4b67d6391b8c1414cab874e6ae65bf80
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/DarkRoomBase.unity
     guid: 48ec25574e2e32c43a2145088b2b9cd0
   - enabled: 1

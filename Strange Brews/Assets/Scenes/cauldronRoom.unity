@@ -12945,6 +12945,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 2492804934400637279, guid: b4a301acbcabd408dba720d9f3e43abf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2492804934400637273, guid: b4a301acbcabd408dba720d9f3e43abf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26863,6 +26868,12 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 2.5967975
       objectReference: {fileID: 0}
+    - target: {fileID: 6700150628390367750, guid: ddcb6fca8c907467badd327bb4380253,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3545321340923618661, guid: 7187a66011cf44048bfcf071a565084d,
+        type: 2}
     - target: {fileID: 6700150628390367751, guid: ddcb6fca8c907467badd327bb4380253,
         type: 3}
       propertyPath: potion2Prefab
@@ -26878,12 +26889,6 @@ PrefabInstance:
       propertyPath: instantiationId
       value: 19
       objectReference: {fileID: 0}
-    - target: {fileID: 6700150628390367750, guid: ddcb6fca8c907467badd327bb4380253,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 3545321340923618661, guid: 7187a66011cf44048bfcf071a565084d,
-        type: 2}
     m_RemovedComponents:
     - {fileID: 6700150628390367751, guid: ddcb6fca8c907467badd327bb4380253, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ddcb6fca8c907467badd327bb4380253, type: 3}
