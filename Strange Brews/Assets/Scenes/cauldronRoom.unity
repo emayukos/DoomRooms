@@ -26881,6 +26881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6700150628390367748, guid: ddcb6fca8c907467badd327bb4380253,
         type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700150628390367748, guid: ddcb6fca8c907467badd327bb4380253,
+        type: 3}
       propertyPath: viewIdField
       value: 19
       objectReference: {fileID: 0}
@@ -26893,15 +26898,26 @@ PrefabInstance:
         type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
-      objectReference: {fileID: 1700315753}
+      objectReference: {fileID: 602085242}
     - target: {fileID: 6700150628390367748, guid: ddcb6fca8c907467badd327bb4380253,
         type: 3}
       propertyPath: synchronization
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6700150628390367748, guid: ddcb6fca8c907467badd327bb4380253,
+        type: 3}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 6700150626858938478}
     m_RemovedComponents:
     - {fileID: 6700150628390367751, guid: ddcb6fca8c907467badd327bb4380253, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ddcb6fca8c907467badd327bb4380253, type: 3}
+--- !u!4 &6700150626858938478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6700150628390367747, guid: ddcb6fca8c907467badd327bb4380253,
+    type: 3}
+  m_PrefabInstance: {fileID: 6700150626858938477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7581892202529904961
 PrefabInstance:
   m_ObjectHideFlags: 0
