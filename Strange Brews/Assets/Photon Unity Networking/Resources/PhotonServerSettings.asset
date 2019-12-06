@@ -99,4 +99,9 @@ MonoBehaviour:
   - isOpenForOther
   - TurnOffProjector
   - TurnOnProjector
+  - activateFL
+  - FLFollowPlayer
+  - deactivateThis
+  - activateFlashlight
+  - delete
   DisableAutoOpenWizard: 1

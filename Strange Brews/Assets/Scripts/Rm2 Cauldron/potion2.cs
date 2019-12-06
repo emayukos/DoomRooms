@@ -17,6 +17,7 @@ public class potion2 : Photon.MonoBehaviour
 	//private tinydoor tinyDoor;
 	// only send message after second potion is drunk
 	private GameObject tinyDoor;
+	GameObject networkTextBox;
 	//public GameObject potion2Prefab;
 	//public bool stop = false;
 	//private GameObject thisplayer; // figure out how to do this individually
@@ -29,8 +30,11 @@ public class potion2 : Photon.MonoBehaviour
 
 	private void Start()
 	{
+		networkTextBox = GameObject.Find("Network Message Text");
 		tinyDoor = GameObject.FindWithTag("tiny door"); // to make easier to find
 		source = GetComponent<AudioSource>();
+		
+		
 		
 		// disable script on other potion until this one is destroyed
 		//potion2Prefab.GetComponent<potion2>().enabled = false;
@@ -39,18 +43,39 @@ public class potion2 : Photon.MonoBehaviour
 		//isActive(true); // for testing
 	}
 
+
+
 	private void Update()
 	{
+		// if both players are shrunk (and this script hasn't been called yet
+			// set empty bottle sprite to active and destroy self
+		if(PhotonNetwork.playerList.Length > 1)
+		{
+			if ((bool)PhotonNetwork.playerList[0].CustomProperties ["shrunk"] == true && 
+				(bool)PhotonNetwork.playerList[1].CustomProperties ["shrunk"] == true)
+			{
+			
+				networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "Both players drank shrinking potion!");
+				Instantiate(emptyBottlePrefab, transform.position, Quaternion.identity, null);
+				Destroy(gameObject);
+				tinyDoor.SendMessage("IsShrunk");
+			}
+
+		}
+
+		// elif other player clicked potion, shrink player and do above
 		// make potion script for other player that checks that it's not their view
-		if(inRange && Input.GetKeyDown(KeyCode.E)) 
+		else if(inRange && Input.GetKeyDown(KeyCode.E)) 
 		{
 			if(!(Player.GetComponent<Shrink>().shrunk)) // if player hasn't shrunk already
 			{
+				networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "second player drank shrinking potion!");
 				drinkPotionRPC();
 			}
 			
 			//stop = true;
 		}
+		
 
 	}
 	

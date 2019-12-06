@@ -37,11 +37,7 @@ public class Box : Photon.MonoBehaviour
 	{
 		if(inRange && Input.GetKeyDown(KeyCode.E)) // make icon that says "press E" to open
 		{
-			if (isOpen)
-			{
-				photonView.RPC("CloseBox", PhotonTargets.All);
-			}
-			else
+			if (!isOpen)
 			{
 				photonView.RPC("OpenBox", PhotonTargets.All);
 			}

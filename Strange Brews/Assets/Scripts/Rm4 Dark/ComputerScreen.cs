@@ -67,7 +67,14 @@ public class ComputerScreen : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             inRange = false;
-            computerScreenPanel.SetActive(false);
+            if (!unlocked)
+            {
+                computerScreenPanel.SetActive(false);
+            }
+            else
+            {
+                photonView.RPC("ComOff", PhotonTargets.All);
+            }
             UIopen = !UIopen;
 
         }

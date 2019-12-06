@@ -20,9 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/cauldronRoom.unity
     guid: 1afab8f37ead64595a1a24b579c1bbee
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DarkRoomBase.unity
     guid: 48ec25574e2e32c43a2145088b2b9cd0
+  - enabled: 0
+    path: Assets/Scenes/EndScene.unity
+    guid: 4357b864dd5ffd649a8daec0e166ca6e
   - enabled: 0
     path: Assets/Scenes/Emily's test room.unity
     guid: 6016fc6f701f94b799756fa3afff09d8
