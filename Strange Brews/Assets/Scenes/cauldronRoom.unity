@@ -4849,6 +4849,9 @@ MonoBehaviour:
   UIConnected: {fileID: 1050352324}
   connected: 0
   group: {fileID: 2036490115}
+  hint1: Maybe it connects to someone...
+  hint2: Maybe it we both have to look at them...
+  text: {fileID: 1957358046}
 --- !u!114 &334451266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7893,6 +7896,8 @@ MonoBehaviour:
   code: 16
   digit1: {fileID: 1026666171}
   digit2: {fileID: 1489374381}
+  hint: Maybe the owner wrote their password on a scroll
+  text: {fileID: 1957358046}
 --- !u!1 &599167602
 GameObject:
   m_ObjectHideFlags: 0
@@ -8458,6 +8463,8 @@ MonoBehaviour:
   i31: Unicorn Horn
   i32: Werewolf Fangs
   photonView: {fileID: 2137422133}
+  hint: Maybe the crystal balls will have the answers
+  text: {fileID: 1957358046}
 --- !u!82 &612348041
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10931,6 +10938,9 @@ MonoBehaviour:
   UIConnected: {fileID: 1050352324}
   connected: 0
   group: {fileID: 2036490115}
+  hint1: Maybe it connects to someone...
+  hint2: Maybe it we both have to look at them...
+  text: {fileID: 1957358046}
 --- !u!114 &799851541
 MonoBehaviour:
   m_ObjectHideFlags: 0

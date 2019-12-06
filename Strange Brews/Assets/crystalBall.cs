@@ -23,6 +23,11 @@ public class crystalBall : MonoBehaviour
 
     public crystalBallGroup group;
 
+    private int attempts;
+    public string hint1 = "Maybe it connects to someone...";
+    public string hint2 = "Maybe it we both have to look at them...";
+    public messageBox text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,6 +85,15 @@ public class crystalBall : MonoBehaviour
         if (isOpen == false)
         {
             photonView.RPC("isOpenForOther", PhotonTargets.All);
+            attempts++;
+            if(attempts > 3 && attempts < 6)
+            {
+                text.SendToTextBox(hint1);
+            }
+            if(attempts >= 6)
+            {
+                text.SendToTextBox(hint2);
+            }
         }
 
         isOpen = true;

@@ -2399,6 +2399,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
+  hint1: Maybe its a seating plan...
+  hint2: Maybe the class list can help...
+  text: {fileID: 0}
   fileCabinet: {fileID: 1433076872}
   photonView: {fileID: 1433076876}
   incorrectanswer: {fileID: 8300000, guid: 24f21139d713343159ca99953f70c0a2, type: 3}
@@ -6097,6 +6100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 1
+  hint1: Maybe its a seating plan...
+  hint2: Maybe the class list can help...
+  text: {fileID: 496310778}
   fileCabinet: {fileID: 1433076872}
   photonView: {fileID: 1433076876}
   incorrectanswer: {fileID: 8300000, guid: 24f21139d713343159ca99953f70c0a2, type: 3}

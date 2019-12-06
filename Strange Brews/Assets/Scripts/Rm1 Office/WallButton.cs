@@ -17,10 +17,15 @@ public class WallButton : Photon.MonoBehaviour
     public Light greenlight;
     bool lightOn = false;
 
+    private int attempts;
+    public string hint1 = "Maybe buttons are connected...";
+    public string hint2 = "Maybe the buttons have to be pressed at the same time...";
+    public messageBox text;
 
-	// can have another script that makes buttons blink if you wanted to
 
-	private void Start()
+    // can have another script that makes buttons blink if you wanted to
+
+    private void Start()
 	{
 		source = GetComponent<AudioSource>();
 	}
@@ -66,6 +71,15 @@ public class WallButton : Photon.MonoBehaviour
 	void pressButtonRPC()
 	{
 		photonView.RPC("pressButton", PhotonTargets.All);
+        attempts++;
+        if (attempts > 6 && attempts < 10)
+        {
+            text.SendToTextBox(hint1);
+        }
+        else if (attempts >= 10)
+        {
+            text.SendToTextBox(hint2);
+        }
 	}
 	
 	void unpressButtonRPC()

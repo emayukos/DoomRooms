@@ -13,6 +13,13 @@ public class messageBox : MonoBehaviour
     private float timeLeft;
     public float showMessageTime = 5.0f;
 
+    private bool isMessage;
+
+    public void SendToTextBox(string message)
+    {
+        photonView.RPC("MessageDisplayLook", PhotonTargets.All, message);
+    }
+
 
     [PunRPC]
     public void MessageDisplayLook(string description)
@@ -20,6 +27,7 @@ public class messageBox : MonoBehaviour
         //changes Text to show only new text
         timeLeft = showMessageTime;
         textLine.text += description + "\n";
+        isMessage = true;
     }
 
     [PunRPC]
@@ -40,16 +48,16 @@ public class messageBox : MonoBehaviour
     public void ResetMessageBox()
     {
         textLine.text = "";
+        isMessage = false;
     }
 
     private void Update()
     {
-        if (timeLeft > 0f)
-        {
-            timeLeft -= Time.deltaTime;
-        }
         
-        if (timeLeft < 0f)
+        timeLeft -= Time.deltaTime;
+        
+        
+        if (timeLeft < 0f && isMessage)
         {
             photonView.RPC("ResetMessageBox", PhotonTargets.All);
         }
