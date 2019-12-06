@@ -14,7 +14,7 @@ public class SoundEffectsOnEnter : MonoBehaviour
     {
     	source = GetComponent<AudioSource>(); // need this!
 		//GetComponent<AudioSource> ().loop = true;
-		source.volume = 1.0f; // to lower volume
+		source.volume = 0.2f; // to lower volume
         StartCoroutine(playEngineSound());
     }
  
