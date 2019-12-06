@@ -2917,8 +2917,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116645380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.06, y: -11.589, z: 78.24609}
-  m_LocalScale: {x: 0.501182, y: 1.8209356, z: 1}
+  m_LocalPosition: {x: -6.06, y: -11.6068, z: 78.24609}
+  m_LocalScale: {x: 0.501182, y: 1.8563097, z: 1}
   m_Children: []
   m_Father: {fileID: 1979498450}
   m_RootOrder: 1
@@ -20584,7 +20584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81002f2c2b7153c4baca332a4c3f6dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  helpOnOff: -1
+  helpOnOff: 1
   helpMenu: {fileID: 925055347}
   inventoryMenu: {fileID: 560048393}
   personalMessageBox: {fileID: 193190716}
