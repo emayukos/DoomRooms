@@ -6447,8 +6447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17dfb56ef27714fee8209ea8b2ca8e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookDescription: 
-  itemName: 
+  lookDescription: Final Key
+  itemName: Final Key
 --- !u!114 &498148714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26888,6 +26888,16 @@ PrefabInstance:
         type: 3}
       propertyPath: instantiationId
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700150628390367748, guid: ddcb6fca8c907467badd327bb4380253,
+        type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 1700315753}
+    - target: {fileID: 6700150628390367748, guid: ddcb6fca8c907467badd327bb4380253,
+        type: 3}
+      propertyPath: synchronization
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6700150628390367751, guid: ddcb6fca8c907467badd327bb4380253, type: 3}

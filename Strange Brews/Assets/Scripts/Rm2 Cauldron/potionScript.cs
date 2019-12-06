@@ -69,7 +69,7 @@ public class potionScript : Photon.MonoBehaviour
 	{
 		source.clip = drinkSoundEffect;
 		source.Play();
-		networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, counter + "drank shrinking potion!");
+		networkTextBox.GetComponent<messageBox>().photonView.RPC("MessageDisplayLook", PhotonTargets.All, "drank shrinking potion!");
 		// should we change this so only the player who drank gets this?
 		//++counter;
 		//if(counter == 1)
