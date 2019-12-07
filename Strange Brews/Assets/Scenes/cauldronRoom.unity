@@ -4742,11 +4742,11 @@ GameObject:
   m_Component:
   - component: {fileID: 334451263}
   - component: {fileID: 334451262}
-  - component: {fileID: 334451264}
   - component: {fileID: 334451265}
   - component: {fileID: 334451267}
   - component: {fileID: 334451266}
   - component: {fileID: 334451268}
+  - component: {fileID: 334451264}
   m_Layer: 0
   m_Name: cr_crystal_ball_blue
   m_TagString: Untagged
