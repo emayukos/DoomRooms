@@ -20584,7 +20584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81002f2c2b7153c4baca332a4c3f6dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  helpOnOff: 1
+  helpOnOff: -1
   helpMenu: {fileID: 925055347}
   inventoryMenu: {fileID: 560048393}
   personalMessageBox: {fileID: 193190716}
