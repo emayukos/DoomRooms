@@ -25,6 +25,8 @@ public class buttonSlot : Photon.MonoBehaviour
 	public bool buttonTaskCompleted = false; // need rpc
 
     public safe safeObject;
+
+    public bool testing;
 	
 
 	private void Start()
@@ -79,6 +81,12 @@ public class buttonSlot : Photon.MonoBehaviour
 
 		//	}
 		}
+        if (testing)
+        {
+            // keep both buttons pressed
+            signalPaintingRPC();
+            safeObject.activate();
+        }
 
 
 
