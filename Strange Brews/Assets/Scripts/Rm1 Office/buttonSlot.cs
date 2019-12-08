@@ -25,6 +25,8 @@ public class buttonSlot : Photon.MonoBehaviour
 	public bool buttonTaskCompleted = false; // need rpc
 
     public safe safeObject;
+
+    public bool testing;
 	
 
 	private void Start()
@@ -47,12 +49,12 @@ public class buttonSlot : Photon.MonoBehaviour
 
 			if (inRange && Input.GetKeyDown(KeyCode.E))
 			{
-				if (GameObject.Find("Inventory").GetComponent<Inventory>().searchItem("buttonUnpressed"))
+				if (GameObject.Find("Inventory").GetComponent<Inventory>().searchItem("Button"))
 				{
 					// put button 1 in wall
 					//Instantiate(wallButton1, buttonPositionInScene, Quaternion.identity);
 					putButtonInWallRPC();
-                    GameObject.Find("Inventory").GetComponent<Inventory>().removeItem("buttonUnpressed");
+                    GameObject.Find("Inventory").GetComponent<Inventory>().removeItem("Button");
 
 
                 }
@@ -79,6 +81,12 @@ public class buttonSlot : Photon.MonoBehaviour
 
 		//	}
 		}
+        if (testing)
+        {
+            // keep both buttons pressed
+            signalPaintingRPC();
+            safeObject.activate();
+        }
 
 
 

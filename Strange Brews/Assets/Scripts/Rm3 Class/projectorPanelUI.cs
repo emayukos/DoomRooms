@@ -98,8 +98,8 @@ public class projectorPanelUI : MonoBehaviour
             // for photon
             Debug.Log(photonView);
             this.photonView.RPC("openFileCabinet", PhotonTargets.All);
-            networkTextBox.GetComponent<InteractText>().photonView.RPC(
-                    "DisplayLook", PhotonTargets.All, "Correct Answer! The filling cabinet has been opened");
+            networkTextBox.GetComponent<messageBox>().photonView.RPC(
+                    "AddText", PhotonTargets.All, "Correct Answer! The filling cabinet has been opened");
         }
         else
         {

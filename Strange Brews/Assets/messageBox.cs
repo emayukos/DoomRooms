@@ -41,7 +41,7 @@ public class messageBox : MonoBehaviour
     {
         //appends new text onto existing display
         timeLeft = showMessageTime;
-        textLine.text += "\n" + description;
+        textLine.text += description + "\n";
     }
 
     [PunRPC]
