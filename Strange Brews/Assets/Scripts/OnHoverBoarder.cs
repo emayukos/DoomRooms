@@ -9,7 +9,7 @@ public class OnHoverBoarder : MonoBehaviour
 	
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		GetComponent<Renderer>().material = border;
+		GetComponent<Renderer>().material = border; // have bright shader
 	}
 
     void OnTriggerStay2D(Collider2D col)
@@ -19,7 +19,7 @@ public class OnHoverBoarder : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
 	{
-		GetComponent<Renderer>().material = nonBorder;
+		GetComponent<Renderer>().material = nonBorder; 
 	}
 	
 

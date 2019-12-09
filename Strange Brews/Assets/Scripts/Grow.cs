@@ -9,10 +9,7 @@ public class Grow : Photon.MonoBehaviour
 	public float originalSize = 0.5f;
 	public bool grow = false; // true when player should be shrinking
 	private AudioSource source;
-    public AudioClip pressSoundEffect;
-
-    // have cute/funny shrinking sound effect play only on key press 
-    // (after pressing E and the sound effect for drinking the potion)
+    public AudioClip growSoundEffect; 
     
     private void Start()
 	{
@@ -41,9 +38,9 @@ public class Grow : Photon.MonoBehaviour
     [PunRPC]
     public void GrowPlayer() {
 		grow = true;
-		if (pressSoundEffect != null)
+		if (growSoundEffect != null)
             {
-                source.PlayOneShot(pressSoundEffect);
+                source.PlayOneShot(growSoundEffect);
             }
     }
 }

@@ -9,8 +9,6 @@ public class PickUp : Photon.MonoBehaviour
 
     private string itemNameFound = null;
     private bool inRange = false;
-    //private string itemDescription = null;
-
 
     void Start()
     {
@@ -26,16 +24,11 @@ public class PickUp : Photon.MonoBehaviour
             if (inRange && Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("pickup");
-                //pop-up only when new message to display
-                //networkTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
-
                 //adds item to multiplayer inventory text box
                 networkTextBox.GetComponent<messageBox>().photonView.RPC("MessageDisplayLook", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
-
                 //add item to inventory, remove from scene
                 //pickup();
                 inventory.GetComponent<Inventory>().photonView.RPC("addItem", PhotonTargets.All, itemNameFound);
-                //this.photonView.RPC("pickup", PhotonTargets.All);
                 this.photonView.RPC("deleteObject", PhotonTargets.All);
                 
             }
@@ -69,24 +62,6 @@ public class PickUp : Photon.MonoBehaviour
             inRange = false;
         }
     }
-
-    //[PunRPC]
-    //private void pickup()
-    //{
-        //adds item to inventory
-        //inventory.GetComponent<Inventory>().photonView.RPC("addItem", PhotonTargets.All, itemNameFound);
-        //     if(itemNameFound == "Final Key")
-        //{
-        //	HasFinalKey = true;
-        //}
-        //removes physical item object from scene
-        //Destroy(gameObject);
-        //PhotonNetwork.Destroy(gameObject);
-        //gameObject.SetActive(false);
-
-      
-
-    //}
 
     [PunRPC]
     private void deleteObject()

@@ -7,52 +7,23 @@ public class potionScript : Photon.MonoBehaviour
 	// make public until pickup script is working
 	public bool drank = false;
 	private bool inRange = false;
-	//public Sprite fullBottle;
-	//public GameObject emptyBottlePrefab;
-
 	private AudioSource source;
     public AudioClip drinkSoundEffect;
 	private GameObject Player;
-	private PhotonPlayer photonPlayer;
-	//private tinydoor tinyDoor;
-	// only send message after second potion is drunk
-	//private GameObject tinyDoor;
 	GameObject networkTextBox;
-	private int counter = 0;
-	//public GameObject potion2Prefab;
-	//public bool stop = false;
-	//private GameObject thisplayer; // figure out how to do this individually
-
-	private void Awake()
-	{
-		//Player = GameObject.FindWithTag("Player");
-		
-	}
 
 	private void Start()
 	{
 		networkTextBox = GameObject.Find("Network Message Text");
-		//tinyDoor = GameObject.FindWithTag("tiny door"); // to make easier to find
 		source = GetComponent<AudioSource>();
-		
-		// disable script on other potion until this one is destroyed
-		//potion2Prefab.GetComponent<potion2>().enabled = false;
-
-		//Player = GameObject.FindWithTag("Player");
-		//isActive(true); // for testing
 	}
 
 	private void Update()
 	{
-		// make potion script for other player that checks that it's not their view
+		// for shrinking both players
 		if(inRange && Input.GetKeyDown(KeyCode.E)) 
 		{
-			//if(!Player.GetComponent<Shrink>().shrunk) // if player hasn't shrunk already
-			//{
 			drinkPotionRPC();
-			//}
-			
-			//stop = true;
 		}
 
 	}
@@ -65,61 +36,24 @@ public class potionScript : Photon.MonoBehaviour
 
 
 	[PunRPC]
-	IEnumerator drinkPotion()  // don't know if allowed to use this format so test
+	IEnumerator drinkPotion()  // IEnumerator to call sound effects in sequence
 	{
 		source.clip = drinkSoundEffect;
 		source.Play();
 		networkTextBox.GetComponent<messageBox>().photonView.RPC("MessageDisplayLook", PhotonTargets.All, "drank shrinking potion!");
-		// should we change this so only the player who drank gets this?
-		//++counter;
-		//if(counter == 1)
-		//{
-		//	networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "One player drank the shrinking potion!");
-		//}
-		//if(counter >= 2)
-		//{
-		//	networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "Both players drank the shrinking potion!");
-		//}
-		//else // for debugging
-		//{
-		//	networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, counter + " player drank the shrinking potion!");
-		//}
-		
-		//Debug.Log("player drank potion");
 		yield return new WaitForSeconds(source.clip.length);
-		//GetComponent<SpriteRenderer>().sprite =;
-		//Instantiate(emptyBottlePrefab, transform.position, Quaternion.identity, null);
-		//GetComponent<SpriteRenderer>().sprite = emptyBottle;
-		//potion2Prefab.GetComponent<potion2>().enabled = false;
-		//Destroy(gameObject);
-		//if(Player.PhotonView.isMine)
 		Player.SendMessage("ShrinkPlayerRPC");
-		//if(counter >= 2)
-		//{
-		//tinyDoor.SendMessage("IsShrunk");
-		//}
+
 		
 	}
-	
-	//// call shrink player RPC for photonPlayer
-	//void callShrink() 
-	//{ 
-	//	Player.SendMessage("ShrinkPlayerRPC");
-	//}
-	
-	
-	
-	// for player 1
+		
 	private void OnTriggerEnter2D(Collider2D col) 
 	{
-		//inRange |= (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine);
 		if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
-		{
-			photonPlayer = PhotonView.Get(col.transform.gameObject).owner; // get the player 
+		{ 
 			inRange = true;
-			// need to assign player too! 
+			// need to assign player too 
 			Player = col.transform.gameObject;
-			//if(photonPlayer.isMasterClient)
 
 			
 		}
