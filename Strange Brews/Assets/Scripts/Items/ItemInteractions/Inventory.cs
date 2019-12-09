@@ -54,7 +54,7 @@ public class Inventory : Photon.MonoBehaviour
 			}
 
             //adds item to inventory display list
-            //inventoryMenuText.GetComponent<InteractText>().DisplayLook(InventoryToString());
+            //inventoryMenuText.GetComponent<InteractText>().DisplayLook(InventoryToString());  //for offline initial testing
             inventoryMenuText.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, InventoryToString());
         }
         else

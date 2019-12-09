@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class FinalDoor : MonoBehaviour
 {
-    public PhotonView photonView;
-    public GameObject endDoor;
+    //End door controller of Dark Room, opened by two buttons held simultaneously
+    //not on actual door gameObject
+
+    public PhotonView photonView;   //door's photonview
+    public GameObject endDoor;      //door's gameObject
     private bool[] switches = new bool[2];
 
 
-    // Start is called before the first frame update
+ 
     void Start()
     {
         switches[0] = false;
         switches[1] = false;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         //Debug.Log("Switch 0: " + switches[0] + "   Switch 1: " + switches[1]);
         if(switches[0] && switches[1])
         {
-            //endDoor.GetComponent<SwitchDoor>().doorOpen();
+            //endDoor.GetComponent<SwitchDoor>().doorOpen();    //for offline initial testing
             endDoor.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
         }
     }
@@ -30,7 +33,7 @@ public class FinalDoor : MonoBehaviour
     [PunRPC]
     public void setSwitchOn(int s)
     {
-        if(s == 1 || s == 0)
+        if(s == 1 || s == 0)    //avoid array out of bounds error
         {
             switches[s] = true;
         }
@@ -40,7 +43,7 @@ public class FinalDoor : MonoBehaviour
     [PunRPC]
     public void setSwitchOff(int s)
     {
-        if (s == 1 || s == 0)
+        if (s == 1 || s == 0)    //avoid array out of bounds error
         {
             switches[s] = false;
         }

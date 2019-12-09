@@ -6,7 +6,7 @@ public class EndSwitches : MonoBehaviour
 {
     public GameObject finalDoorControl;
     public GameObject inventory;
-    public int switchNum;
+    public int switchNum;   //two switches, need number for array access in finalDoorControl intermediary
     public string key;
     public bool inRange = false;
 
@@ -14,13 +14,14 @@ public class EndSwitches : MonoBehaviour
     public GameObject wrongLight;
     public GameObject rightLight;
 
+
     private void Start()
     {
         wrongLight.SetActive(false);
         rightLight.SetActive(false);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if(inRange && Input.GetKeyDown(KeyCode.E))
@@ -28,7 +29,8 @@ public class EndSwitches : MonoBehaviour
             Debug.Log("pressing end switch");
             if (inventory.GetComponent<Inventory>().searchItem(key))
             {
-                //finalDoorControl.GetComponent<FinalDoor>().setSwitchOn(switchNum);
+                // If the Final Key for the given button is in the inventory, the button can unlock the door
+                //finalDoorControl.GetComponent<FinalDoor>().setSwitchOn(switchNum);    //for offline initial testing
                 finalDoorControl.GetComponent<FinalDoor>().photonView.RPC("setSwitchOn", PhotonTargets.All, switchNum);
                 thisPhotonView.RPC("rightLightOn", PhotonTargets.All);
             }
@@ -39,7 +41,7 @@ public class EndSwitches : MonoBehaviour
         }
         if(inRange && Input.GetKeyUp(KeyCode.E))
         {
-            //finalDoorControl.GetComponent<FinalDoor>().setSwitchOff(switchNum);
+            //finalDoorControl.GetComponent<FinalDoor>().setSwitchOff(switchNum);    //for offline initial testing
             finalDoorControl.GetComponent<FinalDoor>().photonView.RPC("setSwitchOff", PhotonTargets.All, switchNum);
             thisPhotonView.RPC("rightLightOff", PhotonTargets.All);
             thisPhotonView.RPC("wrongLightOff", PhotonTargets.All);
@@ -60,7 +62,7 @@ public class EndSwitches : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             inRange = false;
-            //finalDoorControl.GetComponent<FinalDoor>().setSwitchOff(switchNum);
+            //finalDoorControl.GetComponent<FinalDoor>().setSwitchOff(switchNum);    //for offline initial testing
             finalDoorControl.GetComponent<FinalDoor>().photonView.RPC("setSwitchOff", PhotonTargets.All, switchNum);
             thisPhotonView.RPC("rightLightOff", PhotonTargets.All);
             thisPhotonView.RPC("wrongLightOff", PhotonTargets.All);

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DoorSwitch : Photon.MonoBehaviour
 {
+    //pressure pad door switch
     public GameObject door;
-    public GameObject pressurePadOn;
+    public GameObject pressurePadOn;    //sprite for when pressure pad is pushed down
     public PhotonView thisPhotonView;
 
     private void Start()
@@ -17,8 +18,6 @@ public class DoorSwitch : Photon.MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //switch goes down
-        //   animate here?
-
         if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             Debug.Log("Door should open.");
@@ -32,7 +31,6 @@ public class DoorSwitch : Photon.MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         //switch goes up
-        //   animate here?
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             Debug.Log("Door should close.");

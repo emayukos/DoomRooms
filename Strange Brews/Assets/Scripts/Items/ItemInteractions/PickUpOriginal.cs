@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUp : Photon.MonoBehaviour
+public class PickUpOriginal : Photon.MonoBehaviour
 {
+    //first version
     GameObject inventory;
     GameObject networkTextBox;
 
@@ -30,14 +31,14 @@ public class PickUp : Photon.MonoBehaviour
                 //networkTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
 
                 //adds item to multiplayer inventory text box
-                networkTextBox.GetComponent<messageBox>().photonView.RPC("MessageDisplayLook", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
+                networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The " + itemNameFound + " was put in the inventory.");
 
                 //add item to inventory, remove from scene
                 //pickup();
                 inventory.GetComponent<Inventory>().photonView.RPC("addItem", PhotonTargets.All, itemNameFound);
                 //this.photonView.RPC("pickup", PhotonTargets.All);
                 this.photonView.RPC("deleteObject", PhotonTargets.All);
-                
+
             }
         }
     }
@@ -47,7 +48,7 @@ public class PickUp : Photon.MonoBehaviour
         if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
         {
             itemNameFound = GetComponent<InventoryItem>().getItemName();
-			inRange = true;
+            inRange = true;
         }
 
     }
@@ -73,18 +74,18 @@ public class PickUp : Photon.MonoBehaviour
     //[PunRPC]
     //private void pickup()
     //{
-        //adds item to inventory
-        //inventory.GetComponent<Inventory>().photonView.RPC("addItem", PhotonTargets.All, itemNameFound);
-        //     if(itemNameFound == "Final Key")
-        //{
-        //	HasFinalKey = true;
-        //}
-        //removes physical item object from scene
-        //Destroy(gameObject);
-        //PhotonNetwork.Destroy(gameObject);
-        //gameObject.SetActive(false);
+    //adds item to inventory
+    //inventory.GetComponent<Inventory>().photonView.RPC("addItem", PhotonTargets.All, itemNameFound);
+    //     if(itemNameFound == "Final Key")
+    //{
+    //	HasFinalKey = true;
+    //}
+    //removes physical item object from scene
+    //Destroy(gameObject);
+    //PhotonNetwork.Destroy(gameObject);
+    //gameObject.SetActive(false);
 
-      
+
 
     //}
 

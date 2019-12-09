@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HideableBoxes : MonoBehaviour
 {
+    //handles message boxes for help menu, inventory, and any text for player actions
+
     public int helpOnOff = 1;   // 1 is On, -1 is Off
     int invOnOff;
     public GameObject helpMenu;
@@ -19,14 +21,10 @@ public class HideableBoxes : MonoBehaviour
         invOnOff = -1;
     }
 
-    private void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        //switches indicator from 'on' to 'off' or vice versa when applicable key is hit
         if(Input.GetKeyDown(KeyCode.H))
         {
             helpOnOff = helpOnOff * -1;
@@ -37,13 +35,8 @@ public class HideableBoxes : MonoBehaviour
             invOnOff = invOnOff * -1;
 
         }
-        //if (Input.GetKeyDown(KeyCode.M))
-        //{
-        //    personalMessageBox.SetActive(false);
-        //    networkMessageBox.SetActive(false);
-        //}
 
-
+        //open or closes menu given onOff indicator
         OpenClose(helpMenu, helpOnOff);
         OpenClose(inventoryMenu, invOnOff);
 
@@ -53,12 +46,12 @@ public class HideableBoxes : MonoBehaviour
     {
         if (onOff < 0)
         {
-            //turn off help menu
+            //turn off help/inventory menu
             menu.SetActive(false);
         }
         if (onOff > 0)
         {
-            //turn on help menu
+            //turn on help/inventory menu
             menu.SetActive(true);
         }
     }

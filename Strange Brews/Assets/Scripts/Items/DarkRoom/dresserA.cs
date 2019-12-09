@@ -27,8 +27,7 @@ public class dresserA : MonoBehaviour
 
             if (inRange)
             {
-                //record unlocking action in 2-player log, then perform unlocking action
-                //networkTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
+                //open dresser and tell player they did it
                 networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The dresser A was opened.");
                 this.photonView.RPC("openDresser", PhotonTargets.All);
             }
@@ -55,8 +54,7 @@ public class dresserA : MonoBehaviour
     [PunRPC]
     private void openDresser()
     {
-        //itemInside.SetActive(true);
-        //do what's needed to the lockedThing
+        //move open dresser with clue to dresser position, destroy closed dresser
         openSprite.transform.position = position;
         PhotonNetwork.Destroy(gameObject);
 

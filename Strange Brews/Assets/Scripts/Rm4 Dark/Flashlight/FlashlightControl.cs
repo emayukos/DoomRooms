@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FlashlightControl : MonoBehaviour
 {
+    //no longer needed, not kept up
+
     public GameObject flashlight1, flashlight2;
 
 

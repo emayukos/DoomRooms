@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class ExitScene : Photon.MonoBehaviour
 {
+    //simplified scene transition because it's the end and no new puzzle scenes need stuff put in
 
     bool inRange = false;
-    //public Material border;
+    //public Material border;   //hard mode, no borders put on
     //public Material unborder;
     public GameObject levelChanger;
     public Text personalTextBox;
