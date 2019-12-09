@@ -34,15 +34,15 @@ public class projectorInteraction : MonoBehaviour
             {
                 photonView.RPC("TurnOffProjector", PhotonTargets.All);
                 TurnOffProjector();
-                networkTextBox.GetComponent<InteractText>().photonView.RPC(
-                    "DisplayLook", PhotonTargets.All, "The projector has been turned off!");
+                networkTextBox.GetComponent<messageBox>().photonView.RPC(
+                    "MessageDisplayLook", PhotonTargets.All, "The projector has been turned off!");
             }
             else
             {
                 photonView.RPC("TurnOnProjector", PhotonTargets.All);
                 //TurnOnProjector();
-                networkTextBox.GetComponent<InteractText>().photonView.RPC(
-                    "DisplayLook", PhotonTargets.All, "The projector has been turned on!");
+                networkTextBox.GetComponent<messageBox>().photonView.RPC(
+                    "AddText", PhotonTargets.All, "The projector has been turned on!");
             }
 
             // for photon

@@ -25,6 +25,8 @@ public class buttonSlot : Photon.MonoBehaviour
 	public bool buttonTaskCompleted = false; // need rpc
 
     public safe safeObject;
+
+    public bool testing;
 	
 
 	private void Start()
@@ -34,7 +36,7 @@ public class buttonSlot : Photon.MonoBehaviour
 
 	private void Update()
 	{
-		// press E to get button from inventory
+		// press G to get button from inventory
 		// won't do anything if player doesn't have the button yet
 		if (!buttonTaskCompleted)
 		{
@@ -50,8 +52,11 @@ public class buttonSlot : Photon.MonoBehaviour
 				if (GameObject.Find("Inventory").GetComponent<Inventory>().searchItem("Button"))
 				{
 					// put button 1 in wall
+					//Instantiate(wallButton1, buttonPositionInScene, Quaternion.identity);
 					putButtonInWallRPC();
                     GameObject.Find("Inventory").GetComponent<Inventory>().removeItem("Button");
+
+
                 }
 				else
 				{
@@ -59,7 +64,32 @@ public class buttonSlot : Photon.MonoBehaviour
 				}
 
 			}
+
+		//	if (inRange && buttonInWall)
+		//	{
+		//		if (Input.GetKeyDown(KeyCode.E)) // press E to press button
+		//		{
+		//			// pressing button
+		//			wallButton1.SendMessage("pressButton");
+		//			// stop blinking
+		//			// if both buttons are pressed, keep them both pressed down
+		//		}
+		//		else // unpress button
+		//		{
+		//			wallButton1.SendMessage("unpressButton");
+		//		}
+
+		//	}
 		}
+        if (testing)
+        {
+            // keep both buttons pressed
+            signalPaintingRPC();
+            safeObject.activate();
+        }
+
+
+
 	}
 
 	private void OnTriggerEnter2D(Collider2D col) // change this to on button press
@@ -86,6 +116,8 @@ public class buttonSlot : Photon.MonoBehaviour
 		Debug.Log("button task completed!");
 		painting.SendMessage("movePaintUp");
 	}
+	
+	
 	
 	void putButtonInWallRPC()
 	{

@@ -11,8 +11,13 @@ public class OnHoverBoarder : MonoBehaviour
 	{
 		GetComponent<Renderer>().material = border; // have bright shader
 	}
-	
-	void OnTriggerExit2D(Collider2D col)
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        GetComponent<Renderer>().material = border;
+    }
+
+    void OnTriggerExit2D(Collider2D col)
 	{
 		GetComponent<Renderer>().material = nonBorder; 
 	}
