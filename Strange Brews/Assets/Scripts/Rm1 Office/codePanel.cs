@@ -24,6 +24,12 @@ public class codePanel : MonoBehaviour
 
 	public string code = "3101";
 
+    private int attempts;
+    public string hint1 = "Maybe one of the days is Today...";
+    public string hint2 = "Maybe the answer is two dates...";
+    public string hint3 = "Maybe the days are Today and Tomorrow...";
+    public messageBox text;
+
     private void Awake()
     {
         source = GetComponent<AudioSource>();
@@ -74,6 +80,20 @@ public class codePanel : MonoBehaviour
             for (int i=0;i<4;i++) chararray[i] = '0';
             
             spot = 0;
+
+            attempts++;
+            if (attempts > 3 && attempts < 8)
+            {
+                text.SendToTextBox(hint1);
+            }
+            else if (attempts > 8)
+            {
+                text.SendToTextBox(hint2);
+            }
+            else if (attempts > 12)
+            {
+                text.SendToTextBox(hint3);
+            }
         }
 	}
 

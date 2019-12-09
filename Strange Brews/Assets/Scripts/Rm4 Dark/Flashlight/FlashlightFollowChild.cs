@@ -6,6 +6,7 @@ public class FlashlightFollowChild : MonoBehaviour
 {
     //Altered from CameraFollow
     //CameraFollow CREDIT TO: Unity Tutorial page https://learn.unity.com/tutorial/movement-basics?projectId=5c514956edbc2a002069467c#
+    //When the flashlight is a child of the player, remenant from when it was not, too scared and too much else to do to change since it still works
 
     public GameObject playerThis;        //Public variable to store a reference to the player game object
     public PhotonView photonView;
@@ -23,14 +24,12 @@ public class FlashlightFollowChild : MonoBehaviour
         sightRotate(v, h);
     }
 
-    // LateUpdate is called after Update each frame
     void LateUpdate()
     {
         if (photonView.isMine)
         {
             photonView.RPC("FLFollowPlayer", PhotonTargets.All);
         }
-        
     }
 
 
@@ -38,14 +37,16 @@ public class FlashlightFollowChild : MonoBehaviour
     public void FLFollowPlayer()
     {
         transform.position = playerThis.transform.position;
-        //transform.rotation = playerThis.transform.rotation;
+        //transform.rotation = playerThis.transform.rotation;   //had to be changed due to bug, now irrelevant, but too scared to change it back since it works 
         //Debug.Log(sightRotation);
         rbody.MoveRotation(sightRotation);
     }
 
 
+    //this was added by myself
     private void sightRotate(float v, float h)
     {
+        //keeps location of the light in-line with what direction the player is moving
         if (v == 0)
         {
             if (h < 0)

@@ -21,9 +21,9 @@ public class SpinnerSafe : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
+        //only the closed safe sprite should be visible until interacted with
         codePanel.SetActive(false);
         closedSafe.SetActive(true);
         openedSafe.SetActive(false);
@@ -31,12 +31,12 @@ public class SpinnerSafe : MonoBehaviour
         triggeredKey.SetActive(false);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (inRange && Input.GetKeyDown(KeyCode.E) && !isSafeOpened)
         {
-
+            //when E is pressed, turn UI on or off, whichever it wasn't before
             if (UIopen == false)
             {
                 codePanel.SetActive(true);
@@ -57,8 +57,10 @@ public class SpinnerSafe : MonoBehaviour
     private void openSafe()
     {
         source.PlayOneShot(safeopening, 0.03f);
+        //disable further UI interaction
         codePanel.SetActive(false);
         closedSafe.SetActive(false);
+        //show open safe and now available to grab key
         openedSafe.SetActive(true);
         keyclue.SetActive(true);
         triggeredKey.SetActive(true);
@@ -78,9 +80,10 @@ public class SpinnerSafe : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
-                inRange = false;
-                codePanel.SetActive(false);
-                UIopen = !UIopen;
+            //UI should turn off on it's own when no longer in range
+            inRange = false;
+            codePanel.SetActive(false);
+            UIopen = !UIopen;
         }
     }
 

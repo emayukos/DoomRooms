@@ -5,17 +5,13 @@ using UnityEngine;
 public class CameraFollowPrefab : MonoBehaviour
 {
     //attempt base for camera follow a prefab spawned mainPlayer in photon multiplayer format
-    //currently doesn't work
+    //modified from CameraFollow, credit for that script in CameraFollow comments
 
-    GameObject player;        //Public variable to store a reference to the player game object
+    GameObject player;                  //Public variable to store a reference to the player game object
 
-    private Vector3 offset;            //Private variable to store the offset distance between the player and camera
+    private Vector3 offset;             //Private variable to store the offset distance between the player and camera
     private bool playerSet = false;
 
-    void Start()
-    {
-        
-    }
 
     private void Update()
     {

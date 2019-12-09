@@ -23,7 +23,7 @@ public class Look : MonoBehaviour
             {
                 //display description of looked at object
                 Debug.Log(itemDescription);
-                personalTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
+                //personalTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
                 personalTextBox.GetComponent<InteractText>().DisplayLook(itemDescription);
             }
         }
@@ -41,6 +41,5 @@ public class Look : MonoBehaviour
     {
         itemDescription = null;
     }
-
     
 }

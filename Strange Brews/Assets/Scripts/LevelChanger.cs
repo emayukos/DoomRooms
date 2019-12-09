@@ -11,7 +11,6 @@ public class LevelChanger : Photon.MonoBehaviour
     public Text roomNumberText;
 	private int levelToLoad;
 	public AudioClip unlockSound;
-	//public AudioClip doorOpenSound;
 	private AudioSource source;
 	
 	private GameObject leftDoor;
@@ -19,25 +18,10 @@ public class LevelChanger : Photon.MonoBehaviour
 	private GameObject[] players;
 	public Vector2 startPos;
 
-	//void Update()
-	//{
-	//	if (Input.GetMouseButtonDown(0)) {
-	//		FadeToNextLevel();
-	//	} 
-	//}
-
-	//private void Awake()
-	//{
-	//	DontDestroyOnLoad(this.transform);
-	//}
 
 	private void Awake()
 	{	
-		// check to ensure it's not the first scene
-		// (doing this in first scene won't work if both players
-		// are joining at different times
-		//if(SceneManager.GetActiveScene().name != "OfficeScene")
-		//{
+		// move players in front of door (must enter coordinates with variable in Unity)
 		players = GameObject.FindGameObjectsWithTag("Player");
 		players[0].transform.position = startPos;
 		startPos.x -= 0.25f;
@@ -92,16 +76,8 @@ public class LevelChanger : Photon.MonoBehaviour
 		{
 			source.PlayOneShot(unlockSound);
 		}
-		//if (doorOpenSound != null)
-		//{
-		//	source.PlayOneShot(doorOpenSound);
-		//}
     	FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    
-    
-    
-    
     
     public void FadeToLevel(int levelIndex) {
     	levelToLoad = levelIndex;

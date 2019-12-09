@@ -40,32 +40,6 @@ public class Movement : Photon.MonoBehaviour
 	float selfx;
 	float selfy;
 
-
-
-	//private GameObject mainCam;
-	//public GameObject plCam;
-
-	//private photonHandler avatarSetup;
-
-	//public bool UseTransformView = true;
-
-
-
-
-
-	//private void Awake()
-	//{
-	//	if(!devTesting && photonView.isMine)
-	//	{
-	//		//mainCam = GameObject.Find("Main Camera");
-	//		//mainCam.SetActive(false);
-	//		//plCam.SetActive(true);
-
-	//	}
-	//}
-
-
-
 	// Start is called before the first frame update
 	void Start()
     {
@@ -74,8 +48,6 @@ public class Movement : Photon.MonoBehaviour
         position = rbody.position;
         initial_y = position.y;
         thisAnim = GetComponent<Animator>();
-		//avatarSetup = GetComponent<photonHandler>();
-
     }
 
 
@@ -102,24 +74,8 @@ public class Movement : Photon.MonoBehaviour
             moveCharacter();
         }
 
-
     }
 
-    //private void moveCharacter()
-    //{
-    //    float h = Input.GetAxis("Horizontal");
-    //    float v = Input.GetAxis("Vertical");
-
-    //    rbody.velocity = new Vector2(velocity * h, velocity * v);
-
-    //    //characterscale = (transform.position.y - (transform.position.y - initial_y) * 0.5f) / initial_y;
-
-    //    //transform.localScale = new Vector3(characterscale, characterscale, characterscale);
-        
-    //    Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
-        
-    //    //UpdateAnimation(heading);
-    //}
     void moveCharacter()
     {
         Vector3 rightMovement = Vector3.right * moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
@@ -170,17 +126,12 @@ public class Movement : Photon.MonoBehaviour
 
         thisAnim.SetFloat("DirX", selfx);
         thisAnim.SetFloat("DirY", selfy);
-        //myThirdPersonController myC= GetComponent<myThirdPersonController>();
     }
 
 
 
     private void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        // if it is the local player it streams the positions and other things
-        
-   //     if (UseTransformView)
-			//return; // this will take care of what the code below did before
         if (stream.isWriting)
         {
             stream.SendNext(transform.position);
@@ -190,10 +141,6 @@ public class Movement : Photon.MonoBehaviour
 			stream.SendNext(thisAnim.GetFloat("Last_DirectionY"));
 			stream.SendNext(thisAnim.GetFloat("DirX"));
 			stream.SendNext(thisAnim.GetFloat("DirY"));
-			//stream.SendNext(myC._characterState); // int?
-			
-			
-			
         }
         else
         {
@@ -204,19 +151,7 @@ public class Movement : Photon.MonoBehaviour
 			lastY = (float)stream.ReceiveNext();
 			selfx = (float)stream.ReceiveNext();
 			selfy = (float)stream.ReceiveNext();
-			//thisAnim.state = (int)stream.ReceiveNext();
-		
-			//myC._characterState = (CharacterState)stream.ReceiveNext();
-			//myC._characterState = (int)stream.ReceiveNext();
-			
-			
-
-            
-            
-
         }
     }
-
-
 }
 

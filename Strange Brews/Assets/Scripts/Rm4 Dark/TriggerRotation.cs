@@ -75,12 +75,15 @@ public class TriggerRotation : MonoBehaviour
     [PunRPC]
     public void rotateWall()
     {
+        //rotates object by rotateBy speed and direction within set bounds
         rbody.MoveRotation(Mathf.Clamp(rbody.rotation + rotateBy, lowBound, highBound));
     }
 
     [PunRPC]
     public void syncWalls(Quaternion t)
     {
+        //attempt to synchronize walls over lag
+        //failed, haven't had time to continue the attempt
         transform.rotation = t;
     }
 }

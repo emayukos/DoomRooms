@@ -22,6 +22,11 @@ public class projectorPanelUI : MonoBehaviour
     string field4 = "";
     string field5 = "";
 
+    private int attempts;
+    public string hint1 = "Maybe its a seating plan...";
+    public string hint2 = "Maybe the class list can help...";
+    public messageBox text;
+
 
     [SerializeField]
     GameObject fileCabinet;
@@ -93,14 +98,23 @@ public class projectorPanelUI : MonoBehaviour
             // for photon
             Debug.Log(photonView);
             this.photonView.RPC("openFileCabinet", PhotonTargets.All);
-            networkTextBox.GetComponent<InteractText>().photonView.RPC(
-                    "DisplayLook", PhotonTargets.All, "Correct Answer! The filling cabinet has been opened");
+            networkTextBox.GetComponent<messageBox>().photonView.RPC(
+                    "AddText", PhotonTargets.All, "Correct Answer! The filling cabinet has been opened");
         }
         else
         {
             //FIX SOUND THING
             source.PlayOneShot(incorrectanswer, 0.5f);
             Debug.Log("wrong code");
+            attempts++;
+            if (attempts > 3 &&  attempts < 6)
+            {
+                text.SendToTextBox(hint1);
+            }
+            else if (attempts > 6)
+            {
+                text.SendToTextBox(hint2);
+            }
         }
 
     }

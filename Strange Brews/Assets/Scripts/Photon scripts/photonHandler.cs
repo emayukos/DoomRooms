@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+// script for creating and joinging room, as well as instantiating player objects
 
 public class photonHandler : MonoBehaviour
 {
@@ -13,11 +14,6 @@ public class photonHandler : MonoBehaviour
 
     public GameObject mainPlayer;
 
-
-	//public GameObject plCam;
-	//private GameObject mainCam;
-	////public Animator animator;
-
 	private void Awake()
 	{
 		// won't destroy this object when the scene changes bc we will need it later
@@ -25,14 +21,8 @@ public class photonHandler : MonoBehaviour
 		SceneManager.sceneLoaded += OnSceneFinishedLoading;
 	}
 
-    //private void OnEnable()
-    //{
-    //    SceneManager.sceneLoaded += OnSceneFinishedLoading;
-    //}
     public void createNewRoom()
     {
-        //RoomOptions roomOptions = new RoomOptions();
-        //roomOptions.MaxPlayers = 2;
         PhotonNetwork.CreateRoom(photonB.createRoomInput.text, new RoomOptions() { MaxPlayers = 2 }, null);
     }
 
@@ -46,7 +36,6 @@ public class photonHandler : MonoBehaviour
 
     private void OnJoinedRoom()
     {
-		//nameInput.SendMessage("Run"); // added 
         moveScene();
         Debug.Log("We are connected to the room!");
     }
@@ -69,9 +58,9 @@ public class photonHandler : MonoBehaviour
 
     }
 
-    private void SpawnPlayer()
-    {
-        Debug.Log("spawn player");
+	private void SpawnPlayer()
+	{
+		Debug.Log("spawn player");
 
 		PhotonNetwork.Instantiate(mainPlayer.name, mainPlayer.transform.position, mainPlayer.transform.rotation, 0);
 
@@ -79,28 +68,11 @@ public class photonHandler : MonoBehaviour
 		{
 			PhotonNetwork.playerName = "player1";
 		}
-		else 
-		{ 
+		else
+		{
 			PhotonNetwork.playerName = "player2";
 		}
-		
-		
-
-		//myCharacter.GetComponent<Canvas>().eventCamera = Camera.main;
-		//animator = myCharacter.GetComponent<Animator>(); // added this
-		// in resource folder
-		//myCharacter = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "ghost"), 
-										//mainPlayer.transform.position,
-										//mainPlayer.transform.rotation, 0);
-		//myCharacter.transform.parent = mainPlayer.transform;
-		//animator = 
-		
-    }
-
-    //void OnDisable()
-    //{
-    //    SceneManager.sceneLoaded -= OnSceneLoaded;
-    //}
+	}
 
 
 

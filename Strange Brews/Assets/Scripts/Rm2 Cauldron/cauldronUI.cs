@@ -16,6 +16,10 @@ public class cauldronUI : MonoBehaviour
 
     private bool found1, found2, found3;
 
+    private int attempts;
+    public string hint = "Maybe the crystal balls will have the answer...";
+    public messageBox text;
+
     private void Start()
     {
         inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
@@ -60,9 +64,14 @@ public class cauldronUI : MonoBehaviour
 
     public void pressMix()
     {
+        attempts++;
         if (group1.isCorrect() && group2.isCorrect() && group3.isCorrect())
         {
             photonView.RPC("brewPotion", PhotonTargets.All);
+        }
+        if (attempts >= 3)
+        {
+            text.SendToTextBox(hint);
         }
 
     }

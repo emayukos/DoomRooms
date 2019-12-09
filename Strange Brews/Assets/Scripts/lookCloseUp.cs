@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// emma
+// a script for opening a UI for an object
 public class lookCloseUp : MonoBehaviour
 {
 
@@ -47,10 +49,8 @@ public class lookCloseUp : MonoBehaviour
                 {
                     source.PlayOneShot(closeSoundEffect);
                 }
-                
                 objectUI.SetActive(false);
                 UIopen = !UIopen;
-
             }
         }
 
@@ -60,16 +60,13 @@ public class lookCloseUp : MonoBehaviour
     // these determine if the player is in the collision area
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.gameObject.CompareTag("Player"))
         {
             if (collision.GetComponent<PhotonView>().isMine)
             {
                 isIn = true;
             }
-            
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -77,7 +74,6 @@ public class lookCloseUp : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {
-            
             if (collision.GetComponent<PhotonView>().isMine)
             {
                 // moving out of range will also close the close up view
@@ -85,8 +81,6 @@ public class lookCloseUp : MonoBehaviour
                 objectUI.SetActive(false);
                 UIopen = false;
             }
-            
-            
         }
     }
 }

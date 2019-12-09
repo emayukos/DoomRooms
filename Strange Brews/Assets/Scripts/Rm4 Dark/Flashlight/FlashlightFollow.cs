@@ -23,7 +23,6 @@ public class FlashlightFollow : MonoBehaviour
         sightRotate(v, h);
     }
 
-    // LateUpdate is called after Update each frame
     void LateUpdate()
     {
         if (On)
@@ -36,6 +35,7 @@ public class FlashlightFollow : MonoBehaviour
     public void activateLight(GameObject player)
     {
         //can't pass GameObjects through RPCs, light only follows player position on .isMine screen, goes infinitely up on other, out of sight
+        //works for single player
         playerThis = player;
         On = true;
     }
@@ -44,7 +44,7 @@ public class FlashlightFollow : MonoBehaviour
     public void FLFollowPlayer()
     {
         transform.position = playerThis.transform.position;
-        //transform.rotation = playerThis.transform.rotation;
+        //transform.rotation = playerThis.transform.rotation;   //
         //Debug.Log(sightRotation);
         rbody.MoveRotation(sightRotation);
     }
@@ -56,6 +56,7 @@ public class FlashlightFollow : MonoBehaviour
 
     private void sightRotate(float v, float h)
     {
+        //keeps location of the light in-line with what direction the player is moving
         if (v == 0)
         {
             if (h < 0)

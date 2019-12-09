@@ -39,18 +39,18 @@ public class tinydoor : Photon.MonoBehaviour
 			else
 			{
 				Debug.Log("player(s) can't fit through door!");
-				                //adds item to multiplayer inventory text box
+				//adds item to multiplayer inventory text box
 				if (messageSound != null)
             	{
                 	source.PlayOneShot(messageSound);
             	}
-                networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "One or more players too big to fit through door!");
+                networkTextBox.GetComponent<messageBox>().photonView.RPC("MessageDisplayLook", PhotonTargets.All, "One or more players too big to fit through door!");
 			}
 
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D col) // if this doesn't work revert back to on collision enter (need to check trigger)
+	void OnTriggerEnter2D(Collider2D col) 
     {
         if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine) // will only recognize this when the player has the key and is a trigger
         {
@@ -74,7 +74,7 @@ public class tinydoor : Photon.MonoBehaviour
 
     
     public void IsShrunkRPC() { 
-    	photonView.RPC("IsShrunk", PhotonTargets.All); // change to master for now
+    	photonView.RPC("IsShrunk", PhotonTargets.All); 
     }
     
     [PunRPC]

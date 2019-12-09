@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// emma
+// for changing the volumes from the menus
 public class VolumeSlider : MonoBehaviour
 {
     public UnityEngine.UI.Slider slider;
@@ -18,6 +20,7 @@ public class VolumeSlider : MonoBehaviour
 
     void SetVolume(float _value)
     {
+        // set the volume based on what the player has changed the slider to
         mixer.SetFloat(parameterName, ConvertToDecibel(_value / slider.maxValue));
         PlayerPrefs.SetFloat(parameterName, _value);
     }
