@@ -660,7 +660,7 @@ MonoBehaviour:
   shrinkSpeed: 0.1
   shrunkSize: 0.2
   shrink: 0
-  pressSoundEffect: {fileID: 8300000, guid: 7f0498e9b61e54dcf8c0f9b85bb44ad3, type: 3}
+  shrinkSoundEffect: {fileID: 8300000, guid: 7f0498e9b61e54dcf8c0f9b85bb44ad3, type: 3}
   shrunk: 0
 --- !u!114 &4405039587703481566
 MonoBehaviour:
@@ -677,7 +677,7 @@ MonoBehaviour:
   growSpeed: 0.08
   originalSize: 0.5
   grow: 0
-  pressSoundEffect: {fileID: 8300000, guid: 068e74112aa254013b9c3143f28cd30a, type: 3}
+  growSoundEffect: {fileID: 0}
 --- !u!82 &460993403543457635
 AudioSource:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class photonConnect : MonoBehaviour
     }
     
     
-    // another premae function in photon, tells us when the players have joined their lobby
+    // another premade function in photon, tells us when the players have joined their lobby
    	private void OnJoinedLobby(){
    		sectionView1.SetActive(false);
    		sectionView2.SetActive(true);
