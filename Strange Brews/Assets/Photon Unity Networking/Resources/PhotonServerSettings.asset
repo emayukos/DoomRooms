@@ -105,4 +105,7 @@ MonoBehaviour:
   - activateFlashlight
   - delete
   - IsShrunk
+  - MessageDisplayLook
+  - ResetMessageBox
+  - UpdateText
   DisableAutoOpenWizard: 1
