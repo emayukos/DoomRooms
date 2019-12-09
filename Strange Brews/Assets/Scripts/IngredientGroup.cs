@@ -4,18 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// emma
 public class IngredientGroup : MonoBehaviour
 {
-    public GameObject questionMark;
-    public GameObject ingredientGroup;
-
-    public Toggle item1;
-    public Toggle item2;
-
-    public bool isItem1;
+    // the text boxes in the UI
+    public GameObject questionMark, ingredientGroup;
+    public Toggle item1, item2; // the toggles for both the items
+    public bool isItem1; // if the correct item is the first one
 
     private void Start()
     {
+        // hide the ingredients in the cauldron until they get both the ingredients
         ingredientGroup.SetActive(false);
     }
 

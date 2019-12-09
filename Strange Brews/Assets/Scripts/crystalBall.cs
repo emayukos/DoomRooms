@@ -2,26 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// emma
 public class crystalBall : MonoBehaviour
 {
+    private bool inRange, isOpen, connected;
+    // counts the number of players are connected to this crystal ball
+    private int thisIsOpen; 
 
-    private bool inRange, isOpen;
     private AudioSource source;
-
-    private int thisIsOpen;
-
     public AudioClip connectedSound;
 
-    public crystalBall otherCrystalBall;
-
-    public GameObject UIConnecting;
-    public GameObject UIConnected;
-
-    public bool connected;
-
     private PhotonView photonView;
-
-    public crystalBallGroup group;
+    public GameObject UIConnecting, UIConnected; // these are the different UI's
+    public crystalBallGroup group; // this is the group of crystal balls
 
     private int attempts;
     public string hint1 = "Maybe it connects to someone...";
@@ -33,9 +26,7 @@ public class crystalBall : MonoBehaviour
     {
         UIConnecting.SetActive(false);
         UIConnected.SetActive(false);
-
         source = GetComponent<AudioSource>();
-
         photonView = GetComponent<PhotonView>();
     }
 
@@ -68,7 +59,6 @@ public class crystalBall : MonoBehaviour
     public void isOpenForOther()
     {
         thisIsOpen++;
-        //Debug.Log("added to thisIsOpen, now: " + thisIsOpen);
     }
 
     [PunRPC]
@@ -76,7 +66,6 @@ public class crystalBall : MonoBehaviour
     {
         thisIsOpen--;
         if (thisIsOpen < 0) thisIsOpen = 0;
-        //Debug.Log("subtracted from thisIsOpen, now: " + thisIsOpen);
     }
 
 
@@ -84,7 +73,9 @@ public class crystalBall : MonoBehaviour
     {
         if (isOpen == false)
         {
+            // adds 1 to the number of people connect for both players
             photonView.RPC("isOpenForOther", PhotonTargets.All);
+
             attempts++;
             if(attempts > 3 && attempts < 6)
             {
@@ -95,27 +86,22 @@ public class crystalBall : MonoBehaviour
                 text.SendToTextBox(hint2);
             }
         }
-
+        // now open
         isOpen = true;
+
         if (group.isConnected())
         {
+            source.PlayOneShot(connectedSound);
             UIConnected.SetActive(true);
             UIConnecting.SetActive(false);
             connected = true;
-            
         }
         else
         {
             UIConnected.SetActive(false);
             UIConnecting.SetActive(true);
-            connected = false;
-            
+            connected = false; 
         }
-
-        
-        
-
-
     }
 
     

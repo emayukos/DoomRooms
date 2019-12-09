@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// emma
+// for changing or adding text to the message box
+// has a timer on them so they clear
 public class messageBox : MonoBehaviour
 {
-    //for changing or adding text to the message box
-
     public PhotonView photonView;
     public Text textLine;
 
@@ -24,7 +25,7 @@ public class messageBox : MonoBehaviour
     [PunRPC]
     public void MessageDisplayLook(string description)
     {
-        //changes Text to show only new text
+        // add new text to the end of the message
         timeLeft = showMessageTime;
         textLine.text += description + "\n";
         isMessage = true;
@@ -33,7 +34,10 @@ public class messageBox : MonoBehaviour
     [PunRPC]
     public void UpdateText(string description)
     {
+        // reset the message
+        timeLeft = showMessageTime;
         textLine.text = description + "\n";
+        isMessage = true;
     }
 
     [PunRPC]
@@ -53,10 +57,9 @@ public class messageBox : MonoBehaviour
 
     private void Update()
     {
-        
+        // counts down the time
         timeLeft -= Time.deltaTime;
-        
-        
+        // when the time is up, reset the message
         if (timeLeft < 0f && isMessage)
         {
             photonView.RPC("ResetMessageBox", PhotonTargets.All);
