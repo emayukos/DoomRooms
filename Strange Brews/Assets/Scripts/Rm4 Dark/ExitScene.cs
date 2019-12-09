@@ -39,6 +39,17 @@ public class ExitScene : Photon.MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine) // will only recognize this when the player has the key and is a trigger
+        {
+            inRange = true;
+            Debug.Log("Player touched door.");
+            personalTextBox.GetComponent<InteractText>().DisplayLook("Will we leave now?");
+            //GetComponent<Renderer>().material = border; // give door border indicating it can be unlocked
+        }
+    }
+
     void OnTriggerExit2D(Collider2D col)
     {
         inRange = false;
