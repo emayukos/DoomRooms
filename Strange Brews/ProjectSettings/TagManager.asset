@@ -11,6 +11,8 @@ TagManager:
   - clockwise spin
   - flashlight
   - tiny door
+  - bg
+  - Collider
   layers:
   - Default
   - TransparentFX
