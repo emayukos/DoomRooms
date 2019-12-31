@@ -56,9 +56,11 @@ public class PickUp : Photon.MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
     {
-        itemNameFound = null;
-		inRange = false;
-
+        if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
+        {
+            itemNameFound = null;
+            inRange = false;
+        }
     }
 
     [PunRPC]

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class SwitchDoor : MonoBehaviour
 {
-    public PhotonView photonView;
-    public GameObject openPos;
+    //To be attached to a door activated by a switch
+
+    public PhotonView photonView;   //of door this is attached to, for use by relevant switch script
+    public GameObject openPos;      //where the door object goes when open (were previously having issues with photon and setActive for some reason)
     private Vector3 closedPosition;
     private Vector3 openPosition;
 
@@ -21,6 +23,7 @@ public class SwitchDoor : MonoBehaviour
     }
 
 
+    //below are used by scripts for switche(s) for the door 
     [PunRPC]
     public void doorClose()
     {

@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class projectorInteraction : MonoBehaviour
 {
+    // Get both states of the projector
     public Sprite projOff;
     public Sprite projOn;
+    // Check if the player is in range
     private bool inRange;
+    // Get the projector screen object that will be "pulled down"
     public GameObject projectorScreen;
+    // Used to check if the projector is on or off
     private bool isOn = false;
+    // Get the AudioSource object for sounds
     private AudioSource projectorOnAudio;
+    // Getting the network text box for messages that is already attached
     GameObject networkTextBox;
+    // Create photon view so the other play sees these changes
     private PhotonView photonView;
 
 
@@ -18,7 +25,9 @@ public class projectorInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Make sure the projector screen is not showing at the start
         projectorScreen.SetActive(false);
+        // Set up audio object, message box and photon view
         projectorOnAudio = GetComponent<AudioSource>();
         networkTextBox = GameObject.Find("Network Message Text");
         photonView = GetComponent<PhotonView>();
@@ -27,9 +36,10 @@ public class projectorInteraction : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        // Checking if the player is interacting with the projector (pressing E)
         if (inRange && Input.GetKeyDown(KeyCode.E)) // make icon that says "press E" to open
         {
-            //for single player testing
+            // If the projector is on, turn is off
             if (isOn)
             {
                 photonView.RPC("TurnOffProjector", PhotonTargets.All);
@@ -37,32 +47,24 @@ public class projectorInteraction : MonoBehaviour
                 networkTextBox.GetComponent<messageBox>().photonView.RPC(
                     "MessageDisplayLook", PhotonTargets.All, "The projector has been turned off!");
             }
+            // If the projector is off, turn is on
             else
             {
+                // Turn on projector on both players screens
                 photonView.RPC("TurnOnProjector", PhotonTargets.All);
-                //TurnOnProjector();
+                // Send message to both players message boxes
                 networkTextBox.GetComponent<messageBox>().photonView.RPC(
                     "AddText", PhotonTargets.All, "The projector has been turned on!");
             }
-
-            // for photon
-            //if (isOn)
-            //{
-            //    this.photonView.RPC("TurnOffProjector", PhotonTargets.All);
-            //}
-            //else
-            //{
-            //    this.photonView.RPC("TurnOnProjector", PhotonTargets.All);
-
-            //}
         }
 
 
     }
 
+    // Used to change the bool inRange if player is in range of the object
     private void OnTriggerEnter2D(Collider2D col)
     {
-        // for single player testing
+        // Have to check which player it is when using Photon
         if (col.gameObject.CompareTag("Player") )
         {
             if (col.GetComponent<PhotonView>().isMine)
@@ -74,15 +76,13 @@ public class projectorInteraction : MonoBehaviour
         {
             Debug.Log("OnTriggerEnter comaring tag isn't player");
         }
-
-        // for photon testing
-        //inRange |= col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine;
     }
 
+    // Used to change the bool inRange if player has left the range of the object
     private void OnTriggerExit2D(Collider2D col)
     {
-        // For single player testing
-        if(col.gameObject.CompareTag("Player"))
+        // Have to check which player it is when using Photon
+        if (col.gameObject.CompareTag("Player"))
         {
             if (col.GetComponent<PhotonView>().isMine)
             {
@@ -94,62 +94,37 @@ public class projectorInteraction : MonoBehaviour
         {
             Debug.Log("OnTriggerExit comaring tag isn't player");
         }
-
-        //// for photon testing
-        //if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine)
-        //{
-        //    inRange = false;
-        //    this.photonView.RPC("CloseBox", PhotonTargets.All);
-        //}
     }
 
-    // for single player testing
+    // Called when player is in range and presses "e" if isOn is false
     [PunRPC]
     void TurnOnProjector()
     {
-        //Turn on projector
+        // Change the projector sprite to the one that's "on"
+        // and pulled down projector screen and play the sound
         GetComponent<SpriteRenderer>().sprite = projOn;
-        isOn = true;
         projectorScreen.SetActive(true);
         projectorOnAudio.Play();
-
+        // Change this bool to true
+        isOn = true;
     }
-    // for photon
-    //[PunRPC]
-    //void TurnOnProjector()
-    //{
-    //    //Turn on projector
-    //    GetComponent<SpriteRenderer>().sprite = projOn;
-    //    isOn = true;
-    //    projectorScreen.SetActive(true);
 
-    //}
-    // for single player testing
+    // Called when player is in range and presses "e" if isOn is true
     [PunRPC]
     void TurnOffProjector()
     {
         //Turn off projector
         if (isOn)
         {
-            //Turn projector off if projector if on and player presses "e" again
+            // Change the projector sprite to the one that's "off"
+            // and pulled up projector screen and turn off sound
             GetComponent<SpriteRenderer>().sprite = projOff;
             projectorScreen.SetActive(false);
+            // Change this bool to false
             isOn = false;
             projectorOnAudio.Pause();
         }
     }
-    // for photon
-    //[PunRPC]
-    //void TurnOffProjector()
-    //{
-    //    //Turn off projector
-    //    if (isOn)
-    //    {
-    //        //Turn projector off if projector if on and player presses "e" again
-    //        GetComponent<SpriteRenderer>().sprite = projOff;
-    //        projectorScreen.SetActive(false);
-    //        isOn = false;
-    //    }
-    //}
+
 
 }

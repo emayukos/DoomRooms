@@ -8,7 +8,7 @@ public class SimpleOnOff : MonoBehaviour
     private bool On = false;
     public GameObject obj;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         obj.SetActive(false);
@@ -18,6 +18,7 @@ public class SimpleOnOff : MonoBehaviour
     {
         if(inRange && Input.GetKeyDown(KeyCode.E))
         {
+            //toggle on/off when E is pressed
             if (On)
             {
                 obj.SetActive(false);
@@ -46,6 +47,7 @@ public class SimpleOnOff : MonoBehaviour
             inRange = false;
             if (On)
             {
+                //GameObject obj is turned off when out of range to interact with
                 obj.SetActive(false);
                 On = false;
             }

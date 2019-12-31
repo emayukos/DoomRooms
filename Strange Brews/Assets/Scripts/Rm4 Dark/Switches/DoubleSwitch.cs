@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class DoubleSwitch : MonoBehaviour
 {
+    //pressure plate switches to open doors in Dark Room bedrooms
+    // 3 sets of doors, only outside doors or middle door can be open at one time, like an airlock
+
     public GameObject doorOutside;
     public GameObject doorMiddle;
     public GameObject doorCage;
 
     public PhotonView thisPhotonView;
-    public GameObject outsideLight;
+    public GameObject outsideLight;     //light indicators for which doors are currently closed
     public GameObject middleLight;
 
     private bool inRange;
@@ -31,8 +34,8 @@ public class DoubleSwitch : MonoBehaviour
             if (outsideDoorsOpen)
             {
                 Debug.Log("Outside doors should close.");
-                //doorOutside.GetComponent<SwitchDoor>().doorClose();
-                //doorCage.GetComponent<SwitchDoor>().doorClose();
+                //doorOutside.GetComponent<SwitchDoor>().doorClose();   //for offline initial testing
+                //doorCage.GetComponent<SwitchDoor>().doorClose();      //for offline initial testing
                 doorOutside.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
                 doorCage.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
                 thisPhotonView.RPC("MiddleLightOn", PhotonTargets.All);
@@ -41,23 +44,23 @@ public class DoubleSwitch : MonoBehaviour
             else
             {
                 Debug.Log("Outside doors should open.");
-                //doorOutside.GetComponent<SwitchDoor>().doorOpen();
-                //doorCage.GetComponent<SwitchDoor>().doorOpen();
+                //doorOutside.GetComponent<SwitchDoor>().doorOpen();    //for offline initial testing
+                //doorCage.GetComponent<SwitchDoor>().doorOpen();       //for offline initial testing
                 doorOutside.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
                 doorCage.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
-                thisPhotonView.RPC("OutsideLightsOn", PhotonTargets.All);
+                thisPhotonView.RPC("OutsidesLightOn", PhotonTargets.All);
                 outsideDoorsOpen = !outsideDoorsOpen;
             }
 
             if (middleDoorOpen)
             {
-                //doorMiddle.GetComponent<SwitchDoor>().doorClose();
+                //doorMiddle.GetComponent<SwitchDoor>().doorClose();    //for offline initial testing
                 doorMiddle.GetComponent<SwitchDoor>().photonView.RPC("doorClose", PhotonTargets.All);
                 middleDoorOpen = !middleDoorOpen;
             }
             else
             {
-                //doorMiddle.GetComponent<SwitchDoor>().doorOpen();
+                //doorMiddle.GetComponent<SwitchDoor>().doorOpen();     //for offline initial testing
                 doorMiddle.GetComponent<SwitchDoor>().photonView.RPC("doorOpen", PhotonTargets.All);
                 middleDoorOpen = !middleDoorOpen;
             }
@@ -66,9 +69,6 @@ public class DoubleSwitch : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //switch goes down
-        //   light change call here?
-
         if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             inRange = true;
@@ -77,9 +77,6 @@ public class DoubleSwitch : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //switch goes up
-        //   light change call here?
-
         if(collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
             inRange = false;
@@ -87,7 +84,7 @@ public class DoubleSwitch : MonoBehaviour
     }
 
     [PunRPC]
-    private void OutsideLightsOn()
+    private void OutsidesLightOn()
     {
         outsideLight.SetActive(true);
         middleLight.SetActive(false);

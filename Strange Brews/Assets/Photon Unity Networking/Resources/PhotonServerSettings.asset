@@ -108,4 +108,5 @@ MonoBehaviour:
   - MessageDisplayLook
   - ResetMessageBox
   - UpdateText
+  - OutsidesLightOn
   DisableAutoOpenWizard: 1

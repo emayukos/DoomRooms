@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class ExitScene : Photon.MonoBehaviour
 {
+    //simplified scene transition because it's the end and no new puzzle scenes need stuff put in
 
     bool inRange = false;
-    //public Material border;
+    //public Material border;   //hard mode, no borders put on
     //public Material unborder;
     public GameObject levelChanger;
     public Text personalTextBox;
@@ -28,6 +29,17 @@ public class ExitScene : Photon.MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col) // if this doesn't work revert back to on collision enter (need to check trigger)
+    {
+        if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine) // will only recognize this when the player has the key and is a trigger
+        {
+            inRange = true;
+            Debug.Log("Player touched door.");
+            personalTextBox.GetComponent<InteractText>().DisplayLook("Will we leave now?");
+            //GetComponent<Renderer>().material = border; // give door border indicating it can be unlocked
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Player") && col.GetComponent<PhotonView>().isMine) // will only recognize this when the player has the key and is a trigger
         {

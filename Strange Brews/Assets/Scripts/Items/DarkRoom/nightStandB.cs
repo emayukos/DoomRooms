@@ -27,8 +27,7 @@ public class nightStandB : MonoBehaviour
 
             if (inRange)
             {
-                //record unlocking action in 2-player log, then perform unlocking action
-                //networkTextBox.GetComponent<ShowNewMessage>().setHaveNewMessage();
+                //open nightstand and tell player they did it
                 networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The night stand was opened.");
                 this.photonView.RPC("openNightStand", PhotonTargets.All);
             }
@@ -55,8 +54,7 @@ public class nightStandB : MonoBehaviour
     [PunRPC]
     private void openNightStand()
     {
-        //itemInside.SetActive(true);
-        //do what's needed to the lockedThing
+        //move open dresser with key to nightstand position, destroy closed nightstand
         openSprite.transform.position = position;
         PhotonNetwork.Destroy(gameObject);
 

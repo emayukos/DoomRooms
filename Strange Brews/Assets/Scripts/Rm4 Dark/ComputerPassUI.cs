@@ -9,17 +9,12 @@ public class ComputerPassUI : MonoBehaviour
 
     string field1 = "";
 
-    public PhotonView photonView;
+    public PhotonView photonView;   //photonView of object with ComputerScreen script, not UI, to set visible screen and associated active objects
 
     public AudioClip incorrectanswer;
     private AudioSource source;
 
-    public string code = "111795";
-
-
-    ////for single player testing
-    //public GameObject cabinetOpen;
-    //public GameObject cabinetClosed;
+    public string code = "111795";  //first draft code for bottom room computer, changed for each in Inspector
 
 
     public void Awake()
@@ -29,21 +24,19 @@ public class ComputerPassUI : MonoBehaviour
 
     void Start()
     {
-
         Debug.Log("field1: " + field1);
         Debug.Log("source: " + source);
 
-        //cabinetClosed.SetActive(true);
-        //cabinetOpen.SetActive(false);
+        //computer not visible until interacted with
         gameObject.SetActive(false);
         Debug.Log(photonView);
-
     }
 
 
 
     public void onSubmit()
     {
+        //for submit Button component
 
         Debug.Log("field1 fn: " + field1);
 
@@ -52,32 +45,21 @@ public class ComputerPassUI : MonoBehaviour
             isCorrect = true;
             Debug.Log("correct code");
 
-            //for single player testing
-            //cabinetOpen.SetActive(true);
-            //cabinetClosed.SetActive(false);
-
-
             // for photon
-            Debug.Log(photonView);
+            //Debug.Log(photonView);
             this.photonView.RPC("openComputer", PhotonTargets.All);
-
         }
         else
         {
-            //FIX SOUND THING
             source.PlayOneShot(incorrectanswer, 0.5f);
             Debug.Log("wrong code");
         }
-
     }
 
-    //private void closePanel()
-    //{
-    //    gameObject.SetActive(false);
-    //}
 
     public void addFieldValue(string fieldValue)
     {
+        //for Input Field component
         field1 = fieldValue;
         Debug.Log("test: " + field1);
     }

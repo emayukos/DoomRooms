@@ -11,8 +11,6 @@ public class FlashlightStandIn : Photon.MonoBehaviour
     private bool inRange = false;
 
 
-
-    // Update is called once per frame
     void Update()
     {
         if(inRange && Input.GetKeyDown(KeyCode.E))
@@ -20,7 +18,6 @@ public class FlashlightStandIn : Photon.MonoBehaviour
             if (!player.GetComponent<FlashlightActivate>().haveAFlashlight())
             {
                 personalTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "A blacklight flashlight was picked up.");
-                //activateFL();
                 thisPhotonView.RPC("activateFL", PhotonTargets.All);
             }
         }
@@ -48,10 +45,10 @@ public class FlashlightStandIn : Photon.MonoBehaviour
     private void activateFL()
     {
         player.GetComponent<FlashlightActivate>().photonView.RPC("activateFlashlight", PhotonTargets.All);
+        // Below commented script is for when flashlight is not attached to player
+        // doesn't work for photon, gameObjects can't be passed through RPCs
         //realFlashlight.GetComponent<FlashlightFollow>().activateLight(player);
         //realFlashlight.GetComponent<FlashlightFollow>().photonView.RPC("activateLight", PhotonTargets.All, player);
-        //Destroy(gameObject);
-        //PhotonNetwork.Destroy(gameObject);
         thisPhotonView.RPC("delete", PhotonTargets.All);
     }
 

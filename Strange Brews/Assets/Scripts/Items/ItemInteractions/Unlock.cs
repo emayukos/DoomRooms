@@ -22,6 +22,8 @@ public class Unlock : MonoBehaviour
     void Start()
     {
         //find fixed game objects that will be updated with interactions
+        //originally text boxes were set up and copied into scenes, a set of : helpMenu, inventoryMenu, two text boxes
+        //hard coding this was fine, changes were made, would change given more time to ensure it would all still work
         inventory = GameObject.Find("Inventory");
         personalTextBox = GameObject.Find("Personal Message Text");
         networkTextBox = GameObject.Find("Network Message Text");

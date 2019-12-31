@@ -9576,7 +9576,7 @@ MonoBehaviour:
   fileCabinetOpen: {fileID: 1185795954}
   panelUI: {fileID: 1308994885}
   classRoomKey: {fileID: 549209024}
-  lockedText: Its locked...
+  lockedText: It's locked...
   text: {fileID: 496310778}
   lockedSound: {fileID: 8300000, guid: 91200b543a1664ecd9549c2cd95bc916, type: 3}
 --- !u!212 &1433076874

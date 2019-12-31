@@ -25,7 +25,7 @@ public class HiddenSafe : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    // Start is called before the first frame update
+
     void Start()
     {
         codePanel.SetActive(false);
@@ -33,14 +33,14 @@ public class HiddenSafe : MonoBehaviour
         Debug.Log(itemName);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (isActive)
         {
             if (inRange && Input.GetKeyDown(KeyCode.E) && !isSafeOpened)
             {
-
+                //when E is pressed, turn UI on or off, whichever it wasn't before
                 if (UIopen == false)
                 {
                     codePanel.SetActive(true);
@@ -63,6 +63,7 @@ public class HiddenSafe : MonoBehaviour
     {
         //source.PlayOneShot(safeopening, 0.03f);
         Debug.Log("openSafe called");
+        //hidden safe automatically adds the final key to the inventory
         inventory.GetComponent<Inventory>().photonView.RPC("addItem", PhotonTargets.All, itemName);
         networkTextBox.GetComponent<InteractText>().photonView.RPC("DisplayLook", PhotonTargets.All, "The " + itemName + " was taken and put in the inventory.");
         codePanel.SetActive(false);
@@ -84,6 +85,7 @@ public class HiddenSafe : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player") && collision.GetComponent<PhotonView>().isMine)
         {
+            //UI should turn off on it's own when no longer in range
             inRange = false;
             codePanel.SetActive(false);
             UIopen = !UIopen;

@@ -18,6 +18,7 @@ public class FlashlightActivate : MonoBehaviour
     [PunRPC]
     public void activateFlashlight()
     {
+        //used by flashlight standin
         if (photonView.isMine)
         {
             flashlight.SetActive(true);
@@ -28,6 +29,8 @@ public class FlashlightActivate : MonoBehaviour
 
     public bool haveAFlashlight()
     {
+        //checks if player already has a flashlight so they don't steal both
+        //used by flashlight standin
         return hasFlashlight;
     }
 }
