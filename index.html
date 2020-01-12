@@ -1,0 +1,234 @@
+<!DOCTPYE html> 
+
+<!-- 
+input tags
+----------
+for adding elements on our page where users can input info
+must use javascript to make these functional
+
+-->
+
+<!-- container tags (pair) for content or other html tags
+	indent tags inside other tags (children of parent tag) -->
+<html> <!-- starting tag -->
+<!--head tags and body files 
+# two basic sections in every html file
+# head defines data about document-->
+	<head>
+		<!-- meta tags go in head and are used to define info about our file -->
+		<meta charset="UTF-8">
+
+		<meta name="description" content="Programmer portfolio">
+		<meta name="author" content="Emily Mayuko Smith">
+		<meta name="keywords" content="portfolio, blog, computer science, programmer">
+		<!-- 
+		need this so it displays normally on mobile  
+		-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		<title>Emily Mayuko Smith</title>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		 <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Mukta+Malar&display=swap" rel="stylesheet">
+
+		<style>
+		body {
+		  font-family: 'Markazi Text', serif;
+		  font-family: 'Mukta Malar', sans-serif;
+		  margin: 0; /* gets rid of whitespace to left of top nav bar */
+		}
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: mistyrose;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  color: #F08080; /* light coral */
+}
+
+.topnav a.active {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+
+
+		.sidenav {
+		  height: 100%;
+		  width: 60px;
+		  position: fixed;
+		  z-index: 1;
+		  left: 0;
+		  background-color: mistyrose;
+		  overflow-x: hidden;
+		  padding-top: 20px;
+		}
+
+		.sidenav a {
+		  padding: 6px 8px 6px 10px;
+		  text-decoration: none;
+		  text-align: left;
+		  font-size: 16px;
+		  color: #818181;
+		  display: block;
+
+		}
+
+		.sidenav a:hover {
+		  background-color: #F1F1F1;
+
+		}
+
+		.main {
+		  margin-left: 60px; /* Same as the width of the sidenav */
+		  font-size: 28px; /* Increased text to enable scrolling */
+		  padding: 0px 10px;
+		}
+
+
+		@media screen and (max-height: 450px) {
+		  .sidenav {padding-top: 15px;}
+		  .sidenav a {font-size: 18px;}
+		}
+		</style>
+
+	</head>
+
+	<!--body is where all html content goes --> 
+	<body style="background-color:white">
+		<!--
+		containers:
+		----------
+		 spans are inline and divs are block elements 
+		<span>span1</span>
+		<span>span2</span> (will be side by side)
+		<div>div1</div>
+		<div>div2</div> (will be on separate lines)
+		-->
+
+		<div class="topnav">
+			<!-- maybe put this on far right or more right instead -->
+			<!-- dont want color change on hover tho -->
+			<a href="#">Emily Mayuko Smith</a>
+	  		<a class="active" href="index.html">
+	 		<img src="home.png"/>
+			</a>
+			<a href="aboutme.html">About Me</a>
+			<a href="aboutme.html">Projects</a>
+			<a href="aboutme.html">Resume</a>
+			<a href="contactme.html">Contact</a>
+		</div>
+
+
+
+		<div class="sidenav">
+			<!-- 
+			create link to different page on our website
+			(inline element so only takes up certain amount of width of page)
+			-->
+
+			<a href="https://github.com/emayukos"target="_blank">github</a>
+			<a href="linkedin.com/in/emilymayukosmith"target="_blank">
+ 			<img src="linkedin.png"/>
+			</a>
+
+
+
+		</div>
+
+
+		<!-- 
+		this is a header
+		font size depends on number 
+		should define headers of website heirarchically
+		h1
+			h2
+			h2
+				h3
+		-->
+		<div class="main">
+
+
+		<!-- all header stuff goes in here -->
+		<header>
+			<h2>Hi, I'm Emily</h2>
+			<!-- navigation elements -->
+			<nav>
+
+
+
+			</nav>
+		</header>
+		
+		<hr/> <!-- horizontal rule single tag-->
+		<br/> <!-- break single tag to add newline -->
+
+		<!-- 
+		all main content that is unique to the document 
+		(no sidebars, navigation links, etc.)
+
+		-->
+		<main>
+
+
+			<!-- text for article or blog post -->
+			<article>
+				<!-- article section -->
+				<section>
+					<!-- should include header for section -->
+
+					<!-- for ads or content that's not directly related -->
+					<aside> </aside>
+
+					
+				</section>
+
+			</article>
+		</main>
+		<!-- 
+		paragraph for separate block of text 
+		(block element so takes up entire width of page)
+		can format:
+		<b> </b> for bold
+		<i> </i> for italics
+		<big> </big> for bigger text
+		<small> </small> for smaller text
+		<sub> </sub> for subscript (base)
+		<sup> </sup> for superscript (exponent)
+		(make cheatsheet for more)
+		-->
+
+		<!-- 		
+		you can style your HTML and make it look pretty
+		with CSS
+		(separate properties for single style= with ;)
+		<p style="color: blue"> </p> changes text color
+		<p style="background-color: pink"> </p> changes text blocks bg color
+		-->
+
+		<p style="color: black; background-color: peachpuff"><big>This</big> is a <b><i>paragraph </i></b></p>
+		<p>This is another paragraph.</p>
+	
+		<footer>
+			<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+		</footer>
+
+		</div>
+
+	</body>
+</html> <!-- ending tag -->
