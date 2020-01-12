@@ -1,0 +1,85 @@
+
+
+
+body {
+	font-family: 'Markazi Text', serif;
+	font-family: 'Mukta Malar', sans-serif;
+	margin: 0; /* gets rid of whitespace to left of top nav bar */
+}
+
+/** {
+	color: darkblue;
+}*/
+
+
+			/*
+			html { use to get background image that fills screen 
+	  			background: url(cauldronroomphoto.png) no-repeat center center fixed; 
+	  			-webkit-background-size: cover;
+	  			-moz-background-size: cover;
+	  			-o-background-size: cover;
+	 			background-size: cover;
+			}
+			*/
+
+
+
+
+
+.gameheader {
+	color: #950740;
+	text-align: center;
+	font-family: Perpetua;
+	font-style: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: mistyrose;
+}
+
+.topnav a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	color: #F08080; /* light coral */
+}
+
+.topnav a.active {
+	background-color: #f1f1f1; 
+	color: black;
+}
+
+
+.fill {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden
+}
+.fill img {
+	flex-shrink: 0;
+}
+
+.article {
+	background-color: white;
+	max-width: 1300px; 
+	height: 550px;
+	text-align: left;
+	padding: 14px 16px;
+	align-items: center;
+	overflow: hidden
+}
+
+
+
